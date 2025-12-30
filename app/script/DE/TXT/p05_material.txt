@@ -1,0 +1,58 @@
+﻿# Material
+# <p06_material.txt>
+# print "Material Behälter und Weitere Einbauten:"
+#--------------------
+::
+AF713_H2_!_1_!_Standardausführung
+Filterkopf: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Gehäuse: CK15 / C22
+Weitere Einbauten: C-Stahl, GGG
+::
+AF713_H2_!_3_!_Ausführung mit Innenteile Edelstahl
+Filterkopf: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Gehäuse: CK15 / C22
+Weitere Einbauten: Edelstahl
+::
+AF122_G1_!_1_!_Standardausführung
+Gehäuse und Deckel: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Weitere Einbauten: C-Stahl, Aluminium, PPS
+::
+AF122_G1_!_3_!_Standardausführung
+Gehäuse und Deckel: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Weitere Einbauten: Edelstahl 1.4301/1.4571, PPS
+::
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF963_G3,AF113_G3,AF133_G3,AF173_G3_!_1_!_Standardausführung
+Gehäuse und Deckel: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Weitere Einbauten: C-Stahl, GGG
+::
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF963_G3,AF113_G3,AF133_G3,AF173_G3_!_3_!_Standardausführung
+Gehäuse und Deckel: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Weitere Einbauten: Edelstahl
+::
+AF736_G3,AF963_G3,AF113_G3,AF133_G3,AF173_G3_!_2_!_Edelstahlausführung
+Gehäuse und Deckel: Edelstahlguss 1.4408
+Weitere Einbauten: Edelstahl 1.4581, 1.4571, A2
+::
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4_!_6_!_Ausführung mit Deltaseal Beschichtung
+Gehäuse und Deckel: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
+Weitere Einbauten: Edelstahl
+::
+AF713_GX2_!_2_!_Ausführung in Edelstahl
+Gehäuse und Deckel: Edelstahlguss 1.4581
+Weitere Einbauten: Edelstahl
+::
+AF424_S1,AF424_SH1_!_2_!_Edelstahl
+Gehäuse und Deckel: Edelstahl 1.4301 / 1.4404
+Weitere Einbauten: Edelstahl
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1_!_Standardausführung
+Gehäuse und Deckel: C-Stahl
+Weitere Einbauten: C-Stahl
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_3_!_Innenteile Edelstahl
+Gehäuse und Deckel: C-Stahl
+Weitere Einbauten: Edelstahl
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_2_!_Edelstahl
+Gehäuse und Deckel: Edelstahl 1.4571
+Weitere Einbauten: Edelstahl

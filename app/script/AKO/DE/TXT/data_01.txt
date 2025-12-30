@@ -1,0 +1,231 @@
+# AKO Baureihen
+# TYPENSCHLÜSSEL
+01:  X Hauptgruppe = AF
+02:  X Baureihe = Guss usw.
+03: XX Anschlüsse DN
+04:  X Anschlüss Norm
+05:  X Lage der Hauptanschlüsse
+06:  X Deckelverschlussart
+07:  X Sonderheiten / 0 = Standard
+08:  X Einsatzzuordnung "F"
+09: XX Einsatzgröße "07"
+10:  X Ausführung Geh: "B" = Beschichtet, "2"= unbeschichtet
+11:  X Werkstoff Düse: "4" = Gussbronze, "2" = 0.7040
+12: XX Zählnummer für Sonderfälle und Konstruktionsmerkmale "10" = Nennweite 150/200 
+
+# !_1_! Filter indentification FRR = R5-8, FRZ = AF8, FRB = R8-10
+R5-8_!_FRR_!_E:X_!_Automatik-Rückspülfilter in Gussausführung
+R5-8_!_FRR_!_E:F_!_Automatik-Rückspülfilter in Gussausführung mit Eigendruckabreinigung
+R5-8_!_FRR_!_E:G_!_Automatik-Rückspülfilter in Gussausführung mit variabler Fremdmedium-Segmentabreinigung
+# у этого 2х одинаковых вентиля /// 10-я позиция буква G
+AF8_!_FRZ_!_E:X_!_Automatik-Rückspülfilter in Gussausführung mit Eigendruckabreinigung
+AF8_!_FRZ_!_E:F_!_Automatik-Rückspülfilter in Gussausführung mit Eigendruckabreinigung
+R8-10_!_FRB_!_E:X_!_Automatik-Rückspülfilter in Schweissausführung mit Eigendruckabreinigung
+R8-10_!_FRB_!_E:F_!_Automatik-Rückspülfilter in Schweissausführung mit Eigendruckabreinigung
+
+# !_03+04_! Check feasibility of Anschlüssgröße and Norm:
+CHECK_FLANSCHE_!_FRR08W;FRR09W;FRR093;FRR103;FRR113;FRR123;FRR143;FRZ103;FRZ123;FRZ152;FRZ162;FRZ182
+CHECK_FLANSCHE_!_FRB06;FRB07;FRB08;FRB09;FRB10;FRB11;FRB12;FRB14;FRB15;FRB16;FRB17;FRB18
+
+# !_03_! Anschlußgröße Zu- und Ablauf: - похоже, что нужно только для второго прохода
+FLANSCH_SIZE_!_06-DN 40;07-DN 50;08-DN 65;09-DN 80;10-DN 100;11-DN 125;12-DN 150;14-DN 200;15-DN 250;16-DN300;17-DN350;18-DN 400;19-DN 450
+
+# !_04_! Nenndruck + Norm der Filteranschlüsse: - похоже, что нужно только для второго прохода
+NORM_DER_FLANSCH_!_W=nach Werksnorm;1=PN 6 nach DIN 2631;2=PN 10 nach DIN 2632;3=PN 16 nach EN 1092-1/11/B1/PN16;4=PN 25 nach DIN 2634;5=PN 40 nach DIN 2635;A=150 lbs nach ANSI;B=300 lbs nach ANSI;C=400 lbs nach ANSI;D=600 lbs nach ANSI;S=Sonderanschlüsse
+
+# !_05-1_! CHECK feasibility Lage der Hauptanschlüsse
+CF_LDH_!_FRZ,FRR_!_1
+CF_LDH_!_FRZ_!_8
+CF_LDH_!_FRB_!_1,2,3,4,5,6,7,8,9 - или не проверять ???
+
+# !_05-2_! CHECK Lage der Hauptanschlüsse for RADIO-Buttons
+CF_LDH_RADIO_!_FRR=1;FRZ=1,8;FRB=1,2,3,4,5,6,7,8,9
+
+# !_05_! Lage der Hauptanschlüsse
+LDH_!_1_!_übereinander auf der selben Seite
+LDH_!_2_!_gegenüberliegend auf der selben Achse
+LDH_!_3_!_höhengleich, Eintritt 9 Uhr, Austritt 12 Uhr
+LDH_!_4_!_höhengleich, Eintritt 9 Uhr, Austritt 6 Uhr
+LDH_!_5_!_gegenüberliegend höhenversetzt
+LDH_!_6_!_höhenversetzt, oben 12 Uhr, unten 3 Uhr
+LDH_!_7_!_höhenversetzt, oben 6 Uhr, unten 3 Uhr
+LDH_!_8_!_Eintritt von unten, Austritt seitlich
+LDH_!_9_!_sonstige abweichende Anschlüsse
+
+# !_06_! Deckelverschlussart
+Deckel_!_FRR,FRZ,FRB_!_1_!_Stiftschrauben
+
+# !_07_! Sonderheiten
+SH_!_FRB,FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_0_!_Standardausführung
+SH_!_FRB,FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_G_!_Gummiert
+SH_!_FRB,FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_7_!_buntmetallfreie Ausführung
+SH_!_FRB,FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_R_!_Rilsanbeschichtung
+# FRB другой поиск
+SH_!_FRB_!_1_!_mit Heizmantel
+SH_!_FRB_!_2_!_mit elektr. Heizpatrone
+SH_!_FRB_!_3_!_mit Dampf-/Thermalheizpatrone
+SH_!_FRB_!_D_!_mit Stufendüse
+
+# !_10_! Wekrstoff Ausführung Geh: "B" = Beschichtet
+WS_GEH_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FR152,FRZ162,FRZ182_!_2_!_GGG OHNE Beschichtung
+WS_GEH_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_B_!_Beschichtet (GEFKO thermoplastische Beschichtung)
+WS_GEH_!_FRB_!_A_!_Edelstahl
+WS_GEH_!_FRB_!_C_!_C-Stahl 1.0570
+WS_GEH_!_FRB_!_E_!_CrNi allgemein
+WS_GEH_!_FRB_!_H_!_C-Stahl ??? Bitte PRÜFEN !!!
+WS_GEH_!_FRB_!_9_!_Sonderwerkstoffe
+# в тексте - Beschichtung выводить только один раз или 07 или 010, если где-то есть о нем упоминание
+# FRB проверять только три знака
+
+# !_11_! Werkstoff Düse: "4" = Gussbronze
+WDuese_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRB_!_2_!_0.7040 - Gusseisen mit Kugelgraphit (EN-GJS-400-15) GGG-40 
+WDuese_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FR152,FRZ162,FRZ182,FRB_!_4_!_Gussbronze
+WDuese_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FR152,FRZ162,FRZ182,FRB_!_6_!_Edelstahl
+WDuese_!_FRB_!_9_!_Aluminiumbronze 2.0975
+WDuese_!_FRB_!_E_!_Edelstahl 1.4301
+
+# !_12_! OTHER PORTS от этого зависит вентиль обр промывки
+#FRR.X       _!_other_ports_!_Ablass_!_Spülleitung_!_Entlüftung_!_Anzeiger
+:FRR08W:,:FRR09W:_!_other_ports_!_G1/2_!_G1/2_!_G1/4_!_G1/4
+:FRR093:,:FRR103:_!_other_ports_!_G1/2_!_G3/4_!_G1/4_!_G1/4
+:FRR113:         _!_other_ports_!_G1/2_!_G1_!_G1/4_!_G1/4
+:FRR123:,:FRR143:_!_other_ports_!_G1/2_!_G1_!_G1/2_!_G1/4
+:FRZ103:       _!_other_ports_!_G1/2_!_G1/2_!_G1/4_!_G1/4
+:FRZ123_0:     _!_other_ports_!_G3/4_!_G3/4_!_G1/4_!_G1/4
+:FRZ123_5:     _!_other_ports_!_G3/4_!_G1_!_G1/4_!_G1/4
+:FRZ152:       _!_other_ports_!_G1_!_G1_!_G1/4_!_G1/4
+:FRZ162:       _!_other_ports_!_G11/4_!_G11/4_!_G1/4_!_G1/4
+:FRZ182:       _!_other_ports_!_G2_!_G2_!_G1/4_!_G1/4
+:FRB06: ___________
+:FRB06: ___________
+
+# Löchertext
+FRR08W,FRR09W,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Loechertext_!_Alle Einschraublöcher nach DIN 3852 Form X
+FRR093,FRR103,FRR113,FRR123,FRR143_!_Loechertext_!_Alle Einschraublöcher nach DIN 3852
+
+# Material Geh und Deckel:
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_Material_Geh_!_0.7040 (EN-GJS-400-15; GGG-40) Gusseisen mit Kugelgraphit (Sphäroguss)
+FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Material_Geh_!_0.7040 (EN-GJS-400-15; GGG-40) Gusseisen mit Kugelgraphit (Sphäroguss) RILSAN beschichtet
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_Material_Deckel_!_0.7040 (EN-GJS-400-15; GGG-40) Gusseisen mit Kugelgraphit (Sphäroguss)
+FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Material_Deckel_!_1.4301
+
+# Material other components
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Innenteile_!_1.4301 / 1.4408 / Bronze GCuSn10/12
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Lagerbuchsen_!_Bronze GCuSn10/12
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Dichtungen_!_C4400 und NBR
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Antriebswelleabdichtung_!_O-Ring
+########### только после этого выводить инфо из !_10_! Beschichtung ###########
+
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_Aussengrund_!_Außenanstrich: Rostschutzfarbe RAL 6018 Gelbgrün
+FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_Aussengrund_!_Außenanstrich: RAL 7035 (Lichtgrau) oder RAL 7001 (Silbergrau) ohne zusätzlichen Rostschutzfarbe
+FRB_!_Aussengrund_!_Außenanstrich: Rostschutzfarbe RAL 6018 Gelbgrün
+
+# Auslegungsdaten:
+Betriebsdruck_!_FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123_!_16 bar
+Betriebsdruck_!_FRZ152,FRZ162,FRZ182_!_10 bar
+Betriebsdruck_!_FRB_!_**** ______________ bar ************
+Betriebtemperatur_!_FRB,FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143,FRZ103,FRZ123,FRZ152,FRZ162,FRZ182_!_100 Grad C
+
+# Andere Daten:
+FRR08W,FRR09W_!_Inhalt_!_19 Liter
+FRR093,FRR103_!_Inhalt_!_45 Liter
+FRR113_!_Inhalt_!_80 Liter
+FRR123,FRR143_!_Inhalt_!_154 Liter
+FRZ103_!_Inhalt_!_30 Liter
+FRZ123_!_Inhalt_!_60 Liter
+FRZ152_!_Inhalt_!_165 Liter
+FRZ162_!_Inhalt_!_220 Liter
+FRZ182_!_Inhalt_!_430 Liter
+
+FRR08W,FRR09W_!_Gewicht_!_120 kg
+FRR093,FRR103_!_Gewicht_!_205 kg
+FRR113_!_Gewicht_!_250 kg
+FRR123,FRR143_!_Gewicht_!_495 kg
+FRZ103_!_Gewicht_!_110 kg
+FRZ123_!_Gewicht_!_175 kg
+FRZ152_!_Gewicht_!_355 kg
+FRZ162_!_Gewicht_!_460 kg
+FRZ182_!_Gewicht_!_800 kg
+
+# Zeichnung
+FRR08W,FRR09W                                   _!_F_!_Zeichnung_!_5050-20137938-S00
+FRR093,FRR103,FRR113,FRR123,FRR143              _!_F_!_Zeichnung_!_5050-20177096-S00
+FRR08W,FRR09W,FRR093,FRR103,FRR113,FRR123,FRR143_!_G_!_Zeichnung_!_5050-20179624-S00
+FRZ103,FRZ123,FRZ152,FRZ162_!_Flanschlage 8_!_5050-20174318-S00 ????????????????
+FRZ103,FRZ123,FRZ152,FRZ162_!_Flanschlage 1_!_5050-20174362-S00 ??????????????
+
+# RS Ventile - options, if no data provided:
+RS_VENTIL_OPTIONS_!_0-ohne RS Ventil;2-RS Ventil EL 24V;3-RS Ventil ELPN 24V
+
+# Rückspülventie:
+# взять значение "G1/2" из OTHER PORTS выше
+RS_VENTIL_!_0_OHNE Rückspüllkugelhahn
+RS_VENTIL_!_2_!_G1/2_!_Kugelhahn G1/2 elektrisch 24V__76234599 *** SPUELVENTIL G1/2 N187 EL 24V GEMUE
+RS_VENTIL_!_2_!_G3/4_!_Kugelhahn G3/4 elektrisch 24V__76234603 *** SPUELVENTIL G3/4 N187 EL 24V 4SEK
+RS_VENTIL_!_2_!_G1_!_Kugelhahn G1 elektrisch 24V__76234595 *** SPUELVENTIL G1 N187 EL 24V
+RS_VENTIL_!_3_!_G1/2_!_Kugelhahn G1/2 elektro-pneumatisch 24V__76234749 *** KUGELH G 1/2 PN40 EP 24V DC MS
+RS_VENTIL_!_3_!_G3/4_!_Kugelhahn G3/4 elektro-pneumatisch 24V__76234750 *** SPUELVENTIL G3/4 N198 EL/PN 24V DC
+RS_VENTIL_!_3_!_G1_!_Kugelhahn G1 elektro-pneumatisch 24V__79360462 *** KUGELH G1   PN40  ST EP24
+
+# dP Messung - if no data provided:
+DPM_OPTIONS_!_00-ohne DP Kontrolle;DT-mit 2x Drucktransmitter;D2-DDA 5.01;D5-DDA 5.02;PI-PIS 3180 0-16BAR EX 1M KAPILLARLEITUNG
+
+# dP Messung:
+DP_MESSUNG_!_00_!_OHNE
+DP_MESSUNG_!_DT_!_2x Drucktransmitter__70602250 *** DTM G1/4 DT2 -1/15BAR 0-10V AC/DC M12
+DP_MESSUNG_!_D2_!_Differenz-Druck-Kontrolle__76233053 *** DDA 5.01 PN100 120°C FKM C2 0,7BAR
+DP_MESSUNG_!_D5_!_Differenz-Druck-Kontrolle__76233092 *** DDA 5.02 PN100 120°C FKM C2 0,7BAR
+DP_MESSUNG_!_PI_!_Differenz-Druck-Kontrolle__70570829 *** PIS 3180 0-16BAR EX 1M KAPILLARLEITUNG
+добавить его описание в следующий файл
+
+# Elektrische Steuerung - Options 1 String:
+EL_STEUERUNG_OPTIONS_!_L-E900 lose beigelegt;A-E900 am Filtergehäuse angebaut;K-ohne Steuerung, jedoch mit angebautem Klemmenkasten;0-ohne elektrische Steuerung
+
+# Elektrische Steuerung:
+EL_STEUERUNG_!_L_!_E900 lose beigelegt
+EL_STEUERUNG_!_A_!_E900 am Filtergehäuse angebaut
+EL_STEUERUNG_!_K_!_ohne Steuerung, jedoch mit angebautem Klemmenkasten
+EL_STEUERUNG_!_0_!_ohne elektrische Steuerung
+
+# Einsatz: 
+# FRR/FRZ искать по 6 символам
+EINSATZ_BEZ_!_FRR08W,FRR09W_!_SF05S.0XX000_OGE,SF05A.01D000_OPT,SG03A.01D002_OPT
+EINSATZ_BEZ_!_FRR093,FRR103_!_SF07S.0XX000_OGE,SF07A.01E000_OPT,SF07A.07E000_PT2,SF07A.07EW00_PT2,SG20A.01E002_OPT,SG20A.07E002_OPT,SF071.EXX000_OPT,SG20S.0XX002_OPT
+EINSATZ_BEZ_!_FRZ103,FRZ123_!_SF07S.0XX000_OGE,SF07A.07EW00_PT2
+EINSATZ_BEZ_!_FRR113_!_SF46A.02M000_OPT,SG11A.02M000_OPT
+EINSATZ_BEZ_!_FRR123,FRR143_!_SF09S.0XX000_OGE,SF09A.01K000_OPT,SF09A.03S000_PT2,SF09A.01KW00_OPT,SF09A.03SW00_PT2,SG21A.01K002_OPT,SG21A.03S002_PT2,SG21S.0XX000_OPT,SG41A.03S002_PT2
+EINSATZ_BEZ_!_FRZ152,FRZ162_!_SF09S.0XX000_OGE,SF09A.01K000_OPT,SF09A.03S000_PT2,SF09A.01KW00_OPT,SF09A.03SW00_PT2
+
+# FRB искать по 5 символам
+EINSATZ_BEZ_!_FRB06,FRB07_!_SF03A.01B000_OPT,SF03A.03C000_OPT,SF03A.04V000_OPT,SF03S.0XX000_OGE
+EINSATZ_BEZ_!_FRB08,FRB09_!_SF05S.0XX000_OGE,SF05A.01D000_OPT
+EINSATZ_BEZ_!_FRB07,FRB08,FRB09,FRB10,FRB11,FRB12_!_SF07S.0XX000_OGE,SF07A.01E000_OPT,SF07A.07E000_PT2,SF07A.07EW00_PT2
+EINSATZ_BEZ_!_FRB11,FRB12,FRB14,FRB15,FRB16,FRB18_!_SF09S.0XX000_OGE,SF09A.01K000_OPT,SF09A.03S000_PT2,SF09A.01KW00_OPT,SF09A.03SW00_PT2
+EINSATZ_BEZ_!_FRB12,FRB14,FRB15,FRB16,FRB18_!_SF10A.01L000_OPT,SF10S.0XX000_OGE
+EINSATZ_BEZ_!_FRB15,FRB16_!_SF44A.01M000_OPT
+EINSATZ_BEZ_!_FRB11_!_SF46A.02M000_OPT
+EINSATZ_BEZ_!_FRB17_!_SF281.EXX000_OPT,SF28A.01P000_OPT,SF28A.07A000_PT3
+
+# на всякий случай добавляю расшифровку OPT / PT2 / PT3
+OPT_PT2_PT3_!_OGE=ohne Gewebe,OPT=Standard Plissiertiefe,PT2=mit zusätzliche PT+2,PT3=mit zusätzliche PT+3
+
+ELEMENT_TYPE1_!_SF-Eigendruckelement;SG-Fremddruckelement
+ELEMENT_TYPE2_!_S-Spaltfilterelement;A-Filterelement plissiert;1-Filterelement glattbespannt
+
+# M-Grundkörper
+MATERIAL_GK_!_A-Edelstahl 1.4571;C-C-Stahl 1.0038;D-Edelstahl 1.4439;E-Edelstahl 1.4301
+
+GEWEBE_NR_!_08 = 25 µm;10 = 35 µm;12 = 50 µm;14 = 60 µm;16 = 80 µm;17 = 80 µm;18 = 100 µm;20 = 100 µm;21 = 150 µm;24 = 200 µm;25 = 250 µm;28 = 500 µm;34 = 1500 µm;36 = 2000 µm;38 = 3000 µm
+
+# RS Menge
+FRR08W,FRR09W_!_RS_Menge_!_18 l / 9 sec.
+FRR093,FRR103,FRR113 __________ зависит от вставки или от фильтра ?
+FRR123,FRR143 __________________
+
+# Antrieb - Options:
+FRZ103,FRR08W,FRR09W,FRR093,FRR103,FRR113_!_Antrieb_!_76233125 *** GETR.MOT.GR.5 400/460V 50/60HZ NORD
+FRR123,FRR143_!_Antrieb_!_76233126 *** GETR.MOT.GR.7 400/460V 50/60HZ NORD IP55
+FRZ123_!_Antrieb_!_76121156 *** GETR.MOT.MB-SP.50HZ 0.18KW IP55/F   9.3U
+FRZ152,FRZ182_!_Antrieb_!_79303983 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN
+FRZ162_!_Antrieb_!_76121156 *** GETR.MOT.MB-SP.50HZ 0.18KW IP55/F   9.3U
+

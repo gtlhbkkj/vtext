@@ -1,0 +1,47 @@
+﻿# ENDNUMMER 
+::
+-3116: AF713_G1,AF713_GX1,AF724_G4,AF736_G3,AF936_G3,AF113_G3,AF132_G4
+Motor SEW 230/400V, 50Hz; 14/min.
+::
+-3864: AF713_G1,AF713_GX1,AF724_G4,AF736_G3,AF936_G3,AF112_G2,AF113_G3,AF172_G2,AF173_G3
+Anbauten mit Anschluss M12x1
+::
+-3150: AF173_G3,AF113_G3,AF736_G3,usw,usw,---------------------
+- Motor 480 V / 60 Hz, UL-Zertifikat
+  (USA-Zulassung)
+::
+-4166: AF736_G3,AF936_G3,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1
+- 3 Abstreifer 3 x 120 ° am Umfang verteilt
+- Elementlagerung und Mitnehmer-Verbindung wie AF73/G
+- verstärkte Abstreifträger
+::
+-4416: AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF736_G3,AF936_G3
+- mit Lippendichtung
+- mit Dichtadapter für Sperrflüssigkeit
+- Schmierung mit Vaseline (Dichtflansch gefüllt)
+::
+-4506: AF736_G3,AF936_G3
+- Abdichtungswelle 2x O-Ring mit Sperrflüssigkeit
+- Schmierung mit Vaseline
+- Korrosionsschutz mit wasserfreiem Weissöl
+::
+-4529: AF724_G4,AF736_G3,AF936_G3,AF112_G2,AF113_G3,AF172_G2,AF173_G3,AF133_G3
+- Motoranschluss Harting HAN 3A
+- Anbauten mit Anschluss M12x1
+- 5/2 Vorsteuerventile nach Namur (BEE/Airtec Typ : KN-05-510-HN-O62)
+- Zweites Filter u.Motor-Typenschild in PE-Folien unverlierbar am Filter/Motor befestigt
+- Nothandbetätigung der Magnetventile (Kugelhähne) ausschließlich mit Handtaster, nicht mit Feststelltaster
+- Drosselplatte DRPL Namur für 5/2-Wegeventil angebaut an Vorsteuerventilen
+::
+-4393: AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF736_G3,AF936_G3
+- Typenschild mit KraussMaffei-Label
+- Verschlussschrauben G2, G1/4 und G1/8 in entsprechende Bohrungen mit Dichtung aus ALU fest verschraubt.
+- Filter soll Buntmetall-frei sein.
+- Schmierung mit Vaseline wasserfrei.
+- Korrosionsschutz mit wasserfreiem Weissöl
+- (kein Öl auf Hydraulikölbasis zulässig)
+::
+-4386: AF112_G2,AF113_G3,AF172_G2,AF173_G3
+- Anbauten mit Anschluss M12x1 mont.
+- Adapter Gerätesteckdose DIN EN 17301- M12x1
+- AF 11X ohne P2 Drossel

@@ -1,0 +1,26 @@
+﻿# <p01_fs.txt>
+# Filter Baureihen
+
+#KSP Guss
+AF713_H2,AF711_G1,AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF736_G3_!_Automatik-Kantenspaltfilter in Gussausführung mit radialer Abstreiferabreinigung 
+AF936_G3_!_Automatik-Kantenspaltfilter in Gussausführung mit radialer Abstreiferabreinigung und integrierter Zyklonwirkung
+
+#RSF Guss
+AF112_G2,AF113_G3_!_Automatikfilter in Gussausführung mit Eigendruck-Segmentabreinigung
+AF122_G1_!_Automatikfilter in Gussausführung mit Eigendruck-Segmentabreinigung und integrierter Zyklonwirkung
+AF132_G2,AF133_G3_!_Automatikfilter Rückspülfilter in Gussausführung mit Fremddruckstoß-Segmentabreinigung
+AF172_G2,AF173_G3_!_Automatik-Fremddruck Rückspülfilter mit Fremddruckstoß-Segmentabreinigung und integrierter Zyklonwirkung
+
+#AF42 /S1 und /SH1 
+AF424_S1_!_Automatik-Kantenspaltfilter in Schweißausführung mit radialer Abstreiferabreinigung und Abgang Reinseite nach unten
+AF424_SH1_!_Automatik-Kantenspaltfilter mit Heizmantel in Schweißausführung mit radialer Abstreiferabreinigung und Abgang Reinseite nach unten
+
+#KSP Schweiß AF71...AF74/S1 ohne HZM
+AF713_S1,AF724_S1,AF736_S1,AF737_S1,AF738_S1,AF746_S1,AF747_S1,AF748_S1,AF749_S1_!_Automatik-Kantenspaltfilter in Schweißausführung mit radialer Abstreiferabreinigung 
+
+#KSP Schweiß AF71...AF74/SH1 mit HZM
+AF713_SH1,AF724_SH1,AF736_SH1,AF737_SH1,AF738_SH1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_Automatik-Kantenspaltfilter mit Heizmantel in Schweißausführung mit radialer Abstreiferabreinigung
+
+#KSP /SG1
+AF736_SG1,AF737_SG1,AF738_SG1_!_Automatik-Kantenspaltfilter mit radialer Abstreiferabreinigung Ausführunbg SG mit geteiltem, nach unten abbaubarem Gehäuse
+

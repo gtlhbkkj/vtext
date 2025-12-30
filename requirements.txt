@@ -1,0 +1,8 @@
+fastapi
+flake8
+python-dotenv
+jinja2
+httpx
+uvicorn
+gunicorn
+black

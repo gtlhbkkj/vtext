@@ -1,0 +1,333 @@
+﻿# Gehäuse Anschlüsse
+#--------------------
+# TODO:
+# AF42.-3480/SH1 - mit Flansch ??
+# 1 - port // 2 - PN // 3 - Material
+::
+AF122_G1_!_,21,_!_0,1,2_!_1,3_!_///# lt dem DB gibt es auch eine AF122*-*3-*/G1 Ausführung
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G 1/2 Einschraubloch DIN 3852
+Rückspüllanschluss: G 1/2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+::
+AF112_G2_!_,2,_!_0,1,2_!_1,3_!_
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G1 1/2 Einschraubloch DIN 3852 im Flansch DN40 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G 1/2
+::
+AF112_G2_!_,22,_!_0,1,2_!_1,3_!_
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G1 1/2 Einschraubloch DIN 3852 im Flansch DN40 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G 1/2
+Besonderheit: Zulaufanschluss G 1 1/4 verschlossen, Zulauf über Ablass G 1 1/2" DN40
+::
+AF113_G3_!_,3,13,_!_0,1,2_!_2_!_Edelstahl G2 / DN50
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852 in Flanschen DN50 PN16 EN 1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN50 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF113_G3_!_,13,_!_0,1,2_!_1,3_!_GGG G2
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF113_G3_!_,23,_!_0,1,2_!_1,3_!_GGG Sonderanschlüsse "23"
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+Besonderheiten:
+Medium-Zulauf erfolgt über den Ablass-Anschluss
+Besonderheit: Zulauf-Anschluss wird mit einer G2-Verschlussschraube und Dichtung verschlossen!
+::
+AF113_G3_!_,14,_!_0,1,2_!_1,2,3_!_GGG Einschr. FL. DN50
+Zu- / Ablaufanschluss: Einschraubflansch DN50 PN40 EN 1092-1/11B1 in G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF113_G3_!_,15,_!_0,1,2_!_1,2,3_!_GGG Einschr. FL. DN65
+Zu- / Ablaufanschluss: Einschraubflansch DN65 PN40 EN 1092-1/11B1 in G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF113_G3_!_,16,_!_0,1,2_!_1,2,3_!_Sonder mit Reduzierstück von G2 auf G1 1/4 reduziert
+Zu- / Ablaufanschluss: G1 1/4 Einschraublöcher DIN 3852 mit Reduzierstück von G2 auf G1 1/4 reduziert
+Ablassanschluss: G1 Einschraubloch DIN 3852 mit Reduzierstück von G2 auf G1 reduziert
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+Besonderheit: mit Reduzierstück von G2 auf G1 1/4 reduziert
+::
+AF113_G3_!_,18,_!_0,1,2_!_1,2,3_!_GGG G2 1/2
+Zu- / Ablaufanschluss: G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF132_G2_!_,2,_!_0,1,2_!_1_!_Standard GGG
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC 
+(bei Luft: G1/2 kundenseitig zu reduzieren)
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G 1/2
+::
+AF132_G2_!_,22,_!_0,1,2_!_1_!_
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC 
+(bei Luft: G1/2 kundenseitig zu reduzieren)
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G 1/2
+Besonderheit: Zulaufanschluss G 1 1/4 verschlossen, Zulauf über Ablass G 1 1/2" DN40
+::
+AF133_G3_!_,13,_!_0,1,2_!_1_!_Standard GGG
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF133_G3_!_,3,13,_!_0,1,2_!_2_!_Edelstahl DN50 / G2"
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852 in Flanschen DN50 PN16 EN 1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN50 PN16 EN 1092-1/11B1
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF172_G2_!_,2,_!_0,1,2_!_1,3_!_GGG Standard
+Zu- / Ablaufanschluss: G1½ Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G1½ Einschraubloch DIN 3852  im Flansch DN40 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G½
+::
+AF172_G2_!_,12,_!_0,1,2_!_1,3_!_GGG Zulauf-, Ablauf- und Ablassanschluss reduziert auf G1
+Zu- / Ablaufanschluss: G1½ Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G1½ Einschraubloch DIN 3852  im Flansch DN40 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G½
+Besonderheit: Zulauf-, Ablauf- und Ablassanschluss reduziert auf G1
+::
+AF172_G2_!_,22,_!_0,1,2_!_1,3_!_GGG Zulaufanschluss G 1 1/4 verschlossen, Zulauf über Ablass G 1 1/2" DN40
+Zu- / Ablaufanschluss: G1½ Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1
+Ablassanschluss: G1½ Einschraubloch DIN 3852  im Flansch DN40 PN16 EN 1092-1/11B1
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G 1/8
+Manometeranschlüsse: 2 x Gewinde G½
+Besonderheit: Zulaufanschluss G 1 1/4 verschlossen, Zulauf über Ablass G 1 1/2" DN40
+::
+AF173_G3_!_,3,13,_!_0,1,2_!_2_!_Edelstahl G2 / DN50
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852 in Flanschen DN50 PN16 EN 1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN50 PN16 EN 1092-1/11B1 
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF173_G3_!_,12,_!_0,1,2_!_1,3_!_GGG Zulauf-, Ablauf- und Ablassanschluss reduziert auf G1
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+Besonderheit: Zulauf-, Ablauf- und Ablassanschluss reduziert auf G1
+::
+AF173_G3_!_,13,_!_0,1,2_!_1,3_!_GGG G2
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF173_G3_!_,14,_!_0,1,2_!_1,2,3_!_GGG Einschr. FL. DN50
+Zu- / Ablaufanschluss: Einschraubflansch DN50 PN40 EN 1092-1/11B1 in G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF173_G3_!_,15,_!_0,1,2_!_1,2,3_!_GGG Einschr. FL. DN65
+Zu- / Ablaufanschluss: Einschraubflansch DN65 PN40 EN 1092-1/11B1 in G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF173_G3_!_,18,_!_0,1,2_!_1,2,3_!_GGG G2 1/2
+Zu- / Ablaufanschluss: G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Rückspülanschluss: G1 Einschraubloch DIN 3852
+Fremddruckanschluss: G1 Einschraubloch DIN 3852 
+mit integriertem Magnet-Membranventil 24 V DC
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF711_G1,AF713_G1_!_,12,_!_1,2,3,4,5,6_!_1,3,6_!_# Standard
+Zu- / Ablaufanschluss: G1 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+::
+AF713_GX1_!_,2,_!_1,2,3,4,5,6_!_1,3,6_!_# Standard
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+::
+AF713_GX2_!_,2,_!_1,2,3,4,5,6_!_2_!_# Standard
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+::
+AF713_H2_!_,16,_!_9_!_1,3_!_# Standard
+Zu- / Ablaufanschluss: Gewinde G1 1/4
+Ablassanschluss: Gewinde G 1/2
+Alle Einschraublöcher nach DIN 3852
+::
+AF724_G4_!_,2,_!_1,2,3,4,5_!_1,3,6_!_# Standard
+Zu- / Ablaufanschluss: G1 1/4 Einschraublöcher DIN 3852 im Flansch DN40
+Ablassanschluss: G2 Einschraubloch DIN 3852 
+Differenzdruckmessung: 2 x Gewinde G1/8  
+::
+AF936_G3,AF736_G3_!_,13,_!_1,2,3,4,5_!_1,3_!_# GGG G2
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,18,_!_1,2,3,4,5_!_1,3_!_# GGG G2 1/2
+Zu- / Ablaufanschluss: G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,14,_!_1,2,3,4_!_1,2,3_!_# GGG G2 mit Anschraubflansche DN50/PN40
+Zu- / Ablaufanschluss: Einschraubflansch DN50 PN40 im G2 Einschraubloch DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,14,_!_5_!_1,3_!_# GGG G2 mit Anschraubflansche DN50/PN63
+Zu- / Ablaufanschluss: Einschraubflansch DN50 PN40 im G2 Einschraubloch DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,15,_!_1,2,3,4_!_1,3_!_# GGG G2 1/2 mit Anschraubflansche DN65/PN40
+Zu- / Ablaufanschluss: Einschraubflansch DN65 PN40 im G2 1/2 Einschraubloch DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,15,_!_5_!_1,3,4_!_# GGG G2 1/2 mit Anschraubflansche DN65/PN63
+Zu- / Ablaufanschluss: Einschraubflansch DN65 PN63 im G2 1/2 Einschraubloch DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,3,13,_!_1,2,3,4_!_2_!_# Edelstahl G2 / DN50
+Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852 in Flanschen DN50 PN40 EN1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN 50 PN 16 EN 1092-1/11B1
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,18,_!_1,2,3,4_!_2_!_# Edelstahl G2 1/2 in DN50 ohne Anschraubflansche
+Zu- / Ablaufanschluss: G2 1/2 Einschraublöcher DIN 3852 in Flanschen DN50 PN40 EN1092-1/11B1
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN 50 PN 16 EN 1092-1/11B1
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,14,_!_1,2,3,4_!_2_!_# Edelstahl mit Anschraubflansche DN50/PN40
+Zu- / Ablaufanschluss: Einschraubflansch DN50 PN40 im G2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN 50 PN 16 EN 1092-1/11B1
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF936_G3,AF736_G3_!_,15,_!_1,2,3,4_!_2_!_# Edelstahl mit Anschraubflansche DN65/PN40
+Zu- / Ablaufanschluss: Einschraubflansch DN65 PN40 im G2 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G2 Einschraubloch DIN 3852 im Flansch DN 50 PN 16 EN 1092-1/11B1
+Differenzdruckmessung: 2 x Gewinde G1/8
+Manometeranschlüsse: 2 x Gewinde G1/4
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1_!_,1,_!_1,2,3,4,5,6_!_1,2,3_!_# Standard Schweiss G3/4"
+Zu- / Ablaufanschluss: G3/4 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: OHNE
+###########################################
+#######      BITTE ÜBERPRÜFEN !     #######
+###########################################
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1_!_,12,_!_1,2,3,4,5,6_!_1,2,3_!_# Standard Schweiss G1"
+Zu- / Ablaufanschluss: G1 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: OHNE
+###########################################
+#######      BITTE ÜBERPRÜFEN !     #######
+###########################################
+::
+AF713_S1,AF713_SH1,AF724_S1,AF724_SH1_!_,2,_!_1,2,3,4,5,6_!_1,2,3_!_# Standard Schweiss G1 1/2"
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: OHNE
+###########################################
+#######      BITTE ÜBERPRÜFEN !     #######
+###########################################
+::
+AF424_S1_!_,2,_!_1_!_2_!_# Standard S1
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: OHNE
+::
+AF424_SH1_!_,2,_!_1_!_2_!_# Standard SH1
+Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852
+Ablassanschluss: G1 Einschraubloch DIN 3852
+Differenzdruckmessung: OHNE
+Heizmantel: G 1/2  Einschraubloch DIN 3852
+::
+AF736_S1,AF737_S1,AF738_S1,AF736_SG1,AF737_SG1,AF738_SG1_!_,2,3,4,5,6,_!_1,2,3,4_!_1,2,3_!_# Schweiss ohne HZM
+Zu- / Ablaufanschluss: Flansch DN_XXX_ PN_XXX_ EN 1092-1/11B1
+Ablassanschluss: Flansch DN50 PN_XXX_ EN 1092-1/11B1
+Differenzdruckmessung: Flansch DN25 PN_XXX_ EN 1092-1/11B1
+::
+AF736_SH1,AF737_SH1,AF738_SH1_!_,2,3,4,5,6,_!_1,2,3,4_!_1,2,3_!_# Schweiss mit HZM
+Zu- / Ablaufanschluss: Flansch DN_XXX_ PN_XXX_ EN 1092-1/11B1
+Ablassanschluss: Flansch DN50 PN_XXX_ EN 1092-1/11B1
+Differenzdruckmessung: Flansch DN25 PN_XXX_ EN 1092-1/11B1
+Heizmantel: Flansch DN20 PN10 EN 1092-1/11B1
+::
+AF746_S1,AF747_S1,AF748_S1,AF749_S1_!_,2,3,4,5,6,7,8,9,_!_1,2,3,4_!_1,2,3_!_# Schweiss ohne HZM
+Zu- / Ablaufanschluss: Flansch DN_XXX_ PN_XXX_ EN 1092-1/11B1
+Ablassanschluss: Flansch DN50 PN_XXX_ EN 1092-1/11B1
+Differenzdruckmessung: Flansch DN25 PN_XXX_ EN 1092-1/11B1
+::
+AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_,2,3,4,5,6,7,8,9,_!_1,2,3,4_!_1,2,3_!_# Schweiss mit HZM
+Zu- / Ablaufanschluss: Flansch DN_XXX_ PN_XXX_ EN 1092-1/11B1
+Ablassanschluss: Flansch DN50 PN_XXX_ EN 1092-1/11B1
+Differenzdruckmessung: Flansch DN50 PN_XXX_ EN 1092-1/11B1
+Heizmantel: Flansch DN20 PN10 EN 1092-1/11B1

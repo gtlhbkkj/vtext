@@ -1,0 +1,236 @@
+﻿# <p02_element.txt>
+::
+AF7011_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 25 bar
+Gesamtfläche: 71 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Draht Edelstahl 1.4571/ ø42x74 mm, Drahtbreite 0,5 mm
+::
+AF7031_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 40 bar
+Gesamtfläche: 71 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x74 mm, Drahtbreite 0,5 mm
+::
+AF7013_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 25 bar
+Gesamtfläche: 230 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Draht Edelstahl 1.4571/ ø42x194 mm, Drahtbreite 0,5 mm
+::
+AF7033_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 40 bar
+Gesamtfläche: 230 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x194 mm, Drahtbreite 0,5 mm
+::
+AF7071_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 71 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x74 mm, Drahtbreite 1,0 mm
+::
+AF7081_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 71 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x74 mm, Drahtbreite 0,75 mm
+::
+AF7073_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 230 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x194 mm, Drahtbreite 1,0 mm
+::
+AF7083_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 230 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø42x194 mm, Drahtbreite 0,75 mm
+::
+AF50133_!_Lochfolienelement_!_Feinheit_!_
+Filterelementart: Lochfolienelement
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 230 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Folie Edelstahl 1.4571/ ø42x194 mm
+Elektronenstrahlgebohrte konische Filteröffnungen mit Öffnungswinkel von 45°
+::
+AF6014_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 25 bar
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Draht Edelstahl 1.4571/ ø65x231 mm, Drahtbreite 0,5 mm
+::
+AF6034_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 40 bar
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø65x231 mm, Drahtbreite 0,5 mm
+::
+AF6064_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 415 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø65x231 mm, Drahtbreite 1,8 mm
+::
+AF6074_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 415 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø65x231 mm, Drahtbreite 1,0 mm
+::
+AF6084_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 415 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø65x231 mm, Drahtbreite 0,75 mm
+::
+AF50134_!_Lochfolienelement_!_Feinheit_!_
+Filterelementart: Lochfolienelement
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 415 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Folie Edelstahl 1.4571/ ø65x231 mm
+Elektronenstrahlgebohrte konische Filteröffnungen mit Öffnungswinkel von 45°
+::
+AF6016_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 25 bar
+Gesamtfläche: 862 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Draht Edelstahl 1.4571/ ø110x265 mm, Drahtbreite 0,5 mm
+::
+AF6036_!_Kantenspaltspule_!_Spaltweite_!_
+Filterelementart: Kantenspaltspule
+Differenzdruckstabil: bis 45 bar
+Gesamtfläche: 862 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265 mm, Drahtbreite 0,5 mm
+::
+AF6066_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265, Drahtbreite 1,8 mm
+::
+AF6076_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265 mm, Drahtbreite 1,0 mm
+::
+AF6086_!_Kantenspaltrohr_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265, Drahtbreite 0,75 mm
+::
+AF6066SP_!_Kantenspaltrohr, verstärkte Ausführung mit Spirale_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 35 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265, Drahtbreite 1,8 mm
+::
+AF6076SP_!_Kantenspaltrohr, verstärkte Ausführung mit Spirale_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 35 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265 mm, Drahtbreite 1,0 mm
+::
+AF6086SP_!_Kantenspaltrohr, verstärkte Ausführung mit Spirale_!_Spaltweite_!_
+Filterelementart: Kantenspaltrohr
+Differenzdruckstabil: bis 35 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Draht Edelstahl 1.4571/ ø110x265, Drahtbreite 0,75 mm
+::
+AF50126_!_Lochfolienelement_!_Feinheit_!_
+Filterelementart: Lochfolienelement
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Folie Edelstahl 1.4571/ ø110x265 mm
+Elektronenstrahlgebohrte konische Filteröffnungen mit Öffnungswinkel von 30°
+::
+AF50136_!_Lochfolienelement_!_Feinheit_!_
+Filterelementart: Lochfolienelement
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Folie Edelstahl 1.4571/ ø110x265 mm
+Elektronenstrahlgebohrte konische Filteröffnungen mit Öffnungswinkel von 30°
+::
+AF6006_!_Lochblechelement_!_Feinheit_!_
+Filterelementart: Lochblechelement
+Differenzdruckstabil: bis 10 bar
+Gesamtfläche: 836 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Edelstahl, Filtermedium Edelstahl/ ø110x265 mm
+::
+AF120174_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 310 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Topmesh Edelstahl 1.4571/ ø65x231 mm
+::
+AF125214_!_Segmentelement / Wave Element_!_Feinheit_!_
+Filterelementart: Segmentelement / Wave Element
+Gesamtfläche: ==== IN KALKULATION === [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Edelstahl 1.4571/ ø65x231 mm
+::
+AF170174_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl / ø65x230 mm
+::
+AF170204_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe Stahl / ø65x230 mm
+::
+AF170176_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl / ø110x265 mm
+::
+AF170206_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571 / ø110x265 mm
+::
+AF170216_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper 1.4571, Filtermedium 1.4571, Halteringe 1.4571 / ø110x265 mm
+::
+AF100174_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl / ø65x230 mm
+::
+AF100204_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 437 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571 / ø65x230 mm
+::
+AF100176_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl / ø110x265 mm
+::
+AF100206_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571 / ø110x265 mm
+::
+AF100216_!_Segmentelement mit Topmesh_!_Feinheit_!_
+Filterelementart: Segmentelement mit Topmesh
+Gesamtfläche: 763 [cm2]
+Werkstoffe / Abmessungen: Tragkörper 1.4571, Filtermedium 1.4571, Halteringe 1.4571 / ø110x265 mm
+::
+AF105176_!_Segmentelement / Wave Element_!_Feinheit_!_
+Filterelementart: Segmentelement / Wave Element
+Gesamtfläche: 1750 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl / ø110x265 mm
+::
+AF105206_!_Segmentelement / Wave Element_!_Feinheit_!_
+Filterelementart: Segmentelement / Wave Element
+Gesamtfläche: 1750 [cm2]
+Werkstoffe / Abmessungen: Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571 / ø110x265 mm
+::
+AF105216_!_Segmentelement / Wave Element_!_Feinheit_!_
+Filterelementart: Segmentelement / Wave Element
+Gesamtfläche: 1750 [cm2]
+Werkstoffe / Abmessungen: Tragkörper 1.4571, Filtermedium 1.4401, Halteringe 1.4571 / ø110x265 mmx

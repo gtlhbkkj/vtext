@@ -1,0 +1,22 @@
+2025-12-30 19:00:19 ERROR: gawk: fatal: cannot open source file `/DE/AWK/check_input.awk' for reading: No such file or directory
+/opt/vtext/app/script/vtext.sh: line 101: [: -eq: unary operator expected
+gawk: fatal: cannot open source file `/DE/AWK/start_processing.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p01_fs.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p02_element.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p03_antrieb_01.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p03_antrieb_02.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p04_filter_ports.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p05_material.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p02_element.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p07_lastgr_1.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p07_lastgr_2.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p07_lastgr_3.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p07_lastgr_4.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p07_lastgr_5.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p08_farbton.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p09_kategorie.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/p10_endnr.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/print_vtext.awk' for reading: No such file or directory
+gawk: fatal: cannot open source file `/DE/AWK/print_errfin.awk' for reading: No such file or directory
+cat: /tmp/676aee9a-e5a9-11f0-bb7c-ffb62033a91a.fin.txt: No such file or directory
+
