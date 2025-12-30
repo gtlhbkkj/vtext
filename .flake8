@@ -1,0 +1,17 @@
+[flake8]
+exclude =
+    .venv
+    __pycache__
+    tmp
+    *.sql
+    *.html
+    *.bak
+    .git
+    .bash_history
+    .bashrc
+    .lesshst
+    .profile
+    *.txt
+    .git
+    .gitignore
+    .env

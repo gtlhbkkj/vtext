@@ -1,0 +1,23 @@
+# P2 –Regeldrossel für AF 11 Fremddruck-Ventil für AF 13,15 u.17 /// P3 –Regeldrossel für AF 11 u. 17
+#--------- -.1.../-----------
+::
+AF122_G1_!_1
+P2-Regeldrossel
+::
+AF112_G2,AF113_G3_!_1
+P2-Regeldrossel mit P2-Manometer
+::
+AF112_G2,AF113_G3_!_6
+P2-Regeldrossel mit P2-Manometer, P3-Regeldrossel und P3-Manometer
+::
+AF132_G2,AF133_G3,AF172_G2,AF173_G3_!_3
+Fremddruckventil G1 für Flüssigkeit, 24 V
+::
+AF132_G2,AF133_G3,AF172_G2,AF173_G3_!_4
+Fremddruckventil G1 für Flüssigkeit, 230 V
+::
+AF172_G2,AF173_G3_!_8
+Fremddruckventil G1 für Flüssigkeit, 24 V, mit P3-Regeldrossel und P3-Manometer
+::
+AF172_G2,AF173_G3_!_9
+Fremddruckventil G1 für Flüssigkeit, 230 V, mit P3-Regeldrossel und P3-Manometer

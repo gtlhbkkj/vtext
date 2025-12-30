@@ -1,0 +1,47 @@
+# KAT TEXT
+::
+__ OHNE KAT
+Filterbehälter ausgelegt für ungefährliche Flüssigkeiten (Gruppe 2) 
+im Sinne der Druckgeräterichtlinie DGRL 2014/68/EU
+::
+_K0_ 
+Filterbehälter ausgelegt für gefährliche Flüssigkeit (Gruppe 1) im Sinne der Druckgeräterichtlinie DGRL 2014/68/EU (Diagramm 3)
+Für den Druckbehälter ist keine Zertifizierung gemäß Konformitätsbewertungsverfahren erforderlich.
+Auslegung, Design und Herstellung nach Art. 4 Abs.3i "gute Ingenieurpraxis".
+::
+_KI_   Kat I
+Zertifikate und Prüfungen für Druckbehälter nach Konformitäts-Bewertungs-Kategorie I, Druckgeräterichtlinie DGRL 2014/68/EU:
+- Abnahmeprüfzeugnisse 3.1 / EN 10204 der Werkstoffe der drucktragenden Bauteile
+- Druckprobe
+- Verfahrensprüfung durch benannte Stelle (TÜV)
+- Konformitätserklärung und CE-Kennzeichnung des Druckbehälters
+::
+_KII_ Kat II
+Zertifikate und Prüfungen für Druckbehälter nach Konformitäts-Bewertungs-Kategorie II, Druckgeräterichtlinie DGRL 2014/68/EU:
+- Abnahmeprüfzeugnisse 3.1 / EN 10204 der Werkstoffe der drucktragenden Bauteile
+- Druckprobe
+- Verfahrensprüfung durch benannte Stelle (TÜV)
+- Bescheinigung des Behälterbauers, Hersteller ist nach AD2000/HP0 zertifiziert
+- benannte Stelle (TÜV) auf Behälterschild angegeben
+- Konformitätserklärung und CE-Kennzeichnung des Druckbehälters
+::
+_KIII_ 
+Zertifikate und Prüfungen für Druckbehälter nach Konformitäts-Bewertungs-Kategorie III, Druckgeräterichtlinie DGRL 2014/68/EU:
+- Abnahmeprüfzeugnisse 3.1 / EN 10204 der Werkstoffe der drucktragenden Bauteile
+- Druckprobe
+- Verfahrensprüfung durch benannte Stelle (TÜV)
+- Bescheinigung des Behälterbauers, Hersteller ist nach AD2000/HP0 zertifiziert
+- Vorprüfung der Zeichnungen durch benannte Stelle (TÜV)
+- Abschlussprüfung durch benannte Stelle (TÜV)
+- Benannte Stelle (TÜV) auf Behälterschild angegeben
+- Konformitätserklärung und CE-Kennzeichnung des Druckbehälters
+::
+_KIV_
+Zertifikate und Prüfungen für Druckbehälter nach Konformitäts-Bewertungs-Kategorie IV, Druckgeräterichtlinie DGRL 2014/68/EU:
+- Abnahmeprüfzeugnisse 3.1 / EN 10204 der Werkstoffe der drucktragenden Bauteile
+- Verfahrensprüfung durch benannte Stelle (TÜV)
+- Bescheinigung des Behälterbauers, Hersteller ist nach AD2000/HP0 zertifiziert
+- Vorprüfung der Zeichnungen durch benannte Stelle (TÜV)
+- Druckprobe und Abschlussprüfung durch benannte Stelle (TÜV)
+- Benannte Stelle (TÜV) auf Behälterschild angegeben
+- Konformitätserklärung und CE-Kennzeichnung des Druckbehälters

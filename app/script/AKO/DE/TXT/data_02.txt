@@ -1,0 +1,258 @@
+# MOTOR
+::
+76233125 *** GETR.MOT.GR.5 400/460V 50/60HZ NORD
+Stirnradgetriebemotor
+SPANNUNG   : 230/400 V / 265/460 V
+FREQUENZ   : 50 Hz / 60 HZ
+LEISTUNG   : 0,12 KW / 0,12 KW
+NENNSTROM  : 0,68/0,39 A / 0,62/0,36 A
+NENNDREHZAHL: 1370 U/MIN / 1695 U/MIN
+ABTRIEBSDREHZAHL: 7 U/MIN / 8,5 U/MIN
+ABTRIEBSDREHMOMENT: ~125 NM
+SCHUTZART  : IP 55
+::
+76233126 *** GETR.MOT.GR.7 400/460V 50/60HZ NORD IP55
+Stirnradgetriebemotor
+Spannung:            230/ 400V 265/ 460V
+Frequenz:            50Hz/ 60Hz
+Nennleistung:        0,18kW/0,18kW
+Nennstrom IN:        1,18A/ 0,69A 1,13A/ 0,66A
+ab 2025              1,02A/0,59A    0,94A/0,54A
+Drehmoment:          296Nm
+Nenndrehzahl:        1385rpm/ 1710rpm
+Antriebsdrehzagl:    6rpm/ 7rpm
+Schutzart:           IP55
+Isolierstoffklasse:  F VDE 0530
+Effizienzklasse:     IE3
+::
+76121156 *** GETR.MOT.MB-SP.50HZ 0.18KW IP55/F   9.3U
+SPANNUNG   : 230/400V   265/460V
+FREQUENZ   : 50Hz       60Hz
+LEISTUNG   : 0,18KW     0.21kW
+STROM      : 1.16/0.67  1.18/0.68
+SCHUTZART  : IP 55F
+BAUFORM    : B14   GESAMTBAUFORM : B6
+DREHZAHL   : 9.33 U/MIN 11,2 U/MIN
+::
+79303983 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN
+SPANNUNG   : 230/400 V //  265/460 V
+STROMAUFN. : 1,02/0,59 A //  0,92/0,53 A
+FREQUENZ   : 50 HZ // 60 HZ
+LEISTUNG   : 0,18 KW // 0,18 KW
+SCHUTZART  : IP 55 F
+BAUFORM    : B6
+DREHZAHL   : 14 +3 U/MIN. (50Hz)
+KLEMMENKASTENLAGE: 2
+NABENABDECKUNG : K
+::
+76121156 *** GETR.MOT.MB-SP.50HZ 0.18KW IP55/F   9.3U
+SPANNUNG   : 230/400V   265/460V
+FREQUENZ   : 50Hz       60Hz
+LEISTUNG   : 0,18KW     0.21kW
+STROM      : 1.16/0.67  1.18/0.68
+SCHUTZART  : IP 55F
+BAUFORM    : B14   GESAMTBAUFORM : B6
+DREHZAHL   : 9.33 U/MIN 11,2 U/MIN
+::
+# SPÜLLVENTILE
+::
+# KuHa G1/2 ELEKTRISH 24V
+76234599 *** SPUELVENTIL G1/2 N187 EL 24V GEMUE
+Durchgangs - Kugelhahn IG 1/2", PN 63
+direkt montiert mit elektrischem Stellantrieb
+Kugelhahngehäuse : Edelstahl 1.4408
+Kugel : Edelstahl 1.4401
+Dichtungen : PTFE (TFM1600)
+Antrieb : elektrisch 20 Nm
+Steuerspannung : 24 V AC/DC
+Schutzart : IP 65
+Stellzeit : 4 Sek. für 90°
+2 zusätzliche potentialefreie Endschalter
+komplett montiert
+::
+# KuHa G3/4 ELEKTRISH 24V
+76234603 *** SPUELVENTIL G3/4 N187 EL 24V 4SEK
+Durchgangs - Kugelhahn IG 3/4", PN 63
+direkt montiert mit elektrischem Stellantrieb
+Kugelhahngehäuse : Edelstahl 1.4408
+Kugel : Edelstahl 1.4401
+Dichtungen : PTFE (TFM1600)
+Antrieb : elektrisch 20 Nm
+Steuerspannung : 24 V AC/DC
+Schutzart : IP 65
+Stellzeit : 4 Sek. für 90°
+2 zusätzliche potentialefreie Endschalter
+komplett montiert
+::
+# KuHa G1 ELEKTRISH 24V
+76234595 *** SPUELVENTIL G1 N187 EL 24V
+Durchgangs - Kugelhahn IG 1", PN 63
+direkt montiert mit elektrischem Stellantrieb
+Kugelhahngehäuse : Edelstahl 1.4408
+Kugel : Edelstahl 1.4401
+Dichtungen : PTFE (TFM1600)
+Drehmoment : 20NM
+Steuerspannung : 24V AC/DC
+Schutzart : IP 65
+Stellzeit : 4 Sek. für 90°
+2 zusätzliche potentialefreie Endschalter
+komplett montiert
+::
+# KuHa G1 1/4 ELEKTRISH 24V
+76234601 *** SPUELVENTIL G1 1/4 N187 EL 24V GEMUE
+Durchgangs - Kugelhahn IG 11/4", PN 63
+direkt montiert mit elektrischem Stellantrieb
+Artikel: ER309650-07
+Kugelhahngehäuse : Edelstahl 1.4408
+Kugel : Edelstahl 1.4401
+Dichtungen : PTFE (TFM1600)
+Drehmoment : 20NM
+Steuerspannung : 24V AC/DC
+Schutzart : IP 65
+Stellzeit : 4 Sek. für 90°
+2 zusätzliche potentialefreie Endschalter
+komplett montiert
+::
+# KuHa G1/2 ELPN 24V
+76234749 *** KUGELH G 1/2 PN40 EP 24V DC MS
+Duchgangs-Kugelhahn IG 1/2" voller Durchgang, PN 40
+direkt montiert mit pneumatischem Drehantrieb
+Gehäuse Ms-vernickelt, Kugel: Ms-hartverchromt,
+Dichtung: PTFE
+Antrieb: pneumatisch doppeltwirkend
+Ansteuerung: 5/2-Namur-MV, 24 VDC, IP 65,
+mit Nothandbetätigung 
+komplett montiert
+ANTRIEB
+- BETAETIGUNGSART: PNEUMATISCH
+- STEUERDRUCK:     MIN. 4BAR
+- AUSRICHTUNG:     QUER ZUR DURCHFLUSSRICHTUNG MONTIERT
+STEUERVENTIL
+- 5/2-WEGE-VENTIL ANGEBAUT; 24V DC; FEDERRUECKSTELLEND
+- STROMLOS GESCHLOSSEN
+- MIT STECKVERBINDER NACH DIN EN 175301-803 FORM B
+- PASSENDER FREIER STECKVERBINDER BEILIEGEND/VORMONTIERT
+- MIT SCHALLDAEMPFER-ABLUFTDROSSEL
+- SCHUTZART: IP65
+::
+# KuHa G3/4 ELPN 24V
+76234750 *** SPUELVENTIL G3/4 N198 EL/PN 24V DC
+Kugelhahn KA 3/4", mit Antrieb
+Messing/PTFE-FKM, doppeltwirkend
+5/2-Wege Magnetv. Namur DN6, 24V DC
+3-10bar,mit Handnotbet. Alu/NBR
+Abluftdrossel mit Schalldämpfer 1/4"
+Messing
+verschraubt in Magnetventil
+stromlos geschlossen
+::
+# KuHa G1 ELPN 24V
+79360462 *** KUGELH G1   PN40  ST EP24
+KUGELH G1   PN40  ST EP24
+ARMATUR
+- ANSCHLUSS:            G1 Innengewinde
+- DRUCKSTUFE:           PN40
+- WERKSTOFF GEH:        C-STAHL VERNICKELT
+- KUGEL:                MESSING HARTVERCHROMT
+- DICHTUNG:             PTFE-FKM
+- BETRIEBSTEMPERATUR:   -10 - +100°C
+ANTRIEB
+- BETAETIGUNGSART: PNEUMATISCH
+- STEUERDRUCK:     MIN. 4BAR
+- AUSRICHTUNG:     QUER ZUR DURCHFLUSSRICHTUNG MONTIERT
+STEUERVENTIL
+- 5/2-WEGE-VENTIL ANGEBAUT; 24V DC; FEDERRUECKSTELLEND
+- STROMLOS GESCHLOSSEN
+- MIT STECKVERBINDER NACH DIN EN 175301-803 FORM B VORMONTIERT
+- MIT SCHALLDAEMPFER-ABLUFTDROSSEL
+- SCHUTZART: IP65
+::
+# KuHa G11/4 ELPN 24V
+76234753 *** KUGELH G11/4 PN32 EP  24  N198
+ANSCHLUSS:     G1 1/4 INNENGEWINDE
+DICHTUNG:      PTFE-FKM
+BETRIEBSDRUCK: PN32
+PNEUM.-ANTRIEB -DOPPELW.,
+ANGEBAUTES 5/2-WEGE MAGNETVENTIL
+ANTRIEB QUER ZUR DURCHFLUSSRICHTUNG ANGEBAUT!
+MIT SCHALLDAEMPFER-DROSSELN
+STEUERVENTIL STROMLOS GESCHLOSSEN!
+MIT ANGEBAUTER, PNEUMATISCHER, SCHWENKBARER,
+WINKEL-STECKVERSCHRAUBUNG (FÜR 8-ER SCHLAUCH)
+::
+# DTM
+::
+70602250 *** DTM G1/4 DT2 -1/15BAR 0-10V AC/DC M12
+Druckbereich:           -1 bis +15 barG
+Speisung:               14 bis 30 Vdc
+Ausgangssignal:         0 bis 10 V = - 1 bis + 15 bar
+Druckanschluß:          G1/4" außen Gewinde
+Elektrischer Anschluss: M12 - 4 Polig
+::
+76233092 *** DDA 5.02 PN100 120°C FKM C2 0,7BAR
+MEDIUM-BERUEHRTE TEILE: 
+KORROSIONSFEST HARTCOATIERTES ALU
+MESSFEDER: 1.4310
+Messbereich bis 1,3bar
+2 Kontakte
+1. Schaltpunkt (f1) bei ΔP = 0,7bar
+2. Schaltpunkt (f2) bei ΔP = 1,3bar
+Rollmembrane Viton
+::
+76233053 *** DDA 5.01 PN100 120°C FKM C2 0,7BAR
+Medium berührende Teile 1.4448
+Kolben 1.4435
+Messfeder 1.4310
+GEHAEUSE: AlSi12
+Messbereich bis 1,3bar
+2 Kontakt
+Schaltpunkt (f1) bei ΔP = 0,7bar
+Schaltpunkt (f2) bei ΔP = 1,3bar
+Rollmembrane FKM
+::
+70570829 *** PIS 3180 0-16BAR EX 1M KAPILLARLEITUNG
+Grundmessbereich Differenzdruck: 1,3 bis 16 bar
+max. Betriebsdruck (Überdruckfest): 16 (40) bar
+zul. Temperatur: -25 bis +85/+150
+Schutzart DIN 40050: IP 65
+Nennspannung VDC: 24
+zul. Betriebsspannung: 13,5 bis 45 VDC
+Ausgangssignal: 4 bis 20 mA + Hart 5.1
+Messwertanzeige: 5 stellige LED
+ATEX: Ex II 2G Exd IIC T5
+Elektr. Anschluss: M20x1,5 Verdrahtung über Klemmen
+Prozessanschluss: 2x Druckmittler DN25 PN40 mit Kapillarrohr
+Werkstoff Gehäuse: Edelstahl/Al
+Werkstoff medienberührt: Edelstahl
+::
+# Последняя группа
+G /// G = Abnahme Germanischer Loyd
+S /// S = Sonstige Abnahme
+. /// . = REST = UNBEKANNTE ABNAHME - PRÜFEN ###
+T /// TÜV (Modul G)
+L /// LRS
+D /// DNV
+N /// NK
+K /// KR
+V /// BV
+0 /// OHNE Abnahme
+::
+# FIlterfläche
+F02   530cm²
+F03  1310cm² 
+F05  3100cm² =G03
+F07  6280cm² =G20
+F46 10380cm² =G11
+F09 14750cm² =G21 
+G41 18900cm²
+F10 21200cm² =G22
+F44 28000cm² =G27
+F22 22000cm² 
+F23 34000cm² 
+F24 41200cm² 
+F28 37500cm² =G24
+ 
+ 
+F07 aus AF8 ?
+F09 PT+2 = G41 ?
+F10 und F28 mit PT+3  ?

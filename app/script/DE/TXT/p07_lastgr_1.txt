@@ -1,0 +1,220 @@
+﻿# DP MESSUNG
+#--------------------
+# "0" is possible for all filter series
+# 1ый - "_!_" материал фильтр // 2ой - "_!_" цифра ДП
+# проверка а) содержит имя фильтра б) содержит материал номер с) содержит 1 цифру из 3 группы !!!!! содержит а не равно
+::
+AF713_H2,AF711_G1,AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF122_G1,AF112_G4,AF132_G4,AF172_G4,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF424_S1,AF424_SH1,AF713_S1,AF713_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_0_!_OHNE dP Schalter / Manometer
+::
+AF713_H2_!_1,3_!_6_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 2,2 bar, statisch 450 bar
+Schaltpunkt/ Differenzdruck: PiS 3192/2,2
+max. stat. Betriebs-druck: 450 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G¼ über Anbaublock
+Werkstoff Oberteil/Unterteil/ Membran: PA6/Edelstahl /FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF713_H2_!_1,3_!_7_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 5 bar, statisch 450 bar
+Schaltpunkt/ Differenzdruck: PiS 3192/5,0
+max. stat. Betriebs-druck: 450 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G¼ über Anbaublock
+Werkstoff Oberteil/Unterteil/ Membran: PA6/Edelstahl /FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_1_!_Differenzdruckschalterr PiS 3076, Schaltpunkt bei 1,2 bar statisch 63 bar, Aluminium/FPM
+Schaltpunkt/ Differenzdruck: PiS 3076/1,2 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/Al/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_1_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 1,2 bar statisch 63 bar, Edelstahl
+Schaltpunkt/ Differenzdruck: PiS 3076 V2A/1,2 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/VA/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_2_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 0,7 bar statisch 63 bar, Aluminium/FPM
+Schaltpunkt/ Differenzdruck: PiS 3076/0,7 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/Al/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_2_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 0,7 bar statisch 63 bar, Edelstahl
+Schaltpunkt/ Differenzdruck: PiS 3076 V2A/0,7 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/VA/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1_!_1,2,3,6_!_3_!_PiS 3170 MFC, digitaler dp-Manometer m. Steuerungsfunktion in Kombination m. pneumatischem Schwenkantrieb
+Betriebsdaten:
+Grundmessbereich: 0 bis 16 bar
+Max. stat. Betriebsdruck: 32 bar
+zul. Medientemperatur: -10 bis +70°C
+Schutzart des Gehäuses DIN 40050: IP 54
+Elektrische Daten: 
+Versorgungs-/Steuerspannung: 24 VDC
+Schaltausgänge 24 VDC: 4 Schaltausgänge für Ventile jeweils 0,5 A belastbar, 1 Ausgang für Drehantrieb bis 1,0 A belastbar
+Messwertanzeige: 3 Stellen + Vorzeichen
+ATEX: OHNE
+Elektrische Anschlüsse: Klemmleiste, Kabelverschraubungen
+Prozessanschluss: Innengewinde G1/8, passend zur direkten Montage an Filtration Group Filter
+Werkstoffe: 
+Medienberührter Sensor: Edelstahl, FKM, NBR
+Gehäuse: Polyamid PA
+::
+AF711_G1,AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_4_!_PiS 3190, digitaler dp -Manometer, 2 Schaltpunkte, einstellbar
+FILTRATION GROUP Digitales Differenzdruck-Mess- und Anzeigegerät PIS 3190
+Vielfältig konfigurierbares LCD-Display mit programmierbarer Farbwechsel-Hintergrundbeleuchtung,
+Prozessanschlüsse: rückseitig 2 x G1/8
+Messbereiche:
+Differenzdruck: 0...40 bar,
+Ein-/Ausgangsdruck: 0...40 bar, Überdruckfest 80 bar
+2 programmierbare Schaltausgänge
+IO-Link Digitale Datenschnittstelle:
+- ersetzt den klassischen Analog-Ausgang 4…20 mA/0…10 V
+- einfachere Verkabelung, keine geschirmte Messkabel für Analogsignale
+- IO-Link ist funktional und ermöglicht durch bidirektionale Kommunikation eine erweiterte Diagnose von Sensoren und eine einfache und schnelle Parametrierung.
+Datenlogging-Funktion: Speicherung der Messdaten von ca. 20 Wochen
+Visualisierung der Messdaten über die App „Differenzdruckanzeiger Report" auf FG Homepage
+Versorgungsspannung: 12...32 V DC
+Elektrische Anschlüße:
+1 X M12x1 Spannungsversorgung + 2 Schaltausgänge
+1 x M12x1 Spannungsversorgung + IO-Link
+- Automatik-Kugelhahn G2 für Ablass- bzw. Entleerungsanschluss
+mit pneumatischem Schwenkantrieb mit 5/2-Wege-Magnetventil 24 V DC
+Material Gehäuse und  Kugel:  Edelstahl 1.4408, Kugeldichtung:  PTFE
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_8_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 2,2 bar statisch 63 bar, Aluminium/FPM
+Schaltpunkt/ Differenzdruck: PiS 3076/2,2 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/Al/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_8_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 2,2 bar statisch 63 bar, Edelstahl
+Schaltpunkt/ Differenzdruck: PiS 3076 V2A/2,2 bar
+max. stat. Betriebs-druck: 63 bar
+zul. Betriebstemperatur: 10 bis +120 °C
+max. zul. Viskosität: 1000 mm²/s
+Kontaktart: 1 Kontakt NO/NC = Wechselkontakt
+Elektr. Anschluss: Leitungsdose DIN EN 175301-803
+Prozessanschluss: 2x G1/8 direkt
+Werkstoff Oberteil/Unterteil/ Membran: PA6/VA/FKM
+Schaltspannung: 250 VAC/200 VDC
+max. Schaltstrom: 1 A
+Schutzart DIN 40050: IP 65
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_B_!_PIS3154 opt./el. Delta-p-Anzeiger, 2 Schaltpunkte (0,6/0,8), Schließer/Öffner, M12x1
+Differenzdruckanzeiger PIS 3154
+Nenndruck: 160 bar
+Temperaturbereich: -10 °C bis +120 °C
+Werkstoff Unterteil: Al
+Werkstoff Oberteil: PA 6
+Dichtungen: FPM
+Kontaktart: Schließer bei 75 % des Anzeigedrucks Öffner bei 100 % des Anzeigedrucks
+Spannungsbereich: 10 bis 30 VDC
+Schaltstrom: max. 1 A
+Schaltvermögen: max. 20 W
+Anzeige über LED’s im elektrischen Schaltteil: 
+Bereitschaft (LED grün)
+75 % - Schaltpunkt (LED gelb) 
+100 % - Schaltpunkt (LED rot)
+Schutzart: IP 65
+Steckverbindung: M12x1 4 - polig
+::
+AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_C_!_PIS 3310/0,5-6 FKM IO-LINK
+Werkstoff: Al - eloxiert
+Anschluss: 1.4305, Viton
+Prozessanschluss: M20x1,5
+Elektr. Anschluss: M12 Steckverbinder, 4polig
+Mediumstemperatur: -40 °C bis +85 °C
+Umgebungstemperatur: -20 °C bis +70 °C
+Betriebsdruck max.: Max. 400 bar
+Betriebsspannung: 18 – 30 V DC
+Stromaufnahme: < 100 mA
+Differenzdruck: 6 bar
+Messprinzip: Differenzdruckkolben mit Magnet und Hallsensor
+Summe aller Abweichungen: 10% vom Endwert
+Ausgang: IO-Link
+Schutzart: IP67
+::
+AF713_GX1,AF724_G4,AF424_S1,AF424_SH1,AF724_S1,AF724_SH1,AF736_G3,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_5_!_Dig.Delta-p-Schalter mit PDT PIS 3175
+Grundmessbereich Differenzdruck: 0 bis 6/0 bis 40 bar
+max. Betriebsdruck (Überdruckfest): 16 (32)/40 (80) bar
+zul. Temperatur: < _XXX_ °C 
+Schutzart DIN 40050: IP 65
+Nennspannung VDC: 24
+zul. Betriebsspannung: 12 bis 32 VDC
+Ausgangssignal: 4 bis 20 mA/0 bis 10 V
+Schaltkontakte: 2 Relaiskontakte NO/NC programmierbar
+Messwertanzeige: 3,5 stellige LED
+ATEX: OHNE
+Elektr. Anschluss: M12x1 für Versorgung u. 2 Schaltkontakte + M8x1 analoges Ausgangssignal
+Prozessanschluss: Drucktransmitteranschluss : 2x G1 Optional mit Flansch 2x DN 25 PN40
+Werkstoff Gehäuse: Polyamid PA
+Werkstoff medienberührt: Edelstahl, FKM
+::
+AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF424_S1,AF424_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_9_!_PIS 3180 Ex II2G Ex d IIC T5
+Grundmessbereich Differenzdruck: -1,3 bis 16 bar
+max. Betriebsdruck (Überdruckfest): 16 (40) bar
+zul. Temperatur: -25 bis +85/+150
+Schutzart DIN 40050: IP 65
+Nennspannung VDC: 24
+zul. Betriebsspannung: 13,5 bis 45 VDC
+Ausgangssignal: 4 bis 20 mA + Hart 5.1
+Messwertanzeige: 5 stellige LED
+ATEX: Ex II 2G Exd IIC T5
+Elektr. Anschluss: M20x1,5 Verdrahtung über Klemmen
+Prozessanschluss: 2x Druckmittler DN25 PN40 mit Kapillarrohr
+Werkstoff Gehäuse: Edelstahl/Al
+Werkstoff medienberührt: Edelstahl
+::
+AF713_S1,AF713_SH1_!_1,2,3_!_1,2,3,4,5,6,7,8,9_!_kleine Schweissfilter
+###########################################
+#######      BITTE ÜBERPRÜFEN !     #######
+###########################################
