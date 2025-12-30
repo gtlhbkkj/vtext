@@ -17,5 +17,5 @@ errlog.txt
 result.txt
 fin.txt
 .lesshst
-logs
+logs/
 .gitconfig
