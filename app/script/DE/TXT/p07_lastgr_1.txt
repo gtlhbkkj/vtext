@@ -32,7 +32,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_1_!_Differenzdruckschalterr PiS 3076, Schaltpunkt bei 1,2 bar statisch 63 bar, Aluminium/FPM
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3_!_1_!_Differenzdruckschalterr PiS 3076, Schaltpunkt bei 1,2 bar statisch 63 bar, Aluminium/FPM
 Schaltpunkt/ Differenzdruck: PiS 3076/1,2 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -45,7 +45,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_1_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 1,2 bar statisch 63 bar, Edelstahl
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2,6_!_1_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 1,2 bar statisch 63 bar, Edelstahl
 Schaltpunkt/ Differenzdruck: PiS 3076 V2A/1,2 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -58,7 +58,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_2_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 0,7 bar statisch 63 bar, Aluminium/FPM
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3_!_2_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 0,7 bar statisch 63 bar, Aluminium/FPM
 Schaltpunkt/ Differenzdruck: PiS 3076/0,7 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -71,7 +71,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_2_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 0,7 bar statisch 63 bar, Edelstahl
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF713_GX2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2,6_!_2_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 0,7 bar statisch 63 bar, Edelstahl
 Schaltpunkt/ Differenzdruck: PiS 3076 V2A/0,7 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -123,7 +123,7 @@ Elektrische Anschlüße:
 mit pneumatischem Schwenkantrieb mit 5/2-Wege-Magnetventil 24 V DC
 Material Gehäuse und  Kugel:  Edelstahl 1.4408, Kugeldichtung:  PTFE
 ::
-AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3,6_!_8_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 2,2 bar statisch 63 bar, Aluminium/FPM
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3_!_8_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 2,2 bar statisch 63 bar, Aluminium/FPM
 Schaltpunkt/ Differenzdruck: PiS 3076/2,2 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -136,7 +136,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2_!_8_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 2,2 bar statisch 63 bar, Edelstahl
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF736_S1,AF737_S1,AF738_S1_!_2,6_!_8_!_Differenzdruckschalter PiS 3076 V2A, Schaltpunkt bei 2,2 bar statisch 63 bar, Edelstahl
 Schaltpunkt/ Differenzdruck: PiS 3076 V2A/2,2 bar
 max. stat. Betriebs-druck: 63 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -149,7 +149,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_B_!_PIS3154 opt./el. Delta-p-Anzeiger, 2 Schaltpunkte (0,6/0,8), Schließer/Öffner, M12x1
+AF711_G1,AF713_G1,AF813_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_B_!_PIS3154 opt./el. Delta-p-Anzeiger, 2 Schaltpunkte (0,6/0,8), Schließer/Öffner, M12x1
 Differenzdruckanzeiger PIS 3154
 Nenndruck: 160 bar
 Temperaturbereich: -10 °C bis +120 °C
@@ -167,7 +167,7 @@ Bereitschaft (LED grün)
 Schutzart: IP 65
 Steckverbindung: M12x1 4 - polig
 ::
-AF711_G1,AF713_G1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_C_!_PIS 3310/0,5-6 FKM IO-LINK
+AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,2,3,6_!_C_!_PIS 3310/0,5-6 FKM IO-LINK
 Werkstoff: Al - eloxiert
 Anschluss: 1.4305, Viton
 Prozessanschluss: M20x1,5
@@ -183,7 +183,7 @@ Summe aller Abweichungen: 10% vom Endwert
 Ausgang: IO-Link
 Schutzart: IP67
 ::
-AF713_GX1,AF724_G4,AF424_S1,AF424_SH1,AF724_S1,AF724_SH1,AF736_G3,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_5_!_Dig.Delta-p-Schalter mit PDT PIS 3175
+AF713_G1,AF713_GX1,AF724_G4,AF424_S1,AF424_SH1,AF724_S1,AF724_SH1,AF736_G3,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_5_!_Dig.Delta-p-Schalter mit PDT PIS 3175
 Grundmessbereich Differenzdruck: 0 bis 6/0 bis 40 bar
 max. Betriebsdruck (Überdruckfest): 16 (32)/40 (80) bar
 zul. Temperatur: < _XXX_ °C 

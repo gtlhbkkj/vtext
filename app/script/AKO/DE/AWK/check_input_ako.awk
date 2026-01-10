@@ -1,9 +1,7 @@
 BEGIN {
-  print "<pre>" >> errlog_txt
   print "-----------------------------------------------------------------------------" >> errlog_txt
-  print mt "ERROR LOG FOR FILTER : " filter_name                                        >> errlog_txt
+  print "<B>" mt "CHECK LOG FOR FILTER : [" filter_name  "]</B>"                                      >> errlog_txt
   print "-----------------------------------------------------------------------------" >> errlog_txt
-  print "</pre>" >> errlog_txt
 
   RS = "\n"
   FS = "_!_"
@@ -30,32 +28,31 @@ no_of_parts = split(filter_name,parts," ")
 # "S"+p06 == s01, если он введен
 
 if (length(parts[1]) < 6) {
-  print "<pre>Err. 0001 - FILTER NAME IS TOO SHORT, PLS ENTER AT LEAST 6 CHARACTERS</pre>" >> errlog_txt
+  print "Err. 0001 - FILTER NAME IS TOO SHORT, PLS ENTER AT LEAST 6 CHARACTERS" >> errlog_txt
   error_code = 1
   exit
 }
 
-arr_input_str[1] = p01 = substr(parts[1],1,3)              # FRR
+arr_input_str[1] = p01 = substr(parts[1],1,3)    # FRR
 arr_input_str[2] = substr(parts[1],4,2)
 p02s= substr(parts[1],1,5)              # FRR14
 p02 = substr(parts[1],1,6)              # FRR143
-arr_input_str[3] = arr_input_str[4] = p03 = substr(parts[1],7,1); sp03 = p03  # 1 = Lage der HA   /// что такое sp03 ?????
-arr_input_str[5] = p04 = substr(parts[1],8,1); sp04 = p04  # 1 = Deckelverschlussart
-arr_input_str[6] = p05 = substr(parts[1],9,1); sp03 = p03  # 0 = Sonderheiten 
-p06 = substr(parts[1],10,3); sp03 = p03 # G21 = Einsatz
+arr_input_str[3] = arr_input_str[4] = p03 = substr(parts[1],7,1);  # 1 = Lage der HA 
+arr_input_str[5] = p04 = substr(parts[1],8,1);  # 1 = Deckelverschlussart
+arr_input_str[6] = p05 = substr(parts[1],9,1);  # 0 = Sonderheiten 
+p06 = substr(parts[1],10,3);  # G21 = Einsatz
 arr_input_str[7] = p07 = substr(parts[1],13,1) # B
 arr_input_str[8] = p08 = substr(parts[1],14,1) # 4
-p09 = substr(parts[1],15,1) # 1
-arr_input_str[9] = p10 = substr(parts[1],16,1) # 0
+#p09 = substr(parts[1],15,1) # 1
+arr_input_str[9] = p09 = substr(parts[1],15,2) # 0
 
-if (p09 != "" && p09 != 0)  # это стандарт, все остальное - sonder
-    p09 = 0
+if (length(p09) == 1)
+    p09 = "00"
 
-if (p09 == 0 && p10 != 5 )  # FRZ143_5 - другой размер RS Line
-    arr_input_str[i] = p10 = 0
+
 
 if (p06 != "" && p06 !~ /^(F|G)[0-9]{2}$/) {
-  print "<pre>Err. 0002 - FILTER INSERT NAME [" p06 "] IS WRONG</pre>" >> errlog_txt
+  print "Err. 0002 - FILTER INSERT NAME [" p06 "] IS WRONG" >> errlog_txt
   error_code = 1
   exit
 }
@@ -67,10 +64,15 @@ norm_der_flansch = substr(parts[1],6,1)  # [3] или [W]
 fsstr_short = p01                         # FRR    / FRB
 fsstr_middle = p02s                       # FRR14  / FRB06
 fsstr_long1 = fsstr_long2 = p02           # FRR143
-if (p01 == "FRB") {
+if (p01 == "FRB" || p01 == "FRN" ) {
    fsstr_long1 = fsstr_short              # FRR143 / FRB
    fsstr_long2 = fsstr_middle             # FRR143 / FRB06
 }
+smotor = motor = ""
+fsstr_m_einsatz = p02
+if (p01 == "FRB" || p01 == "FRN" )
+   fsstr_m_einsatz = fsstr_long2 "_" p06
+
 
 # r01 = substr(parts[3],1,2)  # DT
 # r02 = substr(parts[3],3,1)  # 0
@@ -80,18 +82,21 @@ if (p01 == "FRB") {
 # r06 = substr(parts[3],7,1)  # X
 
 # ошибка при поиске find_error изначально присваиваем единицу, а если найдено то меняем на 0
-for (i=1; i<=10; i++) 
+for (i=1; i<=13; i++)
    ferr[i] = 1
-tferr[1]=  "Err. 0003 =Filter Series identification= failed. No info in DB about " p01
-tferr[2]=  "Err. 0004 =CHECK_FLANSCHE= failed. No info in DB about [<B>" fsstr_long2 "</B>]"
-tferr[3]=  "Err. 0005 =CHECK feasibility (LdH) Lage der Hauptanschlüsse= failed. No info in DB about LdH = ["p03"] in " p02 " ["p03"]" p04 p05 p06
-tferr[4]=  "Err. 0006 =CHECK (LdH) Lage der Hauptanschlüsse= failed. No info in DB about LdH = [" p03 "] in " p02 " ["p03"]" p04 p05 p06
-tferr[5]=  "Err. 0007 =CHECK Deckelverschlussart= failed. No info in DB about Deckelverschlussart = ["p04"] in " p02 p03 " ["p04"]" p05 p06
-tferr[6]=  "Err. 0008 =CHECK Sonderheiten= failed. No info in DB about Sonderheiten = [" p05 "] in " p02 p03 p04  "["p05"]" p06 p07 p08 
-tferr[7]=  "Err. 0009 =CHECK Wekrstoff Ausführung Geh= failed. No info in DB about [" p07 "] in " p02 p03 p04 p05 p06 "["p07"]"
-tferr[8]=  "Err. 0010 =CHECK Werkstoff Düse= failed. No info in DB about [" p08 "] in " p02 p03 p04 p05 p06 p07 "["p08"]" p09
-tferr[9]=  "Err. 0011 =CHECK Other Ports= failed. No info in DB about [" p10 "] in " p02 p03 p04 p05 p06 p07 p08 p09 "["p10"]"
-tferr[10]= "Err. 0012 =CHECK Einsatz= failed. No info in DB about Einsatz = ["p06"] in " p02 p03 p04 p05 "["p06"]"
+tferr[1]=  "Check 0003 =Filter Series identification=: [" p01 "]"
+tferr[2]=  "Check 0004 =CHECK_FLANSCHE= [" fsstr_long2 "]"
+tferr[3]=  "Check 0005 =CHECK feasibility (LdH) Lage der Hauptanschlüsse=: " p02 "["p03"]" p04 p05 p06
+tferr[4]=  "Check 0006 =CHECK Info zur (LdH) Lage der Hauptanschlüsse=: " p02 " ["p03"]" p04 p05 p06
+tferr[5]=  "Check 0007 =CHECK Deckelverschlussart=: "  p02 p03 "["p04"]" p05 p06
+tferr[6]=  "Check 0008 =CHECK Sonderheiten=: "  p02 p03 p04  "["p05"]" p06 p07 p08
+tferr[7]=  "Check 0009 =CHECK Wekrstoff Ausführung Geh=: " p02 p03 p04 p05 p06 "["p07"]"
+tferr[8]=  "Check 0010 =CHECK Werkstoff Düse=: " p02 p03 p04 p05 p06 p07 "["p08"]" p09
+tferr[9]=  "Check 0011 =CHECK Einsatz 1x RUN=: " p02 p03 p04 p05 "["p06"]"
+tferr[10]= "Check 0012 =CHECK Einsatz 2x RUN=: " p02 p03 p04 p05 "["p06"]"
+tferr[11]= "Check 0013 =CHECK Endnummer=: " p02 p03 p04 p05 p06 p07 p08 "["p09"]"
+tferr[12]= "Check 0014 =CHECK Sondermotor=: " p02 p03 p04 p05 p06 p07 p08 "["p09"]"
+tferr[13]= "Check 0015 =CHECK Standardmotor=: " p02 p03 p04 p05 p06 p07 p08 p09
 
 # 1 величина - это номер ошибки tferr[i]
 arr_radio[1] = "1__p01__Filter Series:"
@@ -102,24 +107,45 @@ arr_radio[5] = "6__p05__Sonderheiten:"
 arr_radio[6] = "10__p06__Filtereinsatz:"
 arr_radio[7] = "7__p07__Ausführung Gehäuse:"
 arr_radio[8] = "8__p08__Werkstoff Düse:"
-arr_radio[9] = "9__p10__Spülleitung:"
 
-# found p01, etc. . параметры которые ищем для скрытых полей
-fp01=fp02=fp03=fp04=fp05=fp06=fp07=fp08=fp09=fp10=0
-fr01=fr02=fr03=fr04=fr05=fr06=0
+str_log[1] = "# !_1_! Filter indentification FRR = R5-8, FRZ = AF8, FRB = R8-10"
+str_log[2] = "# !_03+04_! Check feasibility of Anschlüssgröße and Norm:"
+str_log[3] = "# !_03_! Anschlußgröße Zu- und Ablauf: - похоже, что нужно только для второго прохода"
+str_log[4] = "# !_04_! Nenndruck + Norm der Filteranschlüsse: - похоже, что нужно только для второго прохода"
+str_log[5] = "# !_05-1_! Check feasibility Lage der Hauptanschlüsse"
+str_log[6] = "# !_06_! Deckelverschlussart"
+str_log[7] = "# !_07_! Sonderheiten"
+str_log[8] = "# !_10_! Wekrstoff Ausführung Geh: z.B. \"B\" = Beschichtet"
+str_log[9] = "# !_11_! Werkstoff Düse: z.B. "4" = Gussbronze"
+str_log[10] = "# !_12_! Check Einsatz. First run"
+str_log[11] = "# !_13_! Check Einsatz. Second run"
+str_log[12] = "# !_14_! Check Endnummer / Konstruktionsmerkmale"
+str_log[13] = "# !_15_! Check Sondermotor"
+str_log[14] = "# !_16_! Check Standardmotor"
+# если есть зондер мотор то сначала проверяем его  информацию
+# если их нет то проверяем стандартный мотор
+# вентиль проверять нет возможности
+
 
 # инициализировать текстовые величины - это текст для радио кнопок
 tp01=tp02=tp03=tp04=tp05=tp06=tp07=tp08=tp09=tp10=""
 tr01=tr02=tr03=tr04=tr05=tr06=""
 
 # found radio p01, etc. -- параметры кот ищем для радиокнопок
-frp01=frp02=frp03=frp04=frp05=frp06=frp07=frp08=frp09=frp10=0
-frr01=frr02=frr03=frr04=frr05=frr06=0
+#frp01=frp02=frp03=frp04=frp05=frp06=frp07=frp08=frp09=frp10=0
+#frr01=frr02=frr03=frr04=frr05=frr06=0
 
 einsatztype = "E:" substr(p06,1,1)
 if (substr(p06,1,1) == "")
    einsatztype = "E:X"
+
+if (p01 == "FRN")
+   einsatztype = "E:G"
+
+
+
 }
+# END OF BEGIN BLOCK
 
 
 # ТЕЛО
@@ -129,11 +155,13 @@ if (substr(p06,1,1) == "")
   if (ferr[1] == 1 && p01 != "" && $2 ~ p01 && $3 ~ einsatztype) {
       ferr[1] = 0
       tp01 = $4
+      print_found(str_log[1], tferr[1], "p01 = [" p01 "]; Einsatz = [" einsatztype "]",tp01)
    }
 
    # !_03+04_! Check feasibility of Anschlüssgröße and Norm:
    if (ferr[2] == 1 && $1 == "CHECK_FLANSCHE" && $2 ~ fsstr_long2) {
        ferr[2] = 0
+       print_found(str_log[2], tferr[2], "{$2 ~ fsstr_long2} = [" fsstr_long2 "]" ,$0)
    }
 
    # !_03_! Anschlußgröße Zu- und Ablauf: - похоже что реально нужно для 2-го прохода, а сейчас только для комфортного вывода
@@ -142,8 +170,10 @@ if (substr(p06,1,1) == "")
         split(ag,arr_ag, ";")
         for (i=1; i<=length(arr_ag); i++) {
            split(arr_ag[i],arr_agtemp, "-")
-           if (arr_agtemp[1] == flansch_size)
+           if (arr_agtemp[1] == flansch_size) {
                 tp02 = "Anschlußgröße Zu- und Ablauf: " arr_agtemp[2]
+                print_found(str_log[3], tferr[2], "FLANSCH_SIZE", tp02)
+           }
         }
    }
 
@@ -153,20 +183,25 @@ if (substr(p06,1,1) == "")
         split(ag,arr_ag, ";")
         for (i=1; i<=length(arr_ag); i++) {
            split(arr_ag[i],arr_agtemp, "=")
-           if (arr_agtemp[1] == norm_der_flansch)
+           if (arr_agtemp[1] == norm_der_flansch) {
                 tp02 = tp02 " " arr_agtemp[2]
+                print_found(str_log[4], tferr[2], "NORM_DER_FLANSCH", tp02)
+           }
         }
    }
 
    # !_05-1_! CHECK feasibility Lage der Hauptanschlüsse
-   if (ferr[3]==1 && p03 != "" && $1 == "CF_LDH" && $2 ~ p01 && $3 ~ p03)
+   if (ferr[3]==1 && p03 != "" && $1 == "CF_LDH" && $2 ~ p01 && $3 ~ p03) {
       ferr[3] = 0
+      print_found(str_log[5], tferr[3], "$1 == CF_LDH; $2 ~ p01 / ["p01"]; $3 ~ p03 / ["p03"]" ,$0)
+   }
 
    # !_05_! Lage der Hauptanschlüsse
      if (ferr[3] == 0 && p03 != "" && $1 == "LDH" && $2 == p03) {
          ferr[4] = 0
          tp03 = "Lage der Hauptanschlüsse : " $3
          arr_radio[3] = "HIDDEN-" arr_radio[3]  # раз мы его выше нашли в DB. То прячем / не выводим в радио блоке
+         print_found(str_log[5], tferr[4], "$1 == LDH; $2 == p03 / ["p03"]" ,tp03)
       }
 
    # !_06_! Deckelverschlussart
@@ -174,6 +209,7 @@ if (substr(p06,1,1) == "")
          ferr[5] = 0
          tp04 = "Deckelverschlussart : " $4
          arr_radio[4] = "HIDDEN-" arr_radio[4]
+         print_found(str_log[6], tferr[5], "$1 == \"Deckel\"; $2 ~ p01 / ["p01"]; $3 == p04 / ["p04"]" ,tp04)
       }
 
    # !_07_! Sonderheiten
@@ -181,6 +217,7 @@ if (substr(p06,1,1) == "")
          ferr[6] = 0
          tp05 = "Sonderheiten : " $4
          arr_radio[5] = "HIDDEN-" arr_radio[5]
+         print_found(str_log[7], tferr[6], "$1 == \"SH\"; $2 ~ fsstr_long1 / ["fsstr_long1"]; $3 == p05 / ["p05"]" ,tp05)
       }
 
    # !_10_! Wekrstoff Ausführung Geh: "B" = Beschichtet
@@ -188,6 +225,7 @@ if (substr(p06,1,1) == "")
          ferr[7] = 0
          tp07 = "Wekrstoff Ausführung Geh : " $4
          arr_radio[7] = "HIDDEN-" arr_radio[6]
+         print_found(str_log[8], tferr[7], "$1 == \"WS_GEH\"; $2 ~ fsstr_long1 / ["fsstr_long1"]; $3 == p07 / ["p07"]" ,tp07)
       }
 
    # !_11_! Werkstoff Düse: "4" = Gussbronze
@@ -195,28 +233,57 @@ if (substr(p06,1,1) == "")
          ferr[8] = 0
          tp08 = "Wekrstoff Düse : " $4
          arr_radio[8] = "HIDDEN-" arr_radio[7]
+         print_found(str_log[9], tferr[8], "$1 == \"WDuese\"; $2 ~ fsstr_long1 / ["fsstr_long1"]; $3 == p08 / ["p08"]" ,tp08)
       }
 
-   # !_12_! OTHER PORTS от этого зависит вентиль обр промывки
-   if ($2 == "other_ports") {
-       search_value = ":" fsstr_long2 ":" # для одних 5, а для других 6 символов
-       if (p02 == "FRZ123")
-          search_value = ":FRZ123_" p10 ":"
-#       if (ferr[9] == 1 && p10 != "" && $1 ~ search_value && $2 == "other_ports") {
-       if (ferr[9] == 1 && p10 != "" && $1 ~ search_value) {
-          ferr[9] = 0
-          tp10 = "Spülleitung : " $4
-          arr_radio[9] = "HIDDEN-" arr_radio[8]
-       }
-   }
+   # END-NUMMER
+     if (p09 != "" && p09 != "00" && $1 == "END_NR" && $2 == p09 && $3 ~ p01 && ($4 ~ p06 || $4 == "ALL")) { # fsstr_long2 FRB = 5 cимв. / остальные 6
+        ferr[11] = 0
+        print_found(str_log[12], tferr[11], "END_NR == ["p09"]" ,$0)
+        if ($0 ~ "MOTOR") {
+            split($5,arr_5,";")
+            for (i=1; i<= length(arr_5); i++) {
+               if (arr_5[i] ~ "MOTOR") {
+                  split(arr_5[i],arr_arr_5,"__")
+                  smotor = arr_arr_5[2]
+                  ferr[13] = 0
+               }
+            }
+            print_found(str_log[12], tferr[11], "END_NR == ["p09"]; Sondermotor = [" smotor "]" ,$0)
+        }
+     }
 
-   # EINSATZ_BEZ
+   # EINSATZ_BEZ первый проход
+     if (p06 !="" && ferr[9] == 1 && $1 == "EINSATZ_BEZ_3Z" && $2 ~ fsstr_long2 && $3 ~ p06) { # fsstr_long2 FRB = 5 cимв. / остальные 6
+        ferr[9] = 0
+        print_found(str_log[10], tferr[9], "$1 == \"EINSATZ_BEZ_3Z\"; $2 ~ fsstr_long2 / ["fsstr_long2"]; $3 ~ p06 / ["p06"]" ,$0)
+     }
+
+   # EINSATZ_BEZ второй проход
    # берем все Einsatz кот соответст FRR143 напр.
      if (ferr[10] == 1 && $1 == "EINSATZ_BEZ" && $2 ~ fsstr_long2) {  # fsstr_long2 FRB = 5 cимволов / остальные 6
-        ferr[10] = 0
-        tp06 = $3
+        if (tp06 == "")
+           tp06 = $3
+        else
+           tp06 = tp06 "," $3
+
+        print_found(str_log[11], tferr[10], "$1 == \"EINSATZ_BEZ\"; $2 ~ fsstr_long2 / ["fsstr_long2"]" ,tp06)
       # tp06 = "SF07S.0XX000_OPT,SF07A.01E000_OPT,SF07A.07E000_PT2,SF07A.07EW00_PT2,SG20A.01E002_OPT,SG20A.07E002_OPT
      }
+
+   # !__! # ПРОВЕРКА ЗОНДЕРМОТОРА ЕСЛИ ОН ЕСТЬ
+     if (smotor != "" && ferr[12] == 1 && $2 == "Antrieb" && $3 ~ smotor) {
+#          print "ferr[12] = " ferr[12] >>  errlog_txt
+         ferr[12] = 0
+         print_found(str_log[13], tferr[12], "Sonderantrieb = ["smotor"]", $3)
+      }
+
+   # !__! # ПРОВЕРКА ОБЫЧНОГО МОТОРА ЕСЛИ ОН ЕСТЬ В СПИСКЕ
+     if (smotor == "" && ferr[13] == 1 && $2 == "Antrieb" && $1 ~ fsstr_m_einsatz) {   # FRB, FRN = FRB08_F05
+         ferr[13] = 0
+         motor = substr($3,1,8)
+         print_found(str_log[14], tferr[13], "Standardmotor for ["fsstr_m_einsatz"]", $3)
+      }
 
   # ------- добавить проверку величин из 4 гр SG21AE01K002, если он введен ------ !!!!!!!!!!!!!!!!
   if ($1 == "ELEMENT_TYPE1")
@@ -275,19 +342,62 @@ if (substr(p06,1,1) == "")
       arr_radio[8] = arr_radio[8] "!" $3 "=" $4
   }
 
-  # Spülleitung FRZ123
-  if (p10 == "" && p02 == "FRZ123" && $1 ~ ":FRZ123_" && $2 == "other_ports") {
-      arr_radio[9] = arr_radio[9] "!" substr($1,9,1) "=" $4
-   }
-  if (p10 == "" && p02 != "FRZ123" && $1 ~ ":"fsstr_long2":" && $2 == "other_ports") {
-      arr_radio[9] = arr_radio[9] "!0=" $4
-   }
-}
+  # !_11_! Werkstoff Düse: "4" = Gussbronze 
+  if (p08 == "" && $1 == "WDuese" && $2 ~ fsstr_long1) {          # для одних 3, а для других 6 символов
+      arr_radio[8] = arr_radio[8] "!" $3 "=" $4
+  }
+
+
+
+} # END OF BODY
+
 
 # to01 - описание текста к скрытой кнопке
 # p02 - значение величины к скрытой кнопке
 
 END {
+
+# !_05-1_! CHECK feasibility Lage der Hauptanschlüsse /// CF_LDH
+if (p03 == "")
+   ferr[3] = ferr[4] = 0
+
+# !_06_! Deckelverschlussart
+if (p04 == "")
+   ferr[5] = 0
+
+# !_07_! Sonderheiten
+if (p05 == "")
+   ferr[6] = 0
+
+# !_EINSATZ 1x RUN - не нужен
+if (p06 == "")
+   ferr[9] = 0
+
+# !_10_! Wekrstoff Ausführung Geh: "B" = Beschichtet
+if (p07 == "")
+   ferr[7] = 0
+
+# !_11_! Werkstoff Düse: "4" = Gussbronze
+if (p08 == "")
+   ferr[8] = 0
+
+# EINSATZ_BEZ второй проход
+# берем все Einsatz кот соответст FRR143 напр.
+if (tp06 != "")
+   ferr[10] = 0
+
+# берем все Einsatz кот соответст FRR143 напр.
+if (length(p09) < 2 || p09 == "00")
+   ferr[11] = 0
+
+# MOtor
+if (smotor == "")
+   ferr[12] = 0
+
+if (smotor != "")
+   ferr[13] = 0
+
+
 
 if (error_code == 1)
   exit
@@ -301,28 +411,42 @@ if (error_code == 1)
   arr_hidden[6] = "p06!" p06 "!" tp06
   arr_hidden[7] = "p07!" p07 "!" tp07
   arr_hidden[8] = "p08!" p08 "!" tp08
-  arr_hidden[9] = "p10!" p10 "!" tp10
+  arr_hidden[9] = "p09!" p09 "!Endnummer / Konstruktionsmerkmale"
+#  arr_hidden[9] = "p09!" p09 "!" tp09
 #  arr_hidden[10]= "p10" "!" p10 "!" tp10
 
-#
+
+  print "-\n-\n-----------------------------------------------------------------------------" >> errlog_txt
+  print "<B>"mt "ERROR LOG FOR FILTER : [" filter_name "]</B>"                                 >> errlog_txt
+  print "-----------------------------------------------------------------------------" >> errlog_txt
+
 # Условия проверки if (arr_input_str[i] =! "" && fer[i] = 1) { print tferr[i]} >> “xxxxxxxxxxxx”
   # arr_radio[1] = "1__p01__Filter Series:"
   # проверка  наличия значения для радиокнопок
   for (i=1; i<=2; i++) {
      if (ferr[i] == 1) {
-        print "<pre>" tferr[i] "<pre>" >>  errlog_txt
+        print "FAILED: " tferr[i]  >>  errlog_txt
         error_code = 1
       }
  }
-  for (i=3; i<10; i++) {
+  for (i=3; i<=13; i++) {
     if (arr_radio[i] !~ "HIDDEN" && i != 6) {  # 6  -  Einsatz
       if (split(arr_radio[i],x,"!") == 1) {
         split(arr_radio[i],e,"__")
-        print "<pre>" tferr[e[1]] "<pre>" >>  errlog_txt
+        print "FAILED: " tferr[e[1]]  >>  errlog_txt
         error_code = 1
       }
     }
   }
+
+
+print "\n" >> errlog_txt
+for (i=1; i<=13; i++) {
+   if (ferr[i] == 1) {
+      print "FAILED : ["i"] - " tferr[i] >> errlog_txt
+      error_code = 1
+   }
+}
 
 if (error_code == 1)
   exit
@@ -330,9 +454,8 @@ if (error_code == 1)
 
   # продолжить нижнюю строку .........................
   print_html("p01","p02","p03",p01,p02,p03,tp01,tp02,tp03)
-  test()
 
-  print "<pre>------------------------- END OF ERROR LOG ----------------------------------</pre>" >> errlog_txt
+  print "------------------------- END OF ERROR LOG ----------------------------------" >> errlog_txt
 }
 
 
@@ -349,39 +472,45 @@ print "Input string : <B>" filter_name "</B><BR>" >> result_txt
   }
 
 # строим HTML форму с радио кнопками
+print "<h3>Please select the rest: </h3>"  >> result_txt
+
 print "<form action=\"/process-form\" method=\"post\">"  >> result_txt
+
   for (i=0; i<length(arr_hidden); i++) {
     split(arr_hidden[i],ar,"!")
-        if (ar[2] != "")
+        if (ar[2] != "") {
            print "<input type=\"hidden\" name=\""ar[1]"\" value=\""ar[2]"\">" >> result_txt
+#           printf "<input type=\"hidden\" name=\""ar[1]"\" value=\""ar[2]"\">" >> result_txt
+        }
   }
-
-print "<h3>Please select the rest: </h3>"  >> result_txt
 
 print_einsatz_radio(p06,tp06,ts02,ts04,ts05,tq02)
 print_lastgr_radio(tr01,tr04,tr05)
 
-
   for (i=3; i<10; i++) {
     # 6 = EInsatz
+
+    delete my_array
     if (arr_radio[i] !~ "HIDDEN" && i != 6) {
+#      print "\n\n----------------" arr_radio[i] "------------------\n\n" >> errlog_txt
       split(arr_radio[i],bez,":")  # "10__p09__Spülleitung:"
       split(bez[1],names,"__")
       split(bez[2],values,"!")
-
       print "  <p><u>" names[3] "</u></p>"                     >> result_txt
       checked = " checked"
       for (k=2; k<=length(values); k++) {
         split(values[k],singlevalues,"=")
         sub("="," - ",values[k])
         value = singlevalues[1]
-        print "  <div>"                              >> result_txt
-        print "    <input type=\"radio\" id=\"" value  "\" name=\""names[2]"\" value=\"" value "\"" checked ">" >> result_txt
-        print "    <label for=\"" value "\">" values[k] "</label>" >> result_txt
+#        print "    <input type=\"radio\" id=\"" value  "\" name=\""names[2]"\" value=\"" value "\"" checked ">" >> result_txt
+#        print "    <label for=\"" value "\">" values[k] "</label>" >> result_txt
 
-
-        print "  </div>"                              >> result_txt
-        checked = ""
+        # удаляем дубликаты значений
+        if (!(value in my_array)) {
+            print "    <input type=\"radio\" id=\"" value  "\" name=\""names[2]"\" value=\"" value "\"" checked ">    <label for=\"" value "\">" values[k] "</label>" >> result_txt
+            checked = ""
+            my_array[value]
+        }
       }
     }
   }
@@ -425,13 +554,11 @@ function print_einsatz_radio(p06,tp06,ts02,ts04,ts05,tq02) {
      }
   }
 
-
   if (length(arr_e_bez) == 0) {
      print "Err. 000X - NO SUITABLE FILTER INSERTS FOUND FOR [" p06 "]" >> result_txt
      error_code = 1
      exit
   }
-
 
   xx1 = "Filtereinsätze, angelegt wie folgt:"
   print "  <hr size=\"1\">  <p><u>" xx1 "</u></p>"                     >> result_txt
@@ -461,10 +588,12 @@ function print_einsatz_radio(p06,tp06,ts02,ts04,ts05,tq02) {
 
 
     xx2 = "<B>" substr(arr_e_bez[i],1,4) "</B>" substr(arr_e_bez[i],5) " : " e_typ1 " /// " e_typ2 " /// " pt_text wasser_text
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"p06\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">"  xx2 "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"p06\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">"  xx2 "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+
+    print "    <input type=\"radio\" id=\"" value "\" name=\"p06\" value=\"" value "\"" checked "><label for=\"" value "\">"  xx2 "</label>" >> result_txt
     checked = ""
   }
 
@@ -474,10 +603,11 @@ function print_einsatz_radio(p06,tp06,ts02,ts04,ts05,tq02) {
   for (i=1; i<= length(arr_e_typ3); i++) {
     value = substr(arr_e_typ3[i],1,1)
     sub("-"," - ",arr_e_typ3[i])
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"p06material\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">"  arr_e_typ3[i] "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"p06material\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">"  arr_e_typ3[i] "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+    print "    <input type=\"radio\" id=\"" value "\" name=\"p06material\" value=\"" value "\"" checked ">    <label for=\"" value "\">"  arr_e_typ3[i] "</label>" >> result_txt
     checked = ""
   }
 
@@ -486,15 +616,15 @@ function print_einsatz_radio(p06,tp06,ts02,ts04,ts05,tq02) {
   checked = " checked"
   for (i=1; i<= length(arr_e_typ4); i++) {
     value = substr(arr_e_typ4[i],1,2)
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"p06feinheit\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">" "GEW."  arr_e_typ4[i] "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"p06feinheit\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">" "GEW."  arr_e_typ4[i] "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+    print "    <input type=\"radio\" id=\"" value "\" name=\"p06feinheit\" value=\"" value "\"" checked ">    <label for=\"" value "\">" "GEW."  arr_e_typ4[i] "</label>" >> result_txt
     checked = ""
   }
 
   print " <hr size=\"1\">"                                >> result_txt
-
 }
 
 
@@ -510,10 +640,11 @@ function print_lastgr_radio(tr01,tr04,tr05) {
   for (i=1; i<= length(arr_lastgr1); i++) {
     value = substr(arr_lastgr1[i],1,2)
     sub("-"," - ",arr_lastgr1[i])
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"r01\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">"  arr_lastgr1[i] "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"r01\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">"  arr_lastgr1[i] "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+    print "    <input type=\"radio\" id=\"" value "\" name=\"r01\" value=\"" value "\"" checked ">    <label for=\"" value "\">"  arr_lastgr1[i] "</label>" >> result_txt
     checked = ""
   }
 
@@ -523,10 +654,11 @@ function print_lastgr_radio(tr01,tr04,tr05) {
   for (i=1; i<= length(arr_lastgr2); i++) {
     value = substr(arr_lastgr2[i],1,1)
     sub("-"," - ",arr_lastgr2[i])
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"r04\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">"  arr_lastgr2[i] "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"r04\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">"  arr_lastgr2[i] "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+    print "    <input type=\"radio\" id=\"" value "\" name=\"r04\" value=\"" value "\"" checked ">    <label for=\"" value "\">"  arr_lastgr2[i] "</label>" >> result_txt
     checked = ""
   }
 
@@ -536,10 +668,11 @@ function print_lastgr_radio(tr01,tr04,tr05) {
   for (i=1; i<= length(arr_lastgr3); i++) {
     value = substr(arr_lastgr3[i],1,1)
     sub("-"," - ",arr_lastgr3[i])
-    print "  <div>"                                     >> result_txt
-    print "    <input type=\"radio\" id=\"" value "\" name=\"r05\" value=\"" value "\"" checked ">" >> result_txt
-    print "    <label for=\"" value "\">"  arr_lastgr3[i] "</label>" >> result_txt
-    print "  </div>"                              >> result_txt
+#    print "  <div>"                                     >> result_txt
+#    print "    <input type=\"radio\" id=\"" value "\" name=\"r05\" value=\"" value "\"" checked ">" >> result_txt
+#    print "    <label for=\"" value "\">"  arr_lastgr3[i] "</label>" >> result_txt
+#    print "  </div>"                              >> result_txt
+    print "    <input type=\"radio\" id=\"" value "\" name=\"r05\" value=\"" value "\"" checked ">    <label for=\"" value "\">"  arr_lastgr3[i] "</label>" >> result_txt
     checked = ""
   }
 
@@ -553,16 +686,11 @@ function print_lastgr_radio(tr01,tr04,tr05) {
 
 
 
-
-
-
-function test() {
-# выводим всякую х.ню для проверки
-
-#  print "\n" >> result_txt
-#  for (i=3; i<10; i++) {
-#    print  i" arr_radio[] " arr_radio[i]  >> result_txt
-#  }
-#  print "\n" >> result_txt
-
+# print_found(str_log[1], tferr[1], "p01 = [" p01 "] /// Einsatz = [" einsatztype "]",tp01)
+function print_found(str1, str2, str3, str4) {
+  print "<B>"str1 "</B>"                           >> errlog_txt
+  print "SUCCESS !!     : " str2 " /// passed"     >> errlog_txt
+  print "Searched values: " str3                   >> errlog_txt
+  print "Values found   : " str4                   >> errlog_txt
+  print "...................................................." >> errlog_txt
 }

@@ -1,0 +1,139 @@
+# <page-1.txt>
+# $3 использ по дефолту если у выбранного Медиум он отсутствует и там же ед.изм
+# возможно $3 перенести в след файл <page-2.txt>
+# 1-st line is a label for html file
+
+# MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1:1,2;2:1,2,5,6
+#                                            ^^^^^^^^^^^^^^^
+# $4 = Elemente Pos. 1: 1 -KSF, 2 -RSF; Pos. 2: 1 -Spule, 2 -SP-Rohr, 5 - Segment, 6 -Wave
+MEDIUM_!_medium
+MEDIUM_!_Das zu filtrierende Medium angeben:
+MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1=1,2;2=1,2,5,6
+MEDIUM_!_02_!_02. Polyol_!_1=1;2=1,2
+MEDIUM_!_03_!_03. Isocyanat (MDI, TDI, usw.)_!_1=1;2=1,2
+MEDIUM_!_04_!_04. Wasser_!_1=1,3,4;2=1,2,3
+MEDIUM_!_05_!_05. Miscella_!_1=1;2=1,2
+MEDIUM_!_06_!_06. Pflanzenöl_!_1=1;2=1-4
+MEDIUM_!_07_!_07. TESTMEDIUM_!_1=1;2=1-4
+
+DURCHSATZ_!_durchsatz
+DURCHSATZ_!_Durchsatz [Liter/Min]:
+
+VISCOSITY_!_viscosity
+VISCOSITY_!_Viskosität bei der Betriebstemperatur [mm2/sec]:
+
+WPRESSURE_!_wpressure
+WPRESSURE_!_Betriebsdruck [bar]:
+
+WTEMPERATURE_!_wtemperature
+WTEMPERATURE_!_Betriebstemperatur [Grad C]:
+
+# 2. ANFORDERUNGEN ZUM FILTER
+
+DPRESSURE_!_dpressure
+DPRESSURE_!_Auslegungsdruck [bar]:
+
+DTEMPERATURE_!_dtemperature
+DTEMPERATURE_!_Auslegungstemperatur [Grad C]:
+
+DPIPELINE_!_dpipeline
+DPIPELINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:
+
+FINENESS_!_fineness
+FINENESS_!_Gewünschte Filterfeinheit [µm]:
+
+ANTRIEB_!_antrieb
+ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
+ANTRIEB_!_1. Sterngriff / Handratsche
+ANTRIEB_!_7. Pneumatischer Antrieb
+ANTRIEB_!_6. Ohne Getriebemotor, jedoch mit Motorbock
+ANTRIEB_!_3. Elektrischer Getriebemotor 220V/480V
+ANTRIEB_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3
+
+
+ATEX_!_atex
+ATEX_!_ATEX-Zone [Ja/Nein]:
+ATEX_!_Nein
+ATEX_!_Ja
+
+UTEMPERATURMIN_!_utemperaturmin
+UTEMPERATURMIN_!_Umgebungstemperatur min [Grad C]:
+
+UTEMPERATURMAX_!_utemperaturmax
+UTEMPERATURMAX_!_Umgebungstemperatur max [Grad C]:
+
+# Filtermaterial / Materialbeständigkeit
+MATERIAL_!_material
+MATERIAL_!_Gewünschtes Material Filter:_!_this is a HEAD for dropdowns
+MATERIAL_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
+MATERIAL_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
+MATERIAL_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
+MATERIAL_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
+
+
+MATERIALEL_!_materialel
+MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
+MATERIALEL_!_1. Aluminium + Edelstahl
+MATERIALEL_!_2. Edelstahl
+
+# SECOND RUN - <page-2.awk>
+# добавить факторы в зависимости от Опции
+M_01_!_Kühlschmierstoff (KSS)
+M_01_!_LABEL_!_1_!_Angabe der vorhandenen/aktuellen Vorabscheidung:
+M_01_!_OPTION_!_1_!_01. Zentrale Filtereinheit oder anderer Filter (&lt; 120 µm)_!_1.0
+M_01_!_OPTION_!_2_!_02. Feinspäneförderer oder Schlitzhülse oder Magnetabscheider (&lt; 2 mm)_!_0.9
+M_01_!_OPTION_!_3_!_03. Grobspäneförderer/Lochblech (&lt; 5 mm)_!_0.85
+M_01_!_LABEL_!_2_!_Kühlmittelmedium angeben:
+M_01_!_OPTION_!_1_!_01. Wasserbasierte Emulsion (max. Viskosität 10 cSt)
+M_01_!_OPTION_!_2_!_02. Kühlöl (max. Viskosität 30 cSt)
+M_01_!_OPTION_!_3_!_03. Kühlöl (max. Viskosität 100 cSt)
+M_01_!_LABEL_!_3_!_Art der Metallbearbeitung angeben:
+M_01_!_OPTION_!_1_!_01. Schneiden (Fräsen, Bohren, Drehen)
+M_01_!_OPTION_!_2_!_02. Schleifen (Siliziumkarbid, Bornitrid)
+M_01_!_OPTION_!_3_!_03. Honen, Superfinish
+M_01_!_LABEL_!_4_!_Art des zubearbeitendes Metalls angeben:
+M_01_!_OPTION_!_1_!_01. C-Stahl, Edelstahl
+M_01_!_OPTION_!_2_!_02. Aluminium
+M_01_!_OPTION_!_3_!_03. Magnesium
+M_01_!_OPTION_!_4_!_04. Grauguss oder Sphäroguss
+M_01_!_LABEL_!_5_!_Zweck der Filtration (mindestens eine Option wählen)
+M_01_!_OPTION_!_1_!_01. Kontrollration (sehr wenig Schmutz)
+M_01_!_OPTION_!_2_!_02. nur Schutz der nachgeschalteten Anlagen (mehr Schmutz wie oben)
+M_01_!_OPTION_!_3_!_03. Betriebsfilter / Haupt- und einziger Filter (mehr Schmutz wie oben)
+
+M_02_!_Polyol
+M_02_!_LABEL_!_1_!_Wo steht der Filter:
+M_02_!_OPTION_!_1_!_01. vor der Mischanlage
+M_02_!_OPTION_!_2_!_02. Abfüllung
+M_02_!_OPTION_!_3_!_03. usw.
+
+M_03_!_Isocyanat
+M_03_!_LABEL_!_1_!_Wo steht der Filter:
+M_03_!_OPTION_!_1_!_1. vor der Mischanlage
+M_03_!_OPTION_!_2_!_2. Abfüllung
+M_03_!_OPTION_!_3_!_3. usw.
+
+M_04_!_Wasser
+M_04_!_LABEL_!_1_!_Was für ein Wasser:
+M_04_!_OPTION_!_1_!_1. Leitungswasser
+M_04_!_OPTION_!_2_!_2. Kondenswasser
+M_04_!_OPTION_!_3_!_3. Turbinen Sperrwasser
+M_04_!_OPTION_!_4_!_4. Flusswasser
+M_04_!_OPTION_!_5_!_5. Abwasser
+
+M_05_!_Miscella
+M_05_!_LABEL_!_1_!_Filter Einbausituation:
+M_05_!_OPTION_!_1_!_1. Nach Hydrozyklon
+M_05_!_OPTION_!_2_!_2. Ohne Hydrozyklon
+
+M_06_!_Pflanzenöl
+M_06_!_LABEL_!_1_!_Filter Einbausituation:
+M_06_!_OPTION_!_2_!_01. Rohöl
+M_06_!_OPTION_!_3_!_02. Raffiniertes Öl
+M_06_!_OPTION_!_4_!_03. Extraktionsöl
+
+M_07_!_Testmedium
+M_07_!_LABEL_!_1_!_CHOOSE A TEST MEDIUM:
+M_07_!_OPTION_!_1_!_1. TEST OPTION 1
+M_07_!_OPTION_!_2_!_2. TEST OPTION 2
+M_07_!_OPTION_!_3_!_3. TEST OPTION 3

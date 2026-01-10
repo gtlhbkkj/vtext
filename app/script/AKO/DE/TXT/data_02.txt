@@ -54,6 +54,44 @@ SCHUTZART  : IP 55F
 BAUFORM    : B14   GESAMTBAUFORM : B6
 DREHZAHL   : 9.33 U/MIN 11,2 U/MIN
 ::
+76243550 *** GETR.MOT.GR.3 230/400V 50/60HZ NORD DM16
+STIRNRADGETRIEBEMOTOR
+SPANNUNG   : 230/400 V / 265/460 V
+FREQUENZ   : 50 Hz / 60 HZ
+LEISTUNG   : 0,12 KW / 0,14 KW
+NENNSTROM  : 0,95/0,55 A / 0,94/0,54 A
+NENNDREHZAHL: 1335 U/MIN / 1635 U/MIN
+ABTRIEBSDREHZAHL: 11 U/MIN / 13 U/MIN
+ABTRIEBSDREHMOMENT: ~105 NM
+SCHUTZART  : IP 55
+ISOLIERSTOFFKL: F
+::
+76234774 *** GETR.MOT.GR.3 400/460V 50/60HZ NORD DM20
+SPANNUNG   : 230/400V 50HZ /// 265/460V 60HZ
+NENNSTROM  : 0,55A
+SCHUTZART  : IP 55
+::
+72461204 *** GETR.MOT.GR.5A 380/440V 50/60HZ
+STIRNRADGETRIEBEMOTOR
+SPANNUNG   : 230/400 V / 265/460 V
+FREQUENZ   : 50 Hz / 60 HZ
+LEISTUNG   : 0,9 KW / 1,1 KW
+NENNSTROM  : 0,95/0,55 A / 0,88/0,51 A
+NENNDREHZAHL: 1280 U/MIN / 1550 U/MIN
+ABTRIEBSDREHZAHL: 2,5 U/MIN / 3,1 U/MIN
+ABTRIEBSDREHMOMENT: ~400 NM
+SCHUTZART  : IP 55
+ISOLIERSTOFFKL: F
+BETRIEBSART : S1
+BETRIEBSFAKTOR: ~1
+EINBAULAGE: V1
+::
+MOTDUMMY *** GETR.MOTOR NOCH NICHT ANGELEGT
+#   GETR.MOTOR NOCH NICHT ANGELEGT
+#   ____________________________
+#   ____________________________
+#   ____________________________
+::
 # SPÜLLVENTILE
 ::
 # KuHa G1/2 ELEKTRISH 24V
@@ -112,6 +150,30 @@ Schutzart : IP 65
 Stellzeit : 4 Sek. für 90°
 2 zusätzliche potentialefreie Endschalter
 komplett montiert
+::
+# KuHa G1 1/2 ELEKTRISH 24V
+RS_DUMMY *** NOCH NICHT ANGELEGT
+RS_DUMMY ____________
+RS_DUMMY ____________
+RS_DUMMY ____________
+::
+# KuHa DN50 ELEKTRISH 24V
+72468391 *** KUGELH DN50 PN40  VA EL24  KOMPAKT AUMA
+ARMATUR
+- ANSCHLUSS:            DN50 FLANSCH KOMPAKT
+- DRUCKSTUFE:           PN40
+- WERKSTOFF GEH:        EDELSTAHL
+- KUGEL:                EDELSTAHL
+- DICHTUNG:             PTFE-FKM
+- BETRIEBSTEMPERATUR:   -29 - +175°C
+ANTRIEB
+- BETAETIGUNGSART: ELEKTRISCH AUMA EQ100-2
+- SCHALTPLAN:      EQ150-170.050.27
+- STEUERSPANNUNG:  24V DC
+- LAUFZEIT:        30 sec.
+- SCHUTZART:       IP67
+- Kabeleinführung: M20x1,5
+- MIT 2 ZUSÄTZLICHEN ENDLAGENSCHALTERN (STANDARD)
 ::
 # KuHa G1/2 ELPN 24V
 76234749 *** KUGELH G 1/2 PN40 EP 24V DC MS
@@ -225,6 +287,128 @@ Prozessanschluss: 2x Druckmittler DN25 PN40 mit Kapillarrohr
 Werkstoff Gehäuse: Edelstahl/Al
 Werkstoff medienberührt: Edelstahl
 ::
+# START_OF_ENDNUMMERN /// разместить перед моторами и вентилями, лучше в самом начале
+::
+END_NR_!_05_!_FRZ_!_F07
+RS Anschluss G1 anstatt Standard G3/4
+SONDERRSVENTIL__G1
+::
+END_NR_!_CN_!_FRZ_!_F05,F07,F09,F28,F44
+Geschweißtes Gehäuse R8-10 am Beispiel des AF8 konstruiert
+Eintritt unten
+Ausführung für chinesische Gehäusefertigung:
+Düsenaufnahme im Gehäuse durch 3-Bein zentriert
+::
+END_NR_!_CX_!_FRZ_!_F09
+Filter und somit Filtergehäuse und Düse um 150mm verkürzt
+Düsensitz um 150mm hochgezogen
+Druckmessanschlüsse um 180° versetzt
+::
+END_NR_!_C1_!_FRB_!_F28
+China - Anschlussmaße nach Kundenwunsch
+Handloch in Behälterbodennähe
+Gehäuse steht auf Füßen
+::
+END_NR_!_C2_!_FRB,FRR,FRZ,FRN_!_F44
+Gehäuse mit Korbbogenboden auf Standvorrichtung
+Zusätzliche Anschlüsse für Fremdmediumbefüllung
+::
+END_NR_!_C3_!_FRB_!_F05,F07,F10,F28,F44,F46
+Gehäusehöhe verringert (Höhe abhängig von der Nennweite)
+Gehäuse auf Füßen statt Blindflansch
+::
+END_NR_!_C4_!_FRZ_!_F07,F09,F28
+Gummiert mit Spülleitung und Innenring in 1.4462
+Spülleitung rechtwinklig ohne Rohrbogen
+Innenring als Wagenrad
+::
+END_NR_!_C5_!_FRB_!_ALL
+Serviceflansch inklusive
+::
+END_NR_!_C6_!_FRZ_!_F28
+Kunde: WISON
+DNV 
+Gehäuse und Deckel an Kundenanforderungen angepasst
+::
+END_NR_!_01_!_FRR_!_F05
+Spülleitung G3/4 statt G1/2
+Stehbuchse neu
+Düse nachgearbeitet
+Getriebemotor 72461204 (langsam drehend) 
+SONDERMOTOR__72461204
+SONDERRSVENTIL__G3/4
+::
+END_NR_!_13_!_FRN,FRB,FBG_!_ALL
+Kundenanschlussmaße abweichend vom Standard
+::
+END_NR_!_14_!_FRB,FBG_!_ALL
+Kundenanschlussmaße abweichend vom Standard & abweichend von Z13
+::
+END_NR_!_15_!_FRB_!_F09
+Maß a = 260 statt 310
+::
+END_NR_!_16_!_FRB_!_ALL
+Anschlüsse ANSI (Drucktransmitter, Spülleitung)
+::
+END_NR_!_17_!_FRN_!_G22
+Gehäuse an Kundenanforderungen angepasst
+Filter buntmetallfrei
+::
+END_NR_!_18_!_FCE_!_SA13
+Entlüftung größer als in der Standardausführung
+::
+END_NR_!_19_!_FRB_!_F09
+Gehäuse auf Füßen
+Ablass unten
+Kurze Düse (CX)
+RSL DN50 PN16 unten aus dem Gehäuse und 90° nach rechts
+Nachbau für Ersatz von ZEICH Rückspülfilter R083-1285
+::
+END_NR_!_20_!_FBN_!_ALL
+Neue Standardausführung
+Durchgängiger Gehäusemantel
+Zu-/Ablauf mit Flanschen
+Neue Standardabmessungen
+::
+END_NR_!_22_!_FBN_!_ALL
+Anschlüsse nach Kundenwunsch gedreht
+::
+END_NR_!_25_!_FBN_!_ALL
+Anschlüsse nach Kundenwunsch gedreht
+Zu-/Ablauf mit Gewindestutzen
+Spezielle Bodenplattengeometrie
+::
+END_NR_!_CA_!_FRN_!_G27
+Fremddruckrückspüler mit angebauter Pumpe 
+Basisgehäuse Zählnummer C3 modifiziert
+Fremddruckanschluss von G11/2 reduziert auf G11/4 (Kostenfaktor)
+Angeschweißte Halteplatte für Pumpe
+Austrittstutzen verlängert mit Anschlussmuffe für Pumpe
+::
+END_NR_!_30_!_FRN_!_ALL
+Konus
+Aufnahme über Normpratzen
+::
+END_NR_!_K1_!_FRB_!_F28
+Klöpperboden 
+Deckel nach ZC3
+Rückspülleitung Flanschanschluss
+Ablass Flanschanschluss
+::
+END_NR_!_S1_!_FRB_!_F09
+Sun Chemical
+Nachbau Bestandsfilter
+Gehäuse auf Füßen
+Rückspülleitung 90° Winkel 
+Flanschanschluss DN40
+::
+END_NR_!_S2_!_FRB_!_F09
+Sun Chemical
+Nachbau Bestandsfilter
+Gehäuse auf Füßen
+Rückspülleitung Flanschanschluss DN40
+::
+# END_OF_ENDNUMMERN /// разместить перед моторами и вентилями, лучше в самом начале
 # Последняя группа
 G /// G = Abnahme Germanischer Loyd
 S /// S = Sonstige Abnahme
