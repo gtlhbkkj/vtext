@@ -17,6 +17,9 @@ BEGIN {
   farbton     = "6018 Gelbgrün"
   ke300x_text = ""
 
+  if (material == 6)
+     farbton     = " /// DELTA-SEAL BESCHICHTUNG / SCHWARZ"
+
   if (ke300x ~ /^[3][0][0]/)
     ke300x_text = " Deckel"
 

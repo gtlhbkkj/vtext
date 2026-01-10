@@ -1,0 +1,77 @@
+# <page-1.txt>
+# $3 использ по дефолту если у выбранного Медиум он отсутствует и там же ед.изм
+# возможно $3 перенести в след файл <page-2.txt>
+# 1-st line is a label for html file
+
+# MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1:1,2;2:1,2,5,6
+#                                            ^^^^^^^^^^^^^^^
+# $4 = Elemente Pos. 1: 1 -KSF, 2 -RSF; Pos. 2: 1 -Spule, 2 -SP-Rohr, 5 - Segment, 6 -Wave
+MEDIUM_!_medium
+MEDIUM_!_Das zu filtrierende Medium angeben:
+MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1=1,2;2=1,2,5,6
+MEDIUM_!_02_!_02. Polyol_!_1=1;2=1,2
+MEDIUM_!_03_!_03. Isocyanat (MDI, TDI, usw.)_!_1=1;2=1,2
+MEDIUM_!_04_!_04. Wasser_!_1=1,3,4;2=1,2,3
+MEDIUM_!_05_!_05. Miscella_!_1=1;2=1,2
+MEDIUM_!_06_!_06. Pflanzenöl_!_1=1;2=1-4
+MEDIUM_!_07_!_07. TESTMEDIUM_!_1=1;2=1-4
+
+DURCHSATZ_!_durchsatz
+DURCHSATZ_!_Durchsatz [Liter/Min]:
+
+VISCOSITY_!_viscosity
+VISCOSITY_!_Viskosität bei der Betriebstemperatur [mm2/sec]:
+
+WPRESSURE_!_wpressure
+WPRESSURE_!_Betriebsdruck [bar]:
+
+WTEMPERATURE_!_wtemperature
+WTEMPERATURE_!_Betriebstemperatur [Grad C]:
+
+# 2. ANFORDERUNGEN ZUM FILTER
+
+DPRESSURE_!_dpressure
+DPRESSURE_!_Auslegungsdruck [bar]:
+
+DTEMPERATURE_!_dtemperature
+DTEMPERATURE_!_Auslegungstemperatur [Grad C]:
+
+DPIPELINE_!_dpipeline
+DPIPELINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:
+
+FINENESS_!_fineness
+FINENESS_!_Gewünschte Filterfeinheit [µm]:
+
+ANTRIEB_!_antrieb
+ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
+ANTRIEB_!_1. Sterngriff / Handratsche
+ANTRIEB_!_7. Pneumatischer Antrieb
+ANTRIEB_!_6. Ohne Getriebemotor, jedoch mit Motorbock
+ANTRIEB_!_3. Elektrischer Getriebemotor 220V/480V
+ANTRIEB_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3
+
+
+ATEX_!_atex
+ATEX_!_ATEX-Zone [Ja/Nein]:
+ATEX_!_Nein
+ATEX_!_Ja
+
+UTEMPERATURMIN_!_utemperaturmin
+UTEMPERATURMIN_!_Umgebungstemperatur min [Grad C]:
+
+UTEMPERATURMAX_!_utemperaturmax
+UTEMPERATURMAX_!_Umgebungstemperatur max [Grad C]:
+
+# Filtermaterial / Materialbeständigkeit
+MATERIAL_!_material
+MATERIAL_!_Gewünschtes Material Filter:_!_this is a HEAD for dropdowns
+MATERIAL_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
+MATERIAL_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
+MATERIAL_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
+MATERIAL_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
+
+
+MATERIALEL_!_materialel
+MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
+MATERIALEL_!_1. Aluminium + Edelstahl
+MATERIALEL_!_2. Edelstahl
