@@ -4,8 +4,9 @@
   <title></title>
 </head>
 <body>
+
   <center>
-    <h3>Bitte Filterbezeichnung angeben:</h3> <br />
+      <pre><h3>Bitte Filterbezeichnung angeben:</h3> </pre>
     <form method="get" action="/">
       <input type="text" value="" name="filter_name" length="50" size="50" /><input type="submit" value="Enter" />
     </form>
@@ -24,14 +25,14 @@
   </center>
 
   <hr />
-
+  <pre>
   {{ form_content | safe }}
 
-  <pre>
   {{ output_content }}
-  </pre>
 
   {{ error_content }}
 
+
+  </pre>
 </body>
 </html>

@@ -6,3 +6,4 @@ httpx
 uvicorn
 gunicorn
 black
+python-multipart
