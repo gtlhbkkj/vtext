@@ -19,3 +19,6 @@ fin.txt
 .lesshst
 logs/
 .gitconfig
+*errlog.txt
+*.swp
+*.zip

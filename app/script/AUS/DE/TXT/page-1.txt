@@ -75,3 +75,127 @@ MATERIALEL_!_materialel
 MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
 MATERIALEL_!_1. Aluminium + Edelstahl
 MATERIALEL_!_2. Edelstahl
+
+# SECOND RUN - <page-2.awk>
+# добавить факторы в зависимости от Опции
+M_01_!_Kühlschmierstoff (KSS)
+M_01_!_LABEL_!_1_!_Angabe der vorhandenen/aktuellen Vorabscheidung:
+M_01_!_OPTION_!_1_!_01. Zentrale Filtereinheit oder anderer Filter (&lt; 120 µm)_!_1.0
+M_01_!_OPTION_!_2_!_02. Feinspäneförderer oder Schlitzhülse oder Magnetabscheider (&lt; 2 mm)_!_0.9
+M_01_!_OPTION_!_3_!_03. Grobspäneförderer/Lochblech (&lt; 5 mm)_!_0.85
+M_01_!_LABEL_!_2_!_Kühlmittelmedium angeben:
+M_01_!_OPTION_!_1_!_01. Wasserbasierte Emulsion (max. Viskosität 10 cSt)
+M_01_!_OPTION_!_2_!_02. Kühlöl (max. Viskosität 30 cSt)
+M_01_!_OPTION_!_3_!_03. Kühlöl (max. Viskosität 100 cSt)
+M_01_!_LABEL_!_3_!_Art der Metallbearbeitung angeben:
+M_01_!_OPTION_!_1_!_01. Schneiden (Fräsen, Bohren, Drehen)
+M_01_!_OPTION_!_2_!_02. Schleifen (Siliziumkarbid, Bornitrid)
+M_01_!_OPTION_!_3_!_03. Honen, Superfinish
+M_01_!_LABEL_!_4_!_Art des zubearbeitendes Metalls angeben:
+M_01_!_OPTION_!_1_!_01. C-Stahl, Edelstahl
+M_01_!_OPTION_!_2_!_02. Aluminium
+M_01_!_OPTION_!_3_!_03. Magnesium
+M_01_!_OPTION_!_4_!_04. Grauguss oder Sphäroguss
+M_01_!_LABEL_!_5_!_Zweck der Filtration (mindestens eine Option wählen)
+M_01_!_OPTION_!_1_!_01. Kontrolfiltration (sehr wenig Schmutz)
+M_01_!_OPTION_!_2_!_02. nur Schutz der nachgeschalteten Anlagen (mehr Schmutz wie oben)
+M_01_!_OPTION_!_3_!_03. Betriebsfilter / Haupt- und einziger Filter (mehr Schmutz wie oben)
+
+M_02_!_Polyol
+M_02_!_LABEL_!_1_!_Wo steht der Filter:
+M_02_!_OPTION_!_1_!_01. vor der Mischanlage
+M_02_!_OPTION_!_2_!_02. Abfüllung
+M_02_!_OPTION_!_3_!_03. usw.
+
+M_03_!_Isocyanat
+M_03_!_LABEL_!_1_!_Wo steht der Filter:
+M_03_!_OPTION_!_1_!_1. vor der Mischanlage
+M_03_!_OPTION_!_2_!_2. Abfüllung
+M_03_!_OPTION_!_3_!_3. usw.
+
+M_04_!_Wasser
+M_04_!_LABEL_!_1_!_Was für ein Wasser:
+M_04_!_OPTION_!_1_!_1. Leitungswasser
+M_04_!_OPTION_!_2_!_2. Kondenswasser
+M_04_!_OPTION_!_3_!_3. Turbinen Sperrwasser
+M_04_!_OPTION_!_4_!_4. Flusswasser
+M_04_!_OPTION_!_5_!_5. Abwasser
+
+M_05_!_Miscella
+M_05_!_LABEL_!_1_!_Filter Einbausituation:
+M_05_!_OPTION_!_1_!_1. Nach Hydrozyklon
+M_05_!_OPTION_!_2_!_2. Ohne Hydrozyklon
+
+M_06_!_Pflanzenöl
+M_06_!_LABEL_!_1_!_Filter Einbausituation:
+M_06_!_OPTION_!_2_!_01. Rohöl
+M_06_!_OPTION_!_3_!_02. Raffiniertes Öl
+M_06_!_OPTION_!_4_!_03. Extraktionsöl
+
+M_07_!_Testmedium
+M_07_!_LABEL_!_1_!_CHOOSE A TEST MEDIUM:
+M_07_!_OPTION_!_1_!_1. TEST OPTION 1
+M_07_!_OPTION_!_2_!_2. TEST OPTION 2
+M_07_!_OPTION_!_3_!_3. TEST OPTION 3
+
+# MV = Medium Input Values
+MIV_01_!_DSZ:1,2000;VSC:1,20;WP:1,10;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:10,100
+MIV_02_!_DSZ:1,1000;VSC:100,20000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
+MIV_03_!_DSZ:1,1000;VSC:10,2000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
+MIV_04_!_DSZ:1,3333;VSC:1,1;WP:1,40;WT:0,100;DP:1,40;DT:0,100;DPLINE:25,150;FS:30,1000
+MIV_05_!_DSZ:1,3333;VSC:1,1;WP:1,16;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:80,500
+MIV_06_!_DSZ:1,1000;VSC:1,200;WP:1,16;WT:0,120;DP:1,16;DT:0,120;DPLINE:25,150;FS:30,500
+MIV_07_!_DSZ:1,1000;VSC:1,200;WP:1,16;WT:0,120;DP:1,16;DT:0,120;DPLINE:25,150;FS:30,500
+
+# MPV = Medium Partikeln Values
+# Shmutz1_!_Schmutz2_!_показывать на странице или передавать как скрытые
+MPV_01_!_06,07_!_01_!_HIDDEN:HIDDEN
+MPV_02_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN:HIDDEN
+MPV_03_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN:HIDDEN
+MPV_04_!_*_!_*_!_SHOW:SHOW
+MPV_05_!_18_!_01,02_!_HIDDEN:HIDDEN
+MVP_06_!_01-03,18,19_!_01,02,07,09_!_SHOW:SHOW
+MVP_07_!_02-05,08-11,15-18_!_02-08_!_SHOW:SHOW
+
+# SCHMUTZART
+pos. 1 - фактор расхода (1 - 100% расход; 0,95 - 95% расход)
+если несколько факторов принимает участие, то возможно, произведение их будет неправильно
+pos. 2 - какой элемент подходит
+0. ни один элемент не подходит
+1._Kantenspaltspule
+2._Kantenspaltrohr
+3._Lochblechelement
+4._Lochfolienelement
+5._Segmentelement mit Topmesh
+6._Segmentelement / Wave Element
+
+S01_!_01_!_Sand_!_1;*
+S01_!_02_!_Staub_!_1;*
+S01_!_03_!_Rost und Zunder_!_1;*
+S01_!_04_!_Kreide_!_1;*
+S01_!_05_!_Kunststoffpartikel_!_1;*
+S01_!_06_!_harte Metallpartikeln_!_1;*
+S01_!_07_!_Weiche Metallpartikeln (z.B. Aluminium)_!_1;5,6;
+S01_!_08_!_Produktagglomerate_!_1;1-4
+S01_!_09_!_Ton_!_0;0
+S01_!_10_!_Papier, Kartonstücke_!_1;3,4
+S01_!_11_!_Fasern_!_1;3,4
+S01_!_12_!_Holz_!_1;3,4
+S01_!_13_!_Baumblätter_!_1;3,4
+S01_!_14_!_Haare / Strohhalme / Stoppeln_!_1;3,4
+S01_!_15_!_Fische_!_1;AKO
+S01_!_16_!_Gras / Algen_!_0;0
+S01_!_17_!_Organische Partikeln_!_0,8;1-4
+S01_!_18_!_Kern- und Schalen Teile, fettfreie Partikeln_!_1;1,2_!_# Miscella, Pflanzenöl
+S01_!_19_!_Phospholipide, freie Fettsäuren, Wachse, Pigmente, Proteinverbindungen_!_0,8;1,2# Pflanzenöl
+
+# SCHMUTZEIGENSCHAFTEN
+S02_!_01_!_hart / fest_!_1;*
+S02_!_02_!_körnig_!_1;*
+S02_!_03_!_kristallin_!_1;*
+S02_!_04_!_frei fließend_!_1;*
+S02_!_05_!_Gelee-artig_!_0,8;1-4
+S02_!_06_!_Ton-artig_!_0;0
+S02_!_07_!_amorph_!_0,8;1-4
+S02_!_08_!_klebrig_!_0,8;1-4
+S02_!_09_!_faserig_!_0,9;3,4

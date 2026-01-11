@@ -54,7 +54,7 @@ print_dropdown(k=1) # 1 = MEDIUM
 print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
 print "</form> "                                 >> result_txt
 print "</div>" >> result_txt
-print "</div></body></html>" >> result_txt
+#print "</div></body></html>" >> result_txt
 
 }
 
