@@ -37,6 +37,7 @@ if [ $? -ne 0 ]; then
 fi
 
 medium=$(echo ${json_data} | jq -r '.medium')
+#s01=$(echo ${json_data} | jq -r '.S01')
 
 rm -f ${RESULT_TXT}
 rm -f ${MYERRLOG_TXT}

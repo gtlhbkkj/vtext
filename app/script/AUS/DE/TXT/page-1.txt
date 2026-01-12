@@ -127,13 +127,13 @@ M_05_!_OPTION_!_1_!_1. Nach Hydrozyklon
 M_05_!_OPTION_!_2_!_2. Ohne Hydrozyklon
 
 M_06_!_Pflanzenöl
-M_06_!_LABEL_!_1_!_Filter Einbausituation:
+M_06_!_LABEL_!_1_!_Pflanzenölart:
 M_06_!_OPTION_!_2_!_01. Rohöl
 M_06_!_OPTION_!_3_!_02. Raffiniertes Öl
 M_06_!_OPTION_!_4_!_03. Extraktionsöl
 
 M_07_!_Testmedium
-M_07_!_LABEL_!_1_!_CHOOSE A TEST MEDIUM:
+M_07_!_LABEL_!_1_!_CHOOSE OPTION:
 M_07_!_OPTION_!_1_!_1. TEST OPTION 1
 M_07_!_OPTION_!_2_!_2. TEST OPTION 2
 M_07_!_OPTION_!_3_!_3. TEST OPTION 3
@@ -149,26 +149,26 @@ MIV_07_!_DSZ:1,1000;VSC:1,200;WP:1,16;WT:0,120;DP:1,16;DT:0,120;DPLINE:25,150;FS
 
 # MPV = Medium Partikeln Values
 # Shmutz1_!_Schmutz2_!_показывать на странице или передавать как скрытые
-MPV_01_!_06,07_!_01_!_HIDDEN:HIDDEN
-MPV_02_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN:HIDDEN
-MPV_03_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN:HIDDEN
-MPV_04_!_*_!_*_!_SHOW:SHOW
-MPV_05_!_18_!_01,02_!_HIDDEN:HIDDEN
-MVP_06_!_01-03,18,19_!_01,02,07,09_!_SHOW:SHOW
-MVP_07_!_02-05,08-11,15-18_!_02-08_!_SHOW:SHOW
+MPV_01_!_06,07_!_01_!_HIDDEN,HIDDEN
+MPV_02_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN,HIDDEN
+MPV_03_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN,HIDDEN
+MPV_04_!_1-17_!_*_!_SHOW,SHOW
+MPV_05_!_18_!_01,02_!_HIDDEN,HIDDEN
+MPV_06_!_01-03,18,19_!_01,02,07,09_!_SHOW,SHOW
+MPV_07_!_02-05,08-11,15-18_!_02-08_!_SHOW,SHOW
 
 # SCHMUTZART
-pos. 1 - фактор расхода (1 - 100% расход; 0,95 - 95% расход)
-если несколько факторов принимает участие, то возможно, произведение их будет неправильно
-pos. 2 - какой элемент подходит
-0. ни один элемент не подходит
-1._Kantenspaltspule
-2._Kantenspaltrohr
-3._Lochblechelement
-4._Lochfolienelement
-5._Segmentelement mit Topmesh
-6._Segmentelement / Wave Element
-
+#pos. 1 - фактор расхода (1 - 100% расход; 0,95 - 95% расход)
+#если несколько факторов принимает участие, то возможно, произведение их будет неправильно
+#pos. 2 - какой элемент подходит
+# 0. ни один элемент не подходит
+# 1._Kantenspaltspule
+# 2._Kantenspaltrohr
+# 3._Lochblechelement
+# 4._Lochfolienelement
+# 5._Segmentelement mit Topmesh
+# 6._Segmentelement / Wave Element
+#
 S01_!_01_!_Sand_!_1;*
 S01_!_02_!_Staub_!_1;*
 S01_!_03_!_Rost und Zunder_!_1;*
@@ -187,7 +187,7 @@ S01_!_15_!_Fische_!_1;AKO
 S01_!_16_!_Gras / Algen_!_0;0
 S01_!_17_!_Organische Partikeln_!_0,8;1-4
 S01_!_18_!_Kern- und Schalen Teile, fettfreie Partikeln_!_1;1,2_!_# Miscella, Pflanzenöl
-S01_!_19_!_Phospholipide, freie Fettsäuren, Wachse, Pigmente, Proteinverbindungen_!_0,8;1,2# Pflanzenöl
+S01_!_19_!_Phospholipide, freie Fettsäuren, Wachse, Pigmente, Proteinverbindungen_!_0,8;1,2_!_# Pflanzenöl
 
 # SCHMUTZEIGENSCHAFTEN
 S02_!_01_!_hart / fest_!_1;*
