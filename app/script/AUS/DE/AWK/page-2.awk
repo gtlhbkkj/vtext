@@ -170,7 +170,7 @@ function print_dropdown(k) {
   print "<div class=\"row mb-3\">"  >> result_txt
   print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader "</label>"   >> result_txt
   print "  <div class=\"col-sm-6\">"  >> result_txt
-  print "    <select class=\"form-select\" id=\"" mylabel "\">"  >> result_txt
+  print "    <select class=\"form-select\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
 
   j = 1  # selected
   for (i=3; i<=length(arr_my_str); i++) {
@@ -186,6 +186,8 @@ function print_dropdown(k) {
         option_value = "value"
      j = 2  # "value"
 
+#     print "<option " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
+#     print "<option name=\"" mylabel "\" " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
      print "<option " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
   }
   print "</select>" >> result_txt
@@ -224,7 +226,7 @@ function print_input(mystart, myend) {
     print "   <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader " " min_value "-" max_value "</label>" >> result_txt
     print "       <div class=\"col-sm-2\">" >> result_txt
 #    print "<input type=\"number\" class=\"form-control\" id=\"" mylabel "\" value=\"0\" required>" >> result_txt
-    print "          <input type=\"number\" class=\"form-control\" min=\"" min_value "\" max=\"" max_value "\" step=\"" step_value "\" id=\"" mylabel "\" value=\"" default_value "\" required>" >> result_txt
+    print "          <input type=\"number\" class=\"form-control\" name=\"" mylabel "\" min=\"" min_value "\" max=\"" max_value "\" step=\"" step_value "\" id=\"" mylabel "\" value=\"" default_value "\" required>" >> result_txt
     print "       </div>" >> result_txt
     print "</div>" >> result_txt
 
@@ -266,14 +268,15 @@ print "<p class=\"h4\">Medium: " medium_selected "</p>" >> result_txt
          } else
             kdo = 1
 
+         option_name = "label" label_nr
 #         print "<div class=\"row mb-3 bg-secondary-subtle\">"  >> result_txt
          print "<div class=\"row mb-3\">"  >> result_txt
-         print "  <label for=\"" part1 part2 "\" class=\"col-sm-3 col-form-label\">" part3 "</label>"   >> result_txt
+         print "  <label for=\"" option_name "\" class=\"col-sm-3 col-form-label\">" part3 "</label>"   >> result_txt
          print "  <div class=\"col-sm-6\">"  >> result_txt
-         print "    <select class=\"form-select\" id=\"" part1 part2 "\">"  >> result_txt
+         print "    <select class=\"form-select\" id=\"" option_name "\">"  >> result_txt
 
       } else {
-         print "        <option value=\"" label_nr part2 "\">" part3 "</option>" >> result_txt
+         print "        <option name=\"" option_name "\" value=\"" label_nr part2 "\">" part3 "</option>" >> result_txt
       }
   }
 

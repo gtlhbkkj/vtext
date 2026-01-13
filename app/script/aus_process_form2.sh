@@ -28,6 +28,8 @@ IFS=
 
 json_data=${1}
 
+echo ${json_data} > /tmp/form2.txt
+
 echo ${json_data} | jq 2>/dev/null 1>&2
 if [ $? -ne 0 ]; then
     echo $json_data > /tmp/xxxx
@@ -37,6 +39,15 @@ if [ $? -ne 0 ]; then
 fi
 
 medium=$(echo ${json_data} | jq -r '.medium')
+durchsatz=$(echo ${json_data} | jq -r '.durchsatz')
+viscosity=$(echo ${json_data} | jq -r '.viscosity')
+wpressure=$(echo ${json_data} | jq -r '.wpressure')
+wtemperature=$(echo ${json_data} | jq -r '.wtemperature')
+dpressure=$(echo ${json_data} | jq -r '.dpressure')
+dtemperature=$(echo ${json_data} | jq -r '.dtemperature')
+dpipeline=$(echo ${json_data} | jq -r '.dpipeline')
+fineness=$(echo ${json_data} | jq -r '.fineness')
+
 #s01=$(echo ${json_data} | jq -r '.S01')
 
 rm -f ${RESULT_TXT}
