@@ -1,12 +1,12 @@
 
-### Развёртывание проекта на новом сервере (VPS/VDS Ubuntu)
+### Развёртывание проекта на новом сервере (VPS/VDS Ubuntu/Debian, любой свежей версии)
 
 Обновляем и устанавливаем пакеты:
 ```shell
 # apt update && apt upgrade
 # apt install -y mc git python3-virtualenv python3-pip jq
 ```
-Создаём пользователя и выполняем подготовительные действия, скачиваем проект из github.com:
+Создаём пользователя и выполняем подготовительные действия, скачиваем проект из github.com, устанавливаем нужные библиотеки:
 
 ```shell
 # adduser vtext
@@ -19,11 +19,12 @@ $ mkdir -p logs
 $ make install
 ```
 
-Проверяем запуск веб-приложения в теством режиме, чтобы увидеть возможные ошибки:
+Проверяем запуск веб-приложения в тестовом режиме, чтобы увидеть возможные ошибки:
 ```shell
 $ make run
 ```
-Прерываем выполение: Ctrl + C
+Проверяем на ошибки.
+Прерываем выполнение приложения: Ctrl + C
 
 
 Дальнейшие действия выполняем под root.
@@ -53,7 +54,7 @@ server {
 }
 ```
 
-Создаём synlink для аквтивации конф-файла в nginx:
+Создаём synlink для активации конф-файла в nginx:
 ```shell
 # ln -sf /etc/nginx/sites-available/testsrv24.de.conf /etc/nginx/sites-enabled/testsrv24.de.conf
 ```
@@ -61,9 +62,9 @@ server {
 Создаём служебную директорию для работы скрипта certbot:
 ```shell
 # mkdir -p /var/lib/letsencrypt/webroot
-````
+```
 
-Пробуем получить SSKL-сертификат:
+Пробуем получить SSL-сертификат:
 ```shell
 # certbot certonly -d testsrv24.de --webroot --webroot-path /var/lib/letsencrypt/webroot
 ```
@@ -117,11 +118,11 @@ server {
 }
 ```
 
-Для запувска веб-сервера приложения воспользуемся механизмом systemd.
+Для запуска веб-сервера приложения воспользуемся системным механизмом systemd.
 
 Создаём (под root) файл
 /etc/systemd/system/vtext.service:
-````
+```
 [Unit]
 Description=vtext service
 After=network.target
@@ -140,7 +141,7 @@ WantedBy=multi-user.target
 Применяем настройку:
 ```shell
 # systemctl daemon-reload
-# systemctl eneble vtext
+# systemctl enable vtext
 # systemctl start vtext
 ```
 
@@ -148,3 +149,11 @@ WantedBy=multi-user.target
 ```shell
 # systemctl status vtext
 ```
+
+Запускаем nginx:
+```shell
+# systemctl start nginx
+```
+
+Теперь можно проверить работу приложения в браузере, обратившись по URL:
+https://testsrv24.de/
