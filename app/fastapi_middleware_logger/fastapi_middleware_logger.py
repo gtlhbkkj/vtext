@@ -102,11 +102,9 @@ def add_custom_logger(
                 pass
 
         task = None
-        # if request.headers.get("Content-type") == "application/json":
-        if "/api" in str(request.url):
-            task = BackgroundTask(
-                custom_logger,
-                **{
+        task = BackgroundTask(
+            custom_logger,
+            **{
                     "logger_uri": external_logger_uri,
                     "username": username,
                     "request_client_host": request.client.host,
@@ -119,25 +117,15 @@ def add_custom_logger(
                     # "response_headers": dict(response.headers),
                     # "response_media_type": response.media_type,
                     "response_status_code": str(response.status_code),
-                },
-            )
-            return Response(
-                content=response_body,
-                status_code=response.status_code,
-                headers=dict(response.headers),
-                media_type=response.media_type,
-                background=task,
-            )
-        else:
-            try:
-                return Response(
-                    content=response_body,
-                    status_code=response.status_code,
-                    headers=dict(response.headers),
-                    media_type=response.media_type,
-                )
-            except Exception as e:
-                print(str(e))
+            },
+        )
+        return Response(
+            content=response_body,
+            status_code=response.status_code,
+            headers=dict(response.headers),
+            media_type=response.media_type,
+            background=task,
+        )
     return app
 
 

@@ -38,6 +38,7 @@ app = FastAPI(
     version="0.0.1",
 )
 
+app = add_custom_logger(app, disable_uvicorn_logging=False, external_logger_uri=None)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 
