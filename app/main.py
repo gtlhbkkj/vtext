@@ -79,7 +79,7 @@ async def auslegung_1(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(stderr_data)
+            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
 
         try:
             json_xdata = json.loads(stdout_data)
@@ -141,7 +141,7 @@ async def auslegung_2(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(stderr_data)
+            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
 
         try:
             json_xdata = json.loads(stdout_data)
@@ -203,7 +203,7 @@ async def process_form(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(stderr_data)
+            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
 
         try:
             json_xdata = json.loads(stdout_data)
@@ -261,7 +261,7 @@ async def root(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
     if stderr_data:
-        logger.error(stderr_data)
+        logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
 
     try:
         json_xdata = json.loads(stdout_data)
@@ -322,7 +322,7 @@ async def root(request: Request, filter_name: str = None) -> None:
             os.unlink(tmp_stderr_filename)
 
             if stderr_data:
-                logger.error(stderr_data)
+                logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
 
             try:
                 json_xdata = json.loads(stdout_data)
