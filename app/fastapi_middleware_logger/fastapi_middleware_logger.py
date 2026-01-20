@@ -1,3 +1,4 @@
+from datetime import datetime
 from fastapi import FastAPI, Response, Request
 from starlette.background import BackgroundTask
 from starlette.types import Message
@@ -76,6 +77,7 @@ def add_custom_logger(
         except Exception as exc:
             custom_error_logger(
                 **{
+                    "datetime": datetime.now().strftime('%d-%m-%Y %H:%M:%S'),
                     "request_body": request_body.decode("utf-8"),
                     "request_client_host": request.client.host,
                     "request_method": request.method,
@@ -105,15 +107,16 @@ def add_custom_logger(
         task = BackgroundTask(
             custom_logger,
             **{
-                    "logger_uri": external_logger_uri,
-                    "username": username,
+                    "datetime": datetime.now().strftime('%d-%m-%Y %H:%M:%S'),
+                    # "logger_uri": external_logger_uri,
+                    # "username": username,
                     "request_client_host": request.client.host,
                     "request_method": request.method,
                     "request_uri": str(request.url),
                     "request_body": request_body.decode("utf-8"),
                     # "request_headers": dict(request.headers),
                     "request_query_params": str(dict(request.query_params)),
-                    "response_body": str(response_body.decode('utf-8')),
+                    # "response_body": str(response_body.decode('utf-8')),
                     # "response_headers": dict(response.headers),
                     # "response_media_type": response.media_type,
                     "response_status_code": str(response.status_code),
