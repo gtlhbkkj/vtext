@@ -1,0 +1,199 @@
+!! не забыть про элементы
+
+# Position Header для заголовков финальных форм - для простого считывания и вывода в цикле
+PHEADER_!_1_!_Antrieb
+PHEADER_!_2_!_Filter Anschlüsse (Eingang/Ausgang)
+PHEADER_!_3_!_Auslegungsdruck_!_# для KSF нужно будет писать расшифровку "2"=PN16 usw.
+PHEADER_!_4_!_DP Messung
+PHEADER_!_5_!_Fremddruckventil
+PHEADER_!_6_!_Ablassventil
+PHEADER_!_7_!_Rückspüllventil
+
+# базовая комплектация и цена
+# STANDARD (AF112_G2 - short name, AF1124_G2 - long name) // получается что мотор это 1 поз.
+# $3 = Material
+BASECONF_!_AF122_G1_!_1_!_AF12243-2121-00000/G1_!_AF120174_!_E255_!_2085
+BASECONF_!_AF112_G2_!_1_!_AF11243-221-00000/G2_!_AF100174_!_E256_!_3325
+BASECONF_!_AF113_G3_!_1_!_AF11363-1321-00000/G3_!_AF100176_!_E258_!_4620
+BASECONF_!_AF113_G3_!_2_!_AF11363-1322-00000/G3_!_AF100216_!_E258_!_13185
+BASECONF_!_AF113_G3_!_3_!_AF11363-1323-00000/G3_!_AF100216_!_E258_!_8013
+
+BASECONF_!_AF113_G3_!_1_!_AF11363-1321-00000/G3_!_AF105216_!_E268_!_5254_!_# WAVE Edelstahl
+BASECONF_!_AF113_G3_!_2_!_AF11363-1322-00000/G3_!_AF105216_!_E268_!_11249_!_# WAVE Edelstahl
+BASECONF_!_AF113_G3_!_3_!_AF11363-1323-00000/G3_!_AF105216_!_E268_!_6077_!_# WAVE Edelstahl
+
+BASECONF_!_AF132_G2_!_1_!_AF13243-221-03000/G2_!_AF170174_!_E257_!_3619
+BASECONF_!_AF133_G3_!_1_!_AF13363-1321-03000/G3_!_AF170176_!_E259_!_4988
+BASECONF_!_AF133_G3_!_3_!_AF13363-1323-03000/G3_!_AF170216_!_E259_!_8460
+BASECONF_!_AF172_G2_!_1_!_AF17243-221-03000/G2_!_AF100174_!_E256_!_4615
+BASECONF_!_AF173_G3_!_1_!_AF17363-1321-03000/G3_!_AF100176_!_E258_!_6151
+BASECONF_!_AF173_G3_!_2_!_AF17363-1322-03000/G3_!_AF100216_!_E258_!_12340
+BASECONF_!_AF173_G3_!_3_!_AF17363-1323-03000/G3_!_AF100216_!_E258_!_10393
+
+BASECONF_!_AF173_G3_!_1_!_AF17363-1321-03000/G3_!_AF105216_!_E268_!_6785_!_# WAVE Edelstahl
+BASECONF_!_AF173_G3_!_2_!_AF17363-1322-03000/G3_!_AF105216_!_E268_!_10404_!_# WAVE Edelstahl
+BASECONF_!_AF173_G3_!_3_!_AF17363-1323-03000/G3_!_AF105216_!_E268_!_8457_!_# WAVE Edelstahl
+
+# POSIBLE CONFIGURATIONS //// возможно обьединить  некоторые ?????????
+# вне зависимости от материала, конфигурация у всех одинаковая
+# Pos. 1 = Motor
+# Pos. 2 = Port size
+# Pos. 3 = PN16
+# Pos. 4 = DP Manometer
+#                       3 - 2   2   1 -    4      1     2     2     0
+POSSCONF_!_AF122_G1_!_3,7_!_21_!_2_!_1_!_0,1,2,4_!_0,1_!_0_!_0,2_!_0
+POSSCONF_!_AF112_G2_!_3,7_!_2_!_2_!_1_!_0,1,2,4_!_0,1_!_0,2_!_0,2_!_0
+POSSCONF_!_AF132_G2_!_3_!_2_!_2_!_1_!_0,1,2,4_!_3_!_0,2_!_0_!_0
+POSSCONF_!_AF172_G2_!_3_!_2_!_2_!_1_!_0,1,2,4_!_3_!_0,2_!_0,2_!_0
+POSSCONF_!_AF113_G3_!_3_!_13,14,15,18_!_2_!_1,2,3_!_0,1,2,4_!_0,1_!_0,2_!_0,2_!_0
+POSSCONF_!_AF133_G3_!_3_!_13_!_2_!_1,2_!_0,1,2,4_!_3_!_0,2_!_0_!_0
+POSSCONF_!_AF173_G3_!_3_!_13_!_2_!_1,2,3_!_0,1,2,4_!_3_!_0,2_!_0,2_!_0
+
+# CONFIGURATION
+# CPOS_1 /// ANTRIEB
+# $1-series $2-parameter $3-Material
+CPOS_1_!_*_!_3_!_*_!_Standard Getriebemotor 230/400V 50Hz_!_DUMM0000
+CPOS_1_!_AF112_G2,AF122_G1_!_7_!_*_!_Standard pneum. Drehantrieb_!_DUMM0000
+
+# CPOS_2 /// port size = "2","13","18", может состоять из 1-2 цифр
+# $3 = Port size
+# $4 = Material Geh
+# $6 = Price
+# !!!!!!!!!! AFxxx/G3 Material Edelstahl - пропустить в AWK code !!!!!!!!!!!!!!!!
+CPOS_2_!_AF122_G1_!_21_!_1_!_Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852_!_DUMM0000
+CPOS_2_!_AF112_G2,AF132_G2,AF172_G2_!_2_!_1_!_Zu- / Ablaufanschluss: G1 1/2 Einschraublöcher DIN 3852 in Flanschen DN40 PN16 EN 1092-1/11B1_!_DUMM0000
+CPOS_2_!_AF113_G3,AF133_G3,AF173_G3_!_13_!_1,2,3_!_G2 Einschraublöcher DIN 3852_!_DUMM0000
+CPOS_2_!_AF113_G3,AF133_G3,AF173_G3_!_14_!_1,3_!_Einschraubflansch DN50 PN40 EN 1092-1/11B1 in G2 Einschraublöcher DIN 3852_!_79398124
+CPOS_2_!_AF113_G3,AF133_G3,AF173_G3_!_15_!_1,3_!_Einschraubflansch DN65 PN40 EN 1092-1/11B1 in G2 1/2 Einschraublöcher DIN 3852_!_DUMM0007
+CPOS_2_!_AF113_G3,AF133_G3,AF173_G3_!_18_!_1,3_!_G2 1/2 Einschraublöcher DIN 3852_!_DUMM0001
+CPOS_2_!_AF113_G3,AF133_G3,AF173_G3_!_18_!_2_!_G2 1/2 Einschraublöcher DIN 3852_!_DUMM0002
+
+# POS_3: DRUCKSTUFE - 
+# для всех RSF она одинаковая "2" = PN16, 0 = OHNE MEHRPREIS
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = Druckstufe // "2" = PN16
+CPOS_3_!_*_!_2_!_*_!_PN16_!_DUMM0000
+
+# POS_4: ANZEIGE C-STAHL / ALU /// 1 - материал
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = Typenschl Anzeige
+# $4 = Material Geh. /// "1" = C-Stahl / GGG
+CPOS_4_!_*_!_0_!_*_!_ohne DP Kontrolle_!_DUMM0000
+CPOS_4_!_*_!_1_!_1,3_!_PIS 3076/1,2 Alu _!_79750449
+CPOS_4_!_*_!_2_!_1,3_!_PIS 3076/0,7 Alu _!_79750456
+CPOS_4_!_*_!_4_!_1,3_!_PIS 3190 dig.DPM _!_70570495
+CPOS_4_!_*_!_8_!_1,3_!_PIS 3076/2,2 Alu _!_79751330
+
+# POS_4: ANZEIGE EDELSTAHL /// 2 - материал
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = Typenschl Anzeige
+# $4 = Material Geh. /// "2" = Edelstahl
+CPOS_4_!_*_!_1_!_2_!_PIS 3076/1,2 V2A_!_76348445
+CPOS_4_!_*_!_2_!_2_!_PIS 3076/0,7 V2A_!_72459561
+CPOS_4_!_*_!_4_!_2_!_PIS 3190 dig.DPM_!_70570495
+CPOS_4_!_*_!_8_!_2_!_PIS 3076/2,2 V2A_!_DUMM0003
+
+
+# существующая версия ---------------------------------------------------------------------
+# POS_5 // REGELDROSSEL
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = FD Ventile & Regeldrossel
+# CPOS_5_!_AF122_G1,AF112_G2,AF113_G3_!_0_!_ohne Regeldrossel_!_0
+# CPOS_5_!_AF122_G1_!_1_!_mit P2-Regeldrossel_!_DUMM0004
+# CPOS_5_!_AF112_G2_!_1_!_P2-Regeldrossel mit P2-Manometer_!_DUMM0004_!_# взял тот же самый что и выше
+# CPOS_5_!_AF113_G3_!_1_!_P2-Regeldrossel mit P2-Manometer_!_1,3::DUMM0005;2::DUMM0006
+# CPOS_5_!_AF113_G3_!_6_!_P2-Regeldrossel mit P2-Manometer, mit P3-Regeldrossel und P3-Manometer_!_1,3::DUMM0008;2::DUMM0009
+# CPOS_5_!_AF132_G2,AF172_G2,AF133_G3,AF173_G3_!_3_!_Fremddruckventil G1 für Flüssigkeit, 24 V_!_0
+
+# новая версия ---------------------------------------------------------------------
+# добавил поле материала как у остальных
+# POS_5 // REGELDROSSEL
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = FD Ventile & Regeldrossel
+CPOS_5_!_AF122_G1,AF112_G2,AF113_G3_!_0_!_1,2,3_!_ohne Regeldrossel_!_DUMM0000
+CPOS_5_!_AF122_G1_!_1_!_1,3_!_mit P2-Regeldrossel_!_DUMM0004
+CPOS_5_!_AF112_G2_!_1_!_1,3_!_P2-Regeldrossel mit P2-Manometer_!_DUMM0004_!_# взял тот же самый что и выше
+CPOS_5_!_AF113_G3_!_1_!_1,3_!_P2-Regeldrossel mit P2-Manometer_!_DUMM0005
+CPOS_5_!_AF113_G3_!_1_!_2_!_P2-Regeldrossel mit P2-Manometer_!_DUMM0006
+CPOS_5_!_AF113_G3_!_6_!_1,3_!_P2-Regeldrossel mit P2-Manometer, mit P3-Regeldrossel und P3-Manometer_!_DUMM0008
+CPOS_5_!_AF113_G3_!_6_!_2_!_P2-Regeldrossel mit P2-Manometer, mit P3-Regeldrossel und P3-Manometer_!_DUMM0009
+CPOS_5_!_AF132_G2,AF172_G2,AF133_G3,AF173_G3_!_3_!_1,2,3_!_Fremddruckventil G1 für Flüssigkeit, 24 V_!_DUMM0000
+
+
+# POS_6: ABLASS VENTILE C-STAHL /// 1 - материал
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = Typenschl Ventil
+# $4 = Material Geh. /// "1,3" = C-Stahl / GGG
+CPOS_6_!_*_!_0_!_*_!_ohne Ablassventil_!_DUMM0000
+CPOS_6_!_AF112_G2,AF172_G2_!_2_!_1,3_!_mit Ablass KuHa G1 1/2 MS/VERN.ELPN 24V_!_70303254
+CPOS_6_!_AF132_G2,AF113_G3,AF133_G3,AF173_G3_!_2_!_1,3_!_mit Ablass KuHa G2 MS/VERN.ELPN 24V_!_79751975
+CPOS_6_!_AF113_G3,AF133_G3,AF173_G3_!_2_!_1,3_!_mit Ablass KuHa G2 VA ELPN 24V_!_79751983
+
+
+# POS_7: RS VENTILE C-STAHL /// 1 - материал
+# $2 = FilterBEZ (AF113_G3, usw)
+# $3 = Typenschl Ventil
+# $4 = Material Geh. /// "1,3" = C-Stahl / GGG
+CPOS_7_!_*_!_0_!_*_!_ohne Rückspüllventil_!_DUMM0000
+CPOS_7_!_AF122_G1_!_2_!_1_!_mit Rückspüllventil G1/2 MSVN 24V ELPN_!_76234749
+CPOS_7_!_AF112_G2,AF113_G3,AF172_G2,AF173_G3_!_2_!_1,3_!_mit Rückspüllventil G1 MSVN 24V ELPN_!_79751934
+CPOS_7_!_AF113_G3,AF173_G3_!_2_!_2_!_mit Rückspüllventil G1 VA 24V ELPN_!_79751942
+
+########## PREISE ###########
+
+# NULL-PREIS-OPTION
+DUMM0000_!_NULL-PREIS-OPTION_!_0
+
+# EINSCHRAUBLÖCHER / EINSCHRAUBFLANSCHE
+79398124_!_2x FLANSCH Z G2 DN50/PN40 ST                      _!_790
+DUMM0001_!_G2 1/2 Einschraublöcher DIN 3852 in VARIO3 GGG Geh_!_220
+DUMM0002_!_G2 1/2 Einschraublöcher DIN 3852 in VARIO3 VA Geh _!_980
+DUMM0007_!_Einschraubflansch DN65 PN40 ST EN 1092-1/11B1 in G2 1/2 Einschraublöcher DIN 3852_!_1050
+  -# DUMM0001 ** G2 1/2 Einschraublöcher DIN 3852 in VARIO3 GGG Geh (220)
+  -# 70359864 *** FLANSCHSATZ G2 1/2 DN65/PN40 ST (830) 
+DUMM0010_!_Einschraubflansch DN65 PN40 VA EN 1092-1/11B1 in G2 1/2 Einschraublöcher DIN 3852_!_2030
+  -# DUMM0002 *** G2 1/2 Einschraublöcher DIN 3852 in VARIO3 VA Geh (980)
+  -# DUMMYXXX *** FLANSCHSATZ G2 1/2 DN65/PN40 VA (1050 / abgeschätzt) 
+
+# DP MESSUNG C-STAHL AUSFÜHRUNG
+79750449_!_(1) ANBAUSATZ Z PIS 3076/1,2 F.AF71-173 G VP_!_251
+79750456_!_(2) ANBAUSATZ Z PIS 3076/0,7 F.AF71-173 G VP_!_251
+70570495_!_(4) PIS   3190 Z PN40 G1/8                VP_!_948
+79751330_!_(8) ANBAUSATZ Z PIS 3076/2,2 F.AF71-173 G VP_!_251
+
+# DP MESSUNG EDELSTAHL AUSFÜHRUNG
+76348445_!_(1) ANBAUSATZ Z PIS 3076/1,2 EL.V2A FKM   VP_!_594
+72459561_!_(2) ANBAUSATZ Z PIS 3076/0,7 EL.V2A FKM   VP_!_594
+DUMM0003_!_(3) ANBAUSATZ Z PIS 3076/2,2 EL.V2A FKM   VP_!_594
+
+# VENTILE C-STAHL
+76234749_!_(2) KUGELH G 1/2 PN40 EP 24V DC MS          _!_334
+79751934_!_(2) ANBAUS.KUGELH.G1 PN40MS/VERN.ELPN 24V VP_!_359
+70303254_!_(2) ANBAUS.KUGELH.G1 1/2 PN30 MSVN EP 24V VP_!_441
+79751975_!_(2) ANBAUS.KUGELH.G2 PN30MS/VERN.ELPN 24V VP_!_528
+
+# VENTILE EDELSTAHL
+79751983_!_(2) ANBAUS.KUGELH.G2 PN63 VA ELPN 24V     VP_!_1445
+79751942_!_(2) ANBAUS.KUGELH.G1 PN63 VA ELPN 24V VP ***_!_618
+
+# REGELDROSSEL
+DUMM0004_!_[AF122: +RD] / [AF112: +RD +Manometer]_!_185
+ -# 76188908 *** KUGELH G11/2PN40  ST HAND
+ -# 79710195 *** MANOMETER G1/4-NG63 0-16BAR PN25 GLYCER.
+ -# 79348483 *** DOPPELNIPPEL G 1 1/2 VZK. GF 280
+ -# 79347964 *** REDUZIERUNG R 1/2X1/4 VZK  GF 241
+
+DUMM0008_!_(6) AF113 (C-Stahl 1,3) P2-Regeldrossel mit P2-Manometer, mit P3-Regeldrossel und P3_!_490
+  -# DUMM0005 x 2 = 490
+DUMM0009_!_(6) AF113 (Edelstahl 2) P2-Regeldrossel mit P2-Manometer, mit P3-Regeldrossel und P3_!_830
+  -# DUMM0006 x 2 = 830
+
+DUMM0005_!_AF113 (C-Stahl 1,3): P2-Regeldrossel mit P2-Manometer_!_245
+ -# 79371311 *** DOPPELNIPPEL R 2/G1/4 1.0037
+ -# 77722838 *** KUGELH G2   PN40  MS ST HAND
+ -# 79710195 *** MANOMETER G1/4-NG63 0-16BAR PN25 GLYCER.
+
+DUMM0006_!_AF113 (Edelstahl 2): P2-Regeldrossel mit P2-Manometer_!_415
+ -# 79782848 *** DOPPELNIPPEL R 2/G1/4 1.4571 (69,-)
+ -# 78242836 *** KUGELH G2   PN40  VA HAND (64,-)
+ -# 70373927 *** MANOMETER G1/4-NG63 0-16BAR/PSI PN25 VA (33,-)

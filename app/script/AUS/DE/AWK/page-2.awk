@@ -11,7 +11,6 @@ BEGIN {
 # заходят
 # medium
 
-
 str_medium = str_ivalues = str_pvalues = str_s01 = str_s02 = ""
 ffstr_ivalues = ffstr_pvalues = 0           # для поиска в теле. Если нашли то больше не ищем
 # формируем поисковую строку для вывода доп опций по среде
@@ -80,9 +79,9 @@ for (i=1; i<=length(arr_input_label_2); i++) {
     field1 = arr_input_label_2[i]
     if ($1 == field1) {
         if (arr_input_values_2[i] == "")
-           arr_input_values_2[i] = $2
+           arr_input_values_2[i] = $2 ";;" $3
         else
-           arr_input_values_2[i] = arr_input_values_2[i] "!!" $2
+           arr_input_values_2[i] = arr_input_values_2[i] "!!" $2 ";;" $3
     }
   }
 
@@ -117,7 +116,7 @@ print_bootstrap_head("Filter Auslegung // Seite 2")
 #print "\n\n\n\n\n<BR>" str_pvalues "<BR>\n\n\n\n\n" >> result_txt
 #print "\n\n\n\n\n" str_s01 "<BR>\n\n\n\n\n" >> result_txt
 
-
+#print "<BR>str_bparam: " str_bparam >> result_txt
 print_medium_options(medium,str_medium)
 
 print "<input type=\"hidden\" name=\"medium\" value=\"" medium "\">\n"  >> result_txt
@@ -127,12 +126,12 @@ print "<input type=\"hidden\" name=\"medium\" value=\"" medium "\">\n"  >> resul
 # Schmutzart und Schmutzeigenschaften
 split(str_pvalues, arr_pvalues, "!!") # 06,07!!01!!HIDDEN,HIDDEN
 if (arr_pvalues[1] != "HIDDEN") 
-  print_schmutzart(str_pvalues, str_s01, "Schmutzart:", position=1, field_name="S01")
+  print_schmutzart(str_pvalues, str_s01, "Schmutzart:", position=1, field_name="s01")
 else
 {}
 
 if (arr_pvalues[2] != "HIDDEN") 
-  print_schmutzart(str_pvalues, str_s02, "Schmutzeigenschaften:", position=2, field_name="S02")
+  print_schmutzart(str_pvalues, str_s02, "Schmutzeigenschaften:", position=2, field_name="s02")
 else
 {}
 
@@ -162,33 +161,28 @@ print "</div>" >> result_txt
 function print_dropdown(k) {
   my_str = arr_input_values_2[k]
   split(my_str, arr_my_str, "!!")
-  split(arr_my_str[1],arr_my_str1,"__")
+  split(arr_my_str[1],arr_my_str1,";;")
   mylabel = arr_my_str1[1]
-  split(arr_my_str[2],arr_my_str1,"__")
+  split(arr_my_str[2],arr_my_str1,";;")
   myheader = arr_my_str1[1]
 
   print "<div class=\"row mb-3\">"  >> result_txt
   print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader "</label>"   >> result_txt
   print "  <div class=\"col-sm-6\">"  >> result_txt
   print "    <select class=\"form-select\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
+#  print "    <select class=\"form-select\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
 
   j = 1  # selected
   for (i=3; i<=length(arr_my_str); i++) {
-    split(arr_my_str[i],arr_arr_m,"__")
+#     split(arr_my_str[i],arr_arr_m,"__")
+#     myoption = substr(arr_arr_m[1],4)
+#     myvalue = substr(arr_arr_m[1],1,1)
 
-     myvalue =  arr_my_str[i]
-     myoption = arr_arr_m[1]
-     if (k != 1)  # MEDIUM
-       myoption = substr(arr_arr_m[1],4)
+     split(arr_my_str[i],arr_arr_m,";;")
+     myvalue = arr_arr_m[1]
+     myoption = arr_arr_m[2]
 
-     option_value = "selected"
-     if (j != 1)
-        option_value = "value"
-     j = 2  # "value"
-
-#     print "<option " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
-#     print "<option name=\"" mylabel "\" " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
-     print "<option " option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
+     print "<option value=\"" myvalue "\" >" myoption "</option>" >> result_txt
   }
   print "</select>" >> result_txt
   print "</div></div>"    >> result_txt  # Bootstrap
@@ -268,15 +262,15 @@ print "<p class=\"h4\">Medium: " medium_selected "</p>" >> result_txt
          } else
             kdo = 1
 
-         option_name = "label" label_nr
+         mylabel = "label" label_nr
 #         print "<div class=\"row mb-3 bg-secondary-subtle\">"  >> result_txt
          print "<div class=\"row mb-3\">"  >> result_txt
-         print "  <label for=\"" option_name "\" class=\"col-sm-3 col-form-label\">" part3 "</label>"   >> result_txt
+         print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" part3 "</label>"   >> result_txt
          print "  <div class=\"col-sm-6\">"  >> result_txt
-         print "    <select class=\"form-select\" id=\"" option_name "\">"  >> result_txt
+         print "    <select class=\"form-select\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
 
       } else {
-         print "        <option name=\"" option_name "\" value=\"" label_nr part2 "\">" part3 "</option>" >> result_txt
+         print "        <option value=\"" label_nr part2 "\">" part3 "</option>" >> result_txt
       }
   }
 
@@ -312,7 +306,7 @@ function update_bparam(str_bparam, str_ivalues) {
 
 # Schmutzart und Schmutzeigenschaften
 function print_schmutzart(str_pvalues, str_s0x, h4_head, position, field_name) {
-#function print_schmutzart(str_pvalues,str_s0x) {
+#  print "..........." str_s0x >> result_txt
   print "<p class=\"h4\">"h4_head"</p>" >> result_txt
   print "<div class=\"form-check\">" >> result_txt
 
@@ -370,7 +364,8 @@ function print_schmutzart(str_pvalues, str_s0x, h4_head, position, field_name) {
 
 
 function print_checkbox(myid, mytext, myname) {
-  print "  <input class=\"form-check-input\" type=\"checkbox\" data-bs-theme=\"dark\" name= \"" myname "\" value= \"" myid "\" id=\"" myid "\">" >> result_txt
+#  print "  <input class=\"form-check-input\" type=\"checkbox\" data-bs-theme=\"dark\" name=\"" myname "\" value=\"" myid "\" id=\"" myid "\">" >> result_txt
+  print "  <input class=\"form-check-input\" type=\"checkbox\" data-bs-theme=\"dark\" name=\"" myname"_"myid "\" value=\"" myid "\" id=\"flexCheckDefault\">" >> result_txt
   print "     <label class=\"form-check-label \" for=\"" myid "\">" >> result_txt
   print "        " mytext  >> result_txt
   print "      </label><BR>" >> result_txt

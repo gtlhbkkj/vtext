@@ -12,6 +12,9 @@ str_medium = ""
 
 # DROPDOWNS
 # str_input_label_2 = "MEDIUM;ANTRIEB;MATERIAL;MATERIALEL"
+
+#print "
+
 str_input_label_2 = "MEDIUM"
 split(str_input_label_2, arr_input_label_2, ";")
 for (i=1; i<=length(arr_input_label_2); i++) {
@@ -78,12 +81,6 @@ function print_dropdown(k) {
      myvalue =  arr_tmp[1]    # "01"
      myoption = arr_tmp[2]    # "01. Kühlschmierstoff (KSS)"
 
-#     option_value = "selected"
-#     if (j != 1)
-#        option_value = "value"
-#     j = 2  # "value"
-
-#     print "<option" option_value "=\"" myvalue "\"   >" myoption "</option>" >> result_txt
      print "<option value=\"" myvalue "\">" myoption "</option>" >> result_txt
   }
   print "</select>" >> result_txt

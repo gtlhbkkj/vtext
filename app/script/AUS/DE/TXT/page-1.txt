@@ -3,6 +3,16 @@
 # возможно $3 перенести в след файл <page-2.txt>
 # 1-st line is a label for html file
 
+
+# Мин рабочее давление для отсечения Eigendruck
+MIN_WP_FOR_EIGENDRUCK_!_2.0_!_# 2.0 bar
+
+эту строку также вставить в ТХТ файл и оттуда ее забирать
+# LIST OF RSF FILTERS
+# $2 – FULL LIST /// $3 – working pressure < MIN_WP_FOR_EIGENDRUCK
+LIST_OF_RSF_FILTERS_!_2,3,4,5_!_4,5
+
+
 # MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1:1,2;2:1,2,5,6
 #                                            ^^^^^^^^^^^^^^^
 # $4 = Elemente Pos. 1: 1 -KSF, 2 -RSF; Pos. 2: 1 -Spule, 2 -SP-Rohr, 5 - Segment, 6 -Wave
@@ -44,11 +54,11 @@ FINENESS_!_Gewünschte Filterfeinheit [µm]:
 
 ANTRIEB_!_antrieb
 ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
-ANTRIEB_!_1. Sterngriff / Handratsche
-ANTRIEB_!_7. Pneumatischer Antrieb
-ANTRIEB_!_6. Ohne Getriebemotor, jedoch mit Motorbock
-ANTRIEB_!_3. Elektrischer Getriebemotor 220V/480V
-ANTRIEB_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3
+ANTRIEB_!_1_!_1. Sterngriff / Handratsche
+ANTRIEB_!_7_!_7. Pneumatischer Antrieb
+ANTRIEB_!_6_!_6. Ohne Getriebemotor, jedoch mit Motorbock
+ANTRIEB_!_3_!_3. Elektrischer Getriebemotor 220V/480V
+ANTRIEB_!_4_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3
 
 
 ATEX_!_atex
@@ -65,41 +75,44 @@ UTEMPERATURMAX_!_Umgebungstemperatur max [Grad C]:
 # Filtermaterial / Materialbeständigkeit
 MATERIAL_!_material
 MATERIAL_!_Gewünschtes Material Filter:_!_this is a HEAD for dropdowns
-MATERIAL_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
-MATERIAL_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
-MATERIAL_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
-MATERIAL_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
+MATERIAL_!_1_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
+MATERIAL_!_2_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
+MATERIAL_!_3_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
+MATERIAL_!_6_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
 
 
 MATERIALEL_!_materialel
 MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
-MATERIALEL_!_1. Aluminium + Edelstahl
-MATERIALEL_!_2. Edelstahl
+MATERIALEL_!_1_!_1. Aluminium + Edelstahl
+MATERIALEL_!_2_!_2. Edelstahl
 
 # SECOND RUN - <page-2.awk>
 # добавить факторы в зависимости от Опции
+# SECOND RUN - <page-2.awk>
+# добавить факторы в зависимости от Опции
+# $5 = Eignung (тип фильтра / FTYPE 1-4)
+# $6 = фактор расхода (0.75, 1.0, usw)
+# $7 = Viscosity - есть только у LABEL2
 M_01_!_Kühlschmierstoff (KSS)
 M_01_!_LABEL_!_1_!_Angabe der vorhandenen/aktuellen Vorabscheidung:
-M_01_!_OPTION_!_1_!_01. Zentrale Filtereinheit oder anderer Filter (&lt; 120 µm)_!_1.0
-M_01_!_OPTION_!_2_!_02. Feinspäneförderer oder Schlitzhülse oder Magnetabscheider (&lt; 2 mm)_!_0.9
-M_01_!_OPTION_!_3_!_03. Grobspäneförderer/Lochblech (&lt; 5 mm)_!_0.85
+M_01_!_OPTION_!_11_!_01. Zentrale Filteranlage oder anderer Filter (&lt; 120 µm)_!_12345_!_1.3;
+M_01_!_OPTION_!_12_!_02. Feinspäneförderer oder Schlitzhülse oder Magnetabscheider (&lt; 2 mm)_!_1345_!_1.0
+M_01_!_OPTION_!_13_!_03. Grobspäneförderer/Lochblech (&lt; 5 mm)_!_14_!_0.5
 M_01_!_LABEL_!_2_!_Kühlmittelmedium angeben:
-M_01_!_OPTION_!_1_!_01. Wasserbasierte Emulsion (max. Viskosität 10 cSt)
-M_01_!_OPTION_!_2_!_02. Kühlöl (max. Viskosität 30 cSt)
-M_01_!_OPTION_!_3_!_03. Kühlöl (max. Viskosität 100 cSt)
+M_01_!_OPTION_!_21_!_01. Wasserbasierte Emulsion (max. Viskosität 10 cSt)_!_12345_!_1.0_!_10_!_# Viscosity
+M_01_!_OPTION_!_22_!_02. Kühlöl (max. Viskosität 30 cSt) _!_12345_!_0.7_!_30_!_# Viscosity
+M_01_!_OPTION_!_23_!_03. Kühlöl (max. Viskosität 100 cSt) _!_12345_!_0.4_!_100_!_# Viscosity
 M_01_!_LABEL_!_3_!_Art der Metallbearbeitung angeben:
-M_01_!_OPTION_!_1_!_01. Schneiden (Fräsen, Bohren, Drehen)
-M_01_!_OPTION_!_2_!_02. Schleifen (Siliziumkarbid, Bornitrid)
-M_01_!_OPTION_!_3_!_03. Honen, Superfinish
+M_01_!_OPTION_!_31_!_01. Zerspannen / Schneiden (Fräsen, Bohren, Drehen) _!_12345_!_1.0
+M_01_!_OPTION_!_32_!_02. Schleifen (Siliziumkarbid, Bornitrid) _!_5_!_0.6
+M_01_!_OPTION_!_33_!_03. Honen, Superfinish, Coronieren_!_5_!_0.2
 M_01_!_LABEL_!_4_!_Art des zubearbeitendes Metalls angeben:
-M_01_!_OPTION_!_1_!_01. C-Stahl, Edelstahl
-M_01_!_OPTION_!_2_!_02. Aluminium
-M_01_!_OPTION_!_3_!_03. Magnesium
-M_01_!_OPTION_!_4_!_04. Grauguss oder Sphäroguss
-M_01_!_LABEL_!_5_!_Zweck der Filtration (mindestens eine Option wählen)
-M_01_!_OPTION_!_1_!_01. Kontrolfiltration (sehr wenig Schmutz)
-M_01_!_OPTION_!_2_!_02. nur Schutz der nachgeschalteten Anlagen (mehr Schmutz wie oben)
-M_01_!_OPTION_!_3_!_03. Betriebsfilter / Haupt- und einziger Filter (mehr Schmutz wie oben)
+M_01_!_OPTION_!_41_!_01. C-Stahl, Edelstahl_!_12345_!_1.0
+M_01_!_OPTION_!_42_!_02. Aluminium / Magnesium_!_2345_!_0.75
+M_01_!_OPTION_!_43_!_03. Grauguss oder Sphäroguss_!_2345_!_0.5
+
+# if (fineness <= 20 µm)  faktor_fineness = 0.8
+RSF_FAKTOR_FINENESS_!_20_!_0.8
 
 M_02_!_Polyol
 M_02_!_LABEL_!_1_!_Wo steht der Filter:
@@ -138,7 +151,8 @@ M_07_!_OPTION_!_1_!_1. TEST OPTION 1
 M_07_!_OPTION_!_2_!_2. TEST OPTION 2
 M_07_!_OPTION_!_3_!_3. TEST OPTION 3
 
-# MV = Medium Input Values
+# MV = Medium Input Values - input boarder values for Mediums
+# $1 = Medium
 MIV_01_!_DSZ:1,2000;VSC:1,20;WP:1,10;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:10,100
 MIV_02_!_DSZ:1,1000;VSC:100,20000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_03_!_DSZ:1,1000;VSC:10,2000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
@@ -149,6 +163,8 @@ MIV_07_!_DSZ:1,1000;VSC:1,200;WP:1,16;WT:0,120;DP:1,16;DT:0,120;DPLINE:25,150;FS
 
 # MPV = Medium Partikeln Values
 # Shmutz1_!_Schmutz2_!_показывать на странице или передавать как скрытые
+# $1 = Medium
+# $2 = S01 /// $3 = S02
 MPV_01_!_06,07_!_01_!_HIDDEN,HIDDEN
 MPV_02_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN,HIDDEN
 MPV_03_!_01,02,03,04,05,08_!_01,02,03,07_!_HIDDEN,HIDDEN

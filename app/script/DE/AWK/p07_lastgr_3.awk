@@ -40,10 +40,11 @@ if (found == 0 && ablass != 0)
         found = 1
         split($2,arr_p,"--")
         _portsize = substr(arr_p[1],3,length(arr_p[1]))
+
          if (ablass == 1)
-            print mt "\n" mt "Hand-Kugelhahn " _portsize " für Ablass- bzw. Entleerungsanschluss" >> TMP_DIR "/" UUID ".result.txt"
+            print mt "\n" mt "Hand-Kugelhahn für Ablass- bzw. Entleerungsanschluss" >> TMP_DIR "/" UUID ".result.txt"
          else 
-            print mt "\n" mt "Automatik-Kugelhahn " _portsize " für Ablass- bzw. Entleerungsanschluss" text_ex  >> TMP_DIR "/" UUID ".result.txt"
+            print mt "\n" mt "Automatik-Kugelhahn für Ablass- bzw. Entleerungsanschluss" text_ex  >> TMP_DIR "/" UUID ".result.txt"
 
          print mt $3 >> TMP_DIR "/" UUID ".result.txt"
 

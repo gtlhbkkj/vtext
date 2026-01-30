@@ -1,0 +1,81 @@
+???????????????
+# POS_1 /// FILTERTYP KSF ODER RSF 
+# ETSP = Element Typen Schlüssel Pos. 01
+ETSP_01_!_1_!_ETSP_03::1,2,3,4_!_AF KSP
+ETSP_01_!_2_!_ETSP_03::5,6,7,8,9_!_AF RSF
+ETSP_01_!_3_!_ETSP_3::__ _!_AKO RSF/F
+ETSP_01_!_4_!_ETSP_4::__ _!_AKO RSF/G
+::
+# POS_2 /// FILTERELEMENTART
+1._Kantenspaltspule
+2._Kantenspaltrohr
+3._Lochblechelement
+4._Lochfolienelement
+5._Segmentelement mit Topmesh
+6._Segmentelement / Wave Element
+::
+# POS_3 /// FILTER SERIES (ELEMENT ZUORDNUNG NACH FILTER GRÖSSE)
+ETSP_03_!_0_!_n/A
+ETSP_03_!_1_!_E111,E121_!_AF711_G1_!_# AF7011,AF7031,AF7071,AF7081
+ETSP_03_!_2_!_E112,E122,E142_!_AF713_H2,AF713_G1,AF713_GX1,AF713_GX2,AF713_S1,AF713_SH1_!_# AF7013,AF7033,AF7073,AF7083,AF50133
+ETSP_03_!_3_!_E113,E123,E143_!_AF724_G4,AF724_S1,AF724_SH1,AF424_S1,AF424_SH1_!_# AF6014,AF6034,AF6064,AF6074,AF6084,AF50134
+ETSP_03_!_4_!_E114,E124,E144_!_AF736_G3,AF936_G3,AF736_S1,AF736_SH1,AF736_SG1,AF737_S1,AF737_SH1,AF737_SG1,AF738_S1,AF738_SH1,AF738_SG1,AF746_S1,AF746_SH1,AF747_S1,AF747_SH1,AF748_S1,AF748_SH1,AF749_S1,AF749_SH1_!_# AF6016,AF6036,AF6066,AF6076,AF6086,AF6006,AF50136,AF50126
+ETSP_03_!_5_!_E255_!_AF122_G1_!_# AF120174
+ETSP_03_!_6_!_E256_!_AF112_G2,AF172_G2_!_# AF100174,AF100204
+ETSP_03_!_7_!_E257_!_AF132_G2_!_# AF170174,AF170204
+ETSP_03_!_8_!_E258,E268_!_AF113_G3,AF173_G3_!_# AF100176,AF100206,AF100216,AF105176,AF105206,AF105216
+ETSP_03_!_9_!_E259_!_AF133_G3_!_# AF170176,AF170206,AF170216
+ETSP_03_!_A_!_xxx_!_AKO ...
+::
+# POS_4 /// FILTERFLAECHE, cm2 / ABMESSUNGEN, mm
+0._n/A
+1._71:ø42x74
+2._230:ø42x194
+3._437:ø65x231
+4._415:ø65x231
+5._862:ø110x265
+6._836:ø110x265
+7._310:ø65x231
+8._437:ø65x231
+9._763:ø110x265
+A._1750:ø110x265
+::
+# POS_5 /// DELTA_P, Bar
+0._n/A
+1._10
+2._25
+3._35
+4._40
+5._45
+::
+# POS_6 /// MATERIAL
+1._Tragkörper Alu, Draht Edelstahl 1.4571
+2._Tragkörper Edelstahl, Draht Edelstahl 1.4571
+3._Tragkörper Edelstahl, Folie Edelstahl 1.4571
+4._Tragkörper Alu, Folie Edelstahl 1.4571
+5._Tragkörper Edelstahl, Lochblech Edelstahl 1.4571
+6._Tragkörper Alu, Topmesh Edelstahl 1.4571
+7._Tragkörper Alu hard coated, Edelstahl 1.4571
+8._Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl
+9._Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe Stahl
+A._Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571
+B._Tragkörper 1.4571, Filtermedium 1.4571, Halteringe 1.4571
+C._Tragkörper 1.4571, Filtermedium 1.4401, Halteringe 1.4571
+::
+# POS_7 //// DRAHTBREITE, mm
+0._n/A
+1._0.5
+2._0.75
+3._1.0
+4._1.8
+::
+# POS_8 //// BESONDERHEIT
+0._ohne
+1._Elektronenstrahlgebohrte konische Filteröffnungen mit Öffnungswinkel von 45°
+2._Kantenspaltrohr, verstärkte Ausführung mit Spirale
+::
+# POS_9 /// MAX. TEMPERATURE, GRAD C
+0._n/A
+1._100
+2._180
+3._400

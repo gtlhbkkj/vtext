@@ -105,13 +105,14 @@ func find_felement(filter_series_search, filter_element, callnumber) {
 return str_fineness
 }
 
+# "AF749_!_4,3,12" /// кол этажей, кол элементов на этаже
 func print_no_elements(filter_series_search) {
   arr1[1]= "AF737_!_2,1,2"
   arr1[2]= "AF738_!_3,1,3"
-  arr1[3]= "AF746_!_3,1,3"
-  arr1[4]= "AF747_!_3,2,6"
+  arr1[3]= "AF746_!_1,3,3"
+  arr1[4]= "AF747_!_2,3,6"
   arr1[5]= "AF748_!_3,3,9"
-  arr1[6]= "AF749_!_3,4,12"
+  arr1[6]= "AF749_!_4,3,12"
   for (i=1; i<=6; i++) {
     if (arr1[i] ~ substr(filter_series_search,1,5)) {
      split(arr1[i],arr2,"_!_")
