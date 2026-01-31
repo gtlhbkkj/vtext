@@ -2,13 +2,20 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import subprocess
+import urllib.parse
 import json
 import base64
 import uuid
 import logging
-from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse, HTMLResponse
+from fastapi.responses import (
+    FileResponse,
+    JSONResponse,
+    PlainTextResponse,
+    HTMLResponse,
+    RedirectResponse
+)
 from fastapi.templating import Jinja2Templates
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, status
 from fastapi.staticfiles import StaticFiles
 from fastapi.openapi.docs import (
     get_swagger_ui_html,
@@ -41,6 +48,62 @@ app = FastAPI(
 app = add_custom_logger(app, disable_uvicorn_logging=False, external_logger_uri=None)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
+
+
+@app.post("/rsf-auslegung-fin", response_class=HTMLResponse)
+async def auslegung_1(request: Request) -> None:
+    form_data = await request.form()
+    form_data_dict = dict(form_data)
+    print(form_data_dict)
+
+    err_text = ""
+    stderr_data = None
+    stdout_data = None
+
+    try:
+        tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
+        tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
+        my_env = os.environ.copy()
+        my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
+        with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+            process = subprocess.run(
+                [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('RSF_AUSLEGUNG_FIN_SCRIPT')), json.dumps(form_data_dict),],
+                stdout=stdout_file_object,
+                stderr=stderr_file_object,
+                encoding="utf-8",
+                text=True,
+                check=False,
+                env=my_env
+            )
+
+        with open(tmp_stdout_filename, "r") as tmp_file:
+            stdout_data = tmp_file.read()
+        os.unlink(tmp_stdout_filename)
+
+        with open(tmp_stderr_filename, "r") as tmp_file:
+            stderr_data = tmp_file.read()
+        os.unlink(tmp_stderr_filename)
+
+        if stderr_data:
+            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+
+        try:
+            json_xdata = json.loads(stdout_data)
+            try:
+                output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
+                error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+            except Exception as err:
+                error_content = str(err)
+        except json.decoder.JSONDecodeError as err:
+            error_content = str(err)
+
+    except subprocess.CalledProcessError as ee:
+        err_text = "Error executing script"
+    except FileNotFoundError:
+        err_text = "Script not found. Ensure it's executable and in the correct path."
+
+    # return output_content + error_content
+    return RedirectResponse(url="/?filter_name=" + urllib.parse.quote_plus(output_content), status_code=status.HTTP_303_SEE_OTHER)
 
 
 @app.post("/auslegung-1", response_class=HTMLResponse)

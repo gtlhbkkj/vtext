@@ -389,7 +389,8 @@ print "   </div>" >> result_txt
 
    print "   <input type=\"hidden\" name=\"f_base\" value=\""f_base_hidden"\">" >> result_txt
 #   print "<button type=\"button\" class=\"btn btn-primary\">SEND</button>" >> result_txt
-print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
+#print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
+print "<button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
 
 
    print "</form>"                                 >> result_txt
