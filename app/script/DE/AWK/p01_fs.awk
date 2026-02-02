@@ -2,14 +2,21 @@
 #"AF173_G3,AF173/G3,3,13,2,1,5,0,2,0,0,3001,4406,AK,A13,KII,AF6016-010,100"
 
 BEGIN {
-
   RS = "\n"
   FS = "_!_"
   found = 0
+
+
+#print "my_string: " my_string >> "/home/vtext//app/script/DE/AWK/111.txt"
+
   n = split(my_string, arr1, ",")
 
   filter_series_search = arr1[1]
   filter_series_report = arr1[2]
+
+  if (filter_list_price != "")
+    print mt "List price: " filter_list_price ",- EUR St/Brt\n"  >> TMP_DIR "/" UUID ".result.txt"
+
 
   if (arr1[12] == "3001")
     print mt "Komplettfiltereinsatz ohne Filtergehäuse, ohne Antrieb, auf dem Deckel montiert zur" >> TMP_DIR "/" UUID ".result.txt"

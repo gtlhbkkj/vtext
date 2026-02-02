@@ -10,6 +10,7 @@ BEGIN {
 
 # заходят
 # medium
+# comments
 
 str_medium = str_ivalues = str_pvalues = str_s01 = str_s02 = ""
 ffstr_ivalues = ffstr_pvalues = 0           # для поиска в теле. Если нашли то больше не ищем
@@ -31,12 +32,27 @@ for (i=1; i<=length(arr_input_label_2); i++) {
   arr_input_values_1[i] = ""
 }
 
+# набираем массив для вывода на вебсайте строк ввода параметров давление, тонкость, etc
+counter_arr_for_str_input = 1
+arr_for_str_input[1] = ""
+
 } # END OF BEGIN
 
 
 
 # ТЕЛО
 {
+  # формируем данные из нового блока
+  #I_DATA_S_!_wpressure_!_WP_!_Betriebsdruck [bar]:_!_*
+  # I_DATA_S_!_wtemperature_!_WT_!_Betriebstemperatur [Grad C]:_!_02-99
+  if ($1 == "I_DATA_S" && check_medium_in_inputdata1(medium, $5)) {
+     arr_for_str_input[counter_arr_for_str_input] = $2 ";" $3 ";" $4
+     counter_arr_for_str_input++
+  }
+
+
+
+
   # LABEL / OPTION для MEDIUM
   if ($1 == fstr_medium) {
      if (str_medium == "")
@@ -117,34 +133,53 @@ print_bootstrap_head("Filter Auslegung // Seite 2")
 #print "\n\n\n\n\n" str_s01 "<BR>\n\n\n\n\n" >> result_txt
 
 #print "<BR>str_bparam: " str_bparam >> result_txt
+
+
+if (comments == "ON") {
+for (i=1; i<=length(arr_for_str_input); i++)
+   print "<BR>arr_for_str_input: " arr_for_str_input[i] >> result_txt
+print "<BR>" str_ivalues >> result_txt
+print "comments: " comments >> result_txt
+}
+
+
+
 print_medium_options(medium,str_medium)
 
 print "<input type=\"hidden\" name=\"medium\" value=\"" medium "\">\n"  >> result_txt
+print "<input type=\"hidden\" name=\"comments\" value=\"" comments "\">\n"  >> result_txt
+
 #print_hidden_input(1, 10)
 
 
 # Schmutzart und Schmutzeigenschaften
-split(str_pvalues, arr_pvalues, "!!") # 06,07!!01!!HIDDEN,HIDDEN
-if (arr_pvalues[1] != "HIDDEN") 
-  print_schmutzart(str_pvalues, str_s01, "Schmutzart:", position=1, field_name="s01")
-else
-{}
+#split(str_pvalues, arr_pvalues, "!!") # 06,07!!01!!HIDDEN,HIDDEN
+#if (arr_pvalues[1] != "HIDDEN") 
+#  print_schmutzart(str_pvalues, str_s01, "Schmutzart:", position=1, field_name="s01")
+#else
+#{}
+#
+#if (arr_pvalues[2] != "HIDDEN") 
+#  print_schmutzart(str_pvalues, str_s02, "Schmutzeigenschaften:", position=2, field_name="s02")
+#else
+#{}
 
-if (arr_pvalues[2] != "HIDDEN") 
-  print_schmutzart(str_pvalues, str_s02, "Schmutzeigenschaften:", position=2, field_name="s02")
-else
-{}
 
 
-
-print "<p class=\"h4\">Betriebsdaten:</p>" >> result_txt
+#print "<p class=\"h4\">Betriebsdaten:</p>" >> result_txt
 
 #print_dropdown(k=1) # 1 = MEDIUM
-print_input(mystart=1, myend=4) # durchsaty, viscositz, wpressure, working temperature
+#print_input(mystart=1, myend=4) # durchsaty, viscositz, wpressure, working temperature
 
-print "<p class=\"h4\">Anforderungen zum Filter:</p>" >> result_txt
+#print "<p class=\"h4\">Anforderungen zum Filter:</p>" >> result_txt
 #print "<h5>Anforderungen zum Filter:</h5>" >> result_txt
-print_input(mystart=5, myend=8) # dpressure, dtemperature, dpipeline, fineness
+#print_input(mystart=5, myend=8) # dpressure, dtemperature, dpipeline, fineness
+
+# использует данные из arr_for_str_input[]: // выводит в веб строки ввода данных
+
+print "<p class=\"h4\">Betriebsdaten und Anforderungen:</p>" >> result_txt
+print_input_strings()
+
 
 print_dropdown(k=1) # 2 = ANTRIEB
 print_dropdown(k=2) # 3 = Filtermaterial
@@ -210,11 +245,6 @@ function print_input(mystart, myend) {
           break
         }
      }
-
-#     split(arr_input_label_1[i], arr_tmp, ":")
-#     split(arr_tmp[2], arr_tmp1, ",")
-#     min_value = arr_tmp1[1]
-#     max_value = arr_tmp1[2]
 
     print "<div class=\"row mb-3\">" >> result_txt
     print "   <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader " " min_value "-" max_value "</label>" >> result_txt
@@ -372,3 +402,66 @@ function print_checkbox(myid, mytext, myname) {
   return
 }
 
+
+# проверяем, содержится ли medium = "01" в строке str_myrange = "02,04-06,usw."
+function check_medium_in_inputdata1(medium, str_myrange) {
+   if (str_myrange ~ medium)
+     return 1 # TRUE
+   if (str_myrange ~ "*")
+     return 1 # TRUE
+
+   delete arr_myrange
+   delete arr_tmp
+   split(str_myrange, arr_myrange, ",")
+   for (n=1; n<=length(arr_myrange); n++) {
+     if (split(arr_myrange[n], arr_tmp, "-") > 1) {  # т.е. в серединке был минус "04-06"
+        m_first = 1 * arr_tmp[1]
+        m_last = 1 * arr_tmp[2]
+        if (1 * medium < m_first)
+            return 0 # FALSE
+
+        for (m=m_first; m<=m_last; m++) {  # проходим по 04-06 т.е. 4, 5, 6
+           mystr = m
+           if (m<10)
+             mystr = "0" m # достраиваем строку до двузначного числа
+           if (mystr == medium)
+             return 1 # TRUE
+        }
+     }
+   }
+   return 0 #  FALSE - не нашли
+}
+
+# из этого массива /// arr_for_str_input: durchsatz;DSZ;Durchsatz [Liter/Min]:
+# а из этого пограничные величины str_ivalues = "DSZ:1,2000;VSC:1,20;WP:1,10;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:10,100"
+function print_input_strings() {
+  split(str_ivalues, arr_tmp, ";") # поделили на "DSZ:1,2000" "VSC:1,20"
+  for (i=1; i<=length(arr_for_str_input); i++) {
+     split(arr_for_str_input[i], arr_myhtml, ";")
+     mylabel  = arr_myhtml[1]  # durchsatz
+     my_code  = arr_myhtml[2]  # DSZ
+     myheader = arr_myhtml[3]  # Durchsatz [Liter/Min]:
+
+     for (k=1; k<=length(arr_tmp); k++) {
+        split(arr_tmp[k], arr_tmp1, ":")  # "DSZ" "1,2000"
+
+        if (arr_tmp1[1] == my_code) {     # "DSZ" == "DSZ"
+          split(arr_tmp1[2], arr_tmp2, ",")
+          min_value = arr_tmp2[1]
+          max_value = arr_tmp2[2]
+          default_value = min_value
+          break
+        }
+     }
+
+    print "<div class=\"row mb-3\">" >> result_txt
+    print "   <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader " " min_value "-" max_value "</label>" >> result_txt
+    print "       <div class=\"col-sm-2\">" >> result_txt
+#    print "<input type=\"number\" class=\"form-control\" id=\"" mylabel "\" value=\"0\" required>" >> result_txt
+    print "          <input type=\"number\" class=\"form-control\" name=\"" mylabel "\" min=\"" min_value "\" max=\"" max_value "\" step=\"" step_value "\" id=\"" mylabel "\" value=\"" default_value "\" required>" >> result_txt
+    print "       </div>" >> result_txt
+    print "</div>" >> result_txt
+
+  }
+
+}

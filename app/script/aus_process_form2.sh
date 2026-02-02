@@ -56,8 +56,9 @@ fineness=$(echo ${json_data} | jq -r '.fineness')
 antrieb=$(echo ${json_data} | jq -r '.antrieb')
 material=$(echo ${json_data} | jq -r '.material')
 materialel=$(echo ${json_data} | jq -r '.materialel')
+comments=$(echo ${json_data} | jq -r '.comments')
 
-mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel}"
+mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel};${comments}"
 
 # для другой ветки  -  всё кроме КСС
 # viscosity=$(echo ${json_data} | jq -r '.viscosity')

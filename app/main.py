@@ -12,7 +12,7 @@ from fastapi.responses import (
     JSONResponse,
     PlainTextResponse,
     HTMLResponse,
-    RedirectResponse
+    RedirectResponse,
 )
 from fastapi.templating import Jinja2Templates
 from fastapi import FastAPI, Request, status
@@ -64,16 +64,22 @@ async def auslegung_1(request: Request) -> None:
         tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
         tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
         my_env = os.environ.copy()
-        my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-        with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+        my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+        with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+            tmp_stderr_filename, "w"
+        ) as stderr_file_object:
             process = subprocess.run(
-                [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('RSF_AUSLEGUNG_FIN_SCRIPT')), json.dumps(form_data_dict),],
+                [
+                    Path(os.getenv("SCRIPT_DIR"))
+                    / Path(os.getenv("RSF_AUSLEGUNG_FIN_SCRIPT")),
+                    json.dumps(form_data_dict),
+                ],
                 stdout=stdout_file_object,
                 stderr=stderr_file_object,
                 encoding="utf-8",
                 text=True,
                 check=False,
-                env=my_env
+                env=my_env,
             )
 
         with open(tmp_stdout_filename, "r") as tmp_file:
@@ -85,25 +91,59 @@ async def auslegung_1(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+            logger.error(
+                json.dumps(
+                    {"error_message": stderr_data.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
 
         try:
             json_xdata = json.loads(stdout_data)
             try:
-                output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-                error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+                output_content = base64.b64decode(
+                    json_xdata.get("output_content")
+                ).decode("utf-8")
+                error_content = base64.b64decode(
+                    json_xdata.get("error_content")
+                ).decode("utf-8")
             except Exception as err:
                 error_content = str(err)
+                logger.error(
+                    json.dumps(
+                        {"error_message": error_content.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
         except json.decoder.JSONDecodeError as err:
             error_content = str(err)
+            logger.error(
+                json.dumps(
+                    {"error_message": error_content.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
 
     except subprocess.CalledProcessError as ee:
-        err_text = "Error executing script"
+        err_text = "Error executing script."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except FileNotFoundError:
         err_text = "Script not found. Ensure it's executable and in the correct path."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     # return output_content + error_content
-    return RedirectResponse(url="/?filter_name=" + urllib.parse.quote_plus(output_content), status_code=status.HTTP_303_SEE_OTHER)
+    return RedirectResponse(
+        url="/?filter_name=" + urllib.parse.quote_plus(output_content),
+        status_code=status.HTTP_303_SEE_OTHER,
+    )
 
 
 @app.post("/auslegung-1", response_class=HTMLResponse)
@@ -121,16 +161,21 @@ async def auslegung_1(request: Request) -> None:
         tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
         tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
         my_env = os.environ.copy()
-        my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-        with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+        my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+        with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+            tmp_stderr_filename, "w"
+        ) as stderr_file_object:
             process = subprocess.run(
-                [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('AUS_FORM1_SCRIPT')), json.dumps(form_data_dict),],
+                [
+                    Path(os.getenv("SCRIPT_DIR")) / Path(os.getenv("AUS_FORM1_SCRIPT")),
+                    json.dumps(form_data_dict),
+                ],
                 stdout=stdout_file_object,
                 stderr=stderr_file_object,
                 encoding="utf-8",
                 text=True,
                 check=False,
-                env=my_env
+                env=my_env,
             )
 
         with open(tmp_stdout_filename, "r") as tmp_file:
@@ -142,29 +187,61 @@ async def auslegung_1(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+            logger.error(
+                json.dumps(
+                    {"error_message": stderr_data.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
 
         try:
             json_xdata = json.loads(stdout_data)
             try:
-                output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-                error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+                output_content = base64.b64decode(
+                    json_xdata.get("output_content")
+                ).decode("utf-8")
+                error_content = base64.b64decode(
+                    json_xdata.get("error_content")
+                ).decode("utf-8")
             except Exception as err:
                 error_content = str(err)
+                logger.error(
+                    json.dumps(
+                        {"error_message": error_content.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
         except json.decoder.JSONDecodeError as err:
             error_content = str(err)
+            logger.error(
+                json.dumps(
+                    {"error_message": error_content.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
     except subprocess.CalledProcessError as ee:
-        err_text = "Error executing script"
+        err_text = "Error executing script."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except FileNotFoundError:
         err_text = "Script not found. Ensure it's executable and in the correct path."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     return templates.TemplateResponse(
-        "aus_page1.html", {
+        "aus_page1.html",
+        {
             "request": request,
             "output_content": output_content,
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
-        }
+        },
     )
 
 
@@ -183,16 +260,21 @@ async def auslegung_2(request: Request) -> None:
         tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
         tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
         my_env = os.environ.copy()
-        my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-        with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+        my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+        with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+            tmp_stderr_filename, "w"
+        ) as stderr_file_object:
             process = subprocess.run(
-                [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('AUS_FORM2_SCRIPT')), json.dumps(form_data_dict),],
+                [
+                    Path(os.getenv("SCRIPT_DIR")) / Path(os.getenv("AUS_FORM2_SCRIPT")),
+                    json.dumps(form_data_dict),
+                ],
                 stdout=stdout_file_object,
                 stderr=stderr_file_object,
                 encoding="utf-8",
                 text=True,
                 check=False,
-                env=my_env
+                env=my_env,
             )
 
         with open(tmp_stdout_filename, "r") as tmp_file:
@@ -204,29 +286,61 @@ async def auslegung_2(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+            logger.error(
+                json.dumps(
+                    {"error_message": stderr_data.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
 
         try:
             json_xdata = json.loads(stdout_data)
             try:
-                output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-                error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+                output_content = base64.b64decode(
+                    json_xdata.get("output_content")
+                ).decode("utf-8")
+                error_content = base64.b64decode(
+                    json_xdata.get("error_content")
+                ).decode("utf-8")
             except Exception as err:
                 error_content = str(err)
+                logger.error(
+                    json.dumps(
+                        {"error_message": error_content.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
         except json.decoder.JSONDecodeError as err:
             error_content = str(err)
+            logger.error(
+                json.dumps(
+                    {"error_message": error_content.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
     except subprocess.CalledProcessError as ee:
-        err_text = "Error executing script"
+        err_text = "Error executing script."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except FileNotFoundError:
         err_text = "Script not found. Ensure it's executable and in the correct path."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     return templates.TemplateResponse(
-        "aus_page2.html", {
+        "aus_page2.html",
+        {
             "request": request,
             "output_content": output_content,
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
-        }
+        },
     )
 
 
@@ -245,16 +359,21 @@ async def process_form(request: Request) -> None:
         tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
         tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
         my_env = os.environ.copy()
-        my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-        with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+        my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+        with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+            tmp_stderr_filename, "w"
+        ) as stderr_file_object:
             process = subprocess.run(
-                [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('FORM_SCRIPT')), json.dumps(form_data_dict),],
+                [
+                    Path(os.getenv("SCRIPT_DIR")) / Path(os.getenv("FORM_SCRIPT")),
+                    json.dumps(form_data_dict),
+                ],
                 stdout=stdout_file_object,
                 stderr=stderr_file_object,
                 encoding="utf-8",
                 text=True,
                 check=False,
-                env=my_env
+                env=my_env,
             )
 
         with open(tmp_stdout_filename, "r") as tmp_file:
@@ -266,29 +385,61 @@ async def process_form(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
         if stderr_data:
-            logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+            logger.error(
+                json.dumps(
+                    {"error_message": stderr_data.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
 
         try:
             json_xdata = json.loads(stdout_data)
             try:
-                output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-                error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+                output_content = base64.b64decode(
+                    json_xdata.get("output_content")
+                ).decode("utf-8")
+                error_content = base64.b64decode(
+                    json_xdata.get("error_content")
+                ).decode("utf-8")
             except Exception as err:
                 error_content = str(err)
+                logger.error(
+                    json.dumps(
+                        {"error_message": error_content.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
         except json.decoder.JSONDecodeError as err:
             error_content = str(err)
+            logger.error(
+                json.dumps(
+                    {"error_message": error_content.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
     except subprocess.CalledProcessError as ee:
-        err_text = "Error executing script"
+        err_text = "Error executing script."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except FileNotFoundError:
         err_text = "Script not found. Ensure it's executable and in the correct path."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     return templates.TemplateResponse(
-        "form_result.html", {
+        "form_result.html",
+        {
             "request": request,
             "output_content": output_content,
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
-        }
+        },
     )
 
 
@@ -304,16 +455,20 @@ async def root(request: Request) -> None:
     tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
     tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
     my_env = os.environ.copy()
-    my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-    with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+    my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+    with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+        tmp_stderr_filename, "w"
+    ) as stderr_file_object:
         process = subprocess.run(
-            [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('AUS_SCRIPT')),],
+            [
+                Path(os.getenv("SCRIPT_DIR")) / Path(os.getenv("AUS_SCRIPT")),
+            ],
             stdout=stdout_file_object,
             stderr=stderr_file_object,
             encoding="utf-8",
             text=True,
             check=False,
-            env=my_env
+            env=my_env,
         )
     with open(tmp_stdout_filename, "r") as tmp_file:
         stdout_data = tmp_file.read()
@@ -324,29 +479,59 @@ async def root(request: Request) -> None:
         os.unlink(tmp_stderr_filename)
 
     if stderr_data:
-        logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+        logger.error(
+            json.dumps(
+                {"error_message": stderr_data.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     try:
         json_xdata = json.loads(stdout_data)
         try:
-            output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-            error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
+            output_content = base64.b64decode(json_xdata.get("output_content")).decode(
+                "utf-8"
+            )
+            error_content = base64.b64decode(json_xdata.get("error_content")).decode(
+                "utf-8"
+            )
         except Exception as err:
             error_content = str(err)
+            logger.error(
+                json.dumps(
+                    {"error_message": error_content.replace("\n", " ")},
+                    ensure_ascii=False,
+                )
+            )
     except json.decoder.JSONDecodeError as err:
         error_content = str(err)
+        logger.error(
+            json.dumps(
+                {"error_message": error_content.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except subprocess.CalledProcessError as ee:
-        err_text = "Error executing script"
+        err_text = "Error executing script."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
     except FileNotFoundError:
         err_text = "Script not found. Ensure it's executable and in the correct path."
+        logger.error(
+            json.dumps(
+                {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+            )
+        )
 
     return templates.TemplateResponse(
-        "aus_page1.html", {
+        "aus_page1.html",
+        {
             "request": request,
             "output_content": output_content,
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
-        }
+        },
     )
 
 
@@ -365,16 +550,21 @@ async def root(request: Request, filter_name: str = None) -> None:
             tmp_stdout_filename = "/tmp/" + str(uuid.uuid4()) + ".out.txt"
             tmp_stderr_filename = "/tmp/" + str(uuid.uuid4()) + ".err.txt"
             my_env = os.environ.copy()
-            my_env['SCRIPT_DIR'] = os.getenv('SCRIPT_DIR')
-            with open(tmp_stdout_filename, 'w') as stdout_file_object, open(tmp_stderr_filename, 'w') as stderr_file_object:
+            my_env["SCRIPT_DIR"] = os.getenv("SCRIPT_DIR")
+            with open(tmp_stdout_filename, "w") as stdout_file_object, open(
+                tmp_stderr_filename, "w"
+            ) as stderr_file_object:
                 process = subprocess.run(
-                    [Path(os.getenv('SCRIPT_DIR')) / Path(os.getenv('MAIN_SCRIPT')), filter_name,],
+                    [
+                        Path(os.getenv("SCRIPT_DIR")) / Path(os.getenv("MAIN_SCRIPT")),
+                        filter_name,
+                    ],
                     stdout=stdout_file_object,
                     stderr=stderr_file_object,
                     encoding="utf-8",
                     text=True,
                     check=False,
-                    env=my_env
+                    env=my_env,
                 )
             with open(tmp_stdout_filename, "r") as tmp_file:
                 stdout_data = tmp_file.read()
@@ -385,33 +575,69 @@ async def root(request: Request, filter_name: str = None) -> None:
             os.unlink(tmp_stderr_filename)
 
             if stderr_data:
-                logger.error(json.dumps({'error_message': stderr_data.replace("\n", " ")}, ensure_ascii=False))
+                logger.error(
+                    json.dumps(
+                        {"error_message": stderr_data.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
 
             try:
                 json_xdata = json.loads(stdout_data)
                 try:
-                    output_content = base64.b64decode(json_xdata.get('output_content')).decode('utf-8')
-                    error_content = base64.b64decode(json_xdata.get('error_content')).decode('utf-8')
-                    form_content = base64.b64decode(json_xdata.get('form_content')).decode('utf-8')
+                    output_content = base64.b64decode(
+                        json_xdata.get("output_content")
+                    ).decode("utf-8")
+                    error_content = base64.b64decode(
+                        json_xdata.get("error_content")
+                    ).decode("utf-8")
+                    form_content = base64.b64decode(
+                        json_xdata.get("form_content")
+                    ).decode("utf-8")
                 except Exception as err:
                     error_content = str(err)
+                    logger.error(
+                        json.dumps(
+                            {"error_message": error_content.replace("\n", " ")},
+                            ensure_ascii=False,
+                        )
+                    )
             except json.decoder.JSONDecodeError as err:
                 error_content = str(err)
+                logger.error(
+                    json.dumps(
+                        {"error_message": error_content.replace("\n", " ")},
+                        ensure_ascii=False,
+                    )
+                )
         except subprocess.CalledProcessError as ee:
-            err_text = "Error executing script"
+            err_text = "Error executing script."
+            logger.error(
+                json.dumps(
+                    {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+                )
+            )
         except FileNotFoundError:
-            err_text = "Script not found. Ensure it's executable and in the correct path."
+            err_text = (
+                "Script not found. Ensure it's executable and in the correct path."
+            )
+            logger.error(
+                json.dumps(
+                    {"error_message": err_text.replace("\n", " ")}, ensure_ascii=False
+                )
+            )
 
     print("stderr_data =", stderr_data)
 
     return templates.TemplateResponse(
-        "index.html", {
+        "index.html",
+        {
             "request": request,
             "output_content": output_content,
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
             "form_content": form_content,
-        }
+        },
     )
 
 
@@ -437,9 +663,7 @@ def exception_handler(request, exc):
     return json_resp
 
 
-def get_default_error_response(
-    status_code=503, message="Unavailable."
-):  # noqa: E501
+def get_default_error_response(status_code=503, message="Unavailable."):  # noqa: E501
     return JSONResponse(
         status_code=status_code,
         content={"status_code": status_code, "message": message},

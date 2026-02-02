@@ -52,15 +52,16 @@ if [[ ( "${myfiltername}" =~ ^([A][F]) ) &&  ("${#myfiltername}" -lt 25) ]]; the
    exit
 fi
 
-if [[ "$2" == "" ]]; then
-   mylang="DE"
-elif [[ "$2" == "DE" ]]; then
-   mylang="DE"
-else
-   error_content=$(echo "UNKNOWN LANGUAGE ==[ $2 ]== FOR V-TEXT, SORRY" | base64 -w 0)
-   return_json_content ${output_content} ${form_content} ${error_content}
-   exit
-fi
+mylang="DE"
+#if [[ "$2" == "" ]]; then
+#   mylang="DE"
+#elif [[ "$2" == "DE" ]]; then
+#   mylang="DE"
+#else
+#   error_content=$(echo "UNKNOWN LANGUAGE ==[ $2 ]== FOR V-TEXT, SORRY" | base64 -w 0)
+#   return_json_content ${output_content} ${form_content} ${error_content}
+#   exit
+#fi
 
 awkdir=${SCRIPT_DIR}"/"$mylang"/AWK/"
 txtdir=${SCRIPT_DIR}"/"$mylang"/TXT/"

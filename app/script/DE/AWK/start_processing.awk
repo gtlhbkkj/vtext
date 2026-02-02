@@ -1,5 +1,11 @@
 BEGIN {
 
+#отделяем цену чтобы не нарушать остальную логику
+split(filter_name, arr_tmp, "PRICE:")
+filter_name = arr_tmp[1]
+filter_list_price = arr_tmp[2]
+
+
 # FILTER SERIES
 split(filter_name,parts,"/")
 p1 = substr(parts[1],1,5)
@@ -91,6 +97,13 @@ string = filter_series_search ","  \
    atex  "," \
    kat  "," \
    filter_element
+
+# добавляем листовую цену
+string = string "," filter_list_price
+
+#print "from strart_processing : " string > "/home/vtext/app/script/DE/AWK/111.txt"
+
+
 
 print string
 # AF736_G3,AF73/G3,3,13,2,1,5,0,2,0,0,3002,4406,AK,A13,KIII,AF6016-010

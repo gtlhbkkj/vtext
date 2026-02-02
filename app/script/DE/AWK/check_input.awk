@@ -6,6 +6,12 @@ error_code = 0
 # 1. Убираем двойные пробелы. 
 ################################################
 filter_name = toupper(filter_name)
+
+#отделяем цену чтобы не нарушать остальную логику
+split(filter_name, arr_tmp, "PRICE:")
+filter_name = arr_tmp[1]
+
+
 gsub(/^ +/,"",filter_name)
 gsub(/ +$/,"",filter_name)
 gsub(/ +/," ",filter_name)
@@ -222,7 +228,7 @@ gsub(/[a-zA-Z]/,"",parts_e[2])   # было например "010SP"
 element_end  = parts_e[2]        # стало "010"
 
 found = 0
-for (i=1; i<=8; i++) {
+for (i=1; i<=9; i++) {
   if (arr[i] ~ filter_series && arr[i] ~ element_code){
     found = 1
     i = 20

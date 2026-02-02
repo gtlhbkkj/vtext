@@ -14,5 +14,10 @@ run:
 
 flake8:
 	. .venv/bin/activate; \
-	flake8; \
+	flake8 . ; \
+	deactivate
+
+black:
+	. .venv/bin/activate; \
+	black app/main.py ; \
 	deactivate

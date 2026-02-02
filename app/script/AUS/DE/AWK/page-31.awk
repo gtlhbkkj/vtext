@@ -4,10 +4,8 @@ BEGIN {
 
 # заходит эта строка
 #string_return = "FTYPE::" str_ftype_new "_!_DSZ::" durchsatz_calc 
-# "_!_FS::" fineness "_!_VS::" viscosity "_!_MAT::" material "_!_DSZO::" durchsatz
+# "_!_FS::" fineness "_!_VS::" viscosity "_!_MAT::" material "_!_DSZO::" durchsatz  "_!_COMM::" comments
 
-
-print "<p class=\"fw-bold\">---------  page-31.awk  ----------</p>mystring [from page-3.awk]: "mystring  >> result_txt
 
 # коды ошибок - НЕ ЗАБЫТЬ ПРОВЕРКУ И ВЫВЕСТИ ИХ 
 str_err[1] = "ERR. 0001 - Filter type string is empty, no suitable RSF found"
@@ -48,6 +46,9 @@ material = arr_tmp[2]
 
 split(arr_mystring[6], arr_tmp, "::")
 durchsatz = arr_tmp[2]
+
+split(arr_mystring[7], arr_tmp, "::")
+comments = arr_tmp[2]
 
 
 dtoleranz = 1.0      # DURCHSATZ_TOLERANZ_!_1.05_!_# 5%
@@ -95,13 +96,19 @@ arr_fbez[1] = ""
 
 END {
 
+
+if (comments == "ON") {
+  print "<p class=\"fw-bold\">---------  page-31.awk  ----------</p>mystring [from page-3.awk]: "mystring  >> result_txt
   print "<BR> Filter series to process: "  >> result_txt
   for (i=1; i<=length(arr_fbez); i++)
      print "["arr_fbez[i] "];" >> result_txt
+}
+
 
   str_to_return = ""
   for (i=1; i<=length(arr_main); i++) {
-     print "<BR>" i " -- " arr_main[i] >> result_txt
+     if (comments == "ON")
+        print "<BR>" i " -- " arr_main[i] >> result_txt
      if (str_to_return == "")
        str_to_return = arr_main[i]
      else 
@@ -148,10 +155,13 @@ if (length(arr_final) == 0) {
    # дописать обработчик выхода
 }
 
-print "<BR>Filter series, which are suitable in arr_final[]:" >> result_txt
+if (comments == "ON")
+   print "<BR>Filter series, which are suitable in arr_final[]:" >> result_txt
+
 return_string = "MAT::" material "_!_"
 for (i=1; i<=length(arr_final); i++) {
-   print "<BR>["i"]: " arr_final[i] " // " >> result_txt
+   if (comments == "ON")
+      print "<BR>["i"]: " arr_final[i] " // " >> result_txt
    return_string =  return_string  arr_final[i] ";;"
 }
 
@@ -159,9 +169,11 @@ for (i=1; i<=length(arr_final); i++) {
 gsub(/[^a-zA-Z0-9!;:_]/, "", return_string)
 
 # убираем ";;" в хвосте
-return_string = substr(return_string,1,length(return_string)-2)
+return_string = substr(return_string,1,length(return_string)-2) "CCC-" comments
 
-#print return_string >> result_txt
+if (comments == "ON")
+  print "Return-string: " return_string >> result_txt
+
 print return_string
 
 

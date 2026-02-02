@@ -119,9 +119,6 @@ Versorgungsspannung: 12...32 V DC
 Elektrische Anschlüße:
 1 X M12x1 Spannungsversorgung + 2 Schaltausgänge
 1 x M12x1 Spannungsversorgung + IO-Link
-- Automatik-Kugelhahn G2 für Ablass- bzw. Entleerungsanschluss
-mit pneumatischem Schwenkantrieb mit 5/2-Wege-Magnetventil 24 V DC
-Material Gehäuse und  Kugel:  Edelstahl 1.4408, Kugeldichtung:  PTFE
 ::
 AF711_G1,AF713_G1,AF713_GX1,AF724_G4,AF122_G1,AF112_G2,AF132_G2,AF172_G2,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF724_S1,AF736_S1,AF737_S1,AF738_S1_!_1,3_!_8_!_Differenzdruckschalter PiS 3076, Schaltpunkt bei 2,2 bar statisch 63 bar, Aluminium/FPM
 Schaltpunkt/ Differenzdruck: PiS 3076/2,2 bar

@@ -3,9 +3,11 @@ BEGIN {
   FS = "_!_"
 
 # заходит эта строка
-# mystring = "MAT::1_!_E256!!AF112_G2!!80;;E256!!AF172_G2!!80;;E257!!AF132_..."
+# mystring = "MAT::1_!_E256!!AF112_G2!!80;;E256!!AF172_G2!!80;;E257!!AF132_...CCC-ON"
+split(mystring, arr_tmp, "CCC-")
+comments = arr_tmp[2]
+mystring = arr_tmp[1]
 
-print "<p class=\"fw-bold\">------------  page-32.awk  ---------</p><b> mystring [from page-31.awk]: </b>"mystring  >> result_txt
 
 split(mystring, arr_mystring, "_!_")
 split(arr_mystring[1], arr_mat, "::")
@@ -23,11 +25,14 @@ counter_arr_elements = 1
 # позже в конец дописать опции по каждой позиции ";" $7=pos.1 (3,7), usw
 counter_arr_base_conf = 1
 
+if (comments == "ON") {
+  print "<p class=\"fw-bold\">------------  page-32.awk  ---------</p><b> mystring [from page-31.awk]: </b>"mystring  >> result_txt
+  print "<b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Suitable filter series for processing - (came from previous script, converted from STR to ARR):</b>" >> result_txt
+  for (i=1; i<=length(arr_ftype_el_ff); i++)
+     print "["i"]: " arr_ftype_el_ff[i] " µm // material code - " material "<BR>" >> result_txt
 
-print "<b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Suitable filter series for processing - (came from previous script, converted from STR to ARR):</b>" >> result_txt
-
-for (i=1; i<=length(arr_ftype_el_ff); i++)
-   print "["i"]: " arr_ftype_el_ff[i] " µm // material code - " material "<BR>" >> result_txt
+  print "<BR> ----------------------- заходим в тело ----------------" >> result_txt
+}
 
 # INITIALIZATION
 arr_elements[1] = ""
@@ -40,7 +45,6 @@ str_pos1_variants = ""
 #arr_pos1_variants[1] = arr_pos2_variants[1] = arr_pos3_variants[1] = arr_pos4_variants[1] = ""
 #arr_pos5_variants[1] = arr_pos6_variants[1] = arr_pos7_variants[1] = arr_pos8_variants[1] = ""
 
-   print "<BR> ----------------------- заходим в тело ----------------" >> result_txt
 
 
 } # END OF BEGIN
@@ -167,14 +171,16 @@ for (i=1; i<= length(arr_ftype_el_ff); i++) { #
 
 END {
 
-
-print "<BR><b><span class=\"text-danger\">arr_elements[]</span> - Suitable filter elements, general code extended to specific elements:</b>" >> result_txt
-for (i=1; i<=length(arr_elements) ; i++)
-   print "["i"]: " arr_elements[i] "<BR>" >> result_txt
+if (comments == "ON") {
+  print "<BR><b><span class=\"text-danger\">arr_elements[]</span> - Suitable filter elements, general code extended to specific elements:</b>" >> result_txt
+  for (i=1; i<=length(arr_elements) ; i++)
+     print "["i"]: " arr_elements[i] "<BR>" >> result_txt
+}
 
 #print "<BR><b>Filter base/default configuration, read from TXT in arr_base_conf[], $last = List price:</b>" >> result_txt
 #for (i=1; i<=length(arr_base_conf) ; i++)
 #   print "<BR>["i"]: " arr_base_conf[i] " EUR St/Brt" >> result_txt
+
 
 ########## здесь просто сортировка и добавление тонкости фильтрации ##########
 # пузырьковая сортировка arr_base_conf[] по возрастанию цены.
@@ -213,9 +219,11 @@ for (i=1; i<=length(arr_base_conf); i++) {
 }
 delete arr_tmp1; delete arr_tmp2
 
-print "<b><span class=\"text-danger\">arr_base_conf[]</span> - Filter base conf., read from TXT, SORTED, zus. with fineness:</b>" >> result_txt
-for (i=1; i<=length(arr_base_conf); i++)
-   print  arr_base_conf[i] "<BR>" >> result_txt
+if (comments == "ON") {
+  print "<b><span class=\"text-danger\">arr_base_conf[]</span> - Filter base conf., read from TXT, SORTED, zus. with fineness:</b>" >> result_txt
+  for (i=1; i<=length(arr_base_conf); i++)
+    print  arr_base_conf[i] "<BR>" >> result_txt
+}
 
 #print "<BR><b>Array with single prices (arr_single_prices): </b>" >> result_txt
 #for (key in arr_single_prices) {
@@ -227,10 +235,11 @@ print_table_with_prices()
 
 ########## КОНЕЦ  сортировка и добавление тонкости фильтрации ##########
 
-
-print "<BR><b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Feasible Filter Series Configurations:</b> $1 = Antrieb, ... $last = RSVentil" >> result_txt
-for (i=1; i<=length(arr_ftype_el_ff) ; i++)
-   print "<BR>["i"]: " arr_ftype_el_ff[i] >> result_txt
+if (comments == "ON") {
+  print "<BR><b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Feasible Filter Series Configurations:</b> $1 = Antrieb, ... $last = RSVentil" >> result_txt
+  for (i=1; i<=length(arr_ftype_el_ff) ; i++)
+    print "<BR>["i"]: " arr_ftype_el_ff[i] >> result_txt
+}
 
 #print "<BR><b>Position Headers in arr_form_headers[i]:</b>" >> result_txt
 #for (i=1; i<=length(arr_form_headers); i++)
@@ -274,13 +283,16 @@ arr_str_pos_variants[7] = str_pos7_variants
 
 
 # print final forms
-print "<BR><b>print final forms - arr_base_conf[i] ПОВТОР ВЕРХНЕГО</b>" >> result_txt
+if (comments == "ON")
+   print "<BR><b>print final forms - arr_base_conf[i] REPETITION OF THE ABOVE DATA</b>" >> result_txt
 
 # проходим в цикле по всем отобранным базовым конфигурациям
 for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF170174;E257;3619 
    print "<hr>" >> result_txt
 
-   print "<BR>["i"]:" arr_base_conf[i] >> result_txt
+   if (comments == "ON")
+      print "<BR>["i"]:" arr_base_conf[i] >> result_txt
+
    split(arr_base_conf[i], arr_base_tmp, ";")
    f_type = arr_base_tmp[1]
    f_matr = arr_base_tmp[2]
@@ -327,7 +339,21 @@ for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF
 
 #   print "<BR><b>Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</b>" >> result_txt
 
-   print "<BR><b id=\"change_config" i "\">Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</b>" >> result_txt
+  my_string = "Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]"
+  print "<div class=\"container content\" id=\"change_config" i "\">"  >> result_txt
+  print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
+  print my_string "</div>"  >> result_txt
+  print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
+
+
+
+
+
+#print "<div class=\"p-3 text-white bg-primary border border-primary rounded-3\">" >> result_txt
+#print "<h5 id=\"change_config" i "\">Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</h5>" >> result_txt
+#print "</div>" >> result_txt
+
+#   print "<BR><b id=\"change_config" i "\">Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</b>" >> result_txt
 
    print "<form action=\"/rsf-auslegung-fin\" method=\"post\">"  >> result_txt
 
@@ -482,7 +508,10 @@ function remove_duplicates_from_str_pos_variants(mystr) {
 
 
 
+# split(arr_base_conf[i], arr_tmp, ";") = "AF173_G3;1;AF17363-1321-03000/G3;AF105216;E268;6785;20"
 function print_table_with_prices() {
+  print_bootstrap_head("Auslegungsergebnisse / Filtervorschläge:")
+
   delete arr_tmp
   print "<table class=\"table table-striped\">" >> result_txt
   print "<thead><tr><th scope=\"col\">Base configuration</th>"  >> result_txt
@@ -501,7 +530,10 @@ function print_table_with_prices() {
     tmp3 = arr_tmp[3]
     gsub(/\//, "%2F", tmp3)
 
-    mylink = "https://salestext.ddns.net/?filter_name=" tmp3 "+" el_code
+    # добавляем строку с ценой
+    tmp_price = "PRICE%3A" arr_tmp[6]
+
+    mylink = "https://salestext.ddns.net/?filter_name=" tmp3 "+" el_code tmp_price
     mystr1 = i ". " arr_tmp[3] " mit " el_code
     mystr2 = arr_tmp[6] ",-"
     mystr3 = "[<a href=\""mylink"\">V-Text</a>]"" / [<a href=\"#change_config" i "\">change configuration</a>]"
@@ -512,4 +544,13 @@ function print_table_with_prices() {
   }
   print "</tbody></table>" >> result_txt
   delete arr_tmp
+}
+
+
+function print_bootstrap_head(page_header) {
+  print "<div class=\"container content\">"  >> result_txt
+  print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
+  print page_header "</div>"  >> result_txt
+  print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
+  return
 }

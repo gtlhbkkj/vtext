@@ -26,6 +26,22 @@ MEDIUM_!_05_!_05. Miscella_!_1=1;2=1,2
 MEDIUM_!_06_!_06. Pflanzenöl_!_1=1;2=1-4
 MEDIUM_!_07_!_07. TESTMEDIUM_!_1=1;2=1-4
 
+
+
+# I_DATA_1 = Input Data String 
+# Проверить, вошли ли все необходимые данные в page-3.awk
+I_DATA_S_!_durchsatz_!_DSZ_!_Durchsatz [Liter/Min]:_!_*
+I_DATA_S_!_viscosity_!_VSC_!_Viskosität bei der Betriebstemperatur [mm2/sec]:_!_02,04-06,usw.
+I_DATA_S_!_wpressure_!_WP_!_Betriebsdruck [bar]:_!_*
+I_DATA_S_!_wtemperature_!_WT_!_Betriebstemperatur [Grad C]:_!_02-99
+I_DATA_S_!_dpressure_!_DP_!_Auslegungsdruck [bar]:_!_02-99
+I_DATA_S_!_dtemperature_!_DT_!_Auslegungstemperatur [Grad C]:_!_02-99
+I_DATA_S_!_dpipeline_!_DPLINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:_!_02-99
+I_DATA_S_!_fineness_!_FS_!_Gewünschte Filterfeinheit [µm]:_!_*
+
+
+
+
 DURCHSATZ_!_durchsatz
 DURCHSATZ_!_Durchsatz [Liter/Min]:
 

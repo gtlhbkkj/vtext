@@ -54,6 +54,12 @@ print "<h4>Betriebsdaten:</h4>" >> result_txt
 
 print_dropdown(k=1) # 1 = MEDIUM
 
+print "<div class=\"form-check\">" >> result_txt
+print "  <input class=\"form-check-input\" type=\"checkbox\" name=\"comments\" value=\"ON\" id=\"flexCheckDefault\">" >> result_txt
+print "  <label class=\"form-check-label\" for=\"flexCheckDefault\">Comments (on / off):" >> result_txt
+print "  </label></div>" >> result_txt
+
+
 print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
 print "</form> "                                 >> result_txt
 print "</div>" >> result_txt

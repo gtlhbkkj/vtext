@@ -6,7 +6,7 @@ BEGIN {
 # фильтруем их в хвосте по параметрам EIGNUNG из dropdown для передачи в следующий скрипт
 
 # заходит эта строка
-#mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel}"
+#mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel};${comments}"
 split(mystring,arr_tmp,";")
 medium = arr_tmp[1]
 mdd1 = arr_tmp[2]
@@ -23,6 +23,7 @@ fineness = arr_tmp[12]
 antrieb = arr_tmp[13]
 material = arr_tmp[14]
 materialel = arr_tmp[15]
+comments = arr_tmp[16]
 
 faktor_fineness = 1  # default
 
@@ -113,6 +114,10 @@ if (faktor1* faktor2* faktor3* faktor4* faktor_fineness < 0.5)
 print_bootstrap_head("Filter Auslegung // Seite 3")
 print_input_data()
 
+if (comments == "ON")
+  print "mystring: "  mystring >> result_txt
+
+
 # это константная строка - те типы RSF фильтров которые вообще существуют
 # фильтруем их по параметрам EIGNUNG из dropdown для передачи в следующий скрипт
 # str_ftype ="2,3,4,5"
@@ -126,23 +131,16 @@ for (i=1; i<=length(arr_tmp); i++) {
    }
 }
 ##############################
-string_return = "FTYPE::" str_ftype_new "_!_DSZ::" durchsatz_calc "_!_FS::" fineness "_!_VS::" viscosity "_!_MAT::" material "_!_DSZO::" durchsatz
+string_return = "FTYPE::" str_ftype_new "_!_DSZ::" durchsatz_calc "_!_FS::" fineness "_!_VS::" viscosity "_!_MAT::" material "_!_DSZO::" durchsatz "_!_COMM::" comments
 print string_return
 }
 
 
 
 function print_bootstrap_head(page_header) {
-# print "<!DOCTYPE html><html><head><meta charset=\"utf-8\">"  >> result_txt
-# print "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"  >> result_txt
-# print "<title>Filter Auslegung</title>" >> result_txt
-# print "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM\" crossorigin=\"anonymous\">" >> result_txt
-# print "</head><body>" >> result_txt
 print "<div class=\"container content\">"  >> result_txt
 print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
-#print "<p class=\"h4\">"page_header"</p></div>" >> result_txt
 print page_header "</div>"  >> result_txt
-#print "<form action=\"/auslegung-2\" method=\"post\">"  >> result_txt
 print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
 return
 }

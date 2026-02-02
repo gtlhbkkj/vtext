@@ -37,6 +37,7 @@ if [ $? -ne 0 ]; then
 fi
 
 medium=$(echo ${json_data} | jq -r '.medium')
+comments=$(echo ${json_data} | jq -r '.comments')
 #s01=$(echo ${json_data} | jq -r '.S01')
 
 rm -f ${RESULT_TXT}
@@ -56,11 +57,12 @@ errlog_txt="${TMP_DIR}/${UUID}.aus_page1.errlog.txt"
 result_txt="${TMP_DIR}/${UUID}.aus_page1.result.txt"
 
 
-output=$(gawk -v txtdir=${txtdir} -v medium=${medium} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-2.awk" ${txtdir}"page-1.txt" > /tmp/awk.err.txt)
+output=$(gawk -v txtdir=${txtdir} -v medium=${medium} -v comments=${comments} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-2.awk" ${txtdir}"page-1.txt" > /tmp/awk.err.txt)
 
 echo $output > /tmp/xxxx
 
-output_content=$(cat ${result_txt} ${errlog_txt} | base64 -w 0)
+output_content=$(cat ${result_txt} | base64 -w 0)
+#output_content=$(cat ${result_txt} ${errlog_txt} | base64 -w 0)
 
 #error_content=$(cat ${errlog_txt} | base64 -w 0)
 
