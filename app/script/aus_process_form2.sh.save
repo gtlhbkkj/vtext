@@ -131,11 +131,11 @@ my_string=$output1  # output = "FTYPE::4,5_!_DSZ::0_!_FS::10_!_VS::10_!_MAT::1_!
 my_str1=$(echo ${my_string#*MED::})  # удаляет всю строку до «MED::» , включая «MED::»
 my_medium=$(echo ${my_str1:0:2})  # извлекает два символа, начиная с 0-го. Первый символ - нулевой
 
-#if [[ "$my_medium" == "01" ]]; then
-#    echo "Medium = ${my_medium}" > /home/vtext/app/script/111.txt
-#else
-#    echo "Medium = ${my_medium}" > /home/vtext/app/script/111.txt
-#fi
+if [[ "$my_medium" == "01" ]]; then   
+    echo "Строки равны"
+else
+    echo "Строки не равны"
+fi
 
 output2=$(gawk  -v mystring=${output1} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-31.awk" ${txtdir}"flowrate.txt" )
 output3=$(gawk  -v mystring=${output2} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-32.awk" ${txtdir}"fe-pos.txt" ${txtdir}"fe-code.txt" ${txtdir}"page-2.txt")

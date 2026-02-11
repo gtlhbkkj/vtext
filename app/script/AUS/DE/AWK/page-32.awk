@@ -2,18 +2,30 @@ BEGIN {
   RS = "\n"
   FS = "_!_"
 
+
+
 # заходит эта строка
-# mystring = "MAT::1_!_E256!!AF112_G2!!80;;E256!!AF172_G2!!80;;E257!!AF132_...CCC-ON"
+# mystring = "MED::01_!_MAT::1_!_E256!!AF112_G2!!80;;E256!!AF172_G2!!80;;E257!!AF132_...CCC-ON"
 split(mystring, arr_tmp, "CCC-")
 comments = arr_tmp[2]
 mystring = arr_tmp[1]
 
 
 split(mystring, arr_mystring, "_!_")
-split(arr_mystring[1], arr_mat, "::")
-material = arr_mat[2]
-split(arr_mystring[2], arr_ftype_el_ff, ";;")
 
+split(arr_mystring[1], arr_tmp, "::")
+medium = arr_tmp[2]
+
+split(arr_mystring[2], arr_tmp, "::")
+material = arr_tmp[2]
+
+split(arr_mystring[3], arr_ftype_el_ff, ";;")
+
+# не найдено ни одного подходящего фильтра строка пустая
+if (arr_mystring[2] == "" || medium == "") {
+   print "<p></p><H4>NO SUITABLE FILTERS FOUND FOR THIS APPLICATION!</H4>" >> result_txt
+   exit   # выход из блока BEGIN
+}
 
 # counter для нового массива с элементами // arr_elements[] = "E255;AF120174;783;10,20,30,40,60"
 # $1=el.code $2=el.bez. $3=price $4=fineness
@@ -26,12 +38,14 @@ counter_arr_elements = 1
 counter_arr_base_conf = 1
 
 if (comments == "ON") {
-  print "<p class=\"fw-bold\">------------  page-32.awk  ---------</p><b> mystring [from page-31.awk]: </b>"mystring  >> result_txt
-  print "<b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Suitable filter series for processing - (came from previous script, converted from STR to ARR):</b>" >> result_txt
-  for (i=1; i<=length(arr_ftype_el_ff); i++)
-     print "["i"]: " arr_ftype_el_ff[i] " µm // material code - " material "<BR>" >> result_txt
+  print "<p></p><i><b>----------- Start page-32.awk ----------------</b>"  >> result_txt
+  print "<BR><b> mystring [from page-31.awk]: </b>" mystring  >> result_txt
+  print "<BR><b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Suitable filter series for processing</b> - (received from page-31.awk, converted from STR to ARR):" >> result_txt
 
-  print "<BR> ----------------------- заходим в тело ----------------" >> result_txt
+  for (i=1; i<=length(arr_ftype_el_ff); i++)
+     print "<BR>["i"]: " arr_ftype_el_ff[i] " µm // material code - " material  >> result_txt
+
+  print "<BR> -------------------- end of BEGIN  ----------------</i>" >> result_txt
 }
 
 # INITIALIZATION
@@ -45,6 +59,21 @@ str_pos1_variants = ""
 #arr_pos1_variants[1] = arr_pos2_variants[1] = arr_pos3_variants[1] = arr_pos4_variants[1] = ""
 #arr_pos5_variants[1] = arr_pos6_variants[1] = arr_pos7_variants[1] = arr_pos8_variants[1] = ""
 
+# подходящие по материалу элменты из <fe-pos.txt> POS_6
+str_suitable_material_elements = ""
+
+
+# для красивого вывода в таблице абсолютн / номинальная тонкость фильтрации
+arr_nom_feinheit[200] = 125
+arr_nom_feinheit[160] = 100
+arr_nom_feinheit[130] = 75
+arr_nom_feinheit[100] = 60
+arr_nom_feinheit[80] = 45
+arr_nom_feinheit[60] = 35
+arr_nom_feinheit[40] = 25
+arr_nom_feinheit[30] = 18
+arr_nom_feinheit[20] = 12
+arr_nom_feinheit[10] = 7
 
 
 } # END OF BEGIN
@@ -54,6 +83,25 @@ str_pos1_variants = ""
 # ТЕЛО
 
 {
+# если нет подходящих фильтров
+  if (arr_mystring[2] == "" || medium == "") 
+     exit  # выход из тела
+
+
+# из этого блока подбираем только подходящие по материалу элменты
+# $3 == 1 применимы только в дизайне "1" // $3 == "*" применимы в "2", "3", "6"
+# POS_6 /// MATERIAL
+# $2=code pos. 6; $3=Material 2-Edelstahl, * - alles
+# POS_6_!_1_!_1_!_Tragkörper Alu, Draht Edelstahl 1.4571
+# POS_6_!_2_!_*_!_Tragkörper Edelstahl, Draht Edelstahl 1.4571
+# POS_6_!_3_!_*_!_Tragkörper Edelstahl, Folie Edelstahl 1.4571
+if ($1 == "POS_6" && ($3 == material || $3 == "*") ) {
+   if (str_suitable_material_elements == "")
+      str_suitable_material_elements = $2
+   else
+      str_suitable_material_elements = str_suitable_material_elements ";" $2
+}
+
 
 #  заполнение массива заголовков для вывода финальных форм
 if ($1 == "PHEADER") {
@@ -69,7 +117,10 @@ for (i=1; i<= length(arr_ftype_el_ff); i++) { #
    f_code = arr_main_tmp[2]
    fineness = arr_main_tmp[3]
 
-   if ($1 == "EBCPF" && substr($3,1,4) == el_code) {
+   # EBCPF_!_AF120174_!_E255706001_!_783_!_10,20,30,40,60
+   # EBCPF_!_AF170174_!_E257808001_!_783_!_10,20,30,40,60,80,100
+   if ($1 == "EBCPF" && substr($3,1,4) == el_code && str_suitable_material_elements ~ substr($3,7,1)) {
+#   if ($1 == "EBCPF" && substr($3,1,4) == el_code) {
       # наполняем новый массив элементами
       found1 = 0
       for (k=1; k<=length(arr_elements); k++) {  # E257;AF170174;783;10,20,30,40,60,80,100 
@@ -85,21 +136,38 @@ for (i=1; i<= length(arr_ftype_el_ff); i++) { #
    }
 
 
-   if ($1 == "BASECONF" && $2 == f_code && $3 == material && $6 == el_code) {
+#   if ($1 == "BASECONF" && $2 == f_code && $3 == material && $6 == el_code) {
+#
+#      found2 = 0
+#      for (k=1; k<=length(arr_base_conf); k++) {  # AF132_G2;1;AF13243-221-03000/G2;AF170174;E257;3619
+#          split(arr_base_conf[k], arr_k, ";")
+#          if (arr_k[1] == $2 && arr_k[2] == $3 && arr_k[5] == $6)
+#             found2 = 1
+#      }
+#
+#      # наполняем новый массив
+#      if (found2 == 0) {
+#         arr_base_conf[counter_arr_base_conf] = f_code ";" $3 ";" $4 ";" $5 ";" $6 ";" $7
+#         counter_arr_base_conf++
+#      }
+#   }
+
+   if ($1 == "BASECONF" && $2 ~ medium && $3 == f_code && $4 == material && $7 == el_code) {
 
       found2 = 0
       for (k=1; k<=length(arr_base_conf); k++) {  # AF132_G2;1;AF13243-221-03000/G2;AF170174;E257;3619
           split(arr_base_conf[k], arr_k, ";")
-          if (arr_k[1] == $2 && arr_k[2] == $3 && arr_k[5] == $6)
+          if (arr_k[1] == $3 && arr_k[2] == $4 && arr_k[5] == $7)
              found2 = 1
       }
 
       # наполняем новый массив
       if (found2 == 0) {
-         arr_base_conf[counter_arr_base_conf] = f_code ";" $3 ";" $4 ";" $5 ";" $6 ";" $7
+         arr_base_conf[counter_arr_base_conf] = f_code ";" $4 ";" $5 ";" $6 ";" $7 ";" $8
          counter_arr_base_conf++
       }
    }
+
 
    if ($1 == "POSSCONF" && $2 == f_code) {
       # дополняем существующий массив
@@ -171,10 +239,17 @@ for (i=1; i<= length(arr_ftype_el_ff); i++) { #
 
 END {
 
+# если нет подходящих фильтров
+if (arr_mystring[2] == "" || medium == "") 
+   exit  # выход из END
+
 if (comments == "ON") {
-  print "<BR><b><span class=\"text-danger\">arr_elements[]</span> - Suitable filter elements, general code extended to specific elements:</b>" >> result_txt
+  print "<p></p><i><b><span class=\"text-danger\">arr_elements[]</span> - Suitable filter elements, el.code extended to single elements with fineness: eg. E256 includes [AF100174-,AF100204-] usw. </b>" >> result_txt
   for (i=1; i<=length(arr_elements) ; i++)
-     print "["i"]: " arr_elements[i] "<BR>" >> result_txt
+     print "<BR>["i"]: " arr_elements[i] >> result_txt
+
+  print "<p></p>Material suitablilty / str_suitable_material_elements: "  str_suitable_material_elements >> result_txt
+  print "</i>" >> result_txt
 }
 
 #print "<BR><b>Filter base/default configuration, read from TXT in arr_base_conf[], $last = List price:</b>" >> result_txt
@@ -220,9 +295,10 @@ for (i=1; i<=length(arr_base_conf); i++) {
 delete arr_tmp1; delete arr_tmp2
 
 if (comments == "ON") {
-  print "<b><span class=\"text-danger\">arr_base_conf[]</span> - Filter base conf., read from TXT, SORTED, zus. with fineness:</b>" >> result_txt
+  print "<p></p><i><b><span class=\"text-danger\">arr_base_conf[]</span> - Filter base conf.</b>, read from TXT, price-sorted, zus. with fineness (lasst field):" >> result_txt
   for (i=1; i<=length(arr_base_conf); i++)
-    print  arr_base_conf[i] "<BR>" >> result_txt
+    print "<BR>" arr_base_conf[i]  >> result_txt
+  print  "</i>" >> result_txt
 }
 
 #print "<BR><b>Array with single prices (arr_single_prices): </b>" >> result_txt
@@ -236,9 +312,10 @@ print_table_with_prices()
 ########## КОНЕЦ  сортировка и добавление тонкости фильтрации ##########
 
 if (comments == "ON") {
-  print "<BR><b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Feasible Filter Series Configurations:</b> $1 = Antrieb, ... $last = RSVentil" >> result_txt
+  print "<p></p><i><b><span class=\"text-danger\">arr_ftype_el_ff[]</span> - Feasible Filter Series Configurations:</b> $1 = Antrieb, ... $last = RSVentil" >> result_txt
   for (i=1; i<=length(arr_ftype_el_ff) ; i++)
     print "<BR>["i"]: " arr_ftype_el_ff[i] >> result_txt
+  print "</i>" arr_ftype_el_ff[i] >> result_txt
 }
 
 #print "<BR><b>Position Headers in arr_form_headers[i]:</b>" >> result_txt
@@ -282,13 +359,10 @@ arr_str_pos_variants[7] = str_pos7_variants
 # и так далее по всем 8 позициям
 
 
-# print final forms
-if (comments == "ON")
-   print "<BR><b>print final forms - arr_base_conf[i] REPETITION OF THE ABOVE DATA</b>" >> result_txt
 
 # проходим в цикле по всем отобранным базовым конфигурациям
 for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF170174;E257;3619 
-   print "<hr>" >> result_txt
+   print "<hr class=\"border border-primary border-1 opacity-100\">" >> result_txt
 
    if (comments == "ON")
       print "<BR>["i"]:" arr_base_conf[i] >> result_txt
@@ -339,21 +413,14 @@ for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF
 
 #   print "<BR><b>Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</b>" >> result_txt
 
-  my_string = "Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]"
-  print "<div class=\"container content\" id=\"change_config" i "\">"  >> result_txt
-  print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
-  print my_string "</div>"  >> result_txt
-  print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
+  my_string = i". Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]"
+
+   print "<div class=\"container content\" id=\"change_config" i "\">"  >> result_txt
+#  print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
+#  print my_string "</div>"  >> result_txt
+   print "<h5><b><p class=\"text-primary\">" my_string "</p></b></h5>" >> result_txt
 
 
-
-
-
-#print "<div class=\"p-3 text-white bg-primary border border-primary rounded-3\">" >> result_txt
-#print "<h5 id=\"change_config" i "\">Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</h5>" >> result_txt
-#print "</div>" >> result_txt
-
-#   print "<BR><b id=\"change_config" i "\">Base configuration: " f_base " with " fe_bez " [LP ca. " f_price_base ",- EUR]</b>" >> result_txt
 
    print "<form action=\"/rsf-auslegung-fin\" method=\"post\">"  >> result_txt
 
@@ -365,17 +432,20 @@ for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF
      # arr_form_headers[m-dcounter] = "1;Antrieb" // 1 - номер позиции, затем название позиции
      split(arr_form_headers[m-dcounter], arr_fh_tmp, ";") # разделили на "1" и "Antrieb"
 
+     split(arr_tmp[m], arr_pos_values, ",")   # поделили мотор например на "3" и "7"
+
+     if (length(arr_pos_values) == 1) {
+         print "   <input type=\"hidden\" name=\"pos" arr_fh_tmp[1] "\" value=\"" arr_pos_values[1] ";0\">" >> result_txt
+         continue
+     }
+
+
      print "   <div class=\"row align-items-center\">" >> result_txt
      print "   <label for=\"pos" arr_fh_tmp[1] "\" class=\"row mb-2 col-sm-2 col-form-label\">" arr_fh_tmp[2] ":</label>" >> result_txt
      print "     <div class=\"col-auto\">"  >> result_txt
 
-#     print "<BR> diapazon values: " arr_tmp[m] >> result_txt
-
-     split(arr_tmp[m], arr_pos_values, ",")   # поделили мотор например на "3" и "7"
-#     print "   <div class=\"row mb-3\">" >> result_txt
-
      # заголовок опции например "ANTRIEB"
-     print "        <select class=\"form-select\" id=\"pos" arr_fh_tmp[1] "\" name=\"pos" arr_fh_tmp[1] "\">" >> result_txt
+     print "        <select class=\"form-select border-primary\" id=\"pos" arr_fh_tmp[1] "\" name=\"pos" arr_fh_tmp[1] "\">" >> result_txt
 
 
      ######## это вывод дропдауна только для одной позиции - например мотор ############
@@ -396,7 +466,7 @@ for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF
 
         txt_option = arr_txt_option_tmp[1] " /// Standardausführung ohne Mehrkosten"
         if (arr_txt_option_tmp[2] != 0)
-           txt_option = arr_txt_option_tmp[1] " /// Mehrkosten: " pos_price ",- EUR"
+           txt_option = arr_txt_option_tmp[1] " /// Mehrpreis: " pos_price ",- EUR"
 
         } else {
             txt_option = arr_pos_values[j]
@@ -407,7 +477,7 @@ for (i=1; i<=length(arr_base_conf); i++) {  # AF132_G2;1;AF13243-221-03000/G2;AF
      }
      print "       </select>" >> result_txt
      print "   </div>" >> result_txt
-print "   </div>" >> result_txt
+     print "   </div>" >> result_txt
    }
    ######## конец вывода дропдауна только для одной позиции - например мотор ############
 
@@ -416,10 +486,15 @@ print "   </div>" >> result_txt
    print "   <input type=\"hidden\" name=\"f_base\" value=\""f_base_hidden"\">" >> result_txt
 #   print "<button type=\"button\" class=\"btn btn-primary\">SEND</button>" >> result_txt
 #print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
-print "<button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
+   print "<button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
+
+#   print "</div>" >> result_txt
+   print "</form>" >> result_txt
+   print "</div>" >> result_txt
+
+#   print "</span>" >> result_txt
 
 
-   print "</form>"                                 >> result_txt
 }
 
 } # END OF END-PART
@@ -533,12 +608,28 @@ function print_table_with_prices() {
     # добавляем строку с ценой
     tmp_price = "PRICE%3A" arr_tmp[6]
 
+    # для красивого вывода
+    filter_type = "  /// RSF: "
+    if (substr(arr_tmp[3],1,3) == "AF7") 
+       filter_type = "  /// KSF: "
+
+    str_fineness = " " arr_tmp[7] " µm"
+    if (substr(arr_tmp[3],1,3) != "AF7" && arr_tmp[7] in arr_nom_feinheit)
+       str_fineness = " abs: " arr_tmp[7] " µm, / nom: ca. " arr_nom_feinheit[arr_tmp[7]] " µm"
+
+    filter_type = filter_type str_fineness
+    ########## конец красивого вывода
+
+
+
     mylink = "https://salestext.ddns.net/?filter_name=" tmp3 "+" el_code tmp_price
     mystr1 = i ". " arr_tmp[3] " mit " el_code
     mystr2 = arr_tmp[6] ",-"
     mystr3 = "[<a href=\""mylink"\">V-Text</a>]"" / [<a href=\"#change_config" i "\">change configuration</a>]"
 
-    print "<tr><td>"mystr1"</td>" >> result_txt
+    print "<tr><td>"mystr1 filter_type"</td>" >> result_txt
+
+
     print "<td>"mystr2"</td>" >> result_txt
     print "<td>"mystr3"</td></tr>" >> result_txt
   }
@@ -551,6 +642,6 @@ function print_bootstrap_head(page_header) {
   print "<div class=\"container content\">"  >> result_txt
   print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
   print page_header "</div>"  >> result_txt
-  print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
+#  print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
   return
 }

@@ -49,18 +49,19 @@ A._1750:ø110x265
 5._45
 ::
 # POS_6 /// MATERIAL
-1._Tragkörper Alu, Draht Edelstahl 1.4571
-2._Tragkörper Edelstahl, Draht Edelstahl 1.4571
-3._Tragkörper Edelstahl, Folie Edelstahl 1.4571
-4._Tragkörper Alu, Folie Edelstahl 1.4571
-5._Tragkörper Edelstahl, Lochblech Edelstahl 1.4571
-6._Tragkörper Alu, Topmesh Edelstahl 1.4571
-7._Tragkörper Alu hard coated, Edelstahl 1.4571
-8._Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl
-9._Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe Stahl
-A._Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571
-B._Tragkörper 1.4571, Filtermedium 1.4571, Halteringe 1.4571
-C._Tragkörper 1.4571, Filtermedium 1.4401, Halteringe 1.4571
+# $2=code pos. 6; $3=Material 2-Edelstahl, * - alles
+POS_6_!_1_!_1_!_Tragkörper Alu, Draht Edelstahl 1.4571
+POS_6_!_2_!_*_!_Tragkörper Edelstahl, Draht Edelstahl 1.4571
+POS_6_!_3_!_*_!_Tragkörper Edelstahl, Folie Edelstahl 1.4571
+POS_6_!_4_!_1_!_Tragkörper Alu, Folie Edelstahl 1.4571
+POS_6_!_5_!_*_!_Tragkörper Edelstahl, Lochblech Edelstahl 1.4571
+POS_6_!_6_!_1_!_Tragkörper Alu, Topmesh Edelstahl 1.4571
+POS_6_!_7_!_*_!_Tragkörper Alu hard coated, Edelstahl 1.4571
+POS_6_!_8_!_1_!_Tragkörper Alu, Filtermedium 1.4571, Halteringe Stahl
+POS_6_!_9_!_1_!_Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe Stahl
+POS_6_!_A_!_*_!_Tragkörper Alu hard coated, Filtermedium 1.4571, Halteringe 1.4571
+POS_6_!_B_!_*_!_Tragkörper 1.4571, Filtermedium 1.4571, Halteringe 1.4571
+POS_6_!_C_!_*_!_Tragkörper 1.4571, Filtermedium 1.4401, Halteringe 1.4571
 ::
 # POS_7 //// DRAHTBREITE, mm
 0._n/A

@@ -8,18 +8,15 @@ BEGIN {
   RS = "\n"
   FS = "_!_"
 
-str_medium = ""
-
 # DROPDOWNS
 # str_input_label_2 = "MEDIUM;ANTRIEB;MATERIAL;MATERIALEL"
-
-#print "
+# сколько в строке членов столько дропдаунов и выводим
 
 str_input_label_2 = "MEDIUM"
 split(str_input_label_2, arr_input_label_2, ";")
-for (i=1; i<=length(arr_input_label_2); i++) {
-  arr_input_values_2[i] = ""
-}
+#for (i=1; i<=length(arr_input_label_2); i++) {
+  arr_input_values_2[1] = ""
+#}
 
 } # END OF BEGIN
 
@@ -39,31 +36,30 @@ for (i=1; i<=length(arr_input_label_2); i++) {
     }
   }
 
-
 }
 
 
 END {
 
 # MEDIUM
-
+# в результате считывания в теле получаем массив строк
+# arr_input_values_2[i] = medium!!Das zu filtrierende Medium angeben:::!!01::01. Kühlschmierstoff (KSS)!!02::02. Polyol!!03::03. Isocyanat (MDI, TDI, usw.)!!04::04. Wasser!!05::05. Miscella!!06::06. Pflanzenöl!!07::07. TESTMEDIUM
+# arr_input_values_2[i]
 
 print_bootstrap_head("Auslegung Seite 1")
-
-print "<h4>Betriebsdaten:</h4>" >> result_txt
+print "<h4>Anwendung:</h4>" >> result_txt
 
 print_dropdown(k=1) # 1 = MEDIUM
 
+
+# CHECKBOX for comments
 print "<div class=\"form-check\">" >> result_txt
-print "  <input class=\"form-check-input\" type=\"checkbox\" name=\"comments\" value=\"ON\" id=\"flexCheckDefault\">" >> result_txt
+print "  <input class=\"form-check-input border-primary\" type=\"checkbox\" name=\"comments\" value=\"ON\" id=\"flexCheckDefault\">" >> result_txt
 print "  <label class=\"form-check-label\" for=\"flexCheckDefault\">Comments (on / off):" >> result_txt
 print "  </label></div>" >> result_txt
-
-
 print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
 print "</form> "                                 >> result_txt
 print "</div>" >> result_txt
-#print "</div></body></html>" >> result_txt
 
 }
 
@@ -78,7 +74,7 @@ function print_dropdown(k) {
   print "<div class=\"row mb-3\">"  >> result_txt
   print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader "</label>"   >> result_txt
   print "  <div class=\"col-sm-4\">"  >> result_txt
-  print "    <select class=\"form-select\" id=\"" mylabel "\" name=\"" mylabel "\">"  >> result_txt
+  print "    <select class=\"form-select border-primary\" id=\"" mylabel "\" name=\"" mylabel "\">"  >> result_txt
 
   j = 1  # selected
   for (i=3; i<=length(arr_my_str); i++) {

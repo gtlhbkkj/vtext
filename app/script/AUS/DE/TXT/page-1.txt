@@ -7,7 +7,9 @@
 # Мин рабочее давление для отсечения Eigendruck
 MIN_WP_FOR_EIGENDRUCK_!_2.0_!_# 2.0 bar
 
-эту строку также вставить в ТХТ файл и оттуда ее забирать
+# материал прокладок
+MATERIAL_DICHTUNGEN_!_Material Dichtungen: FPM und Lager: PTFE
+
 # LIST OF RSF FILTERS
 # $2 – FULL LIST /// $3 – working pressure < MIN_WP_FOR_EIGENDRUCK
 LIST_OF_RSF_FILTERS_!_2,3,4,5_!_4,5
@@ -40,35 +42,7 @@ I_DATA_S_!_dpipeline_!_DPLINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:
 I_DATA_S_!_fineness_!_FS_!_Gewünschte Filterfeinheit [µm]:_!_*
 
 
-
-
-DURCHSATZ_!_durchsatz
-DURCHSATZ_!_Durchsatz [Liter/Min]:
-
-VISCOSITY_!_viscosity
-VISCOSITY_!_Viskosität bei der Betriebstemperatur [mm2/sec]:
-
-WPRESSURE_!_wpressure
-WPRESSURE_!_Betriebsdruck [bar]:
-
-WTEMPERATURE_!_wtemperature
-WTEMPERATURE_!_Betriebstemperatur [Grad C]:
-
-# 2. ANFORDERUNGEN ZUM FILTER
-
-DPRESSURE_!_dpressure
-DPRESSURE_!_Auslegungsdruck [bar]:
-
-DTEMPERATURE_!_dtemperature
-DTEMPERATURE_!_Auslegungstemperatur [Grad C]:
-
-DPIPELINE_!_dpipeline
-DPIPELINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:
-
-FINENESS_!_fineness
-FINENESS_!_Gewünschte Filterfeinheit [µm]:
-
-ANTRIEB_!_antrieb
+ANTRIEB_!_antrieb_!_03,05-07
 ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
 ANTRIEB_!_1_!_1. Sterngriff / Handratsche
 ANTRIEB_!_7_!_7. Pneumatischer Antrieb
@@ -82,14 +56,8 @@ ATEX_!_ATEX-Zone [Ja/Nein]:
 ATEX_!_Nein
 ATEX_!_Ja
 
-UTEMPERATURMIN_!_utemperaturmin
-UTEMPERATURMIN_!_Umgebungstemperatur min [Grad C]:
-
-UTEMPERATURMAX_!_utemperaturmax
-UTEMPERATURMAX_!_Umgebungstemperatur max [Grad C]:
-
 # Filtermaterial / Materialbeständigkeit
-MATERIAL_!_material
+MATERIAL_!_material_!_01-03,05
 MATERIAL_!_Gewünschtes Material Filter:_!_this is a HEAD for dropdowns
 MATERIAL_!_1_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
 MATERIAL_!_2_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
@@ -97,7 +65,7 @@ MATERIAL_!_3_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
 MATERIAL_!_6_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
 
 
-MATERIALEL_!_materialel
+MATERIALEL_!_materialel_!_01-03,05
 MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
 MATERIALEL_!_1_!_1. Aluminium + Edelstahl
 MATERIALEL_!_2_!_2. Edelstahl
@@ -167,9 +135,10 @@ M_07_!_OPTION_!_1_!_1. TEST OPTION 1
 M_07_!_OPTION_!_2_!_2. TEST OPTION 2
 M_07_!_OPTION_!_3_!_3. TEST OPTION 3
 
-# MV = Medium Input Values - input boarder values for Mediums
-# $1 = Medium
-MIV_01_!_DSZ:1,2000;VSC:1,20;WP:1,10;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:10,100
+# MIV = Medium Input Values - input boarder values for Mediums
+# $1 = Param, $2, $3, $4 = min, max, step
+MIV_01_!_DSZ:1,2000,1;VSC:1,20,1;WP:1,10,0.1;WT:0,80,1;DP:1,16,1;DT:0,100,1;DPLINE:25,150,1;FS:10,100,5
+# add step
 MIV_02_!_DSZ:1,1000;VSC:100,20000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_03_!_DSZ:1,1000;VSC:10,2000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_04_!_DSZ:1,3333;VSC:1,1;WP:1,40;WT:0,100;DP:1,40;DT:0,100;DPLINE:25,150;FS:30,1000

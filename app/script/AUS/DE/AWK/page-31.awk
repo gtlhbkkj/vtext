@@ -2,9 +2,10 @@ BEGIN {
   RS = "\n"
   FS = "_!_"
 
+
 # заходит эта строка
 #string_return = "FTYPE::" str_ftype_new "_!_DSZ::" durchsatz_calc 
-# "_!_FS::" fineness "_!_VS::" viscosity "_!_MAT::" material "_!_DSZO::" durchsatz  "_!_COMM::" comments
+# (string_return): FTYPE::4,5_!_DSZ::0_!_FS::10_!_VS::10_!_MAT::1_!_DSZO::1_!_COMM::ON_!_KSF::ON_!_MED::01_!_FKF::0.8
 
 
 # коды ошибок - НЕ ЗАБЫТЬ ПРОВЕРКУ И ВЫВЕСТИ ИХ 
@@ -19,8 +20,14 @@ split(mystring,arr_mystring,"_!_")
 str_ftype = arr_mystring[1]
 split(str_ftype, arr_tmp, "::")
 str_part2 = arr_tmp[2]
-if (str_part2 == "")
-   print str_err[1] >> result_txt
+
+# не найдено ни одного подходящего фильтра
+if (str_part2 == "") {
+#   print "<BR>EXIT page-31.awk" >> result_txt
+   exit    # выходим из блока BEGINN
+}
+
+
 split(str_part2, arr_ftypes, ",")
 #print "<BR>TEST geeignete ftypen :" str_part2  >> result_txt
 
@@ -36,11 +43,6 @@ split(arr_mystring[4], arr_tmp, "::")
 viscosity = arr_tmp[2]
 #print "<BR>TEST viscosity :" viscosity  >> result_txt
 
-# в финальной версии можно или из предыдущего скрипта в строке передать или из <page-1.txt>
-mat[1] = "1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl"
-mat[2] = "2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl"
-mat[3] = "3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl"
-
 split(arr_mystring[5], arr_tmp, "::")
 material = arr_tmp[2]
 
@@ -50,14 +52,26 @@ durchsatz = arr_tmp[2]
 split(arr_mystring[7], arr_tmp, "::")
 comments = arr_tmp[2]
 
+# проверяем нужно ли учитывать KSF
+split(arr_mystring[8], arr_tmp, "::")
+ksf = arr_tmp[2]
+
+split(arr_mystring[9], arr_tmp, "::")
+medium = arr_tmp[2]
+
+# определяем мин тонкость фильтрации для кот определен фактор уменьшения расхода
+fk_fineness = 1.0
+split(arr_mystring[10], arr_tmp, "::")
+rsf_fk_fineness = arr_tmp[2]  #20:0.8
+split(rsf_fk_fineness,arr_1,":")
+min_fineness = arr_1[1]
+fk_fineness = arr_1[2]
+
 
 dtoleranz = 1.0      # DURCHSATZ_TOLERANZ_!_1.05_!_# 5%
 j = 1  # counter for new arr_fbez[] = "AF122_G1", "AF133_G3", etc.
 m = 1  # counter for new  arr_elem_durchsatz[m] = "E255!!10-30;20-50;30-80;40-100;60-120;80-140;100-150;200-200", etc.
 arr_fbez[1] = ""
-
-
-
 
 } # END OF BEGIN
 
@@ -65,8 +79,20 @@ arr_fbez[1] = ""
 
 # ТЕЛО
 {
+
   if ($1 == "DURCHSATZ_TOLERANZ")
      dtoleranz = $2 # на сколько % можем превысить расход в нашей КСС табл
+
+  # считываем все что в этом блоке просто для вывода в комментариях для ясности
+  # FTYPE_!_2_!_AF122_G1
+  # FTYPE_!_3_!_AF112_G2,AF113_G3
+
+  if ($1 == "FTYPE") {
+     if (str_ftype_for_web == "") 
+        str_ftype_for_web = $2 ":" $3
+     else
+        str_ftype_for_web = str_ftype_for_web";" $2 ":" $3
+  }
 
 
   # наполняем массив обозначений фильтров arr_fbez[] = "AF122_G1", "AF133_G3", etc.
@@ -80,6 +106,18 @@ arr_fbez[1] = ""
      }
   }
 
+
+  # KSFNA = KSF nach Anwendungen / MEDIUM - geeignete KSF für die Anwendung
+  # $2 = MEDIUM
+  # $3 = geeignete Filtertypen
+  # KSFNA_!_01_!_AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF736_G3
+  if (ksf == "ON" && $1 == "KSFNA" && $2 == medium) {
+     split($3, arr_field3, ",")
+     for (k=1; k<=length(arr_field3); k++) {
+         arr_fbez[j] = arr_field3[k]
+         j++
+     }
+  }
 
   # наполняем массив для передачи в след скрипт "E255;AF122_G1;10-30;20-50;30-80;40-100;60-120;80-140;100-150;200-200"
   if (length(arr_fbez) > 0) {
@@ -96,24 +134,41 @@ arr_fbez[1] = ""
 
 END {
 
-
-if (comments == "ON") {
-  print "<p class=\"fw-bold\">---------  page-31.awk  ----------</p>mystring [from page-3.awk]: "mystring  >> result_txt
-  print "<BR> Filter series to process: "  >> result_txt
-  for (i=1; i<=length(arr_fbez); i++)
-     print "["arr_fbez[i] "];" >> result_txt
-}
+## не найдено ни одного подходящего фильтра
+#if (str_part2 == "") {
+#   exit    # выходим из блока END
+#}
 
 
   str_to_return = ""
   for (i=1; i<=length(arr_main); i++) {
-     if (comments == "ON")
-        print "<BR>" i " -- " arr_main[i] >> result_txt
      if (str_to_return == "")
        str_to_return = arr_main[i]
-     else 
+     else
        str_to_return = str_to_return "_!_" arr_main[i]
   }
+
+
+if (comments == "ON") {
+  print "<i><b>--------- Start page-31.awk ----------------</b></i>"  >> result_txt
+  print "<BR><i>mystring [from page-3.awk]: " mystring  >> result_txt
+  print "<p></p><BR>Filter types my classification: Eignung / Filter Series:" >> result_txt
+  split(str_ftype_for_web, arr_str_ftype_for_web, ";")
+  for (i=1; i<=length(arr_str_ftype_for_web); i++) {
+    split(arr_str_ftype_for_web[i],arr_tmp,":")
+    print "<BR>["arr_tmp[1]"] - " arr_tmp[2] >> result_txt
+  }
+
+  print "<p></p><BR> Filter series to process (nach Eignung) - arr_fbez[]: "  >> result_txt
+  for (i=1; i<=length(arr_fbez); i++)
+     print "["arr_fbez[i] "];" >> result_txt
+
+  print "<p></p><BR>Values in arr_main[]" >> result_txt
+  for (i=1; i<=length(arr_main); i++) 
+     print "<BR>" i " -- " arr_main[i] >> result_txt
+  print "</i>" >> result_txt
+}
+
 
 
 # финальная проверка расходов во всех выбранных фильтрах
@@ -128,7 +183,15 @@ for (i=1; i<=length(arr_main); i++) {
    str_durchsatz = arr_main_rec[3]
    split(str_durchsatz, arr_tmpnew, ";")
    split(arr_tmpnew[length(arr_tmpnew)], arr_tmp_end, "-")  # максимальные значения "100-400"
+
    max_durchsatz_element = arr_tmp_end[2]
+
+   # если тонкость фильтрации нашего диапазона <= 20 мкм, то корректируем расход в строке
+   # с учетом этого фактора "RSF_FAKTOR_FINENESS" .
+   if (arr_tmp_end[2] >= min_fineness) {    # если в стр расхода тонксть < 20 мкм, то восст- 
+      max_durchsatz_element /= fk_fineness  # расход через фактор
+   }
+
 
    dt = durchsatz_c * dtoleranz
    if (dt > max_durchsatz_element) {      # наш расход за пределами диапазона строки
@@ -149,21 +212,12 @@ for (i=1; i<=length(arr_main); i++) {
 }
 
 
-if (length(arr_final) == 0) {
-   print "<H5>no suitable filters found</H5>" >> result_txt
-   exit
-   # дописать обработчик выхода
-}
 
-if (comments == "ON")
-   print "<BR>Filter series, which are suitable in arr_final[]:" >> result_txt
-
-return_string = "MAT::" material "_!_"
+return_string = "MED::" medium "_!_" "MAT::" material "_!_"
 for (i=1; i<=length(arr_final); i++) {
-   if (comments == "ON")
-      print "<BR>["i"]: " arr_final[i] " // " >> result_txt
    return_string =  return_string  arr_final[i] ";;"
 }
+
 
 # каким то образом в начало попал спецсимвол убираем всё кроме букв цифр, "!", ";", ":"
 gsub(/[^a-zA-Z0-9!;:_]/, "", return_string)
@@ -171,8 +225,16 @@ gsub(/[^a-zA-Z0-9!;:_]/, "", return_string)
 # убираем ";;" в хвосте
 return_string = substr(return_string,1,length(return_string)-2) "CCC-" comments
 
-if (comments == "ON")
-  print "Return-string: " return_string >> result_txt
+if (comments == "ON") {
+   print "<p></p><BR><i>Filter series, which are suitable in arr_final[]:" >> result_txt
+
+   for (i=1; i<=length(arr_final); i++)
+      print "<BR>["i"]: " arr_final[i] >> result_txt
+
+   print "<p></p>Return-string: " return_string >> result_txt
+   print "<BR><b>----------- End of page-31.awk ------------</b></i>" >> result_txt
+
+}
 
 print return_string
 
