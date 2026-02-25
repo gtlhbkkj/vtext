@@ -3,6 +3,9 @@
 # возможно $3 перенести в след файл <page-2.txt>
 # 1-st line is a label for html file
 
+# строка возможных дропдаунов которые есть в этом файле
+# cчитываем в <page-2.txt>
+ALL_AVAILABLE_DROPDOWNS_!_ANTRIEB;MATERIAL;MATERIALEL
 
 # Мин рабочее давление для отсечения Eigendruck
 MIN_WP_FOR_EIGENDRUCK_!_2.0_!_# 2.0 bar
@@ -14,61 +17,66 @@ MATERIAL_DICHTUNGEN_!_Material Dichtungen: FPM und Lager: PTFE
 # $2 – FULL LIST /// $3 – working pressure < MIN_WP_FOR_EIGENDRUCK
 LIST_OF_RSF_FILTERS_!_2,3,4,5_!_4,5
 
+# для выбора из таблицы расходов
+# arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
+TOLERANZ_VISCOSITY_!_1.05
+TOLERANZ_FINENESS_!_1.05
 
 # MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1:1,2;2:1,2,5,6
-#                                            ^^^^^^^^^^^^^^^
+# нужно ли это действительно для KSS?
 # $4 = Elemente Pos. 1: 1 -KSF, 2 -RSF; Pos. 2: 1 -Spule, 2 -SP-Rohr, 5 - Segment, 6 -Wave
+# строка "viscosity:1;atex:ON;antrieb:4;kategorie:ON;elements:1,12,4,56,*,*,*,*,*;dkb_offl:ON" считывается <page-3.awk>
+# dkb_offl:ON /// Durchsatz Kalkulation - Offene Filter Betrachten : ON = YES, OFF = общая площадь поверхности играет роль
 MEDIUM_!_medium
-MEDIUM_!_Das zu filtrierende Medium angeben:
+MEDIUM_!_Das zu filtrierende Medium:
 MEDIUM_!_01_!_01. Kühlschmierstoff (KSS)_!_1=1,2;2=1,2,5,6
-MEDIUM_!_02_!_02. Polyol_!_1=1;2=1,2
-MEDIUM_!_03_!_03. Isocyanat (MDI, TDI, usw.)_!_1=1;2=1,2
-MEDIUM_!_04_!_04. Wasser_!_1=1,3,4;2=1,2,3
-MEDIUM_!_05_!_05. Miscella_!_1=1;2=1,2
-MEDIUM_!_06_!_06. Pflanzenöl_!_1=1;2=1-4
-MEDIUM_!_07_!_07. TESTMEDIUM_!_1=1;2=1-4
-
+MEDIUM_!_02_!_02. Miscella_!_viscosity:1;atex:ON;antrieb:4;kategorie:ON;elements:^[E][1][1-2][4][5-6].[MATERIAL].[0];dkb_offl:OFF
+MEDIUM_!_03_!_03. Polyol_!_usw
+MEDIUM_!_04_!_04. Isocyanat (MDI, TDI, usw.)_!_usw
+MEDIUM_!_05_!_05. Wasser_!_usw
+MEDIUM_!_06_!_06. Pflanzenöl_!_usw
+MEDIUM_!_07_!_07. TESTMEDIUM_!_usw
 
 
 # I_DATA_1 = Input Data String 
 # Проверить, вошли ли все необходимые данные в page-3.awk
 I_DATA_S_!_durchsatz_!_DSZ_!_Durchsatz [Liter/Min]:_!_*
-I_DATA_S_!_viscosity_!_VSC_!_Viskosität bei der Betriebstemperatur [mm2/sec]:_!_02,04-06,usw.
+I_DATA_S_!_viscosity_!_VSC_!_Viskosität bei der Betriebstemperatur [mm2/sec]:_!_03,04-06,usw.
 I_DATA_S_!_wpressure_!_WP_!_Betriebsdruck [bar]:_!_*
-I_DATA_S_!_wtemperature_!_WT_!_Betriebstemperatur [Grad C]:_!_02-99
+I_DATA_S_!_wtemperature_!_WT_!_Betriebstemperatur [Grad C]:_!_03-99
 I_DATA_S_!_dpressure_!_DP_!_Auslegungsdruck [bar]:_!_02-99
-I_DATA_S_!_dtemperature_!_DT_!_Auslegungstemperatur [Grad C]:_!_02-99
-I_DATA_S_!_dpipeline_!_DPLINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:_!_02-99
+I_DATA_S_!_dtemperature_!_DT_!_Auslegungstemperatur [Grad C]:_!_03-99
+I_DATA_S_!_dpipeline_!_DPLINE_!_Anschlussgröße / Rohrleitungsdurchmesser [mm]:_!_03-99
 I_DATA_S_!_fineness_!_FS_!_Gewünschte Filterfeinheit [µm]:_!_*
 
 
-ANTRIEB_!_antrieb_!_03,05-07
+
+ANTRIEB_!_antrieb_!_02,05-06,07
 ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
-ANTRIEB_!_1_!_1. Sterngriff / Handratsche
-ANTRIEB_!_7_!_7. Pneumatischer Antrieb
-ANTRIEB_!_6_!_6. Ohne Getriebemotor, jedoch mit Motorbock
-ANTRIEB_!_3_!_3. Elektrischer Getriebemotor 220V/480V
-ANTRIEB_!_4_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3
+ANTRIEB_!_1_!_1. Sterngriff / Handratsche_!_03-05
+ANTRIEB_!_7_!_7. Pneumatischer Antrieb_!_03-05,07
+ANTRIEB_!_6_!_6. Ohne Getriebemotor, jedoch mit Motorbock_!_08
+ANTRIEB_!_3_!_3. Elektrischer Getriebemotor 220V/480V_!_01,03-05,08
+ANTRIEB_!_4_!_4. Elektrischer Getriebemotor 220V/480V in ATEX Ex 2G II T3_!_02
 
 
 ATEX_!_atex
 ATEX_!_ATEX-Zone [Ja/Nein]:
 ATEX_!_Nein
 ATEX_!_Ja
-
 # Filtermaterial / Materialbeständigkeit
 MATERIAL_!_material_!_01-03,05
 MATERIAL_!_Gewünschtes Material Filter:_!_this is a HEAD for dropdowns
-MATERIAL_!_1_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl
-MATERIAL_!_2_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl
-MATERIAL_!_3_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl
-MATERIAL_!_6_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl
+MATERIAL_!_1_!_1. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile C-Stahl_!_*
+MATERIAL_!_2_!_2. Gehäuse und Deckel: Edelstahl / Innenteile Edelstahl_!_*
+MATERIAL_!_3_!_3. Gehäuse und Deckel: GGG40 oder C-Stahl / Innenteile Edelstahl_!_*
+MATERIAL_!_6_!_6. Gehäuse und Deckel: GGG40 oder C-Stahl beschichtet / Innenteile Edelstahl_!_03-99
 
 
 MATERIALEL_!_materialel_!_01-03,05
 MATERIALEL_!_Gewünschtes Material Filterelement:_!_this is a HEAD for dropdowns
-MATERIALEL_!_1_!_1. Aluminium + Edelstahl
-MATERIALEL_!_2_!_2. Edelstahl
+MATERIALEL_!_1_!_1. Aluminium + Edelstahl_!_*
+MATERIALEL_!_2_!_2. Edelstahl_!_*
 
 # SECOND RUN - <page-2.awk>
 # добавить факторы в зависимости от Опции
@@ -98,30 +106,34 @@ M_01_!_OPTION_!_43_!_03. Grauguss oder Sphäroguss_!_2345_!_0.5
 # if (fineness <= 20 µm)  faktor_fineness = 0.8
 RSF_FAKTOR_FINENESS_!_20_!_0.8
 
-M_02_!_Polyol
-M_02_!_LABEL_!_1_!_Wo steht der Filter:
-M_02_!_OPTION_!_1_!_01. vor der Mischanlage
-M_02_!_OPTION_!_2_!_02. Abfüllung
-M_02_!_OPTION_!_3_!_03. usw.
+# $5 = "1.0" - Durchsatz Faktor
+# факторы расхода - считывается <page-3.awk>
+M_02_!_Miscella
+M_02_!_LABEL_!_1_!_Filter Einbausituation:
+M_02_!_OPTION_!_11_!_1. Nach Hydrozyklon (Schmutzgehalt <= 0.05%)_!_1.0
+M_02_!_OPTION_!_12_!_2. Ohne Hydrozyklon (Schmutzgehalt 0,05 - 0.25%)_!_0.8
+M_02_!_OPTION_!_13_!_3. Ohne Hydrozyklon (Schmutzgehalt 0.25 - 2.0%)_!_0.6
 
-M_03_!_Isocyanat
+
+M_03_!_Polyol
 M_03_!_LABEL_!_1_!_Wo steht der Filter:
-M_03_!_OPTION_!_1_!_1. vor der Mischanlage
-M_03_!_OPTION_!_2_!_2. Abfüllung
-M_03_!_OPTION_!_3_!_3. usw.
+M_03_!_OPTION_!_1_!_01. vor der Mischanlage
+M_03_!_OPTION_!_2_!_02. Abfüllung
+M_03_!_OPTION_!_3_!_03. usw.
 
-M_04_!_Wasser
-M_04_!_LABEL_!_1_!_Was für ein Wasser:
-M_04_!_OPTION_!_1_!_1. Leitungswasser
-M_04_!_OPTION_!_2_!_2. Kondenswasser
-M_04_!_OPTION_!_3_!_3. Turbinen Sperrwasser
-M_04_!_OPTION_!_4_!_4. Flusswasser
-M_04_!_OPTION_!_5_!_5. Abwasser
+M_04_!_Isocyanat
+M_04_!_LABEL_!_1_!_Wo steht der Filter:
+M_04_!_OPTION_!_1_!_1. vor der Mischanlage
+M_04_!_OPTION_!_2_!_2. Abfüllung
+M_04_!_OPTION_!_3_!_3. usw.
 
-M_05_!_Miscella
-M_05_!_LABEL_!_1_!_Filter Einbausituation:
-M_05_!_OPTION_!_1_!_1. Nach Hydrozyklon
-M_05_!_OPTION_!_2_!_2. Ohne Hydrozyklon
+M_05_!_Wasser
+M_05_!_LABEL_!_1_!_Was für ein Wasser:
+M_05_!_OPTION_!_1_!_1. Leitungswasser
+M_05_!_OPTION_!_2_!_2. Kondenswasser
+M_05_!_OPTION_!_3_!_3. Turbinen Sperrwasser
+M_05_!_OPTION_!_4_!_4. Flusswasser
+M_05_!_OPTION_!_5_!_5. Abwasser
 
 M_06_!_Pflanzenöl
 M_06_!_LABEL_!_1_!_Pflanzenölart:
@@ -138,8 +150,9 @@ M_07_!_OPTION_!_3_!_3. TEST OPTION 3
 # MIV = Medium Input Values - input boarder values for Mediums
 # $1 = Param, $2, $3, $4 = min, max, step
 MIV_01_!_DSZ:1,2000,1;VSC:1,20,1;WP:1,10,0.1;WT:0,80,1;DP:1,16,1;DT:0,100,1;DPLINE:25,150,1;FS:10,100,5
+MIV_02_!_DSZ:100,2000,10;WP:1,10,0.1;DP:1,16,1;FS:80,200,10_!_# остальные данные избыточны
+
 # add step
-MIV_02_!_DSZ:1,1000;VSC:100,20000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_03_!_DSZ:1,1000;VSC:10,2000;WP:1,16;WT:0,100;DP:1,16;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_04_!_DSZ:1,3333;VSC:1,1;WP:1,40;WT:0,100;DP:1,40;DT:0,100;DPLINE:25,150;FS:30,1000
 MIV_05_!_DSZ:1,3333;VSC:1,1;WP:1,16;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:80,500

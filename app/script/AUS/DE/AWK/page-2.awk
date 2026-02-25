@@ -21,16 +21,15 @@ fstr_medium = "M_" medium
 fstr_ivalues = "MIV_" medium # MV = Medium Input Values
 fstr_pvalues = "MPV_" medium # MPV = Medium Partikeln Values
 
-# на его базе считываем и формируем дропдауны
-str_input_label_2 = "ANTRIEB;MATERIAL;MATERIALEL"
-split(str_input_label_2, arr_input_label_2, ";")
-#for (i=1; i<=length(arr_input_label_2); i++) {
-#  arr_input_values_1[i] = ""
-#}
-
 # набираем массив для вывода на вебсайте строк ввода параметров давление, тонкость, etc
 counter_arr_for_str_input = 1
 arr_for_str_input[1] = ""
+delete arr_for_str_input
+
+# на базе массива arr_input_label_2 формируем подходящие дропдауны 
+counter_aad = 0 # чтобы эту строку ALL_AVAILABLE_DROPDOWNS в <page-1.txt> искать только 1 раз
+delete arr_input_label_2
+delete arr_dropdowns
 
 } # END OF BEGIN
 
@@ -38,6 +37,15 @@ arr_for_str_input[1] = ""
 
 # ТЕЛО
 {
+  # эта строка в самом начале файла <page-1.txt>
+  if (counter_aad == 0 && $1 == "ALL_AVAILABLE_DROPDOWNS") {
+     str_input_label_2 = $2
+#     split(str_input_label_2, arr_input_label_2, ";")
+     split(str_input_label_2, arr_dropdowns, ";")
+     counter_aad = 1 # чтобы эту строку ALL_AVAILABLE_DROPDOWNS в <page-1.txt> искать только 1 раз
+  }
+
+
   # формируем массив arr_for_str_input[] строк ввода данных из блока # I_DATA_S
   # I_DATA_S_!_wpressure_!_WP_!_Betriebsdruck [bar]:_!_*
   # I_DATA_S_!_wtemperature_!_WT_!_Betriebstemperatur [Grad C]:_!_02-99
@@ -69,13 +77,13 @@ arr_for_str_input[1] = ""
 
   # формирование массива для дропдаунов типа
   # "materialel!!Gewünschtes Material Filterelement:!!1. Aluminium + Edelstahl!!2. Edelstahl "
-  for (i=1; i<=length(arr_input_label_2); i++) {
-    field1 = arr_input_label_2[i]
+  for (i=1; i<=length(arr_dropdowns); i++) {
+    field1 = arr_dropdowns[i]
     if ($1 == field1) {
         if (arr_input_values_2[i] == "")
-           arr_input_values_2[i] = $2 ";;" $3
+           arr_input_values_2[i] = $2 ";;" $3 ";;" $4
         else
-           arr_input_values_2[i] = arr_input_values_2[i] "!!" $2 ";;" $3
+           arr_input_values_2[i] = arr_input_values_2[i] "!!" $2 ";;" $3 ";;" $4
     }
   }
 
@@ -84,13 +92,21 @@ arr_for_str_input[1] = ""
 
 END {
 
-#str_ivalues = MIV_01_!_DSZ:1,2000;VSC:1,20;WP:1,10;WT:0,80;DP:1,16;DT:0,100;DPLINE:25,150;FS:10,100
+#str_ivalues = MIV_02_!_DSZ:1,2000,10;WP:1,10,0.1;DP:1,16,1;FS:80,200,10_!_# остальные данные избыточны
 
 if (comments == "ON") {
+   print "<BR>str_input_label_2: "  str_input_label_2  >> result_txt
    print "<BR><i>Aquired data from page-1.txt:" >> result_txt
    for (i=1; i<=length(arr_for_str_input); i++)
       print "<BR>arr_for_str_input["i"]: " arr_for_str_input[i] >> result_txt
-   print "<BR>str_ivalues: " str_ivalues "</i>" >> result_txt
+   print "<BR>str_ivalues: " str_ivalues  >> result_txt
+
+   print "<p></p>Dropdown Arrays /// arr_input_values_2[i]: "  >> result_txt
+   for (i=1; i<=length(arr_input_values_2); i++) {
+     print "<BR>["i"]: " arr_input_values_2[i]  >> result_txt
+   }
+
+   print "</i><p></p>" >> result_txt
 }
 
 # вывод дропдаунов для МЕДИУМ
@@ -100,53 +116,30 @@ print "<input type=\"hidden\" name=\"medium\" value=\"" medium "\">\n"  >> resul
 print "<input type=\"hidden\" name=\"comments\" value=\"" comments "\">\n"  >> result_txt
 
 print "<p class=\"h4\">Betriebsdaten und Anforderungen:</p>" >> result_txt
+# печать строкового ввода отдельных параметров
 print_input_strings()
-print_dropdown(k=1) # 2 = ANTRIEB
-print_dropdown(k=2) # 3 = Filtermaterial
-print_dropdown(k=3) # 4 = MAterial Element
+
+# печать дропдаунов
+print_dropdown_newversion() # alle zusammen
 
 # CHECKBOX for KSF in KSS Anwendung
-print "<div class=\"form-check\">" >> result_txt
-print "  <input class=\"form-check-input border-primary\" type=\"checkbox\" name=\"ksf\" value=\"ON\" id=\"flexCheckDefault\">" >> result_txt
-print "  <label class=\"form-check-label\" for=\"flexCheckDefault\">Kantenspaltfilter berücksichtigen: (Ja / Nein):" >> result_txt
-print "  </label></div>" >> result_txt
+if (medium == "01") { # KSS Anwendung
+   print "<div class=\"form-check\">" >> result_txt
+   print "  <input class=\"form-check-input border-primary\" type=\"checkbox\" name=\"ksf\" value=\"ON\" id=\"flexCheckDefault\">" >> result_txt
+   print "  <label class=\"form-check-label\" for=\"flexCheckDefault\">Kantenspaltfilter berücksichtigen: (Ja / Nein):" >> result_txt
+   print "  </label>" >> result_txt
+   print "</div>" >> result_txt
+} else
+   print "<input type=\"hidden\" name=\"ksf\" value=\"ON\">"  >> result_txt
 
-
-print "</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
+print "\n</ul><button type = \"Submit\" class=\"btn btn-primary btn-lg\"> SEND </button>"  >> result_txt
 print "</form> "                                 >> result_txt
 print "</div>" >> result_txt
 
 } # END OF END
 
 
-function print_dropdown(k) {
-  my_str = arr_input_values_2[k]
-  split(my_str, arr_my_str, "!!")
-  split(arr_my_str[1],arr_my_str1,";;")
-  mylabel = arr_my_str1[1]
-  split(arr_my_str[2],arr_my_str1,";;")
-  myheader = arr_my_str1[1]
-
-  print "<div class=\"row mb-3\">"  >> result_txt
-  print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader "</label>"   >> result_txt
-  print "  <div class=\"col-sm-6\">"  >> result_txt
-#  print "    <select class=\"form-select\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
-  print "    <select class=\"form-select border-primary\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
-
-  j = 1  # selected
-  for (i=3; i<=length(arr_my_str); i++) {
-     split(arr_my_str[i],arr_arr_m,";;")
-     myvalue = arr_arr_m[1]
-     myoption = arr_arr_m[2]
-
-     print "<option value=\"" myvalue "\" >" myoption "</option>" >> result_txt
-  }
-  print "</select>" >> result_txt
-  print "</div></div>"    >> result_txt  # Bootstrap
-}
-
-
-
+# печать бутстрап шапки
 function print_bootstrap_head(page_header) {
 print "<div class=\"container content\">"  >> result_txt
 print "<div class=\"p-2 mb-2 bg-primary text-white\">"  >> result_txt
@@ -156,6 +149,7 @@ print "<ul class=\"list-group list-striped mb-3\">"  >> result_txt
 return
 }
 
+# печать опций на анвендунг
 function print_medium_options(medium,str_medium) {
 kdo = 0  # переменная "в состоянии до"
 split(str_medium, arr_str_medium, "!!")
@@ -351,36 +345,86 @@ function print_input_strings() {
 }
 
 
+# печатает дропдауны на основании считанной из <page-1.txt> $3="03,05-07"
+# ANTRIEB_!_antrieb_!_03,05-07
+# ANTRIEB_!_Der gewünschte Antrieb:_!_this is a HEAD for dropdowns
+function print_dropdown_newversion() {
+  for (i=1; i<=length(arr_input_values_2); i++) {
+#    print "<BR>arr_input_values_2["i"] = " arr_input_values_2[i] >> result_txt
+    split(arr_input_values_2[i], arr_my_str, "!!")
 
-#function print_input(mystart, myend) {
-#  step_value = 0
-#  default_value = 0
-#
-#  for (i=mystart; i<=myend; i++) {
-#     split(arr_input_values_1[i], arr_myhtml, "!!")
-#
-#     mylabel  = arr_myhtml[1]
-#     myheader = arr_myhtml[2]
-#
-#     split(str_bparam, arr_tmp, ";")
-#     for (k=1; k<=length(arr_tmp); k++) {
-#        split(arr_tmp[k], arr_tmp1, ":")
-#        split(arr_tmp1[2], arr_tmp2, ",")
-#        if (arr_tmp1[1] == mylabel) {
-#          min_value = arr_tmp2[1]
-#          max_value = arr_tmp2[2]
-#          step_value = arr_tmp2[2]
-#          default_value = min_value
-#          break
-#        }
-#     }
-#
-#    print "<div class=\"row mb-3\">" >> result_txt
-#    print "   <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader " " min_value "-" max_value "</label>" >> result_txt
-#    print "       <div class=\"col-sm-2\">" >> result_txt
-#    print "          <input type=\"number\" class=\"form-control\" name=\"" mylabel "\" min=\"" min_value "\" max=\"" max_value "\" step=\"" step_value "\" id=\"" mylabel "\" value=\"" default_value "\" required>" >> result_txt
-#    print "       </div>" >> result_txt
-#    print "</div>" >> result_txt
-#
-#  }
-#}
+    # antrieb;;03,05-07  !!
+    # Der gewünschte Antrieb:;;this is a HEAD for dropdowns  !!
+    # 1;;1. Sterngriff / Handratsche!!7;;7. Pneumatischer Antrieb!!6;;6. Ohne Getriebemotor, jedoch mit Motorbock  !!
+
+    split(arr_my_str[1],arr_my_str1,";;")
+    # поделили строку "antrieb;;03,05-07" на "antrieb" и "03,05-07"
+
+    if (check_medium_in_string(arr_my_str1[2]) == 0)  # т.е. в строке "03,05-07" нашего MEDIUM нету
+        continue
+
+#    split(arr_my_str[1],arr_my_str1,";;")
+    mylabel = arr_my_str1[1]                       # mylabel = "antrieb"
+    split(arr_my_str[2],arr_my_str1,";;")
+    myheader = arr_my_str1[1]
+
+    print "<div class=\"row mb-3\">"  >> result_txt
+    print "  <label for=\"" mylabel "\" class=\"col-sm-3 col-form-label\">" myheader "</label>"   >> result_txt
+    print "  <div class=\"col-sm-6\">"  >> result_txt
+    print "    <select class=\"form-select border-primary\" name=\"" mylabel "\" id=\"" mylabel "\">"  >> result_txt
+
+    j = 1  # selected
+    for (i3=3; i3<=length(arr_my_str); i3++) {
+       split(arr_my_str[i3],arr_arr_m,";;")
+       myvalue = arr_arr_m[1]
+       myoption = arr_arr_m[2]
+
+       if (check_medium_in_string(arr_arr_m[3]) == 0)  # т.е. в строке "03,05-07" нашего MEDIUM нету
+          continue
+
+       print "        <option value=\"" myvalue "\" >" myoption "</option>" >> result_txt
+    }
+
+    print "      </select>" >> result_txt
+    print "   </div>"    >> result_txt  # Bootstrap
+    print "</div>"    >> result_txt  # Bootstrap
+
+  }
+}
+
+
+# проверка наличия medium = "01" в строке типа "02-06,07,usw"
+function check_medium_in_string(str_tmp) { # зашла строка "02-06,07,usw"
+#  print "<BR> str_tmp: " str_tmp >> result_txt
+
+  if (str_tmp ~ medium || str_tmp == "*")
+     return "true"
+
+  split(str_tmp, arr_str_tmp, ",")         # поделили нашу строку на "02-06" "07" "usw."
+#  print "<BR> number of parts: "  split(str_tmp, arr_str_tmp, ",") >> result_txt
+
+  for (i2=1; i2<=length(arr_str_tmp); i2++) {
+     split(arr_str_tmp[i2], arr_func_tmp, "-")
+#     print "<BR> arr_str_tmp["i2"] " arr_str_tmp[i2] >> result_txt
+
+     minv = arr_func_tmp[1]
+     maxv = arr_func_tmp[2]
+
+#     print "<BR> minv: " minv " /// maxv:" maxv  >> result_txt
+
+
+     for (i1=minv; i1<=maxv; i1++) {
+       compare_value = i1
+       if (i1<10)
+          compare_value = "0" i1
+       if (compare_value == medium) {
+#         print "<BR> return TRUE"  >> result_txt
+         return "true"
+       }
+
+     }
+  }
+
+#print "<BR> return FALSE"  >> result_txt
+return 0
+}

@@ -6,7 +6,7 @@
 ::
 AF713_H2,AF711_G1,AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF122_G1,AF112_G4,AF132_G4,AF172_G4,AF736_G3,AF113_G3,AF133_G3,AF173_G3,AF424_S1,AF424_SH1,AF713_S1,AF713_SH1,AF724_S1,AF724_SH1,AF736_S1,AF737_S1,AF738_S1,AF736_SH1,AF737_SH1,AF738_SH1,AF736_SG1,AF737_SG1,AF738_SG1,AF746_S1,AF747_S1,AF748_S1,AF749_S1,AF746_SH1,AF747_SH1,AF748_SH1,AF749_SH1_!_1,2,3,6_!_0_!_OHNE dP Schalter / Manometer
 ::
-AF713_H2_!_1,3_!_6_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 2,2 bar, statisch 450 bar
+AF713_H2,AF724_G4_!_1,3_!_6_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 2,2 bar, statisch 450 bar
 Schaltpunkt/ Differenzdruck: PiS 3192/2,2
 max. stat. Betriebs-druck: 450 bar
 zul. Betriebstemperatur: 10 bis +120 °C
@@ -19,7 +19,7 @@ Schaltspannung: 250 VAC/200 VDC
 max. Schaltstrom: 1 A
 Schutzart DIN 40050: IP 65
 ::
-AF713_H2_!_1,3_!_7_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 5 bar, statisch 450 bar
+AF713_H2,AF724_G4_!_1,3_!_7_!_Differenzdruckschalter PiS 3192, Schaltpunkt bei 5 bar, statisch 450 bar
 Schaltpunkt/ Differenzdruck: PiS 3192/5,0
 max. stat. Betriebs-druck: 450 bar
 zul. Betriebstemperatur: 10 bis +120 °C

@@ -209,7 +209,7 @@ Zu- / Ablaufanschluss: Gewinde G1 1/4
 Ablassanschluss: Gewinde G 1/2
 Alle Einschraublöcher nach DIN 3852
 ::
-AF724_G4_!_,2,_!_1,2,3,4,5_!_1,3,6_!_# Standard
+AF724_G4_!_,2,_!_1,2,3,4,5,6_!_1,3,6_!_# Standard
 Zu- / Ablaufanschluss: G1 1/4 Einschraublöcher DIN 3852 im Flansch DN40
 Ablassanschluss: G2 Einschraubloch DIN 3852 
 Differenzdruckmessung: 2 x Gewinde G1/8  

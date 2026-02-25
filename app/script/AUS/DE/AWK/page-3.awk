@@ -4,7 +4,6 @@ BEGIN {
 
 print_bootstrap_head("Filter Auslegung // Seite 3")
 
-
 # заходит эта строка
 # mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};
 # ${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel};${comments};${ksf}"
@@ -12,20 +11,33 @@ print_bootstrap_head("Filter Auslegung // Seite 3")
 #print "<BR>mystring: " mystring >> result_txt
 
 ##################### УНИВЕРСАЛЬНЫЙ ВАРИАНТ
-arr_tmp[1] = ""
-split(mystring,arr_tmp1,";")
+
+# поступает в виде переменной
+# json_data: label1:111,medium:02,comments:ON,durchsatz:100,wpressure:3,dpressure:3,fineness:80,material:1,materialel:1,ksf:ON 
+gsub(/[^a-zA-Z0-9:,]/, "", json_data)
+
+delete arr_tmp; delete arr_tmp1; delete arr_tmp2;
+split(json_data, arr_tmp1, ",")
 
 for (i=1; i<=length(arr_tmp1); i++) {
    split(arr_tmp1[i],arr_tmp2,":")
    arr_tmp[arr_tmp2[1]] = arr_tmp2[2]
 }
 
+#arr_tmp[1] = ""
+#split(mystring,arr_tmp1,";")
+#
+#for (i=1; i<=length(arr_tmp1); i++) {
+#   split(arr_tmp1[i],arr_tmp2,":")
+#   arr_tmp[arr_tmp2[1]] = arr_tmp2[2]
+#}
+
 
 medium = arr_tmp["medium"]
-mdd1 = arr_tmp["mdd1"]
-mdd2 = arr_tmp["mdd2"]
-mdd3 = arr_tmp["mdd3"]
-mdd4 = arr_tmp["mdd4"]
+mdd1 = arr_tmp["label1"]
+mdd2 = arr_tmp["label2"]
+mdd3 = arr_tmp["label3"]
+mdd4 = arr_tmp["label4"]
 durchsatz = arr_tmp["durchsatz"]
 wpressure = arr_tmp["wpressure"]
 wtemperature = arr_tmp["wtemperature"]
@@ -38,30 +50,6 @@ material = arr_tmp["material"]
 materialel = arr_tmp["materialel"]
 comments = arr_tmp["comments"]
 ksf = arr_tmp["ksf"]
-
-
-#################### БОЛЕЕ ДУБОВЫЙ ВАРИАНТ
-
-#split(mystring,arr_tmp,";")
-#medium = arr_tmp[1]
-#mdd1 = arr_tmp[2]
-#mdd2 = arr_tmp[3]
-#mdd3 = arr_tmp[4]
-#mdd4 = arr_tmp[5]
-#durchsatz = arr_tmp[6]
-#wpressure = arr_tmp[7]
-#wtemperature = arr_tmp[8]
-#dpressure = arr_tmp[9]
-#dtemperature = arr_tmp[10]
-#dpipeline = arr_tmp[11]
-#fineness = arr_tmp[12]
-#antrieb = arr_tmp[13]
-#material = arr_tmp[14]
-#materialel = arr_tmp[15]
-#comments = arr_tmp[16]
-#ksf = arr_tmp[17]
-
-#######################   END ##################
 
 
 
@@ -165,15 +153,18 @@ if (fmaterial == "")
   print "<BR><b>Error. Description for filter material " material " NOT FOUND in page-1.txt" >> result_txt
 
 
-# расчет минимального фактора и расчетного расхода
+# расчет минимального фактора и расчетного расхода для КСС
 # расчетный расход равен или минимальному фактору (если он меньше 
-min_faktor = calculate_min_faktor(faktor1, faktor2, faktor3, faktor4, faktor_fineness)
-durchsatz_calc = durchsatz / (faktor1 * faktor2 * faktor3 * faktor4 * faktor_fineness)
-durchsatz_calc = int(durchsatz_calc*10+0.5)/10
-if (faktor1* faktor2* faktor3* faktor4* faktor_fineness < 0.5)
-   durchsatz_calc = int(durchsatz / min_faktor)
+if (medium == "01") {
+   min_faktor = calculate_min_faktor(faktor1, faktor2, faktor3, faktor4, faktor_fineness)
+   durchsatz_calc = durchsatz / (faktor1 * faktor2 * faktor3 * faktor4 * faktor_fineness)
+   durchsatz_calc = int(durchsatz_calc*10+0.5)/10
+   if (faktor1* faktor2* faktor3* faktor4* faktor_fineness < 0.5)
+      durchsatz_calc = int(durchsatz / min_faktor)
+}
 
 print_input_data()
+
 
 # это константная строка - те типы RSF фильтров которые вообще существуют
 # фильтруем их по параметрам EIGNUNG из dropdown для передачи в следующий скрипт
@@ -190,6 +181,7 @@ for (i=1; i<=length(arr_tmp); i++) {
    }
 }
 
+
 #print "<BR>str_ftype: " str_ftype >> result_txt
 #print "<BR>eignung1:" eignung1 "/// eignung2:" eignung2 "/// eignung3:"eignung3 " /// eignung4:" eignung4 >> result_txt
 #print "str_ftype_new:" str_ftype_new >> result_txt
@@ -200,8 +192,9 @@ s_ret = s_ret "_!_MAT::" material "_!_DSZO::" durchsatz "_!_COMM::" comments "_!
 string_return = s_ret "_!_MED::" medium "_!_FKF::" rsf_fk_fineness
 
 if (comments == "ON") {
-  print "<BR><i>INPUT DATA from WEB page (mystring): "  mystring >> result_txt
-  print "<BR>mystring=${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel};${comments};${ksf}"  >> result_txt
+  print "<BR><i>INPUT DATA from WEB page: "  mystring >> result_txt
+#  print "<BR>mystring=${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};${dpressure};${dtemperature};${dpipeline};${fineness};${antrieb};${material};${materialel};${comments};${ksf}"  >> result_txt
+  print "<BR> json_data: " json_data >> result_txt
   print "<BR>parameters for page-31.awk (string_return): "  string_return >> result_txt
   print "<BR><b>--------- End of page-3.awk ----------------</b></i><BR>"  >> result_txt
 }
