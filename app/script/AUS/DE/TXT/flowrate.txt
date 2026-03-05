@@ -17,9 +17,9 @@ FTYPE_!_5_!_AF172_G2,AF173_G3
 # KSFNA = KSF nach Anwendungen / MEDIUM - geeignete KSF TYPEN für die Anwendung
 # $2 = MEDIUM
 # $3 = geeignete Filtertypen
-KSFNA_!_01_!_AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF736_G3
-KSFNA_!_02_!_usw
-KSFNA_!_03_!_usw
+#KSFNA_!_01_!_AF713_G1,AF713_GX1,AF713_GX2,AF724_G4,AF736_G3
+#KSFNA_!_02_!_usw
+#KSFNA_!_03_!_usw
 
 
 # DURCHSATZ

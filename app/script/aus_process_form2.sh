@@ -38,7 +38,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# не трогать !!!!
 medium=$(echo ${json_data} | jq -r '.medium')
+# не трогать !!!!
+
 
 # mdd = Medium Drop Down
 #mdd1=$(echo ${json_data} | jq -r '.label1')
@@ -94,7 +97,7 @@ medium=$(echo ${json_data} | jq -r '.medium')
 # для другой ветки  -  всё кроме КСС
 # viscosity=$(echo ${json_data} | jq -r '.viscosity')
 # Schmutz S01
-s01_01=$(echo ${json_data} | jq -r '.S01_01')
+#s01_01=$(echo ${json_data} | jq -r '.S01_01')
 # usw.
 # s02_01 usw
 
@@ -122,13 +125,15 @@ if [[ "${medium}" == "01" ]]; then
   #output1=$(gawk  -v mystring=${mystring} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-3.awk" ${txtdir}"page-1.txt")
   #output2=$(gawk  -v mystring=${output1} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-31.awk" ${txtdir}"fe-code.txt" )
 
-  output2=$(gawk  -v mystring=${output1} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-31.awk" ${txtdir}"flowrate.txt" )
+  output2=$(gawk  -v mystring=${output1} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-31.awk" ${txtdir}"fe-code.txt" ${txtdir}"f-housing.txt"  ${txtdir}"flowrate.txt" )
   output3=$(gawk  -v mystring=${output2} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-32.awk" ${txtdir}"fe-pos.txt" ${txtdir}"fe-code.txt" ${txtdir}"page-2.txt")
   #output3=$(gawk  -v mystring=${output2} -v result_txt=${result_txt} -v errlog_txt=${errlog_txt} -f ${awkdir}"page-32.awk" ${txtdir}"page-2.txt")
 
 else
   output1=$(gawk -v json_data=${json_data} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-3-ksf.awk" ${txtdir}"page-1.txt" ${txtdir}"flowrate.txt" ${txtdir}"fe-code.txt" ${txtdir}"fe-pos.txt")
-  output2=$(gawk -v mystring=${output1} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-31-ksf.awk" ${txtdir}"fe-code.txt" ${txtdir}"fe-pos.txt" ${txtdir}"page-2.txt")
+  output2=$(gawk -v mystring=${output1} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-31-ksf.awk" ${txtdir}"f-housing.txt" ${txtdir}"fe-pos.txt" ${txtdir}"fe-code.txt" ${txtdir}"page-2.txt")
+  output3=$(gawk -v mystring=${output2} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-32-ksf.awk" ${txtdir}"page-2.txt")
+  output4=$(gawk -v mystring=${output3} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-33-ksf.awk" ${txtdir}"page-2.txt")
 
 fi
 

@@ -219,11 +219,17 @@ toleranz_fineness = 1.0 # default value
   }
 
   # scanning <flowrate.txt> вытаскиваем массив строк на расход для данного анвендунга
-  if ($1 == "DSZM_" medium ) {
-    c_arr_flowrate++
+  # забираем все что есть по нашему MEDIUM в массив
+  if ($1 ~ "DSZM_" && $1 ~ medium ) {
     split($4, arr_field4, "__")
-    arr_flowrate[c_arr_flowrate] = $2 ":" $3 ":" arr_field4[2] ":" $5
+    arr_flowrate[length(arr_flowrate)+1] = $2 ":" $3 ":" arr_field4[2] ":" $5
   }
+
+#  if ($1 == "DSZM_" medium ) {
+#    c_arr_flowrate++
+#    split($4, arr_field4, "__")
+#    arr_flowrate[c_arr_flowrate] = $2 ":" $3 ":" arr_field4[2] ":" $5
+#  }
 
     # внутри файла <fe-code.txt> в arr_flowrate[] заменяем "E123" на "E12345678"
     for (i=1; i<=length(arr_flowrate); i++) {
@@ -393,18 +399,40 @@ print_input_data()
 
 ############## START CALCULATION ################
 
-# 1. собираем подходящие записи по вязкости  в arr_visc_flowrate[]
-mystring = create_arr_visc_flowrate(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
-if (mystring == "") {  # массив arr_visc_flowrate[1] вернулся пустой 
+# 1. собираем подходящие 1-2 записи по вязкости в arr_visc_flowrate[]
+arr_visc_flowrate[1] = ""
+create_arr_visc_flowrate(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
+
+if (arr_visc_flowrate[1] == "") {  # массив arr_visc_flowrate[1] вернулся пустой 
    print "<p></p><i><b>Table Viscosity / Fineness / Flowrate is empty. EXIT:</b>" >> result_txt
    exit
 }
 
+
+# mystring = create_arr_visc_flowrate1(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
+#if (mystring == "") {  # массив arr_visc_flowrate[1] вернулся пустой 
+#   print "<p></p><i><b>Table Viscosity / Fineness / Flowrate is empty. EXIT:</b>" >> result_txt
+#   exit
+#}
+
+
+
 viscosity_upd = viscosity
-if (split(mystring, arr_visc_flowrate, "_!_") == 1) {
+#print "<p></p><i>viscosity_upd : " viscosity_upd "</i>" >> result_txt
+
+if (length(arr_visc_flowrate) == 1) {
    split(arr_visc_flowrate[1], arr1, ":")
    viscosity_upd = arr1[1]
+   delete arr1;
+} else {
+    print "<p></p><b>2 or more records under development : </b>" >> result_txt
+    exit
 }
+
+#print "<p></p><i>viscosity_upd : " viscosity_upd "</i>" >> result_txt
+
+
+
 
 # 2. определяем границы тонкости ф. в нашей таблице 
 # arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
@@ -472,9 +500,12 @@ mystr = mystr ",material:"material",materialel:"materialel",ksf:"ksf",kategorie:
 #str_no_of_elements = "1,2,3,6,9,12,18,24,36,48"
 string_return = prepare_mystr_for_next_script(mystr, str_no_of_elements)
 
+
 if (comments == "ON") {
   print "<p></p><i>parameters for page-31-ksf.awk (string_return): "  string_return >> result_txt
   print "<BR>mystr: $1=number of elements; $4=LP; $5=3-rd digit from left in the code = filter size: 2- AF713, 3-AF724, 4- AF73" >> result_txt
+  print "<BR>[1;AF6036-020;E114552102;2156] - this is the base for calculations // E11[4] - filter size" >> result_txt
+  print "<BR>[;3] - eg. according to calculations, filter size [3]=AF724_G4 is suitable as well" >> result_txt
   print "<BR><b>--------- End of page-3-ksf.awk ----------------</b></i><BR>"  >> result_txt
 }
 
@@ -528,43 +559,6 @@ print "</tbody></table>" >> result_txt
 
 
 ########## FUNCTIONS FOR CALCULATION ####################
-
-# собираем подходящие записи по вязкости  в arr_visc_flowrate[]
-function create_arr_visc_flowrate(viscosity, tv) {
-# dano
-# arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5 /// одна или много записей
-# выбираем из него 1 или 2 записи с подходящей вязкостью в arr_visc_flowrate[] или его строку str_arr_visc_flowrate
-#
-mystring1 = ""
-delete arr_visc_flowrate
-for (k=1; k<=length(arr_flowrate); k++) {
-   split(arr_flowrate[k], arr1, ":")  # 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
-   viscosity_min = viscosity_max = arr1[1]
-   if (arr_flowrate[k+1] =! "") {
-      split(arr_flowrate[k+1], arr2, ":")
-      viscosity_max = arr2[1]
-   }
-   if (viscosity <= viscosity_min * tv) {
-      arr_visc_flowrate[1] = arr_flowrate[k]
-      mystring1 = arr_visc_flowrate[1]
-      break
-   }
-   if (viscosity <= viscosity_max * tv && viscosity >= viscosity_max / tv && viscosity_min != viscosity_max) {  # записей > 1
-      arr_visc_flowrate[1] = arr_flowrate[k+1]
-      mystring1 = arr_visc_flowrate[1]
-      break
-   }
-   if (viscosity > viscosity_min * tv && viscosity < viscosity_max * tv) {
-      arr_visc_flowrate[1] = arr_flowrate[k]
-      arr_visc_flowrate[2] = arr_flowrate[k+1]
-      mystring1 = arr_visc_flowrate[1] "_!_" arr_visc_flowrate[2]
-      break
-   }
-}
-delete arr_visc_flowrate; delete arr1; delete arr2
-return mystring1
-}
-
 
 # добавляем в ARR arr_suitable_elements открытую площадь поверхности
 # чтобы каждый раз потом не пересчитывать и по ней отсортировать
@@ -751,13 +745,69 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
 
    ef = "0" el_fineness/10
    if (el_fineness < 100)
-      ef = "00" el_fineness
+      ef = "00" el_fineness/10
 
 
    full_el_bez = el_bez "-" ef
+#   mystr = mystr ":" number_of_elements ";" full_el_bez ";" el_code ";" el_price
    mystr = mystr ":" number_of_elements ";" full_el_bez ";" el_code ";" el_price ";" el_size
 }
 
 
 return mystr
 }
+
+
+
+
+
+
+# собираем подходящие записи по вязкости  в arr_visc_flowrate[]
+function create_arr_visc_flowrate(viscosity, tv) {
+# dano
+# arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5 /// одна или много записей
+# выбираем из него 1 или 2 записи с подходящей вязкостью в arr_visc_flowrate[] или его строку str_arr_visc_flowrate
+#
+# mystring1 = ""
+# delete arr_visc_flowrate
+
+# проверяем границы таблицы TOP / BOTTOM
+top_record = arr_flowrate[1]                     # top table record
+bot_record = arr_flowrate[length(arr_flowrate)]  # bottom table record
+split(top_record, arr_top, ":")
+split(bot_record, arr_bot, ":")
+min_table_viscosity = arr_top[1]
+max_table_viscosity = arr_bot[1]
+delete arr_top; delete arr_bot;
+
+# если top значение вязкости в пределах толеранц или введенная вязкость существенно ниже
+# в новой таблице будет всего одна пограничная строка
+if (min_table_viscosity >= viscosity / tv) {
+    arr_visc_flowrate[1] = arr_flowrate[1]
+    return
+}
+
+# если bottom значение вязкости в пределах толеранц или введенная вязкость cущественно выше
+# в новой таблице будет всего одна пограничная строка
+if (max_table_viscosity <= viscosity * tv) {
+    arr_visc_flowrate[1] = arr_flowrate[length(arr_flowrate)]
+    return
+}
+
+# если до сих пор не вышли, значит вязкость гарантированно в интервале
+for (k=1; k<length(arr_flowrate); k++) {
+   split(arr_flowrate[k],   arr1, ":")  # 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
+   split(arr_flowrate[k+1], arr2, ":")  # 1000:E114521102:AF6016:80-138;100-167;200-278:862:0.5
+   viscosity_min = arr1[1]
+   viscosity_max = arr2[1]
+
+   if (viscosity_min > viscosity && viscosity_max < viscosity) {
+       arr_visc_flowrate[1] = arr_flowrate[k]
+       arr_visc_flowrate[2] = arr_flowrate[k+1]
+       delete arr1; arr2;
+       return
+   }
+}
+
+
+} # END of Function
