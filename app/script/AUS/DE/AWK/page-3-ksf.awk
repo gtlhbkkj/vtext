@@ -1,9 +1,22 @@
+# page-3-ksf.awk
+# page-1.txt
+# flowrate.txt
+# fe-code.txt
+# fe-pos.txt
+
 BEGIN {
   RS = "\n"
   FS = "_!_"
 
+
 print_bootstrap_head("Filter Auslegung KSF // Seite 3")
 
+# для аппроксимации расхода от вязкости
+# procent_viscosity = smoothing_factor * (viscosity - viscosity1) / (viscosity2 - viscosity1)  # 0.8
+smoothing_factor = 0.8
+# если он равен нулю то зависимость прямая линия
+# если он равен 1 то зависимость возможно сильно крутое скругление
+# при необходимости вывести его в текстовый файл для кажд анвендунга
 
 # заходит эта строка
 # mystring="${medium};${mdd1};${mdd2};${mdd3};${mdd4};${durchsatz};${wpressure};${wtemperature};
@@ -72,6 +85,7 @@ str_flowrate = "" # для сохранения расходов из <flowrate.
 toleranz_viscosity = 1.0 # default value
 toleranz_fineness = 1.0 # default value
 #my_regexp = "^[E][1][1-2][4][5-6].[2].[0]"
+delete arr_all_elements;
 
 } # END OF BEGIN
 
@@ -218,6 +232,12 @@ toleranz_fineness = 1.0 # default value
         str_elements = str_elements "_!_" $2 "-" $3 "-" $4 "-" $5
   }
 
+  # на всякий случай сохраняем весь файл в памяти. только скребковые элементы
+  if ($1 == "EBCPF" && $3 ~ "^[E][1]") {  # ^[E][1][1-2][4][5-6].[MATERIAL].[0]
+    arr_all_elements[length(arr_all_elements)+1] = $2 ";" $3 ";" $4 ";" $5
+  }
+
+
   # scanning <flowrate.txt> вытаскиваем массив строк на расход для данного анвендунга
   # забираем все что есть по нашему MEDIUM в массив
   if ($1 ~ "DSZM_" && $1 ~ medium ) {
@@ -239,7 +259,6 @@ toleranz_fineness = 1.0 # default value
        if ($1 == "EBCPF" && $2 == el_fr_bez)
           arr_flowrate[i] = arr_fr_tmp1[1] ":" $3 ":" arr_fr_tmp1[3] ":" arr_fr_tmp1[4]  # $3 = E12345678
     }
-
 
   # scanning <fe-pos.txt>
   # берем оттуда все что есть по поз 4 - площадь поверхности и поз 7 - Drahtbreite
@@ -403,33 +422,37 @@ print_input_data()
 arr_visc_flowrate[1] = ""
 create_arr_visc_flowrate(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
 
-if (arr_visc_flowrate[1] == "") {  # массив arr_visc_flowrate[1] вернулся пустой 
+
+if (arr_visc_flowrate[1] == "") {  # массив arr_visc_flowrate[1] вернулся пустой
    print "<p></p><i><b>Table Viscosity / Fineness / Flowrate is empty. EXIT:</b>" >> result_txt
    exit
 }
 
-
-# mystring = create_arr_visc_flowrate1(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
-#if (mystring == "") {  # массив arr_visc_flowrate[1] вернулся пустой 
-#   print "<p></p><i><b>Table Viscosity / Fineness / Flowrate is empty. EXIT:</b>" >> result_txt
-#   exit
-#}
-
-
-
 viscosity_upd = viscosity
-#print "<p></p><i>viscosity_upd : " viscosity_upd "</i>" >> result_txt
 
-if (length(arr_visc_flowrate) == 1) {
+if (length(arr_visc_flowrate) != 1) {
+#    print "<p></p><b>2 or more records under development : </b>" >> result_txt
+
+    # у нас гарантированно две записи /// преобразовываем их в ОДНУ 
+    # аппроксимацией для указанной вязкости
+    # arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
+    #  arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
+#    approximate_arr_visc_flowrate_from_2_to_1_records()
+    print_arr_visc_flowrate_as_table()
+
+
+
+
+
+
+
+
+
+
+}
    split(arr_visc_flowrate[1], arr1, ":")
    viscosity_upd = arr1[1]
    delete arr1;
-} else {
-    print "<p></p><b>2 or more records under development : </b>" >> result_txt
-    exit
-}
-
-#print "<p></p><i>viscosity_upd : " viscosity_upd "</i>" >> result_txt
 
 
 
@@ -493,6 +516,10 @@ add_open_filter_surface_to_arr_suitable_elements()
 # и если сразу виден макс расход то его также
 add_fineness_flowrate_range_and_max_flowrate_to_arr_suitable_elements()
 
+# проверяем возможно можно перейти на более мелкие элементы если расход маленький
+# эта функция перепишет в случае необходимости arr_suitable_elements[]
+find_smaller_elements_and_rewrite_arr_suitable_elements()
+
 #mystr = "medium:02,comments:ON,dpressure:1,antrieb:4,material:1,materialel:2,ksf:ON,kategorie_!_str_myarr"
 mystr = "medium:"medium",comments:"comments",dpressure:"dpressure",antrieb:"antrieb ",atex:"atex
 mystr = mystr ",material:"material",materialel:"materialel",ksf:"ksf",kategorie:"kategorie"_!_str_myarr"
@@ -502,6 +529,10 @@ string_return = prepare_mystr_for_next_script(mystr, str_no_of_elements)
 
 
 if (comments == "ON") {
+   print "<p></p><BR># arr_suitable_elements[]: <BR># after find_smaller_elements_and_rewrite_arr_suitable_elements()" >> result_txt
+   for (k=1; k<=length(arr_suitable_elements); k++)
+      print "<BR>["k"]: " arr_suitable_elements[k] >> result_txt
+
   print "<p></p><i>parameters for page-31-ksf.awk (string_return): "  string_return >> result_txt
   print "<BR>mystr: $1=number of elements; $4=LP; $5=3-rd digit from left in the code = filter size: 2- AF713, 3-AF724, 4- AF73" >> result_txt
   print "<BR>[1;AF6036-020;E114552102;2156] - this is the base for calculations // E11[4] - filter size" >> result_txt
@@ -595,6 +626,7 @@ function add_open_filter_surface_to_arr_suitable_elements() {
 function add_fineness_flowrate_range_and_max_flowrate_to_arr_suitable_elements() {
 split(arr_visc_flowrate[1], arr_total_range, ":")  #  arr_total_range[4] = "80-138;100-167;200-278"
 split(arr_total_range[4], arr_single_range, ";")   #  arr_single_range[1] = "80-138" "100-167" "200-278"
+
 for (k=1; k<=length(arr_suitable_elements); k++) {
    split(arr_suitable_elements[k], arr1, "-")
    fineness_our = arr1[4]                          #  130 µm
@@ -614,7 +646,6 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
       split(arr_single_range[length(arr_single_range)], arr4, "-")      #  "200-278"
       table_fineness_abs_max = arr4[1]                 #  arr4[1] = 200 µm
       table_flowrate_abs_max = arr4[2]                 #  arr4[2] = 278 LPM
-
 
 #      print "<BR>our: " fineness_our " table_fineness_min: " table_fineness_min " // table_fineness_max: " table_fineness_max >> result_txt
 
@@ -784,6 +815,7 @@ delete arr_top; delete arr_bot;
 # в новой таблице будет всего одна пограничная строка
 if (min_table_viscosity >= viscosity / tv) {
     arr_visc_flowrate[1] = arr_flowrate[1]
+#    print "<BR>EXIT 1: "  >> result_txt
     return
 }
 
@@ -791,6 +823,8 @@ if (min_table_viscosity >= viscosity / tv) {
 # в новой таблице будет всего одна пограничная строка
 if (max_table_viscosity <= viscosity * tv) {
     arr_visc_flowrate[1] = arr_flowrate[length(arr_flowrate)]
+#    print "<BR>EXIT 2: "  >> result_txt
+
     return
 }
 
@@ -800,14 +834,281 @@ for (k=1; k<length(arr_flowrate); k++) {
    split(arr_flowrate[k+1], arr2, ":")  # 1000:E114521102:AF6016:80-138;100-167;200-278:862:0.5
    viscosity_min = arr1[1]
    viscosity_max = arr2[1]
+#   print "<BR>v-min: " viscosity_min " /// v-max: " viscosity_max  >> result_txt
 
-   if (viscosity_min > viscosity && viscosity_max < viscosity) {
+   if (viscosity_min < viscosity && viscosity_max > viscosity) {
        arr_visc_flowrate[1] = arr_flowrate[k]
        arr_visc_flowrate[2] = arr_flowrate[k+1]
-       delete arr1; arr2;
+
+
+       # приводим наши две записи к идентичным интервалам тонкости фильтрации
+       split(arr_visc_flowrate[1], arr1, ":")
+       split(arr_visc_flowrate[2], arr2, ":")
+       range1 = arr1[4]  #       50-55;80-138;100-167;200-278
+       range2 = arr2[4]  #             80-138;100-167;200-278
+       newrange2 = ""
+       split(range1, arr_range1, ";")
+       split(range2, arr_range2, ";")
+       for (n=1; n<=length(arr_range2); n++) {
+          split(arr_range2[n], arr_pair2, "-")
+          for (m=1; m<=length(arr_range1); m++) {
+             split(arr_range1[m], arr_pair1, "-")
+             if (arr_pair1[1] == arr_pair2[1]) {
+                if (newrange2 == "")
+                   newrange2 = arr_range1[n]
+                else
+                   newrange2 = newrange2 ";" arr_range1[n]
+             }
+          }
+       }
+
+       arr_visc_flowrate[1] = arr1[1] ":" arr1[2] ":" arr1[3] ":" newrange2 ":" arr1[5] ":" arr1[6]
+
+
+
+       delete arr1; delete arr2;
        return
    }
 }
 
 
 } # END of Function
+
+
+# create one array line (approximated) from two border members
+function approximate_arr_visc_flowrate_from_2_to_1_records() {
+   delete arr_tmp1; delete arr_tmp2; delete arr_fl_fine_tmp1; delete arr_fl_fine_tmp2
+   # arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
+   # arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
+   # у них одинаковые интервалы, общая площ поверхности и drahtbreite
+   split(arr_visc_flowrate[1], arr_tmp1, ":")
+   split(arr_visc_flowrate[2], arr_tmp2, ":")
+   viscosity1 = arr_tmp1[1]                    # 1
+   viscosity2 = arr_tmp2[1]                    # 1000
+   str_flowrate_fineness1 = arr_tmp1[4]        # 30-100;50-140;80-220;100-250;130-270;160-300;200-400
+   str_flowrate_fineness2 = arr_tmp2[4]        # 30-50;50-70;80-110;100-125;130-134;160-150;200-200
+   total_f_surface = arr_tmp1[5]  # 862 cm2
+   drahtbreite = arr_tmp1[6]                   # 0.5 mm
+   el_code = arr_tmp1[2]                       # E114521102
+   el_bez  = arr_tmp1[3]                       # AF6016
+
+   split(str_flowrate_fineness1, arr_flowrate_fineness1, ";")
+   split(str_flowrate_fineness2, arr_flowrate_fineness2, ";")
+
+   # build new string for ARR with specified fineness (approximated values in string)
+   my_new_str = viscosity ":" el_code ":" el_bez
+   counterx = 1
+
+   for (k=1; k<=length(arr_flowrate_fineness1); k++) {
+      split(arr_flowrate_fineness1[k], arr_fl_fine_tmp1, "-")
+      split(arr_flowrate_fineness2[k], arr_fl_fine_tmp2, "-")
+      fineness_tmp = arr_fl_fine_tmp1[1]
+      flowrate1    = arr_fl_fine_tmp1[2]
+      flowrate2    = arr_fl_fine_tmp2[2]
+
+      koef = (flowrate1-flowrate2) / (viscosity2-viscosity1)
+      b = flowrate1 - koef * viscosity1
+
+      # по уравнению прямой линии было бы isf_our = koef * viscosity + b
+       flowrate_our = b - koef * viscosity
+
+       dviscosity = (viscosity2 - viscosity1)/10          # шаг 1/10 от разницы вязкостей
+       procent_viscosity = smoothing_factor * (viscosity - viscosity1) / (viscosity2 - viscosity1)  # 0.8
+       flowrate_our = flowrate_our - (flowrate_our - flowrate2) * procent_viscosity
+
+      # данных для новой единственной строки массива достаточно
+      # arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
+
+      if (counterx == 1) {
+          my_new_str = my_new_str ":" fineness_tmp "-" int(10 * flowrate_our)/10
+          counterx++
+      } else {
+          my_new_str = my_new_str ";" fineness_tmp "-" int(10 * flowrate_our)/10
+      }
+
+   }
+
+   my_new_str = my_new_str ":" total_f_surface ":" drahtbreite
+   delete arr_visc_flowrate;
+   arr_visc_flowrate[1] = my_new_str
+}
+
+
+# проверяем возможно можно перейти на более мелкие элементы если расход маленький
+# эта функция перепишет в случае необходимости
+# arr_suitable_elements[]
+# [1]: AF6036-E114552102-2156-50-862-0.5-78.3_!_50-138.7=138.7_!_0.21
+# [2]: AF6066-E124612403-903-500-836-1.8-181.7_!_200-396.3=396.3_!_0.07
+# [3]: AF6076-E124612303-903-100-836-1.0-76_!_100-247.7=247.7_!_0.12
+# [4]: AF6086-E124612203-903-50-836-0.75-52.2_!_50-138.7=138.7_!_0.21
+#arr_all_elements[1]:
+# [1]: AF7011;E111121102;181;30,40,50,60,80,100,130,160,200,250,360,500
+# [2]: AF7031;E111142102;1475;30,40,50,60,80,100,130,160,200,250,360,500
+# [3]: AF7013;E112221102;213;30,40,50,60,80,100,130,160,200,250,360,500
+function find_smaller_elements_and_rewrite_arr_suitable_elements() {
+#   for (k=1; k<=length(arr_all_elements); k++)
+#      print "<BR>arr_all_elements["k"]: " arr_all_elements[k] >> result_txt
+
+   for (k=1; k<=length(arr_suitable_elements); k++) {
+      split(arr_suitable_elements[k], arr1, "_!_")
+      no_of_el = arr1[length(arr1)]                   # 0.21
+      split(arr1[1], arr2, "-")                       # AF6036-E114552102-2156-50-862-0.5-78.3
+      old_code = arr2[2]                              # E114552102
+      my_regexp1 = "^E1" substr(old_code,3,1)         # ^E11
+      my_regexp2 = ".*" substr(old_code,7,4) "$"      # .*2102$
+      old_fineness = arr2[4]                         # 50
+
+      # заменяем на AF713 если подходит
+      if (no_of_el <= 0.3) {             # compare last item 0.22
+         my_regexp = my_regexp1 "2" my_regexp2        # ELemente AF713
+         for (m=1; m<=length(arr_all_elements); m++) {
+            split(arr_all_elements[m], arr3, ";")
+            if (arr3[2] ~ my_regexp) {                # E114552102
+               # [k] порядковый номер arr_suitable_elements
+               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness)
+            }
+         }
+      }
+
+      # заменяем на AF72 если подходит
+      if (no_of_el > 0.3 && arr1[length(arr1)] <= 0.55) {             # compare last item 0.22
+         my_regexp = my_regexp1 "3" my_regexp2        # ELemente AF713
+         for (m=1; m<=length(arr_all_elements); m++) {
+            split(arr_all_elements[m], arr3, ";")
+            if (arr3[2] ~ my_regexp) {                # E114552102
+               # [k] порядковый номер arr_suitable_elements
+               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness)
+            }
+         }
+      }
+
+   }
+
+
+}
+
+
+function replace_element_in_arr_suitable_elements(k, element_arr_all_elements, old_fineness) {
+  delete arr5; delete arr6;
+  split(element_arr_all_elements, arr5, ";")     # AF7083;E122212203;600;60,80,100,130,160
+  split(arr5[4], arr6, ",")                      # 60,80,100,130,160
+  new_fineness = 0
+  for (n=1; n<length(arr6); n++) {
+     if (old_fineness == arr6[n]) {
+         new_fineness = arr6[n]
+         break
+     }
+     if (old_fineness > arr6[n] && old_fineness < arr6[n+1]) {
+         new_fineness = arr6[n+1]
+         break
+     }
+  }
+  if (new_fineness == 0)
+     new_fineness = arr6[length(arr6)]
+
+  arr_suitable_elements[k] = arr5[1] "-" arr5[2] "-" arr5[3] "-" new_fineness
+  delete arr5; delete arr6;
+}
+
+
+
+
+function print_arr_visc_flowrate_as_table() {
+# в page-3-ksf.awk в конце когда остается всего 1 запись или две записи перед аппроксимацией
+# arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
+# arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
+
+# на первую строку
+print "<BR><u>Table. Flowrate (LPM) vs. filter fineness</u>" >> result_txt
+
+split(arr_visc_flowrate[1], arr_tmp1, ":")
+viscosity1 = arr_tmp1[1]
+element1 = arr_tmp1[3]
+range1 = arr_tmp1[4]
+length_of_range = split(range1, arr_range1, ";")
+
+print "<table class=\"table table-striped\">" >> result_txt
+print "<thead><tr>"  >> result_txt
+
+# print Table header
+print "<th scope=\"col\">Viscosity, cSt</th>"  >> result_txt
+print "<th scope=\"col\">Element</th>" >> result_txt
+for (n=1; n<=length_of_range; n++) {
+   split(arr_range1[n], arr_range1_tmp, "-")                              # 30-100 
+   print "<th scope=\"col\">"arr_range1_tmp[1] "µm</th>"  >> result_txt   # 30
+}
+
+print "</th>"  >> result_txt
+print "</tr></thead>"  >> result_txt
+
+# конец заголовка начало тела
+print "<tbody>" >> result_txt
+
+# строка 1
+print "<tr>" >> result_txt
+print "<td>"viscosity1"</td>" >> result_txt
+print "<td>"element1"</td>" >> result_txt
+
+for (n=1; n<=length_of_range; n++) {
+   split(arr_range1[n], arr_range1_tmp, "-")            # 30-100 
+   print "<td>"arr_range1_tmp[2]"</td>"  >> result_txt  # 100
+}
+
+print "</tr>" >> result_txt
+# конец первой строки
+
+# если больше 1 записей (т.е. 2 штуки) то печатаем вторую запись точно также
+if (length(arr_visc_flowrate) == 2) {
+
+  # строка 2
+  split(arr_visc_flowrate[2], arr_tmp2, ":")
+  viscosity2 = arr_tmp2[1]
+  element2 = arr_tmp2[3]
+  range2 = arr_tmp2[4]
+  split(range2, arr_range2, ";")
+
+
+  print "<tr>" >> result_txt
+  print "<td>"viscosity2"</td>" >> result_txt
+  print "<td>"element2"</td>" >> result_txt
+
+
+  for (n=1; n<=length_of_range; n++) {
+     split(arr_range2[n], arr_range2_tmp, "-")            # 30-100 
+     print "<td>"arr_range2_tmp[2]"</td>"  >> result_txt  # 100
+  }
+
+  print "</tr>" >> result_txt
+  # конец второй строки
+
+  approximate_arr_visc_flowrate_from_2_to_1_records()
+  # и еще раз повторяем другим цветом
+
+
+  # last line in RED COLOR
+  split(arr_visc_flowrate[1], arr_tmp2, ":")
+  viscosity2 = arr_tmp2[1]
+  element2 = arr_tmp2[3]
+  range2 = arr_tmp2[4]
+  split(range2, arr_range2, ";")
+
+
+  print "<tr>" >> result_txt
+  print "<td><b><p class=\"text-danger\">"viscosity2"</p></td></b>" >> result_txt
+  print "<td><b><p class=\"text-danger\">"element2"</p></td></b>" >> result_txt
+
+  for (n=1; n<=length_of_range; n++) {
+     split(arr_range2[n], arr_range2_tmp, "-")            # 30-100
+     print "<td><b><p class=\"text-danger\">"arr_range2_tmp[2]"</p></td></b>"  >> result_txt  # 100
+  }
+
+  print "</tr>" >> result_txt
+
+
+
+}
+#
+print "</tbody></table>" >> result_txt
+return
+
+}

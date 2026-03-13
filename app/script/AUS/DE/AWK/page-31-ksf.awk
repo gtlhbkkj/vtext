@@ -142,12 +142,6 @@ BEGIN {
     }
     counter_arr_zuordnung = 2
 
-#      print "<p></p>TMP array - arr_tmp_elements[]: "  >> result_txt
-#      for (k=1; k<=length(arr_tmp_elements); k++) {
-#        print "<BR>["k"]:" arr_tmp_elements[k] >> result_txt
-#      }
-
-
   }
 
   # <fe-code.txt>
@@ -180,12 +174,6 @@ BEGIN {
         else
            arr_main_elements[length(arr_main_elements)+1] = no_of_el ";" el_bez ";" $3 ";" $4        # $4 = list price
 
-#        print "<p></p>["m"] my_regex: " my_regex >> result_txt
-#        print "<BR>["m"] arr_tmp_elements[k]: " arr_tmp_elements[m] >> result_txt
-#        print "<BR>["m"]: " $0 >> result_txt
-#        print "<BR>["m"]: arr_main_elements["length(arr_main_elements)"]: " arr_main_elements[length(arr_main_elements)] >> result_txt
-
-
      }
   }
 
@@ -196,7 +184,8 @@ BEGIN {
    # добавить if (atex == "ON") то $1 == "BASECONF_EX"
    #
    # BASECONF_EX_!_02_!_9_!_AF748_S1_!_1_!_AF7484-521-00000/S1_!_AF6016_!_E114_!_18000
-   if ($1 == "BASECONF_EX" && $2 ~ medium && $5 == material && str_passende_filter_series ~ $4) {
+   if ($1 == "BASECONF" && $2 ~ medium && $5 == material && str_passende_filter_series ~ $4) {
+#   if ($1 == "BASECONF_EX" && $2 ~ medium && $5 == material && str_passende_filter_series ~ $4) {
 #      print "<br>$0: " $0 >> result_txt
 
       # arr_main_elements[]:
@@ -208,10 +197,7 @@ BEGIN {
          no_of_elements = arr1[1]
 #         el_bez = arr1[2]
          el_code = arr1[3]
-#         el_price = arr1[4]
-#
-##         print "<br>no_of_elements: " no_of_elements " /// el_code: " el_code  >> result_txt
-#
+
 #         # наполняем новый массив
          if ($3 == no_of_elements && substr($8,4,1) == substr(el_code,4,1)) {
             arr_base_conf[length(arr_base_conf)+1] =  $3 ";" $4 ";" $5 ";" $6 ";" $7 ";" $8 ";" $9 "_!_" arr_main_elements[k]

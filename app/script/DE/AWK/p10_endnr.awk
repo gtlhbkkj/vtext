@@ -27,14 +27,14 @@ BEGIN {
      found = 1
      print "\n" mt                                 >> TMP_DIR "/" UUID ".result.txt"
      print mt "[-" endnr "] Sonderausführung:" >> TMP_DIR "/" UUID ".result.txt"
-     for (i=4; i<=NF; i++)
+     for (i=3; i<=NF; i++)
        print mt $i                                 >> TMP_DIR "/" UUID ".result.txt"
    }
 }
 
 
 END {
-  if (found == 0) {  
+  if (found == 0) {
     print mt                                                              >> TMP_DIR "/" UUID ".result.txt"
     print mt "### End Number [-" endnr "] NOT FOUND IN DB"                >> TMP_DIR "/" UUID ".result.txt"
     print mt "Err.code 1001 - End Number [-" endnr "] NOT FOUND IN DB"    >> TMP_DIR "/" UUID ".errlog.txt"

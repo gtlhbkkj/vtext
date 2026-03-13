@@ -72,9 +72,7 @@ BEGIN {
         field1_pos1 = "CPOS_1_EX"
         field1_pos4 = "CPOS_4_EX"
         field1_pos6 = "CPOS_6_EX"
-
     }
-
 
 }
 # END OF BEGIN BLOCK
@@ -102,7 +100,6 @@ BEGIN {
       split(arr_pos[1], arr_pos1, ",")          # 2  4
       for (k=1; k<=length(arr_pos1); k++) {
          pos_value = arr_pos1[k]
-
          # заполнение массивов позиций (мотор индикатор и проч)
          if ($1 == field1_pos1 && ($2 == "*" || $2 ~ f_code) && $3 == pos_value && ($4 == "*" || $4 ~ material)) {
             if (arr_pos1_variants[key] == "")
@@ -370,13 +367,7 @@ print "</div>" >> result_txt
 # split(arr_base_conf[i], arr_tmp, ";") = "AF173_G3;1;AF17363-1321-03000/G3;AF105216;E268;6785;20"
 function print_table_with_prices() {
   print_bootstrap_head("Auslegungsergebnisse / Filtervorschläge:")
-
-  delete arr_tmp
-  print "<table class=\"table table-striped\">" >> result_txt
-  print "<thead><tr><th scope=\"col\">Base configuration</th>"  >> result_txt
-  print "<th scope=\"col\">LP, EUR St/Brt</th>" >> result_txt
-  print "<th scope=\"col\">Zuzätzliche Info</th></tr></thead>"  >> result_txt
-  print "<tbody>" >> result_txt
+  delete arr_tmp; delete arr_tmp1; delete arr_tmp2;
 
   for (key in arr_main) {
     split(arr_main[key], arr_main_tmp, ";")
@@ -420,20 +411,48 @@ function print_table_with_prices() {
 #    mystr1 = i ". " arr_tmp[3] " mit " el_code
 #    mystr2 = arr_tmp[6] ",-"
 #    mystr3 = "[<a href=\""mylink"\">V-Text</a>]"" / [<a href=\"#change_config" i "\">change configuration</a>]"
+
     mystr3 = "[<a href=\"#change_config" key "\">change configuration</a>]"
-
-
     mystr = filter_bez " mit " no_of_el " x " str_elements
     mylprice = "ab ca. " lprice ",- EUR"
 
+    # создаем временный массив для сортировки
+    arr_tmp1[length(arr_tmp1)+1] = lprice "_!_" mystr "_!_" mylprice "_!_" mystr3
+  }
+
+  # сортируем arr_tmp1 в arr_tmp2 по возрастанию цены
+  for (k=1; k<=length(arr_tmp1); k++) {
+     split(arr_tmp1[k], arr_tmp1_k, "_!_")
+     for (m=k+1; m<=length(arr_tmp1); m++) {
+        split(arr_tmp1[m], arr_tmp1_m, "_!_")
+        if (arr_tmp1_m[1] < arr_tmp1_k[1]) {
+           tmp_elem = arr_tmp1[k]
+           arr_tmp1[k] = arr_tmp1[m]
+           arr_tmp1[m] = tmp_elem
+#           break
+        }
+     }
+  }
+
+  # печать сводной таблицы с ценами
+  print "<table class=\"table table-striped\">" >> result_txt
+  print "<thead><tr><th scope=\"col\">Base configuration</th>"  >> result_txt
+  print "<th scope=\"col\">LP, EUR St/Brt</th>" >> result_txt
+  print "<th scope=\"col\">Zuzätzliche Info</th></tr></thead>"  >> result_txt
+  print "<tbody>" >> result_txt
+
+  for (k=1; k<=length(arr_tmp1); k++) {
+    split(arr_tmp1[k], arr_tmp2, "_!_")
+    mystr    = arr_tmp2[2]
+    mylprice = arr_tmp2[3]
+    mystr3   = arr_tmp2[4]
     print "<tr><td>"mystr"</td>" >> result_txt
-
-
     print "<td>" mylprice "</td>" >> result_txt
     print "<td>" mystr3 "</td></tr>" >> result_txt
   }
+
   print "</tbody></table>" >> result_txt
-  delete arr_tmp
+  delete arr_tmp; delete arr_tmp1; delete arr_tmp2;
 }
 
 

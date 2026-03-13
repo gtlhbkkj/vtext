@@ -45,3 +45,8 @@ Anbauten mit Anschluss M12x1
 - Anbauten mit Anschluss M12x1 mont.
 - Adapter Gerätesteckdose DIN EN 17301- M12x1
 - AF 11X ohne P2 Drossel
+::
+-4716: AF724_G4
+- Anbauten aus Edelstahl
+- Dichtaufsatz Sperrflüssigkeit aus Edelstahl inkl. Schmiernippel
+- Getriebemotor 208V 60Hz 0,18kW

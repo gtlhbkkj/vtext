@@ -50,6 +50,11 @@ BEGIN {
       print "<BR>-------- Enter BODY --------- </i>" >> result_txt
    }
 
+    field1_possconf = "POSSCONF"  # configuration possible
+    if (atex == "ON") {
+        field1_possconf = "POSSCONF_EX"
+    }
+
 }
 # END OF BEGIN BLOCK
 
@@ -64,7 +69,7 @@ BEGIN {
 
    # добавляем POSSIBLE CONFIGURATIONS в конец
    for (key in arr_main) {
-      if ($1 == "POSSCONF_EX" && $2 ~ key && $6 ~ material) {
+      if ($1 == field1_possconf && $2 ~ key && $6 ~ material) {
          str_pos = $3 ";" $4 ";" $5 ";" $6 ";" $7 ";" $8 ";" $9 ";" $10 ";" $11
          arr_main[key] = arr_main[key] "_!_" str_pos
       }

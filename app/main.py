@@ -277,11 +277,13 @@ async def auslegung_2(request: Request) -> None:
                 env=my_env,
             )
 
-        with open(tmp_stdout_filename, "r") as tmp_file:
+        with open(tmp_stdout_filename, "r", encoding='utf-8', errors='ignore') as tmp_file:
+        # with open(tmp_stdout_filename, "r") as tmp_file:
             stdout_data = tmp_file.read()
         os.unlink(tmp_stdout_filename)
 
-        with open(tmp_stderr_filename, "r") as tmp_file:
+        with open(tmp_stderr_filename, "r", encoding='utf-8', errors='ignore') as tmp_file:
+        # with open(tmp_stderr_filename, "r") as tmp_file:
             stderr_data = tmp_file.read()
         os.unlink(tmp_stderr_filename)
 
