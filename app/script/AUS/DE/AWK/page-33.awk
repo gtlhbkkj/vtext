@@ -26,6 +26,7 @@ pos6 = arr_tmp["pos6"]
 pos7 = arr_tmp["pos7"]
 f_base = arr_tmp["f_base"]
 element = arr_tmp["element"]
+kategorie = arr_tmp["kategorie"]
 
 
 if (pos7 == "")
@@ -55,6 +56,13 @@ if (element != "") {                    # запрос пришел из KSF
      element = felem "-0" int(feinheit/10)
 }
 
+# KATEGORIE
+if (kategorie != "") {                    # запрос пришел из KSF
+   split(kategorie, arr_kategorie, ";")
+   kategorie = arr_kategorie[1]
+   kategorie_price = arr_kategorie[2]
+}
+
 
 #base
 split(fbez,arr_fbez,"-")
@@ -67,9 +75,9 @@ part2 = arr_pos2[1] arr_pos3[1] substr(part2,length(part2),1)
 part3 = arr_pos4[1] arr_pos5[1] arr_pos6[1] arr_pos7[1]  substr(part3, 5, length(part3)-4)
 
 ## price
-fin_price = price + arr_pos1[2] + arr_pos2[2] + arr_pos3[2] + arr_pos4[2] + arr_pos5[2] + arr_pos6[2] + arr_pos7[2] + elem_price
+fin_price = price + arr_pos1[2] + arr_pos2[2] + arr_pos3[2] + arr_pos4[2] + arr_pos5[2] + arr_pos6[2] + arr_pos7[2] + elem_price + kategorie_price
 
-mystring = part1 "-" part2 "-" part3 " "  element "PRICE:" fin_price
+mystring = part1 "-" part2 "-" part3 " " kategorie " " element "PRICE:" fin_price
 
 print mystring >> result_txt
 

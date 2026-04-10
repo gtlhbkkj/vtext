@@ -192,6 +192,13 @@ BEGIN {
    }
 
 
+   # KATEGORIE FILE
+   if (kategorie == "ON" && $1 == "KAT")
+      arr_kat_inhalt[$2] = $3 "_!_" $4
+
+   if (kategorie == "ON" && $1 == "KAT_PREIS")
+      arr_kat_price[$2] = $3 "_!_" $4
+
 }
 # END OF BODY
 
@@ -199,12 +206,26 @@ BEGIN {
 END {
 #
 
+# удаляем из  arr_kat_inhalt все лишнее
+delete arr_new;
+for (key in arr_main) {
+   arr_new[key] = arr_kat_inhalt[key]
+}
+delete arr_kat_inhalt;
+
+for (key in arr_new) {
+   arr_kat_inhalt[key] = arr_new[key]
+}
+delete arr_new;
+
+
 
 # распечатать
 if (comments == "ON") {
    print "<p></p><i>arr_main[]: /// size: " length(arr_main) >> result_txt
-   for (key in arr_main)
+   for (key in arr_main) {
       print "<BR>["key"]: " arr_main[key] >> result_txt
+   }
 
    for (k=1; k<=length(arr_form_headers); k++)
       print "<BR>["k"]: " arr_form_headers[k] >> result_txt
@@ -237,14 +258,29 @@ if (comments == "ON") {
    print "<p></p>: arr_pos6_variants /// ABLASS : "  >> result_txt
    for (key in arr_pos6_variants)
       print "<BR>["key"]: " arr_pos6_variants[key] >> result_txt
+
+
+   if (kategorie == "ON") {
+     print "<p></p>: Geh.Inhalt für Kategoriebestimmung arr_kat_inhalt[] : "  >> result_txt
+     for (key in arr_kat_inhalt)
+        print "<BR>["key"]: " arr_kat_inhalt[key] >> result_txt
+
+     print "<p></p>: Kategorie preise arr_kat_price: "  >> result_txt
+     for (key in arr_kat_price)
+        print "<BR>["key"]: " arr_kat_price[key] >> result_txt
+   }
+
    print "<p></p></i>" >> result_txt
+
+
 }
+
+
+
+
 
 print_table_with_prices()
 
-if (comments == "ON") {
-   print "<BR><i><b>-------- End of &lt page-33-ksf.awk &gt --------- </b></i>: " >> result_txt
-}
 
 
 
@@ -346,6 +382,11 @@ for (key in arr_main) {       # arr_main[AF747_S1]: 6;AF6016;737;1;AF7472-821-00
        # входят член асс массива с элементами arr_elem[AF747_S1]: AF6036-020;2156=AF6066-050;903=AF6076-016;903
        # цена базового элемента в базовой конфигурации, количество элементов 
        print_html_code_for_dropdown_element(arr_elem[key], el_base_price, no_of_el)
+
+       if (kategorie == "ON")
+          print_html_code_for_dropdown_kategorie(key)
+
+
 
 # -----
 
@@ -491,6 +532,38 @@ function  print_html_code_for_dropdown_element(arr_elem_key, el_base_price, no_o
 
       txt_option = "mit " no_of_el "x " elem_new_bez o_txt
       print "         <option value=\"" elem_new_bez";"price_change "\">" txt_option "</option>" >> result_txt
+   }
+
+   print "       </select>" >> result_txt
+   print "   </div>" >> result_txt
+   print "   </div>" >> result_txt
+
+   return
+}
+
+
+
+# вывод дропдауна для категории
+function  print_html_code_for_dropdown_kategorie(key) {
+   split(arr_kat_inhalt[key], arr_inhalt1, "_!_") # [AF747_S1]: 75_!_2-2.6;3-13.3;4-25
+   split(arr_inhalt1[2], arr_inhalt2, ";")        # 2-2.6;3-13.3;4-25
+
+   # заголовок опции "KATEGORIE"
+   print "   <div class=\"row align-items-center\">" >> result_txt
+   print "   <label for=\"kategorie" "\" class=\"row mb-2 col-sm-2 col-form-label\">DRGL Zertifizierung ("arr_inhalt1[1]" [L]):</label>" >> result_txt
+   print "     <div class=\"col-auto\">"  >> result_txt
+   print "        <select class=\"form-select border-primary\" id=\"kategorie" "\" name=\"kategorie"  "\">" >> result_txt
+
+   delete arr_tmp1
+   for (n=1; n<=length(arr_inhalt2); n++) {  # 2-2.6  3-13.3   4-25
+      split(arr_inhalt2[n], arr_tmp1, "-")   # 2 - 2.6
+      kat_nr = arr_tmp1[1]
+      split(arr_kat_price[kat_nr], arr_kat_price_tmp, "_!_")  #KII_!_1400
+      price_change = arr_kat_price_tmp[2]
+      kat_roemisch = arr_kat_price_tmp[1]
+
+      txt_option = "Kategorie " kat_roemisch " bis " arr_tmp1[2] " bar /// Mehrpreis: " price_change ",- EUR"
+      print "         <option value=\"" kat_roemisch";"price_change "\">" txt_option "</option>" >> result_txt
    }
 
    print "       </select>" >> result_txt

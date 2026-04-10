@@ -133,7 +133,7 @@ else
   output1=$(gawk -v json_data=${json_data} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-3-ksf.awk" ${txtdir}"page-1.txt" ${txtdir}"flowrate.txt" ${txtdir}"fe-code.txt" ${txtdir}"fe-pos.txt")
   output2=$(gawk -v mystring=${output1} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-31-ksf.awk" ${txtdir}"f-housing.txt" ${txtdir}"fe-pos.txt" ${txtdir}"fe-code.txt" ${txtdir}"page-2.txt")
   output3=$(gawk -v mystring=${output2} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-32-ksf.awk" ${txtdir}"page-2.txt")
-  output4=$(gawk -v mystring=${output3} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-33-ksf.awk" ${txtdir}"page-2.txt")
+  output4=$(gawk -v mystring=${output3} -v txtdir=${txtdir} -v result_txt=${result_txt} -f ${awkdir}"page-33-ksf.awk" ${txtdir}"page-2.txt" ${txtdir}"kategorie.txt" )
 
 fi
 

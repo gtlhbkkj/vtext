@@ -20,6 +20,8 @@ BEGIN {
       arr_main[arr_tmp3[1]] = arr_tmp3[2]
    }
 
+   dpm_g1 = arr_main["dpm_g1"]
+   viscosity = arr_main["viscosity"]
    medium = arr_main["medium"]
    comments = arr_main["comments"]
    dpressure = arr_main["dpressure"]
@@ -41,7 +43,7 @@ BEGIN {
 
    if (comments == "ON") {
       print "<i><b> -------- Begin &lt page-32-ksf.awk &gt --------- </b><BR>[mystring]: "mystring >> result_txt
-      print "<BR>medium: " medium " /// comments: " comments " /// dpressure: " dpressure " /// antrieb: " antrieb " /// material: " material " /// materialel: " materialel " /// ksf: " ksf " /// kategorie: " kategorie " /// atex: " atex >> result_txt
+      print "<BR>medium: " medium " /// comments: " comments " /// dpressure: " dpressure " /// antrieb: " antrieb " /// material: " material " /// materialel: " materialel " /// ksf: " ksf " /// kategorie: " kategorie " /// atex: " atex " /// viscosity: " viscosity " /// dpm_g1:" dpm_g1 >> result_txt
 
       print "<p></p>arr_main[]: " >> result_txt
       for (key in arr_main)
@@ -54,12 +56,20 @@ BEGIN {
     if (atex == "ON") {
         field1_possconf = "POSSCONF_EX"
     }
+    viscosity_limit = 0
+
 
 }
 # END OF BEGIN BLOCK
 
 # ТЕЛО
 {
+   if (atex != "ON" && $1 == "VISCOSITY_LIMIT") {
+      viscosity_limit = $2
+      if (viscosity >= viscosity_limit || dpm_g1 == "")
+         field1_possconf = "POSSCONF_HV"  # configuration for hochviscosity without DPM G1/8"
+   }
+
 
    # если нет подходящих фильтров
      if (mystring == "") {
@@ -70,6 +80,10 @@ BEGIN {
    # добавляем POSSIBLE CONFIGURATIONS в конец
    for (key in arr_main) {
       if ($1 == field1_possconf && $2 ~ key && $6 ~ material) {
+
+#   print "<BR>field1_possconf: " $0 >> result_txt
+
+
          str_pos = $3 ";" $4 ";" $5 ";" $6 ";" $7 ";" $8 ";" $9 ";" $10 ";" $11
          arr_main[key] = arr_main[key] "_!_" str_pos
       }

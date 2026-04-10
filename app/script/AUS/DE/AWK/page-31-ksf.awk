@@ -1,3 +1,5 @@
+# f-housing.txt, "fe-pos.txt", "fe-code.txt", "page-2.txt"
+
 BEGIN {
   RS = "\n"
   FS = "_!_"
@@ -7,7 +9,7 @@ BEGIN {
 
 
    delete arr_main; delete arr_tmp1; delete arr_tmp2; delete arr_tmp3; delete arr_tmp4; delete arr_suitable_elements;
-   delete arr_main_elements; 
+   delete arr_main_elements;
    split(mystring, arr_tmp1, "_!_")    # medium:02,comments:ON,dpressure:1,antrieb:4,material:1,materialel:2,ksf:ON,kategorie:ON
                                     # str_myarr:9;AF6036-010;E114552102;2156;4:6;AF6066-050;E124612403;903;4:9;AF6076-010;E124612303;903;4:9;AF6086-010;E124612203;903;4
 
@@ -19,6 +21,9 @@ BEGIN {
       arr_main[arr_tmp3[1]] = arr_tmp3[2]
    }
 
+   dpm_g1 = arr_main["dpm_g1"]
+   fineness = arr_main["fineness"]
+   viscosity = arr_main["viscosity"]
    medium = arr_main["medium"]
    comments = arr_main["comments"]
    dpressure = arr_main["dpressure"]
@@ -36,7 +41,18 @@ BEGIN {
 
    if (comments == "ON") {
       print "<b> -------- Begin page-31-ksf.awk --------- </b><BR>[mystring]: "mystring >> result_txt
-      print "<BR>medium: " medium " /// comments: " comments " /// dpressure: " dpressure " /// antrieb: " antrieb " /// material: " material " /// materialel: " materialel " /// ksf: " ksf " /// kategorie: " kategorie " /// atex: " atex >> result_txt
+
+      # GET SERVER RESPONSE 200 or 404
+      #curl -o /dev/null -s -w "%{http_code}" https://shopindustrial.filtrationgroup.com/de/77734700.html
+#      mymaterial_nr = "77734700"
+#      myvar = "https://shopindustrial.filtrationgroup.com/de/" mymaterial_nr ".html"
+#      mycmd = "curl -o /dev/null -s -w \"%{http_code}\" " myvar
+#      mycmd | getline result
+#      close(mycmd)
+#      print "<p></p>Ответ сервера: " result >> result_txt
+
+
+      print "<BR>medium: " medium " /// comments: " comments " /// dpressure: " dpressure " /// antrieb: " antrieb " /// material: " material " /// materialel: " materialel " /// ksf: " ksf " /// kategorie: " kategorie " /// atex: " atex " /// viscosity: " viscosity >> result_txt
 
       print "<BR>arr_suitable_elements[i]: "  >> result_txt
       for (i=1; i<=length(arr_suitable_elements); i++)
@@ -80,7 +96,7 @@ BEGIN {
    # $2 = MEDIUM
    # $3 = geeignete Filtertypen
    # KSFNA_!_02_!_AF736_G3,AF736_S1,AF737_S1,AF738_S1,AF747_S1,AF748_S1,AF749_S1,AF757_S1,AF758_S1,AF759_S1
-   if ($1 == "KSFNA" && $2 == medium) {
+   if ($1 == "KSFNA" && $2 ~ medium) {
       str_passende_filter_series = $3
 #      print "<BR>str_passende_filter_series: " str_passende_filter_series >> result_txt
    }
@@ -138,7 +154,6 @@ BEGIN {
 #          arr_main_elements[length(arr_main_elements)+1] = no_of_el ";" "REPLACEME-" arr1[2] ";" el_code_template ";" arr_zuordnung[filter_size_new]
           arr_tmp_elements[length(arr_tmp_elements)+1] = no_of_el ";" "REPLACEME-" arr1[2] ";" el_code_template ";" arr_zuordnung[filter_size_new]
        }
-
     }
     counter_arr_zuordnung = 2
 
@@ -149,6 +164,16 @@ BEGIN {
   if ($1 == "EBCPF") {
      arr_elements_full[$2] = $4
   }
+
+
+#   x1 = 0
+#   if (x1 == 0) {
+#     print "<p></p>arr_tmp_elements[]: "  >> result_txt
+#     for (k1=1; k1<=length(arr_tmp_elements); k1++) {
+#        print "<BR>["k1"]:" arr_tmp_elements[k1] >> result_txt
+#     }
+#     x1 = 1
+#   }
 
 
 
@@ -174,7 +199,10 @@ BEGIN {
         else
            arr_main_elements[length(arr_main_elements)+1] = no_of_el ";" el_bez ";" $3 ";" $4        # $4 = list price
 
+#       myprint()
+
      }
+
   }
 
 
@@ -213,7 +241,6 @@ BEGIN {
 # BEGIN END BLOCK
 END {
 #
-
 # добавляем в arr_base_conf[k] цену базового элемента из ассоциативного массива
 for (k=1; k<=length(arr_base_conf); k++) {
   split(arr_base_conf[k], arr1, ";")
@@ -317,3 +344,11 @@ print  mystring
 # END OF END BLOCK
 
 
+
+
+#function myprint() {
+#   print "<p></p>Final array - arr_main_elements[]: "  >> result_txt
+#   for (k1=1; k1<=length(arr_main_elements); k1++) {
+#      print "<BR>["k1"]:" arr_main_elements[k1] >> result_txt
+#   }
+#}

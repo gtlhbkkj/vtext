@@ -37,6 +37,7 @@ for (i=1; i<=length(arr_tmp1); i++) {
 
 # порядок вывода на печать
 str_no_of_elements = "1,2,3,6,9,12,18,24,36,48"  # для всех одинаково
+#str_no_of_elements = "1:400,2:800,3:1000,6:2400,9:2400,12:2400,18:3600,24:3800,36:3800,48:3800"  # для всех одинаково
 
 str_to_print = "medium,mdd1,mdd2,mdd3,mdd4,viscosity,durchsatz,durchsatz_c,fineness,wpressure,dpressure,wtemperature,"
 str_to_print = str_to_print "dtemperature,antrieb,material,materialel,elements,atex,kategorie"
@@ -128,6 +129,8 @@ delete arr_all_elements;
       # ON = YES, OFF = общая площадь поверхности играет роль
       if (arr_tmp2[1] == "dkb_offl")
          dkb_offl = arr_tmp2[2]
+      if (arr_tmp2[1] == "dpm_g1")
+         dpm_g1 = arr_tmp2[2]
     }
   }
 
@@ -162,10 +165,20 @@ delete arr_all_elements;
         arr_to_p["mdd1"] = $4
      }
      if ($2 == "OPTION" && $3 == substr(mdd1,2,2)) {
-        arr_to_p["mdd1"] = arr_to_p["mdd1"] ";" substr($4,4) ";F.Durchsatz = " $5
-        fk1 = $5
+        arr_to_p["mdd1"] = arr_to_p["mdd1"] ";" substr($4,4) ";" $5
+#        arr_to_p["mdd1"] = arr_to_p["mdd1"] ";" substr($4,4) ";F.Durchsatz = " $5
+#        fk1 = $5
+        fk_tmp = find_faktor_durchsatz_from_option($5)  # fdurchsatz:1.0
+        if (fk_tmp)
+           fk1 = fk_tmp
+        if (viscosity == "") {
+           visc_tmp = find_viscosity_from_option($5)    # viscosity:12000;
+           if (visc_tmp)
+              arr_main["viscosity"] = viscosity = visc_tmp
+        }
      }
   }
+
 
   if (mdd2 != "" && $1 == field_medium_label_options) {  # M_02_!_Miscella
      if ($2 == "LABEL" && $3 == substr(mdd2,1,1)) {
@@ -173,7 +186,15 @@ delete arr_all_elements;
      }
      if ($2 == "OPTION" && $3 == substr(mdd2,2,2)) {
         arr_to_p["mdd2"] = arr_to_p["mdd2"] ";" substr($4,4) ";F.Durchsatz = " $5
-        fk2 = $5
+#        fk2 = $5
+        fk_tmp = find_faktor_durchsatz_from_option($5)  # fdurchsatz:1.0
+        if (fk_tmp)
+           fk2 = fk_tmp
+        if (viscosity == "") {
+           visc_tmp = find_viscosity_from_option($5)    # viscosity:12000;
+           if (visc_tmp)
+              arr_main["viscosity"] = viscosity = visc_tmp
+        }
      }
   }
 
@@ -183,7 +204,15 @@ delete arr_all_elements;
      }
      if ($2 == "OPTION" && $3 == substr(mdd3,2,2)) {
         arr_to_p["mdd3"] = arr_to_p["mdd3"] ";" substr($4,4) ";F.Durchsatz = " $5
-        fk3 = $5
+#        fk3 = $5
+        fk_tmp = find_faktor_durchsatz_from_option($5)  # fdurchsatz:1.0
+        if (fk_tmp)
+           fk3 = fk_tmp
+        if (viscosity == "") {
+           visc_tmp = find_viscosity_from_option($5)    # viscosity:12000;
+           if (visc_tmp)
+              arr_main["viscosity"] = viscosity = visc_tmp
+        }
      }
   }
 
@@ -193,7 +222,15 @@ delete arr_all_elements;
      }
      if ($2 == "OPTION" && $3 == substr(mdd4,2,2)) {
         arr_to_p["mdd4"] = arr_to_p["mdd4"] ";" substr($4,4) ";F.Durchsatz = " $5
-        fk4 = $5
+#        fk4 = $5
+        fk_tmp = find_faktor_durchsatz_from_option($5)  # fdurchsatz:1.0
+        if (fk_tmp)
+           fk4 = fk_tmp
+        if (viscosity == "") {
+           visc_tmp = find_viscosity_from_option($5)    # viscosity:12000;
+           if (visc_tmp)
+              arr_main["viscosity"] = viscosity = visc_tmp
+        }
      }
   }
 
@@ -289,6 +326,8 @@ for (i=1; i<=length(arr_tmp1); i++) {
 # если в строке "str_other_parameters" содержатся дополнительные параметры то
 # дополняем ассоциативный массив arr_main[]
 
+
+
 if (arr_tmp["viscosity"] != "") {
    viscosity = arr_main["viscosity"] = arr_tmp["viscosity"]
 }
@@ -326,9 +365,11 @@ if (arr_tmp["elements"] != "") {
    arr_to_p["elements"] = "Elemente:;" col_elements
 }
 
-durchsatz_c = durchsatz / (fk1 * fk2 * fk3 * fk4)
-arr_main["durchsatz_c"] = arr_to_p["durchsatz_c"] = "Durchsatz umgerechnet [Liter/Min]:;" durchsatz_c
+#print "<p></p><i>xxxxxxxxxxxxxxxx: " durchsatz, fk1, fk2, fk3, fk4 >> result_txt
 
+durchsatz_c = durchsatz / (fk1 * fk2 * fk3 * fk4)
+
+arr_main["durchsatz_c"] = arr_to_p["durchsatz_c"] = "Durchsatz umgerechnet [Liter/Min]:;" durchsatz_c
 
 # update arr_flowrate[i] with ":" surface, cm2 ":" Drahtbreite, mm
 for (i=1; i<= length(arr_flowrate); i++) {
@@ -347,7 +388,6 @@ for (i=1; i<=length(arr_str_elements[i]); i++) {
      str_elements_tmp = str_elements_tmp "_!_" arr_str_elements[i] "-" arr_pos_4[substr(arr1[2],5,1)] "-" arr_pos_7[substr(arr1[2],8,1)]
 }
 str_elements = str_elements_tmp
-
 
 
 
@@ -379,22 +419,8 @@ if (comments == "ON") {
   for (i=1; i<=length(arr_flowrate); i++)
      print "<BR>arr_flowrate["i"]: " arr_flowrate[i] >> result_txt
 
-
+  print "<p></p>viscosity: " viscosity  >> result_txt
   print "</i>" >> result_txt
-
-#  print "<p></p>arr_to_p[\"medium\"]: " arr_to_p["medium"]  >> result_txt
-#  print "<BR>arr_to_p[\"mdd1\"]: " arr_to_p["mdd1"]  >> result_txt
-#  print "<BR>arr_to_p[\"durchsatz\"]: " arr_to_p["durchsatz"]  >> result_txt
-#  print "<BR>arr_to_p[\"viscosity\"]: " arr_to_p["viscosity"]  >> result_txt
-#  print "<BR>arr_to_p[\"wpressure\"]: " arr_to_p["wpressure"]  >> result_txt
-#  print "<BR>arr_to_p[\"dpressure\"]: " arr_to_p["dpressure"]  >> result_txt
-#  print "<BR>arr_to_p[\"wtemperature\"]: " arr_to_p["wtemperature"]  >> result_txt
-#  print "<BR>arr_to_p[\"dtemperature\"]: " arr_to_p["dtemperature"]  >> result_txt
-#  print "<BR>arr_to_p[\"fineness\"]: " arr_to_p["fineness"]  >> result_txt
-#  print "<BR>arr_to_p[\"atex\"]: " arr_to_p["atex"]  >> result_txt
-#  print "<BR>arr_to_p[\"antrieb\"]: " arr_to_p["antrieb"]  >> result_txt
-#  print "<BR>arr_to_p[\"kategorie\"]: " arr_to_p["kategorie"]  >> result_txt
-#  print "<BR>arr_to_p[\"elements\"]: " arr_to_p["elements"]  >> result_txt
 
 }
 
@@ -411,9 +437,6 @@ print_input_data()
 
 # arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
 
-  split(str_flowrate, arr_str_flowrate, "!")
-  for (i=1; i<=length(arr_str_flowrate); i++)
-     print "<BR>arr_str_flowrate["i"]: " arr_str_flowrate[i]  >> result_txt
 
 
 ############## START CALCULATION ################
@@ -421,7 +444,6 @@ print_input_data()
 # 1. собираем подходящие 1-2 записи по вязкости в arr_visc_flowrate[]
 arr_visc_flowrate[1] = ""
 create_arr_visc_flowrate(viscosity, toleranz_viscosity) # проверить как работает функция на неск записях с разн вязкостями
-
 
 if (arr_visc_flowrate[1] == "") {  # массив arr_visc_flowrate[1] вернулся пустой
    print "<p></p><i><b>Table Viscosity / Fineness / Flowrate is empty. EXIT:</b>" >> result_txt
@@ -438,42 +460,47 @@ if (length(arr_visc_flowrate) != 1) {
     # arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
     #  arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
 #    approximate_arr_visc_flowrate_from_2_to_1_records()
-    print_arr_visc_flowrate_as_table()
 
 
-
-
-
-
-
-
-
+    print_arr_visc_flowrate_as_table_1()
+#    print_arr_visc_flowrate_as_table()
 
 }
    split(arr_visc_flowrate[1], arr1, ":")
    viscosity_upd = arr1[1]
-   delete arr1;
+#   delete arr1;
 
-
-
+#print "<p></p>arr_visc_flowrate[1]: " arr_visc_flowrate[1]   >> result_txt
 
 # 2. определяем границы тонкости ф. в нашей таблице 
 # arr_flowrate[1]: 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
 k_max = split(arr1[4], arr2, ";")  #  80-138;100-167;200-278
+#print "<br>k_max: " k_max   >> result_txt
+
 split(arr2[1], arr3, "-")          #  80-138
 fineness_table_min = arr3[1]
+#print "<br>arr2[1]: " arr2[1], fineness_table_min   >> result_txt
+
 split(arr2[k_max], arr3, "-")      #  200-178
 fineness_table_max = arr3[1]
+#print "<br>arr2[1]: " arr2[k_max], fineness_table_max   >> result_txt
 
 fineness_upd = fineness
-if (fineness <= fineness_table_min) 
+if (fineness <= fineness_table_min)
    fineness_upd = fineness_table_min
+
+#print "<br>fineness_upd: " fineness_upd   >> result_txt
+
 
 # 3. исключаем неподходящие элементы и формируем новый массив arr_suitable_elements[]
 #    из str_elements : AF6036-E114552102-2156-30,40,50,80,100,130,200,250,360,500-836-0.5_!_
 delete arr_suitable_elements
 fineness_tmp = fineness_upd
+
 k_max = split(str_elements, arr_str_elements, "_!_")
+#print "<br>str_elements: " str_elements   >> result_txt
+
+
 for (k=1; k<=k_max; k++) {
    split(arr_str_elements[k], arr1, "-")
    k1_max = split(arr1[4], arr2, ",")                              # 30,40,50,80,100,130,200,250,360,500
@@ -501,10 +528,17 @@ if (comments == "ON") {
       print "<BR>arr_visc_flowrate["k"]:" arr_visc_flowrate[k] >> result_txt
    print "<BR>Fineness range in our data table: fineness_table_min = " fineness_table_min "µm to fineness_table_max = " fineness_table_max "µm" >> result_txt
    print "<BR>First fineness check: Input fineness: " fineness "µm /// updated fineness = " fineness_upd "µm" >> result_txt
-   if (dkb_offl == "ON")
-      print "<BR>dkb_offl = ON: take open filtration surface as base for flow rate calculations " >> result_txt
-   else
-      print "<BR>dkb_offl = OFF: DO NOT take open filtration surface as base for flow rate calculations " >> result_txt
+
+   dkb_offl_txt = ""
+   if (dkb_offl != "ON")
+      dkb_offl_txt = "DO NOT"
+   print "<BR>Parameter \"dkb_offl\" = ON: " dkb_offl_txt " take open filtration surface as base for flow rate calculations " >> result_txt
+
+   dpm_g1_txt = " All dP-Switches and Manometers may be used"
+   if (dpm_g1 == "ON")
+      dpm_g1_txt = " Only PIS 3175 and PIS 3180 may be used. Avoid using G1/8 Manometer ports"
+   print "<BR>Parameter \"dpm_g1\" = ON: " dpm_g1_txt  >> result_txt
+
 }
 
 
@@ -520,8 +554,12 @@ add_fineness_flowrate_range_and_max_flowrate_to_arr_suitable_elements()
 # эта функция перепишет в случае необходимости arr_suitable_elements[]
 find_smaller_elements_and_rewrite_arr_suitable_elements()
 
+print_arr_suitable_elements_as_table()
+
+
 #mystr = "medium:02,comments:ON,dpressure:1,antrieb:4,material:1,materialel:2,ksf:ON,kategorie_!_str_myarr"
 mystr = "medium:"medium",comments:"comments",dpressure:"dpressure",antrieb:"antrieb ",atex:"atex
+mystr = mystr ",viscosity:"viscosity ",dpm_g1:"dpm_g1 ",fineness:"fineness
 mystr = mystr ",material:"material",materialel:"materialel",ksf:"ksf",kategorie:"kategorie"_!_str_myarr"
 
 #str_no_of_elements = "1,2,3,6,9,12,18,24,36,48"
@@ -582,6 +620,22 @@ for (i=1; i<=length(arr_tmp1); i++) {
 }
 
 
+if (dpm_g1 == "ON") {
+    print "<tr><td>DP Messung:</td>" >> result_txt
+    print "<td>nur über G1 Anschlüss</td>" >> result_txt
+    print "<td>dpm_g1:ON</td></tr>" >> result_txt
+}
+
+    print "<tr><td>Offene Filter Fläche berücksichtigen:</td>" >> result_txt
+    txt_option = "Nein"
+    if (dkb_offl == "ON")
+       txt_option = "Ja"
+    print "<td>"txt_option"</td>" >> result_txt
+    print "<td>dkb_offl: "dkb_offl"</td></tr>" >> result_txt
+
+
+
+
 
 print "</tbody></table>" >> result_txt
 
@@ -624,10 +678,17 @@ function add_open_filter_surface_to_arr_suitable_elements() {
 # добавляем интервал в который попадает наша тонкость фильтрации
 # и если сразу виден макс расход то его также
 function add_fineness_flowrate_range_and_max_flowrate_to_arr_suitable_elements() {
+#print "<BR>arr_visc_flowrate[1]: " arr_visc_flowrate[1] >> result_txt
+
 split(arr_visc_flowrate[1], arr_total_range, ":")  #  arr_total_range[4] = "80-138;100-167;200-278"
 split(arr_total_range[4], arr_single_range, ";")   #  arr_single_range[1] = "80-138" "100-167" "200-278"
+drahtbreite_table = arr_total_range[6]
+total_surface_table = arr_total_range[5]
 
 for (k=1; k<=length(arr_suitable_elements); k++) {
+
+#   print "<BR>arr_suitable_elements[k]: " arr_suitable_elements[k] >> result_txt
+
    split(arr_suitable_elements[k], arr1, "-")
    fineness_our = arr1[4]                          #  130 µm
    open_surface_our = arr1[7]                      #  177.8 cm2
@@ -642,6 +703,10 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
       table_fineness_max = arr3[1]                 #  arr3[1] = 100 µm
       table_flowrate_max = arr3[2]                 #  arr3[2] = 167 LPM
 
+
+#   print "<BR>: " table_fineness_min "-" table_flowrate_min ";" table_fineness_max "-" table_flowrate_max>> result_txt
+
+
       # absolut max / последнее значение максимальное
       split(arr_single_range[length(arr_single_range)], arr4, "-")      #  "200-278"
       table_fineness_abs_max = arr4[1]                 #  arr4[1] = 200 µm
@@ -650,25 +715,40 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
 #      print "<BR>our: " fineness_our " table_fineness_min: " table_fineness_min " // table_fineness_max: " table_fineness_max >> result_txt
 
       if (fineness_our == table_fineness_min) {
-         arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] "=" table_flowrate_min "_!_" int(100*durchsatz_c/table_flowrate_min)/100
-#         print "<BR>1. arr_suitable_elements["k"]: " arr_suitable_elements[k] >> result_txt
-         break
-      }
+         if (dkb_offl != "ON")
+            arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] "=" table_flowrate_min "_!_" int(100*durchsatz_c/table_flowrate_min)/100
+         else {
+            open_surface_table =  (1000*total_surface_table / (table_fineness_min + 1000*drahtbreite_table)) * table_fineness_min/1000
+            flowrate_our = int(100*table_flowrate_min * open_surface_our / open_surface_table) / 100
+            arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] "=" flowrate_our "_!_" int(100*durchsatz_c/flowrate_our)/100
+#            print "<BR>--: " arr_suitable_elements[k] "--FR min:" table_flowrate_min "--FR our" flowrate_our >> result_txt
 
-      if (fineness_our > table_fineness_min && fineness_our < table_fineness_max) {
-         approximated_flowrate = approximate_flowrate_1_record(arr_visc_flowrate[1], arr_single_range[m], arr_single_range[m+1], fineness_our, open_surface_our)
-         arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] ";" arr_single_range[m+1] "=" approximated_flowrate "_!_" int(100*durchsatz_c/approximated_flowrate)/100
-#         arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] ";" arr_single_range[m+1]
-#         print "<BR>2. arr_suitable_elements["k"]: " arr_suitable_elements[k] >> result_txt
+         }
          break
       }
 
       # если наша тонк ф больше самого большого табличного
       if (fineness_our >= table_fineness_abs_max) {
-         arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[length(arr_single_range)] "=" table_flowrate_abs_max  "_!_" int(100*durchsatz_c/table_flowrate_abs_max)/100
-#         print "<BR>3. arr_suitable_elements["k"]: " arr_suitable_elements[k] >> result_txt
+         if (dkb_offl != "ON")
+             arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[length(arr_single_range)] "=" table_flowrate_abs_max  "_!_" int(100*durchsatz_c/table_flowrate_abs_max)/100
+         else {
+            open_surface_table =  (1000 * total_surface_table / (table_fineness_abs_max + 1000*drahtbreite_table)) * table_fineness_abs_max/1000
+            flowrate_our = int(100 * table_flowrate_abs_max * open_surface_our / open_surface_table)/100
+            arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[length(arr_single_range)] "=" flowrate_our "_!_" int(100*durchsatz_c/flowrate_our)/100
+#            print "<BR>open surface table: " open_surface_table " /// open surface our: " open_surface_our >> result_txt
+#            print "<BR>--: " arr_suitable_elements[k] "--FR max:" table_flowrate_abs_max "--FR our:" flowrate_our >> result_txt
+         }
          break
       }
+
+
+      if (fineness_our > table_fineness_min && fineness_our < table_fineness_max) {
+         approximated_flowrate = approximate_flowrate_1_record(arr_visc_flowrate[1], arr_single_range[m], arr_single_range[m+1], fineness_our, open_surface_our)
+         arr_suitable_elements[k] = arr_suitable_elements[k] "_!_" arr_single_range[m] ";" arr_single_range[m+1] "=" approximated_flowrate "_!_" int(100*durchsatz_c/approximated_flowrate)/100
+         break
+      }
+
+
 
    }
 
@@ -679,7 +759,7 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
      print "<br># $8=table range, $9=max flow rate " >> result_txt
      for (k=1; k<=length(arr_suitable_elements); k++) 
         print "<BR>["k"]: " arr_suitable_elements[k] >> result_txt
-     print "</i>" >> result_txt
+     print "</i><p></p>" >> result_txt
   }
 
 }
@@ -729,6 +809,9 @@ return flowrate_table
 
 # подготовить строку для следущего скрипта
 function prepare_mystr_for_next_script(mystr, str_no_of_elements) {
+#str_no_of_elements = "1:400,2:800,3:1000,6:2400,9:2400,12:2400,18:3600,24:3800,36:3800,48:3800"  # для всех одинаково
+#print "<BRrd>mystr: "mystr " /// str_no_of_elements: " str_no_of_elements >> result_txt
+
 split(str_no_of_elements, arr_no_of_elements, ",")
 
 for (k=1; k<=length(arr_suitable_elements); k++) {
@@ -742,8 +825,14 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
    number_of_elements = 0
 
    for (m=1; m<=length(arr_no_of_elements); m++) {
-      el_size = 4 # POS_3 ELements code AF73
+      split(arr_no_of_elements[m], arr1, ":")
+#      min = arr1[1]   # number of elemeents
+#      max_flowrate = arr1[2]
+
       min = arr_no_of_elements[m]
+
+
+      el_size = 4 # POS_3 ELements code AF73
 
       if (m==1 && no_of_el <= 1.1 * min/4) {
          number_of_elements = 1
@@ -757,6 +846,7 @@ for (k=1; k<=length(arr_suitable_elements); k++) {
          break
       }
 
+#      if (min <= 3 && no_of_el <= 1.2 * min && durchsatz <= max_flowrate) {
       if (min <= 3 && no_of_el <= 1.2 * min) {
          number_of_elements = min
          break
@@ -815,7 +905,7 @@ delete arr_top; delete arr_bot;
 # в новой таблице будет всего одна пограничная строка
 if (min_table_viscosity >= viscosity / tv) {
     arr_visc_flowrate[1] = arr_flowrate[1]
-#    print "<BR>EXIT 1: "  >> result_txt
+#    print "<BR>EXIT 1: " arr_visc_flowrate[1]  >> result_txt
     return
 }
 
@@ -824,22 +914,36 @@ if (min_table_viscosity >= viscosity / tv) {
 if (max_table_viscosity <= viscosity * tv) {
     arr_visc_flowrate[1] = arr_flowrate[length(arr_flowrate)]
 #    print "<BR>EXIT 2: "  >> result_txt
-
     return
 }
 
 # если до сих пор не вышли, значит вязкость гарантированно в интервале
 for (k=1; k<length(arr_flowrate); k++) {
+
    split(arr_flowrate[k],   arr1, ":")  # 1:E114521102:AF6016:80-138;100-167;200-278:862:0.5
    split(arr_flowrate[k+1], arr2, ":")  # 1000:E114521102:AF6016:80-138;100-167;200-278:862:0.5
    viscosity_min = arr1[1]
    viscosity_max = arr2[1]
-#   print "<BR>v-min: " viscosity_min " /// v-max: " viscosity_max  >> result_txt
+
+#    print "<BR>--viscosity: " viscosity, viscosity_min, viscosity_max >> result_txt
+
+
+   if (viscosity_min == viscosity) {
+       arr_visc_flowrate[1] = arr_flowrate[k]
+#       print "<BR>break 1 " >> result_txt
+       break
+   }
+
+   if (viscosity_max == viscosity) {
+       arr_visc_flowrate[1] = arr_flowrate[k+1]
+#       print "<BR>break 2 " >> result_txt
+       break
+   }
+
 
    if (viscosity_min < viscosity && viscosity_max > viscosity) {
        arr_visc_flowrate[1] = arr_flowrate[k]
        arr_visc_flowrate[2] = arr_flowrate[k+1]
-
 
        # приводим наши две записи к идентичным интервалам тонкости фильтрации
        split(arr_visc_flowrate[1], arr1, ":")
@@ -847,28 +951,30 @@ for (k=1; k<length(arr_flowrate); k++) {
        range1 = arr1[4]  #       50-55;80-138;100-167;200-278
        range2 = arr2[4]  #             80-138;100-167;200-278
        newrange2 = ""
+
        split(range1, arr_range1, ";")
        split(range2, arr_range2, ";")
        for (n=1; n<=length(arr_range2); n++) {
-          split(arr_range2[n], arr_pair2, "-")
+          split(arr_range2[n], arr_pair2, "-")     # 50-35
           for (m=1; m<=length(arr_range1); m++) {
-             split(arr_range1[m], arr_pair1, "-")
+             split(arr_range1[m], arr_pair1, "-")  # 30-50
+
              if (arr_pair1[1] == arr_pair2[1]) {
                 if (newrange2 == "")
-                   newrange2 = arr_range1[n]
+                   newrange2 = arr_range1[m]
                 else
-                   newrange2 = newrange2 ";" arr_range1[n]
+                   newrange2 = newrange2 ";" arr_range1[m]
              }
           }
        }
 
        arr_visc_flowrate[1] = arr1[1] ":" arr1[2] ":" arr1[3] ":" newrange2 ":" arr1[5] ":" arr1[6]
 
-
-
        delete arr1; delete arr2;
        return
    }
+
+    delete arr1; delete arr2;
 }
 
 
@@ -881,6 +987,7 @@ function approximate_arr_visc_flowrate_from_2_to_1_records() {
    # arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
    # arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
    # у них одинаковые интервалы, общая площ поверхности и drahtbreite
+
    split(arr_visc_flowrate[1], arr_tmp1, ":")
    split(arr_visc_flowrate[2], arr_tmp2, ":")
    viscosity1 = arr_tmp1[1]                    # 1
@@ -906,12 +1013,11 @@ function approximate_arr_visc_flowrate_from_2_to_1_records() {
       flowrate1    = arr_fl_fine_tmp1[2]
       flowrate2    = arr_fl_fine_tmp2[2]
 
-      koef = (flowrate1-flowrate2) / (viscosity2-viscosity1)
-      b = flowrate1 - koef * viscosity1
+      koef = (flowrate2-flowrate1) / (viscosity2-viscosity1)
+      b =  koef * viscosity1 - flowrate1
 
       # по уравнению прямой линии было бы isf_our = koef * viscosity + b
-       flowrate_our = b - koef * viscosity
-
+       flowrate_our = koef * viscosity - b
        dviscosity = (viscosity2 - viscosity1)/10          # шаг 1/10 от разницы вязкостей
        procent_viscosity = smoothing_factor * (viscosity - viscosity1) / (viscosity2 - viscosity1)  # 0.8
        flowrate_our = flowrate_our - (flowrate_our - flowrate2) * procent_viscosity
@@ -949,23 +1055,46 @@ function find_smaller_elements_and_rewrite_arr_suitable_elements() {
 #   for (k=1; k<=length(arr_all_elements); k++)
 #      print "<BR>arr_all_elements["k"]: " arr_all_elements[k] >> result_txt
 
+# we take fineness of the first element in array
+   first_pass = 1
+
    for (k=1; k<=length(arr_suitable_elements); k++) {
       split(arr_suitable_elements[k], arr1, "_!_")
       no_of_el = arr1[length(arr1)]                   # 0.21
       split(arr1[1], arr2, "-")                       # AF6036-E114552102-2156-50-862-0.5-78.3
+      split(arr1[2], arr2_tmp, "=")                   # 100-247.7=247.7
+      max_flowrate_tmp = arr2_tmp[2]
+
       old_code = arr2[2]                              # E114552102
+
+      if (first_pass == 1) {                           # fineness take only ONE time
+        old_fineness = arr2[4]                         # 50
+        first_pass = 0
+      }
+
+#      print "<BR>--<BR>arr_suitable_elements["k"]: " arr_suitable_elements[k] >> result_txt
+#      print "<BR>max_flowrate_tmp: " max_flowrate_tmp >> result_txt
+#      print "<BR>old_code: " old_code " /// old_fineness: " old_fineness >> result_txt
+
       my_regexp1 = "^E1" substr(old_code,3,1)         # ^E11
       my_regexp2 = ".*" substr(old_code,7,4) "$"      # .*2102$
-      old_fineness = arr2[4]                         # 50
 
       # заменяем на AF713 если подходит
       if (no_of_el <= 0.3) {             # compare last item 0.22
          my_regexp = my_regexp1 "2" my_regexp2        # ELemente AF713
          for (m=1; m<=length(arr_all_elements); m++) {
+#            print "<BR>arr_all_elements["m"]: " arr_all_elements[m] >> result_txt
+
             split(arr_all_elements[m], arr3, ";")
             if (arr3[2] ~ my_regexp) {                # E114552102
-               # [k] порядковый номер arr_suitable_elements
-               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness)
+#                print "<BR>-- arr_all_elements["m"]: " arr_all_elements[m] >> result_txt
+
+              # [k] порядковый номер arr_suitable_elements
+
+#               print "<BR>1/4 BEFORE: arr_all_elements["m"]: " arr_all_elements[m] >> result_txt
+               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness, max_flowrate_tmp/4)
+#               print "<BR>AFTER: arr_suitable_elements["k"]: " arr_suitable_elements[k] "<BR>--<BR>" >> result_txt
+               break
             }
          }
       }
@@ -977,7 +1106,12 @@ function find_smaller_elements_and_rewrite_arr_suitable_elements() {
             split(arr_all_elements[m], arr3, ";")
             if (arr3[2] ~ my_regexp) {                # E114552102
                # [k] порядковый номер arr_suitable_elements
-               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness)
+
+#               print "<BR>1/2 BEFORE: arr_all_elements["m"]: " arr_all_elements[m] >> result_txt
+               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness, max_flowrate_tmp/2)
+#               print "<BR>AFTER: arr_suitable_elements["k"]: " arr_suitable_elements[k] "<BR>--<BR>" >> result_txt
+               break
+#               replace_element_in_arr_suitable_elements(k, arr_all_elements[m], old_fineness, max_flowrate_tmp/2)
             }
          }
       }
@@ -988,44 +1122,93 @@ function find_smaller_elements_and_rewrite_arr_suitable_elements() {
 }
 
 
-function replace_element_in_arr_suitable_elements(k, element_arr_all_elements, old_fineness) {
+function replace_element_in_arr_suitable_elements(k, element_arr_all_elements, old_fineness, new_flowrate) {
   delete arr5; delete arr6;
   split(element_arr_all_elements, arr5, ";")     # AF7083;E122212203;600;60,80,100,130,160
+  pos4_code = substr(arr5[2],5,1)                # code total filter surface
+  total_filer_surface_tmp = arr_pos_4[pos4_code]
+  pos7_code = substr(arr5[2],8,1)                # drahtbreite
+  drahtbreite_tmp = arr_pos_7[pos7_code]
+
+#  print "<BR>INSIDE total filter surface " arr5[1] " // " arr5[2] " : "  pos4_code " // " total_filer_surface_tmp >> result_txt
+#  print "<BR>INSIDE drahtbreite " arr5[1] " // " arr5[2] " : "  pos7_code " // " drahtbreite_tmp >> result_txt
+
   split(arr5[4], arr6, ",")                      # 60,80,100,130,160
   new_fineness = 0
   for (n=1; n<length(arr6); n++) {
-     if (old_fineness == arr6[n]) {
+     if (old_fineness <= arr6[n]) {
          new_fineness = arr6[n]
+#         print "<BR>INSIDE new_fineness EQUAL: " new_fineness >> result_txt
          break
      }
-     if (old_fineness > arr6[n] && old_fineness < arr6[n+1]) {
+     if (old_fineness > arr6[n] && old_fineness <= arr6[n+1]) {
          new_fineness = arr6[n+1]
+#         print "<BR>INSIDE new_fineness BETWEEN: " new_fineness >> result_txt
          break
      }
   }
-  if (new_fineness == 0)
+  if (new_fineness == 0) {
      new_fineness = arr6[length(arr6)]
+#     print "<BR>INSIDE new_fineness OVER RANGE: " new_fineness >> result_txt
+  }
 
-  arr_suitable_elements[k] = arr5[1] "-" arr5[2] "-" arr5[3] "-" new_fineness
+  open_filter_surface_tmp = int(10 * total_filer_surface_tmp * new_fineness / (new_fineness + 1000*drahtbreite_tmp))/10
+
+  arr_suitable_elements[k] = arr5[1] "-" arr5[2] "-" arr5[3] "-" new_fineness "-" total_filer_surface_tmp "-" drahtbreite_tmp "-" open_filter_surface_tmp "_!_" new_fineness "-" int(10*new_flowrate)/10 "=" int(10*new_flowrate)/10 "_!_1" 
   delete arr5; delete arr6;
 }
 
 
 
 
-function print_arr_visc_flowrate_as_table() {
-# в page-3-ksf.awk в конце когда остается всего 1 запись или две записи перед аппроксимацией
-# arr_visc_flowrate[1]:1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
-# arr_visc_flowrate[2]:1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5 
 
-# на первую строку
+
+function find_faktor_durchsatz_from_option(value) { # fdurchsatz:1.0
+   fdurchsatz = ""
+   split(value, arr_value, ";")
+   for (c=1; c<=length(arr_value); c++) {
+      split(arr_value[c], arr_tmp1, ":")
+      if (arr_tmp1[1] == "fdurchsatz") {
+         fdurchsatz = arr_tmp1[2]
+         break
+      }
+   }
+
+   delete arr_value; delete arr_tmp1;
+   return fdurchsatz
+}
+
+function find_viscosity_from_option(value) {    # viscosity:12000;
+   viscosity = ""
+   split(value, arr_value, ";")
+   for (c=1; c<=length(arr_value); c++) {
+      split(arr_value[c], arr_tmp1, ":")
+      if (arr_tmp1[1] == "viscosity") {
+         viscosity = arr_tmp1[2]
+         break
+      }
+   }
+
+   delete arr_value; delete arr_tmp1;
+   return viscosity
+}
+
+
+
+
+
+function print_arr_visc_flowrate_as_table_1() {
+# Flow rates (read from =flowrate.txt=) $1 = viscosity, etc. $5 = serface, cm2, $6 = Drahtbreite, mm
+# arr_flowrate[1]: 1:E114521102:AF6016:30-100;50-140;80-220;100-250;130-270;160-300;200-400:862:0.5
+# arr_flowrate[2]: 1000:E114521102:AF6016:30-50;50-70;80-110;100-125;130-134;160-150;200-200:862:0.5
+# arr_flowrate[3]: 10000:E114521102:AF6016:50-35;80-55;100-63;130-70;160-75;200-100:862:0.5
+# arr_flowrate[4]: 50000:E114521102:AF6016:80-27;100-33;130-37;160-40;200-50:862:0.5
+
 print "<BR><u>Table. Flowrate (LPM) vs. filter fineness</u>" >> result_txt
 
-split(arr_visc_flowrate[1], arr_tmp1, ":")
-viscosity1 = arr_tmp1[1]
-element1 = arr_tmp1[3]
-range1 = arr_tmp1[4]
-length_of_range = split(range1, arr_range1, ";")
+split(arr_flowrate[1], arr_tmp1, ":")                      # take 1st the line with most wide range
+max_range = arr_tmp1[4]                                    # 30-100;50-140;80-220;100-250;130-270;160-300;200-400
+length_of_max_range = split(max_range, arr_max_range, ";") # кол-во столбцов в таблице
 
 print "<table class=\"table table-striped\">" >> result_txt
 print "<thead><tr>"  >> result_txt
@@ -1033,82 +1216,143 @@ print "<thead><tr>"  >> result_txt
 # print Table header
 print "<th scope=\"col\">Viscosity, cSt</th>"  >> result_txt
 print "<th scope=\"col\">Element</th>" >> result_txt
-for (n=1; n<=length_of_range; n++) {
-   split(arr_range1[n], arr_range1_tmp, "-")                              # 30-100 
+for (n=1; n<=length_of_max_range; n++) {
+   split(arr_max_range[n], arr_range1_tmp, "-")                           # 30-100
    print "<th scope=\"col\">"arr_range1_tmp[1] "µm</th>"  >> result_txt   # 30
 }
 
-print "</th>"  >> result_txt
+print "</th>"          >> result_txt
 print "</tr></thead>"  >> result_txt
 
 # конец заголовка начало тела
 print "<tbody>" >> result_txt
 
-# строка 1
-print "<tr>" >> result_txt
-print "<td>"viscosity1"</td>" >> result_txt
-print "<td>"element1"</td>" >> result_txt
+# вывод таблицы
 
-for (n=1; n<=length_of_range; n++) {
-   split(arr_range1[n], arr_range1_tmp, "-")            # 30-100 
-   print "<td>"arr_range1_tmp[2]"</td>"  >> result_txt  # 100
+found = 0
+for (k=1; k<=length(arr_flowrate); k++) {
+   split(arr_flowrate[k], arr_tmp1, ":")
+   viscosity_k = arr_tmp1[1]
+   element_k = arr_tmp1[3]
+   range_k = arr_tmp1[4]
+   length_of_range_k = split(range_k, arr_range_k, ";")
+
+   print "<tr>" >> result_txt
+   print "<td>"viscosity_k"</td>" >> result_txt
+   print "<td>"element_k"</td>" >> result_txt
+
+   for (n=1; n<=length(arr_max_range); n++) {
+      split(arr_max_range[n], arr_max_range_tmp, "-")            # 30-100
+      fineness_tmp   = arr_max_range_tmp[1]
+
+      for (m=1; m<=length(arr_range_k); m++) {
+         split(arr_range_k[m], arr_range_tmp_k, "-")            # 80-120
+         fineness_tmp_k = arr_range_tmp_k[1]
+
+         if (fineness_tmp == fineness_tmp_k) {
+             print "<td>"arr_range_tmp_k[2]"</td>"  >> result_txt
+             found = 1
+             break
+         }
+      }
+      if (found == 0)
+         print "<td>--</td>"  >> result_txt
+
+      found = 0
+   }
+
+   print "</tr>" >> result_txt
+   # конец строки таблицы
 }
-
-print "</tr>" >> result_txt
-# конец первой строки
-
-# если больше 1 записей (т.е. 2 штуки) то печатаем вторую запись точно также
-if (length(arr_visc_flowrate) == 2) {
-
-  # строка 2
-  split(arr_visc_flowrate[2], arr_tmp2, ":")
-  viscosity2 = arr_tmp2[1]
-  element2 = arr_tmp2[3]
-  range2 = arr_tmp2[4]
-  split(range2, arr_range2, ";")
-
-
-  print "<tr>" >> result_txt
-  print "<td>"viscosity2"</td>" >> result_txt
-  print "<td>"element2"</td>" >> result_txt
-
-
-  for (n=1; n<=length_of_range; n++) {
-     split(arr_range2[n], arr_range2_tmp, "-")            # 30-100 
-     print "<td>"arr_range2_tmp[2]"</td>"  >> result_txt  # 100
-  }
-
-  print "</tr>" >> result_txt
-  # конец второй строки
 
   approximate_arr_visc_flowrate_from_2_to_1_records()
   # и еще раз повторяем другим цветом
-
 
   # last line in RED COLOR
   split(arr_visc_flowrate[1], arr_tmp2, ":")
   viscosity2 = arr_tmp2[1]
   element2 = arr_tmp2[3]
-  range2 = arr_tmp2[4]
-  split(range2, arr_range2, ";")
-
+  range_red = arr_tmp2[4]
+  split(range_red, arr_range_red, ";")
 
   print "<tr>" >> result_txt
   print "<td><b><p class=\"text-danger\">"viscosity2"</p></td></b>" >> result_txt
   print "<td><b><p class=\"text-danger\">"element2"</p></td></b>" >> result_txt
 
-  for (n=1; n<=length_of_range; n++) {
-     split(arr_range2[n], arr_range2_tmp, "-")            # 30-100
-     print "<td><b><p class=\"text-danger\">"arr_range2_tmp[2]"</p></td></b>"  >> result_txt  # 100
-  }
+  found = 0
+   for (n=1; n<=length(arr_max_range); n++) {
+      split(arr_max_range[n], arr_max_range_tmp, "-")            # 30-100
+      fineness_tmp   = arr_max_range_tmp[1]
 
+      for (m=1; m<=length(arr_range_red); m++) {
+         split(arr_range_red[m], arr_range_tmp_red, "-")            # 80-120
+         fineness_tmp_red = arr_range_tmp_red[1]
+
+         if (fineness_tmp == fineness_tmp_red) {
+             print "<td><b><p class=\"text-danger\">"arr_range_tmp_red[2]"</p></td></b>"  >> result_txt
+             found = 1
+             break
+         }
+      }
+      if (found == 0)
+         print "<td><b><p class=\"text-danger\">--</p></td></b>"  >> result_txt
+
+      found = 0
+   }
   print "</tr>" >> result_txt
 
 
 
-}
-#
 print "</tbody></table>" >> result_txt
-return
 
+} # END OF FUNC
+
+
+
+function  print_arr_suitable_elements_as_table() {
+   print "<BR><u>Suitable filter elements</u>" >> result_txt
+   print "<table class=\"table table-striped\">" >> result_txt
+   print "<thead><tr>"  >> result_txt
+
+   # print Table header
+   print "<th scope=\"col\">Element</th>"  >> result_txt
+   print "<th scope=\"col\">Feinheit, µm</th>" >> result_txt
+   print "<th scope=\"col\">LP, EUR</th>" >> result_txt
+   print "<th scope=\"col\">Gesamt Fl., cm2</th>" >> result_txt
+   print "<th scope=\"col\">Drahtbreite, mm</th>" >> result_txt
+   print "<th scope=\"col\">Offene F.Fläche, cm2</th>" >> result_txt
+   print "<th scope=\"col\">Durchsatz/El., LPM</th>" >> result_txt
+   print "<th scope=\"col\">Elementzahl</th>" >> result_txt
+   print "</tr></thead>"  >> result_txt
+
+   # конец заголовка начало тела
+   print "<tbody>" >> result_txt
+   for (k=1; k<=length(arr_suitable_elements); k++) {
+      print "<tr>"  >> result_txt
+
+      split(arr_suitable_elements[k], arr_k1, "_!_")
+      split(arr_k1[1], arr_k2, "-")
+      element_k = arr_k2[1]
+      fineness_k = arr_k2[4]
+      price_k = arr_k2[3]
+      total_flaeche_k = arr_k2[5]
+      drahtbreite_k = arr_k2[6]
+      offene_flaeche_k = arr_k2[7]
+      split(arr_k1[2], arr_k3, "=")
+      durchsatz_k = arr_k3[2]
+      no_of_el_k = arr_k1[3]
+      print "<td>"element_k"</td>"  >> result_txt
+      print "<td>"fineness_k"</td>"  >> result_txt
+      print "<td>"price_k"</td>"  >> result_txt
+      print "<td>"total_flaeche_k"</td>"  >> result_txt
+      print "<td>"drahtbreite_k"</td>"  >> result_txt
+      print "<td>"offene_flaeche_k"</td>"  >> result_txt
+      print "<td>"durchsatz_k"</td>"  >> result_txt
+      print "<td>"no_of_el_k"</td>"  >> result_txt
+      print "<td>""</td>"  >> result_txt
+
+      print "</tr>"  >> result_txt
+   }
+   print "</tbody></table><p>.</p>" >> result_txt
+   delete arr_k1; delete arr_k2; delete arr_k3;
 }

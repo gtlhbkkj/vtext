@@ -136,11 +136,16 @@ output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR
 
 # echo "17. Print Endnummer <p10_endnr.awk>"
 output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p10_endnr.awk" $txtdir"p10_endnr.txt")
+output1=$(gawk  -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p11_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
+
+echo ${output1} > /tmp/output1.txt
+echo ${output} > /tmp/output.txt
 
 output=$(gawk -v filter_name="$myfiltername" -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"print_vtext.awk" ${RESULT_TXT})
 output=$(gawk -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"print_errfin.awk" ${ERRLOG_TXT})
 
 output_content=$(cat ${FIN_TXT} | base64 -w 0)
+echo ${output_content} > /tmp/output_content.txt
 
 rm -f ${RESULT_TXT}
 rm -f ${MYERRLOG_TXT}
