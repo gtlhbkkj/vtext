@@ -17,6 +17,7 @@ BEGIN {
   material = arr1[6]
 
   result_txt = TMP_DIR "/" UUID ".result.txt"
+#  result_txt = TMP_DIR "/" UUID ".html.txt"
   errlog_txt = TMP_DIR "/" UUID ".errlog.txt"
 #       print mt "# STILL UNDER DEVELOPMENT // SPARE PARTS LIST: == " f_bez        >> result_txt
 
@@ -77,52 +78,30 @@ BEGIN {
 
 END {
 
-    if (f_bez == "AF724_G4") {
+    if (f_bez == "AF713_G1" || f_bez == "AF724_G4" || f_bez == "AF736_G3" ) {
        print mt  >> result_txt
        print mt "-----------------------------------------------------------------------------" >> result_txt
-       print mt "# STILL UNDER DEVELOPMENT // SPARE PARTS LIST:"                                >> result_txt
+       print mt "# UNDER DEVELOPMENT, PARTIALLY FUNCTIONABLE // SPARE PARTS LIST:"                                >> result_txt
        print mt "# ERSATZTEILE FÜR"                >> result_txt
        print mt "# filter_name: " filter_name                >> result_txt
-       print mt "# my_string: " my_string               >> result_txt
-       print mt "# Filter_bez: " f_bez " /// Material: " material                >> result_txt
        print mt "-----------------------------------------------------------------------------" >> result_txt
 
-    print mt  >> result_txt
-#    print mt "Abstreifer (inkl. Abstreiferfedern):" >> result_txt
-#    for (k=1; k<=length(arr_ets01); k++) {
-#       split(arr_ets01[k], arr_01, ";")
-#
-#       if (arr_01[2] != "n/a")
-#          price = arr_01[2] " EUR St/Brt"
-#       else
-#          price = "nicht verkaufsfähig"
-#
-#       str_arr_01_3 = ""
-#       if (arr_01[3] != "")
-#          str_arr_01_3 = " /// " arr_01[3] # Abstreifer + 4 Blattfeder
-#
-#       str_arr_01_4 = ""
-#       if (arr_01[4] != "")
-#          str_arr_01_4 = " /// " arr_01[4] # 1:71371285,4:79745365
-#
-#       print mt "   " arr_01[1] " /// " price str_arr_01_3 str_arr_01_4 >> result_txt
-#       print_fg_link(substr(arr_01[1],1,8), 6) # SAP Mat-Nr, No of Spaces in the beginning of line
-#
-#       # prints all single mat-numbers with prices and links
-#       print_bom(arr_01[4], 10) # 1:71371285,4:79745365 //// 10 - no of blank spaces
-#
-#    }
+
+       print "<BR>" mt >> TMP_DIR "/" UUID ".html.txt"
+       print "<BR>-----------------------------------------------------------------------------" >> TMP_DIR "/" UUID ".html.txt"
+       print "<BR><B># UNDER DEVELOPMENT, PARTIALLY FUNCTIONABLE // SPARE PARTS LIST:</B>"              >> TMP_DIR "/" UUID ".html.txt"
+       print "<BR># ERSATZTEILE FÜR"                >> TMP_DIR "/" UUID ".html.txt"
+       print "<BR># filter_name: " filter_name                >> TMP_DIR "/" UUID ".html.txt"
+       print "<BR>-----------------------------------------------------------------------------" >> TMP_DIR "/" UUID ".html.txt"
 
 
 
-
-#   print mt "length of arr_et_pricelist: " length(arr_et_pricelist) >> result_txt
-#   for (key in arr_et_pricelist)
-#     print mt "["key"]: " arr_et_pricelist[key] >> result_txt
 
 
    # NEW SECTION ############################################
-   print mt "---new block :-------------" >> result_txt
+
+   delete arr_section_of_spares
+
    for (i=1; i<=length(arr_headers); i++) {
       # create arr_spares_tmp[] from string in arr_spares[i]
       delete arr_spares_tmp;
@@ -152,73 +131,28 @@ function check_material(field3, material) {
 
 # CHECK EXISTENCE OF LINK IN FG SHOP and PRINTING IT
 function print_fg_link(mymaterial_nr, no_of_spaces)  {
-   myvar = "https://shopindustrial.filtrationgroup.com/de/" mymaterial_nr ".html"
-   mycmd = "curl -o /dev/null -s -w \"%{http_code}\" " myvar
-   mycmd | getline result
-   close(mycmd)
-   if (result == 200) {
-      spaces1 = ""
-      for (ix=1; ix<=no_of_spaces; ix++)
-        spaces1 = spaces1 " "
-      print mt spaces1 myvar >> result_txt
-   }
+#   myvar = "https://shopindustrial.filtrationgroup.com/de/" mymaterial_nr ".html"
+#   mycmd = "curl -o /dev/null -s -w \"%{http_code}\" " myvar
+#   mycmd | getline result
+#   close(mycmd)
+#   if (result == 200) {
+#      spaces1 = ""
+#      for (ix=1; ix<=no_of_spaces; ix++)
+#        spaces1 = spaces1 " "
+#      print mt spaces1 myvar >> result_txt
+#   }
 }
 
-
-# prints all single mat-numbers with prices and links
-function print_bom(str_to_split, no_of_spaces) {
-   if (str_to_split != "") {                      # 1:71371285,4:79745365
-      delete arr_tmp1; delete arr_tmp2
-
-      spaces = ""
-      for (ix=1; ix<=no_of_spaces; ix++)
-        spaces = spaces " "
-
-      print mt spaces "beinhaltet:"  >> result_txt
-      split(str_to_split, arr_tmp1, ",")
-      for (k_bom=1; k_bom<=length(arr_tmp1); k_bom++) {
-         split(arr_tmp1[k_bom], arr_tmp2, ":")
-         kol_vo = arr_tmp2[1]
-         mat_nr = arr_tmp2[2]
-
-
-         split(arr_et_pricelist[mat_nr], arr_et_tmp1, ";")
-         et_bezeichnung = arr_et_tmp1[1]
-
-         if (arr_et_tmp1[2] != "n/a")
-            et_price = arr_et_tmp1[2] " EUR St/Brt"
-         else
-            et_price = "nicht verkaufsfähig"
-
-         str_arr_et_tmp1_3 = ""
-         if (arr_et_tmp1[3] != "")
-            str_arr_et_tmp1_3 = " /// " arr_et_tmp1[3] # Abstreifer + 4 Blattfeder
-
-         str_arr_et_tmp1_4 = ""
-         if (arr_et_tmp1[4] != "")
-            str_arr_et_tmp1_4 = " /// " arr_et_tmp1[4] # 1:71371285,4:79745365
-
-
-         print mt spaces kol_vo "x["mat_nr"]: " et_bezeichnung " /// " et_price str_arr_et_tmp1_3 str_arr_et_tmp1_4 >> result_txt
-         print_fg_link(mat_nr, 9) # SAP Mat-Nr, No of Spaces in the beginning of line
-
-
-#         print mt spaces kol_vo "x["mat_nr"]: " arr_et_pricelist[mat_nr]  >> result_txt
-#         print mt spaces kol_vo "x["mat_nr"]: " et_bezeichnung " /// " et_price  >> result_txt
-
-
-
-      }
-   }
-}
 
 
 function  print_section_of_spares(arr_headers_current) {
+#print result_txt >> "/home/vtext/app/script/DE/AWK/111.txt"
+
     print mt >> result_txt
     print mt arr_headers_current ":" >> result_txt
 
     for (k=1; k<=length(arr_spares_tmp); k++) {
-       print mt arr_spares_tmp[k] >> result_txt
+#       print mt "--arr_spares_tmp["k"]--RAW OUTPUT////" arr_spares_tmp[k] >> result_txt
 
        split(arr_spares_tmp[k], arr_01, ";")
 
@@ -235,10 +169,186 @@ function  print_section_of_spares(arr_headers_current) {
        if (arr_01[4] != "")
           str_arr_01_4 = " /// " arr_01[4] # 1:71371285,4:79745365
 
-       print mt "   " arr_01[1] " /// " price str_arr_01_3 str_arr_01_4 >> result_txt
-       print_fg_link(substr(arr_01[1],1,8), 6) # SAP Mat-Nr, No of Spaces in the beginning of line
+       print mt arr_01[1] " /// " price str_arr_01_3 str_arr_01_4 >> result_txt
+       print_fg_link(substr(arr_01[1],1,8), 3) # SAP Mat-Nr, No of Spaces in the beginning of line
 
        # prints all single mat-numbers with prices and links
-       print_bom(arr_01[4], 6) # 1:71371285,4:79745365 //// 10 - no of blank spaces
+       sap_mat_nr = substr(arr_spares_tmp[k],1,8)
+#       arr_section_of_spares[sap_mat_nr] = arr_01[4]
+#       delete arr_pass_number;
+       pass_number = 1
+#       arr_pass_number[pass_number] = sap_mat_nr
+#       print mt "arr_pass_number["pass_number"]:" arr_pass_number[pass_number]  " /// " sap_mat_nr  " /// " arr_section_of_spares[sap_mat_nr] >> result_txt
+
+
+       # НАЧАЛО ПРОБЛЕМЫ
+       length_arr = split(arr_01[4], arr_sap_mat_nr, ",") # кол-во членов в массиве для себя, для кода это не нужно
+#       print mt "arr_01[4]:" arr_01[4] " /// number of arr members: " length_arr >> result_txt    # вывожу на печать для себя
+
+       # for print_bom_2 - string
+       mystring = arr_01[4]
+       if (mystring != "") { # если кол-во членов в массиве больше нуля то запускаем рекурсивную функцию
+
+         split(mystring, arr_mystring, ",")
+         for (k2=1; k2<=length(arr_mystring); k2++) {
+             mystring1 = arr_mystring[k2]
+#             print mt "========== Print section of spares, mystring = " mystring1 >> result_txt
+             print_specification(mystring1)   # print BOM
+         }
+
+       }
+
     }
+}
+
+
+
+
+
+# print Stüli complex way
+function print_specification(mystr) {
+
+    mat_nr = print_separate_mat_number(mystr, 3)  # 3 - kolvo probelov
+    mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+    # pass nr 1
+    length_1 = split(mystr1, arr_mystr1, ",")
+    for (m1=1; m1<=length_1; m1++) {
+        mat_nr = print_separate_mat_number(arr_mystr1[m1], 6)  # 6 - kolvo probelov
+        mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+        # pass nr 2
+         length_2 = split(mystr1, arr_mystr2, ",")
+         for (m2=1; m2<=length_2; m2++) {
+            mat_nr = print_separate_mat_number(arr_mystr2[m2], 9)  # 9 - kolvo probelov
+            mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+            # pass nr 3
+            length_3 = split(mystr1, arr_mystr3, ",")
+            for (m3=1; m3<=length_3; m3++) {
+                mat_nr = print_separate_mat_number(arr_mystr3[m3], 12)  # 9 - kolvo probelov
+                mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+                # pass nr 4
+                length_4 = split(mystr1, arr_mystr4, ",")
+                for (m4=1; m4<=length_4; m4++) {
+                    mat_nr = print_separate_mat_number(arr_mystr4[m4], 15)  # 15 - kolvo probelov
+                    mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+                   # pass nr 5
+                   length_5 = split(mystr1, arr_mystr5, ",")
+                   for (m5=1; m5<=length_5; m5++) {
+                       mat_nr = print_separate_mat_number(arr_mystr5[m5], 18)  # 18 - kolvo probelov
+                       mystr1 = find_mystr1(mat_nr)                  # returns "1:71234569,12x72323133,"
+
+                   }
+                }
+            }
+        }
+    }
+ }
+
+# вытаскивает строку материала и возвращает строку со спецификацией
+function find_mystr1(mat_nr) {
+    split(arr_et_pricelist[mat_nr], arr_et_tmp1, ";")
+    return arr_et_tmp1[4]            # "1:71234569,12x72323133,"
+}
+
+
+
+function print_separate_mat_number(tmp_value, no_of_spaces) {
+    split(tmp_value, arr_tmp10, ":")
+    kol_vo = arr_tmp10[1]      # это количество штук, например 1
+    mat_nr = arr_tmp10[2]      # это 8-значный номер, типа "71371285"
+    if (mat_nr != "") {
+
+       split(arr_et_pricelist[mat_nr], arr_et_tmp1, ";")
+       et_bezeichnung = arr_et_tmp1[1]
+
+       if (arr_et_tmp1[2] != "n/a")
+          et_price = arr_et_tmp1[2] " EUR St/Brt"
+       else
+          et_price = "nicht verkaufsfähig"
+
+       str_arr_et_tmp1_3 = ""
+       if (arr_et_tmp1[3] != "")
+          str_arr_et_tmp1_3 = " /// " arr_et_tmp1[3] # Abstreifer + 4 Blattfeder
+
+       str_arr_et_tmp1_4 = ""
+       if (arr_et_tmp1[4] != "")
+          str_arr_et_tmp1_4 = " /// " arr_et_tmp1[4] # 1:71371285,4:79745365
+
+       mat_nr_to_print = mat_nr
+       if (mat_nr ~ "ETDUM")
+          mat_nr_to_print = "_DUMMY__"
+
+       print mt calc_spaces(no_of_spaces) kol_vo "x["mat_nr_to_print"]: " et_bezeichnung " /// " et_price str_arr_et_tmp1_3 str_arr_et_tmp1_4 >> result_txt
+       print_fg_link(mat_nr, no_of_spaces) # SAP Mat-Nr, No of Spaces in the beginning of line
+
+       if (mat_nr ~ "ETDUM9") {
+          print mt calc_spaces(no_of_spaces + 3) "Available filter elements:" >> result_txt
+
+          delete arr_tmp_10; delete arr_tmp_11;
+          sort_filter_elements(mat_nr)
+
+          for (k2=1; k2<=length(arr_tmp_11); k2++) {
+             split(arr_tmp_11[k2], arr_tmp_10, ";")
+             print mt calc_spaces(no_of_spaces+3) "["arr_tmp_10[1]"]: " arr_tmp_10[2] " /// " arr_tmp_10[3] >> result_txt
+          }
+       }
+    }
+
+    return mat_nr
+}
+
+
+function calc_spaces(no_of_spaces) {
+    spaces = ""
+    for (ix=1; ix<=no_of_spaces; ix++)
+      spaces = spaces " "
+    return spaces
+}
+
+
+
+
+
+function sort_filter_elements(mat_nr) {
+
+   # копируем из ассоциативного массива в обычный в виде 72427708;AF6016-005;OK
+   for (key in arr_et_pricelist) {
+       if (arr_et_pricelist[key] ~ mat_nr) {
+          split(arr_et_pricelist[key], arr_tmp_10, ";")
+          arr_tmp_11[length(arr_tmp_11)+1] = key ";" arr_tmp_10[2] ";" arr_tmp_10[3]
+       }
+   }
+
+   delete arr_tmp_10;
+
+   # sort
+   for (k1=1; k1<length(arr_tmp_11); k1++) {
+       for (k2=1; k2<length(arr_tmp_11)-k1; k2++) {
+
+          split(arr_tmp_11[k2], arr_t_01, ";")       # 72427708;AF6016-005;OK
+          split(arr_t_01[2], arr_t_01_end, "-")      # AF6016-005 или AF6016-005 SP
+          split(arr_t_01_end[2], arr_t_01_end, "SP") # 005 или 005 SP
+          min_value1 = arr_t_01_end[1]
+
+          split(arr_tmp_11[k2+1], arr_t_02, ";")     # 72427708;AF6016-005;OK
+          split(arr_t_02[2], arr_t_02_end, "-")      # AF6016-005 или AF6016-005 SP
+          split(arr_t_02_end[2], arr_t_02_end, "SP") # 005 или 005 SP
+          min_value2 = arr_t_02_end[1]
+#       print mt calc_spaces(no_of_spaces) k1 ": " arr_tmp_11[k1] " - " min_value1 " /// " arr_tmp_11[k1+1] " - " min_value2 >> result_txt
+
+          if (min_value1 > min_value2) {
+             temp_value = arr_tmp_11[k2]
+             arr_tmp_11[k2] = arr_tmp_11[k2+1]
+             arr_tmp_11[k2+1] = temp_value
+          }
+       }
+   }
+
+
+
+
 }

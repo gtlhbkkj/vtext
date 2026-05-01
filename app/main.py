@@ -544,6 +544,7 @@ async def root(request: Request, filter_name: str = None) -> None:
     output_content = ""
     error_content = ""
     form_content = ""
+    html_content = ""
     stderr_data = None
     stdout_data = None
 
@@ -596,6 +597,10 @@ async def root(request: Request, filter_name: str = None) -> None:
                     form_content = base64.b64decode(
                         json_xdata.get("form_content")
                     ).decode("utf-8")
+                    html_content = base64.b64decode(
+                        json_xdata.get("html_content")
+                    ).decode("utf-8")
+                    print("html_content ==>", html_content)
                 except Exception as err:
                     error_content = str(err)
                     logger.error(
@@ -639,6 +644,7 @@ async def root(request: Request, filter_name: str = None) -> None:
             "stderr_content": stderr_data,
             "error_content": error_content + " " + err_text,
             "form_content": form_content,
+            "html_content": html_content,
         },
     )
 

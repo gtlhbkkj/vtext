@@ -4,7 +4,7 @@
 # RS = "\n::"
 # FS = "_!_"
 ::
-# AF713_H2,AF724_G4,AF736_G3
+# AF713_H2,AF724_G4,AF724_S1,AF724_SH1,AF736_G3
 79303983 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN
 Mehrbereichsspannungsmotor
 SPANNUNG   : 230/400 V //  265/460 V

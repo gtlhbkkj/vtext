@@ -1,1 +1,0 @@
-vtext@salestext.ddns.net.2522465

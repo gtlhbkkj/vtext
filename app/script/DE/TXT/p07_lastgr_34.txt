@@ -250,25 +250,24 @@ STEUERVENTIL
 - SCHUTZART: IP65
 ::
 # G1 -- PN40 -- EL 24V -- VA
-# DUMMY *** ANBAUS.KUGELH.G1 PN40 VA EL  24V   VP [REF 79783911, jedoch in VA]
+# DUMMY *** ANBAUS.KUGELH.G1 PN63 VA EL  24V  VP [REF 76234595]
 #
 # ABLASSVENTIL AF713_GX2_!_,1,2,12,13,14,15,16,17,18,_!_1,2,3,4,5_!_2_!_4
 # RS-VENTIL AF112_G2,AF172_G2,AF113_G3,AF173_G3_!_PORTSIZE_!_PN_!_2_!_4
 mit elektrischem Schwenkantrieb 24V DC
-KUGELH G1   PN40 VA EL24
-- ANSCHLUSS:            G1 INNENGEWINDE
-- DRUCKSTUFE:           PN 40
-- WERKSTOFF GEH:        EDELSTAHL
-- KUGEL:                EDELSTAHL
-- DICHTUNG:             PTFE-FKM
-- BETRIEBSTEMPERATUR:   -10 - +100°C
-ANTRIEB
-- BETAETIGUNGSART:     ELEKTRISCH
-- STEUERSPANNUNG:      24V DC
-- LAUFZEIT:            14 -17 sec.
-- SCHUTZART:           IP65
-- KABELEINFUEHRUNG:    M20x1,5
-- QUER ZUR DURCHFLUSSRICHTUNG AUFGEBAUT,
+76234595 *** SPUELVENTIL G1 N187 EL 24V
+Durchgangs - Kugelhahn IG 1", PN 63
+direkt montiert mit elektrischem Stellantrieb
+Artikel: ER309650-06
+Kugelhahngehäuse : Edelstahl 1.4408
+Kugel : Edelstahl 1.4401
+Dichtungen : PTFE (TFM1600)
+Drehmoment : 20NM
+Steuerspannung : 24V AC/DC
+Schutzart : IP 65
+Stellzeit : 4 Sek. für 90°
+2 zusätzliche potentialefreie Endschalter
+komplett montiert und funktionsgeprüft
 ::
 # G1 -- PN40 -- EL 230V -- VA
 # DUMMY *** ANBAUS.KUGELH.G1 PN40 VA EL 230V   VP [REF 79783929, jedoch in VA]

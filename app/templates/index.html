@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filter Auslegung</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-
   <center>
       <pre><h3>Bitte Filterbezeichnung angeben:</h3> </pre>
     <form method="get" action="/">
@@ -22,18 +24,19 @@
     [FRZ, FRR, FRB, FRN: Mind. 6 / Max. 16 Zeichen]
     under development: <a href="https://salestext.ddns.net/aus_page1">Auslegung</a>
     </pre>
-
   </center>
 
   <hr />
-  <pre>
+
+  {{ html_content | safe }}
+
   {{ form_content | safe }}
 
+  <pre>
   {{ output_content }}
 
   {{ error_content }}
-
-
   </pre>
+
 </body>
 </html>

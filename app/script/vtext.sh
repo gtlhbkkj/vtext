@@ -13,6 +13,10 @@ function return_json_content() {
 
     echo '    "error_content": '
     echo '"'${3}'"'
+    echo ','
+
+    echo '    "html_content": '
+    echo '"'${4}'"'
     echo '}'
 }
 
@@ -26,6 +30,7 @@ RESULT_TXT=${TMP_DIR}"/"${UUID}".result.txt"
 MYERRLOG_TXT=${TMP_DIR}"/"${UUID}".myerrlog.txt"
 ERRLOG_TXT=${TMP_DIR}"/"${UUID}".errlog.txt"
 FIN_TXT=${TMP_DIR}"/"${UUID}".fin.txt"
+HTML_TXT=${TMP_DIR}"/"${UUID}".html.txt"
 
 
 myfiltername=$1
@@ -33,22 +38,24 @@ myfiltername=$1
 myfiltername=$(echo "$myfiltername" | sed 's/^[[:space:]]*//')
 myfiltername=$(echo $myfiltername | tr '[:lower:]' '[:upper:]')
 
+html_content=$(echo "" | base64 -w 0)
 form_content=$(echo "" | base64 -w 0)
 output_content==$(echo "" | base64 -w 0)
 error_content=$(echo "" | base64 -w 0)
+html_content=$(echo "" | base64 -w 0)
 
 
 # все RSF продукты
 if [[ "${myfiltername}" =~ ^([F][R][BRNZ]) ]]; then
     form_content=$(${SCRIPT_DIR}/vtextako.sh "${myfiltername}" | base64 -w 0)
-    return_json_content ${output_content} ${form_content} ${error_content}
+    return_json_content ${output_content} ${form_content} ${error_content} ${html_content}
     exit
 fi
 
 # если строка пустая или длина строки меньше 15
 if [[ ( "${myfiltername}" =~ ^([A][F]) ) &&  ("${#myfiltername}" -lt 25) ]]; then
    error_content=$(echo "The filter name for an AF product is too short: Length ==[ ${#myfiltername} chars ]==[$myfiltername]== Please enter a full AF name" | base64 -w 0)
-   return_json_content ${output_content} ${form_content} ${error_content}
+   return_json_content ${output_content} ${form_content} ${error_content} ${html_content}
    exit
 fi
 
@@ -59,7 +66,7 @@ mylang="DE"
 #   mylang="DE"
 #else
 #   error_content=$(echo "UNKNOWN LANGUAGE ==[ $2 ]== FOR V-TEXT, SORRY" | base64 -w 0)
-#   return_json_content ${output_content} ${form_content} ${error_content}
+#   return_json_content ${output_content} ${form_content} ${error_content} ${html_content}
 #   exit
 #fi
 
@@ -80,10 +87,11 @@ if [ $err_code -eq "1" ]; then
    cat /dev/null > ${MYERRLOG_TXT}
    output=$(gawk -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"print_errlog.awk" ${ERRLOG_TXT})
    error_content=$(cat ${MYERRLOG_TXT} | base64 -w 0)
+   cat /dev/null > ${HTML_TXT}
    cat /dev/null > ${RESULT_TXT}
    cat /dev/null > ${MYERRLOG_TXT}
    cat /dev/null > ${ERRLOG_TXT}
-   return_json_content ${output_content} ${form_content} ${error_content}
+   return_json_content ${output_content} ${form_content} ${error_content} ${html_content}
    exit
 fi
 
@@ -138,19 +146,22 @@ output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR
 output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p10_endnr.awk" $txtdir"p10_endnr.txt")
 output1=$(gawk  -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p11_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
 
-echo ${output1} > /tmp/output1.txt
-echo ${output} > /tmp/output.txt
+#echo ${output1} > /tmp/output1.txt
+#echo ${output} > /tmp/output.txt
 
+# both print to FIN_TXT=${TMP_DIR}"/"${UUID}".fin.txt"
 output=$(gawk -v filter_name="$myfiltername" -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"print_vtext.awk" ${RESULT_TXT})
 output=$(gawk -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"print_errfin.awk" ${ERRLOG_TXT})
 
 output_content=$(cat ${FIN_TXT} | base64 -w 0)
-echo ${output_content} > /tmp/output_content.txt
+html_content=$(cat ${HTML_TXT} | base64 -w 0)
+#echo ${output_content} > /tmp/output_content.txt
 
 rm -f ${RESULT_TXT}
 rm -f ${MYERRLOG_TXT}
 rm -f ${ERRLOG_TXT}
 rm -f ${MYERRLOG_TXT}
 rm -f ${FIN_TXT}
+rm -f ${HTML_TXT}
 
-return_json_content ${output_content} ${form_content} ${error_content}
+return_json_content ${output_content} ${form_content} ${error_content} ${html_content}
