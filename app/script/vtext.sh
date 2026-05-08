@@ -144,9 +144,21 @@ output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR
 
 # echo "17. Print Endnummer <p10_endnr.awk>"
 output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p10_endnr.awk" $txtdir"p10_endnr.txt")
-output1=$(gawk  -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p11_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
 
+#output1=$(gawk  -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p11_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
+et_file_name=$(gawk -v my_string=$my_str -f $awkdir"p11_find_spares.awk" $txtdir"p11_find_et_file.txt")
 #echo ${output1} > /tmp/output1.txt
+file_path=$txtdir$et_file_name
+#echo ${file_path} >> /home/vtext/app/script/DE/AWK/output1.txt
+#echo ${file_path} >> /home/vtext/app/script/DE/AWK/output1.txt
+
+if [ -f "$file_path" ]; then
+#  output1=$(gawk -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p12_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
+  output1=$(gawk -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p12_spares.awk" $file_path)
+fi
+
+
+
 #echo ${output} > /tmp/output.txt
 
 # both print to FIN_TXT=${TMP_DIR}"/"${UUID}".fin.txt"
