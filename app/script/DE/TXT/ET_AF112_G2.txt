@@ -1,0 +1,123 @@
+# Data for arr_headers[]
+ET_SECTION_!_1_!_1. Abstreifer (Abstreiferleiste, Rückspüllkanal)
+ET_SECTION_!_2_!_2. Dichstungssatz
+ET_SECTION_!_3_!_3. Buchsensatz
+ET_SECTION_!_4_!_4. Motor
+ET_SECTION_!_5_!_5. Gehäuse und Deckel
+ET_SECTION_!_6_!_6. Rest: Mitnehmer, usw.
+ET_SECTION_!_7_!_7. Antriebswelle
+ET_SECTION_!_8_!_8. Komplettfiltereinsatz (mit und ohne Antrieb)
+ET_SECTION_!_9_!_9. Elemente
+ET_SECTION_!_10_!_10. dP Manometer
+ET_SECTION_!_11_!_11. Ventile
+END_OF_BLOCK_ET_SECTION
+
+EZ_!_AF112_G2_!_*_!_5050-20049991-S00
+
+####################################################################################
+##                                     AF112/G2                                   ##
+####################################################################################
+
+############   SECTION 1 /// Abstreifer (Abstreiferleiste, Rückspüllkanal)  ############
+ETS01_!_AF112_G2_!_*_!_70371789 *** RUECKSPUELKANAL Z AF112-172 VP_!_388.00_!_Kunststoff
+
+
+############   SECTION 2 /// D-SATZ  ############
+ETS02_!_AF112_G2_!_*_!_70368610 *** D-SATZ AF112/G KOMPL FKM VP_!_177.00_!_Dichtungsatz komplett_!_1:70349580,1:70356777,1:70371821
+ETS02_!_AF112_G2_!_*_!_70349580 *** D-SATZ ELEMENT AF132-172/G FKM VP_!_103.00_!_D-SATZ ELEMENT_!_2:78322885;2:79332230,2:77565476
+ETS02_!_AF112_G2_!_*_!_70356777 *** D-SATZ GEHAEUSE AF112-172/G FKM VP_!_43.50_!_D-SATZ GEHAEUSE_!_2:76229067,2:76233043,2:70563699,2:76233039,1:77756513,2:70012492
+ETS02_!_AF112_G2_!_*_!_70371821 *** D-SATZ WELLE AF112/G FKM VP_!_44.90_!_D-SATZ WELLE_!_1:79372376,1:76311237,1:76311245,1:77756323
+
+
+############   SECTION 3 /// B-SATZ  ############
+ETS03_!_AF112_G2_!_*_!_70308169 *** BUCHSENSATZ AF73-113/G3 VP_!_98.80_!_PTFE
+
+
+############   SECTION 4 /// MOTOR  ############
+ETS04_!_AF112_G2_!_*_!_79717919 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN VP_!_757.00
+ETS04_!_AF112_G2_!_*_!_79334830 *** MOTORBOCK AF72/G4 ALU BEARB_!_177.00
+
+
+############   SECTION 5 /// GEH + DECKEL  ############
+ETS05_!_AF112_G2_!_*_!_70369644 *** DECKEL Z AF112/G2 0.7040_!_n/a_!_Baugruppe Deckel_!_1:70369531,1:70371784,1:76351407,1:76351415,1:72487963
+
+
+############   SECTION 6 /// Rest: usw.   ############
+
+############   SECTION 7 ///  Mitnehmer, Antriebswelle   ############
+ETS07_!_AF112_G2_!_*_!_70371784 *** ANTRIEBSWELLE Z AF72-112/G2 ST LIPPEND_!_132.00_!_Baugruppe_!_1:70307837,1:79304247
+
+############   SECTION 8 /// Komplettfiltereinsatz (mit und ohne Antrieb)   ############
+ETS08_!_AF112_G2_!_*_!_ETDUM881 *** AF11240-021-00000-3001/G2 mit AF100174-xxx_!_2155.00_!_Komplett Einsatz auf dem Deckel Montiert mit Filterelement_!_1:ETDUM880,1:ETDUM991
+
+############   SECTION 9 /// Filterelemente   ############
+
+ETS09_!_AF112_G2_!_*_!_ETDUM991 *** AF100174-xxx F. AF112/172_!_957.00_!_Segmentelement mit Topmesh / Tragkörper Alu, Filtermedium 1.4571
+
+
+####################################################################################
+##                          Einzelne Teile AF112/G2                               ##
+####################################################################################
+
+# 1. RSK
+70371789_!_RUECKSPUELKANAL Z AF112-172 VP_!_388.00_!_Kunststoff
+
+# 2. DICHTUNGEN
+70368610_!_D-SATZ AF112/G KOMPL FKM VP_!_177.00_!_Dichtungsatz komplett_!_1:70349580,1:70356777,1:70371821
+
+70349580_!_D-SATZ ELEMENT AF132-172/G FKM VP_!_103.00_!_D-SATZ ELEMENT_!_2:78322885;2:79332230,2:77565476
+78322885_!_FUEHRUNGSRING 61,5 PTFE AF72-132_!_n/a
+79332230_!_ANL-SCHEIBE  70X 62X1.5   PTFE FDA_!_n/a
+77565476_!_O-RING 062,00X2,00 FKM 80SHA ISO3601B N_!_n/a
+
+70356777_!_D-SATZ GEHAEUSE AF112-172/G FKM VP_!_43.50_!_D-SATZ GEHAEUSE_!_2:76229067,2:76233043,2:70563699,2:76233039,1:77756513,2:70012492
+76229067_!_O-RING 097,00X4,00 FKM 75SHA ISO3601B N_!_n/a
+76233043_!_DIRG A 14,0X 20,0X2,0 C4400 G1/4_!_n/a
+70563699_!_DIRG A 10,0X 13,5X1,5 DIN7715 C4400 G1/8_!_n/a
+76233039_!_DIRG A 21,0X 26,0X2,0 DIN7603 C4400 G1/2_!_n/a
+77756513_!_O-RING 052,07X2,62 FKM 75SHA ISO3601B N_!_n/a
+70012492_!_DIRG A 10,0X 16,0X1,0 DIN7603 CU_!_n/a
+
+70371821_!_D-SATZ WELLE AF112/G FKM VP_!_44.90_!_D-SATZ WELLE_!_1:79372376,1:76311237,1:76311245,1:77756323
+79372376_!_LIPPENDICHTUNG D=18_!_n/a
+76311237_!_O-RING 018,64X3,53 FKM 70SHA ISO3601B N_!_n/a
+76311245_!_STUETZRING SG  17.9X24X0.7        PTFE_!_n/a
+77756323_!_O-RING 032,99X2,62 FKM 75SHA ISO3601B N_!_n/a
+
+# 3. B-Satz
+70308169_!_BUCHSENSATZ AF73-113/G3 VP_!_98.80_!_PTFE
+
+# 4. Motor
+79717919_!_GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN VP_!_757.00
+79334830_!_MOTORBOCK AF72/G4 ALU BEARB_!_177.00
+
+# 5. Deckel
+70369531_!_DECKEL B AF72-112/G3 0.7040_!_n/a_!_Deckel unbeschichtet
+76351407_!_DICHTAUFSATZ AF73-113/G3 ST LIPPEND._!_28.40
+76351415_!_DICHTSCHEIBE AF736-1136 1.0037_!_11.10
+
+# 7. Antriebswelle
+70371784_!_ANTRIEBSWELLE Z AF72-112/G2 ST LIPPEND_!_132.00_!_Baugruppe_!_1:70307837,1:79304247
+70307837_!_ANTRIEBSWELLE AF73-113/G3 1.4571_!_151.00
+79304247_!_MITNEHMER AF72/G4 BEARB_!_36.00
+
+# 8. Kompletteinsatz
+ETDUM880_!_AF11240-021-00000-3001/G2_!_n/a_!_Komplett Einsatz auf dem Deckel Montiert OHNE Filterelement_!_1:70369531,1:70371784,1:76351407,1:76351415,3:70345607,1:70358581,1:70368610,1:70308169,1:72487963
+
+70350010_!_AF 1124.-.21-...../G2 KSP GERUEST_!_n/a_!_Baugruppe Gerüst_!_3:70345607,1:70358581,1:70371789
+70345607_!_DISTANZBOLZEN AF172 C-STAHL_!_29.80
+70358581_!_ZENTRIERFLANSCH AF112 1.0038_!_59.70
+
+72487963_!_ROSTSCHUTZFARBE GELBGRUEN RAL 6018_!_n/a
+
+# 9. Elemente
+ETDUM991_!_AF100174-xxx F. AF112/172_!_957.00_!_Segmentelement mit Topmesh / Tragkörper Alu, Filtermedium 1.4571
+
+# ELEMENTE
+70358490_!_ETDUM991_!_AF100174-001
+70358492_!_ETDUM991_!_AF100174-002
+70358493_!_ETDUM991_!_AF100174-003
+70328638_!_ETDUM991_!_AF100174-004
+70358494_!_ETDUM991_!_AF100174-006
+70358495_!_ETDUM991_!_AF100174-008
+70358496_!_ETDUM991_!_AF100174-010

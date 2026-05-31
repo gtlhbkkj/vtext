@@ -1,0 +1,5 @@
+1: Händler - AM
+2: Kontraktoren - OE
+3: Endkunden - AM
+4: OE/OES - Key Account
+5: Nicht zugeordnet

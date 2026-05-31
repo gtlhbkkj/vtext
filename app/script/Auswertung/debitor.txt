@@ -1,0 +1,1546 @@
+129082;Compound Solutions Limited;1;1
+147714;BMTS Technology Austria;5;3
+105606;Robert Bosch GmbH;5;3
+128378;Gustav Schmidt GmbH & Co. KG;4;1
+149924;Paul Bauder GmbH & Co. KG;6;3
+128229;Ditech AS;8;1
+105627;Henkel AG & Co. KGAA;6;3
+106311;RAMPF Production Systems;9;4
+139923;Versalis Deutschland GmbH;6;1
+147262;MAHLE Filtersysteme GmbH;5;3
+121376;Franz Funke;4;3
+147264;MAHLE Blechtechnologie GmbH;5;3
+118623;ZIMEX GmbH;9;3
+106547;Keil Anlagenbau;10;4
+106596;Forst Technologie GmbH & Co. KG;6;4
+150601;KSB Service GmbH;4;1
+109383;Bayern-Fass Rekonditionierungs GmbH;11;3
+148748;F.B. Egner;4;1
+105794;Plasser Robel Services GmbH;5;2
+148569;Technoalpin Austria Ges.m.b.H.;8;3
+109091;Harting Electric GmbH & Co.KG;10;3
+5204500;Filtration Group Sp.z.o.o.;1;3
+107862;HEDELIUS MASCHINENFABRIK GMBH;7;4
+109712;Heinrichs & Co. KG;6;3
+147437;Fuchs Lubricants;12;3
+90323;Service Inland;3;5
+122063;Ingenieur Büro J. Middelhoff;6;3
+124656;Schondelmaier GmbH;13;3
+105774;SKF Lubrication Systems;7;4
+128881;Otto Fuchs KG;13;4
+107422;Gehring Naumburg GmbH & Co.KG;14;3
+149827;Lubropoint S.R.L.S.;15;3
+120856;PlasmaAir AG;16;3
+119014;GS Industrietechnik;1;3
+106091;Siltronic AG;1;3
+148877;Wagner;9;3
+118600;BGM-Trading GmbH;4;1
+130024;Grillo-Werke AG;3;3
+130181;Prototyp-Werke GmbH;16;4
+136815;Gelsenkraft GmbH;14;3
+130312;Woma GmbH;6;4
+131532;COMPAGNIE DES ILES DU PONANT;1;3
+118180;KB Servicepoint Bassum GmbH;1;3
+116154;MHT;17;1
+149329;Vibrant Curiosity Ltd.;3;3
+150932;YNSECT;18;3
+105934;AZO GMBH + CO.KG;19;4
+129695;ZENTIS GmbH & Co. KG;1;3
+122081;Elmetherm S.A.;17;3
+121994;ASB Anlagen-Service-;5;1
+147169;Quant Service GmbH;1;1
+124041;Rubix U.K. Limited;20;1
+148159;Basi Schöberl GmbH & Co.KG;1;3
+106192;MAN Energy Solutions SE;21;4
+106451;WALTHER;4;4
+147098;OQ Services GmbH;1;3
+142140;THAMES DIESEL INJECTION PART LTD.;22;1
+151406;EMAG Salach GmbH;17;4
+151486;Lürssen Yacht;2;1
+140454;Tox Pressotechnik;9;3
+106378;Lekang Filter AS;8;1
+106319;Gutmann GmbH;19;3
+117281;Franz Wild Öltechnik GmbH;4;1
+129894;GE Power Systems GmbH;9;3
+148678;Franz Suden KG;6;3
+128024;Hellmers GmbH Fahrzeugbau;10;4
+107167;BASF Polyurethanes GmbH;10;3
+129503;NSC Schifffahrtsgesellschaft;1;3
+106272;Enke-Werk;4;3
+141001;Oventrop GmbH & Co. KG;13;3
+2440;FILTRATION GROUP BV;3;3
+149312;EIG CRUSTAG;9;3
+150055;Mercedes-Benz AG;16;3
+128891;Wafios Umformtechnik GmbH;14;4
+126522;GST Grinder GmbH;11;3
+118873;Tesium GmbH;6;3
+150397;MFR Power Solution GmbH;19;3
+106529;Koemmerling;19;3
+141906;Inovyn Deutschland GmbH;14;3
+106603;Dometic Germany Krautheim GmbH;9;3
+129745;Wasserverband Eifel-Rur;14;3
+109570;In.Tec Di Nicolotti Maurizio;15;1
+106379;Bosch Rexroth GmbH;5;4
+106933;Müller Hydraulik GmbH;16;4
+110205;Pressedruck Potsdam GmbH;4;3
+138428;Bartec Benke GmbH;7;3
+131534;LED-POLYURETHANE;17;4
+151144;John Deere GmbH & Co. KG;19;3
+118163;TSM Technical Services &;7;1
+129557;CETIB Dexis;1;3
+149546;ARYZTA Bakeries Deutschland GmbH;14;3
+105629;FrymaKoruma AG;1;3
+150706;Winning BLW GmbH;1;4
+127769;Marine Shipstores D. Medri GmbH;3;1
+137661;FFG Werke GmbH;19;4
+150834;BCSA GEAR;17;3
+151392;Valeo Powertrain GmbH;5;4
+108520;Behringer Corp.;8;1
+108619;Techno Commerz;1;1
+150393;RWE Power AG;7;3
+106259;Probst & Class GmbH & Co. KG;19;4
+149495;HYD & AU Luxembourg S.A.;17;3
+148534;SAB;7;3
+151337;EFC NV;8;1
+150909;GHP;17;3
+136402;Refood GmbH & Co. KG;14;3
+130876;DEXIS PAYS DE  LOIRE;17;1
+101322;A.-W.Heil & Sohn GmbH & Co. KG;4;1
+138751;Brammer;23;1
+112385;Hilite Germany GmbH;5;3
+105945;HECKLER & KOCH GMBH;1;3
+115757;HYD&AU FLUID;17;4
+150163;Weseke Dragees GmbH;6;3
+127812;Wilhelm Rump GmbH & Co KG;7;1
+132728;Brachthäuser;3;1
+122179;SEFI Rungis;3;1
+150775;Theile-Schürrholz GmbH;4;1
+109658;Fertigungstechnik Nord GmbH;7;3
+130179;Nordenhamer Zinkhütte GmbH;1;3
+111431;Hine S. A.;3;1
+105971;Mauser-Werke Oberndorf;1;4
+110843;Turbo-HKS GmbH;3;4
+141847;Vattenfall Wasserkraft GmbH;4;3
+115640;POLYFLUID;17;1
+106631;Batimat;5;3
+150412;Brammer S.A.;8;1
+129849;Gebr. Willers GmbH & Co.KG;14;3
+148773;PCH Technischer Handel GmbH;4;1
+151326;ONERGYS GmbH;4;5
+147624;YACO-tec GmbH;4;1
+101680;DMG MORI;5;4
+105926;HERRENKNECHT AG;9;4
+106149;AACHENER PRINTEN-U.SCHOKOLAD.-;1;3
+150882;thomas zement GmbH & Co. KG;14;3
+147992;Tecnoelastomeri Srl;15;3
+130253;Sonac Lingen GmbH;1;3
+147762;Richter + Frenzel GmbH & Co. KG;1;3
+108766;PMC Hydraulics Oy;8;1
+149479;FRIMO Hungary Kft.;11;4
+141934;EVAC OY;7;1
+105522;Rolls-Royce Solutions GmbH;3;4
+124346;Hugo Benzing GmbH & Co.KG;16;3
+149197;ADDCON EUROPE GmbH;14;3
+105758;Danfoss Power Solutions;7;4
+149291;PWK IBEX GmbH;4;3
+136637;Orion Engineered Carbons GmbH;6;3
+148096;OBD PRECISION GmbH;1;3
+131437;RUBIX THOME;17;1
+148931;Tom Parker Ltd;1;1
+149732;4D Hydraulik GmbH;4;1
+107994;Liqui Filter GmbH;4;1
+133064;IKN GmbH;10;3
+150571;Dörken Coatings GmbH& Co. KG;14;3
+120904;Burgmaier Hightech GmbH & Co.KG;9;3
+137319;ERIKS BV;8;1
+125889;OMSG (Deutschland) GmbH;16;4
+128912;Kohn Industry Products;4;3
+105820;HELD TECHNOLOGIE GMBH;16;2
+147595;Gabriele Vezzani;3;3
+106067;Präzisionswerk Schnatz;14;4
+5203100;Filtration Group BV;3;3
+101139;ISP Salzbergen GmbH & Co. KG;1;3
+129927;B.V.A. s.r.o.;24;3
+133757;Entek Otomasyon Urunleri San.veTic.;23;1
+101029;Audi AG;5;3
+127681;Alfa Laval Mid Europe GmbH;10;4
+106339;BREHM GMBH +CO.KG;9;3
+109672;Müller Praezision GmbH;1;3
+105874;Gehring Technologies GmbH & Co KG;1;3
+108845;Rugel;9;3
+132747;Stahl Gerlafingen AG;25;3
+150651;CHIRON Group SE;9;4
+108251;Carl Benzinger GmbH;9;4
+5203600;FILTRATION GROUP Ltd;3;3
+121215;Federal-Mogul Friedberg GmbH;11;3
+108388;Rohrwerk Maxhuette;5;3
+132105;Dr.-Ing. Robert Stopp;14;4
+110637;Wasserkraft Volk AG;16;2
+136365;C. Thywissen GmbH;14;3
+105943;Robert Bosch GmbH;5;4
+129739;ENGINEERING DOBERSEK;14;4
+117583;Hans Hoffmann GmbH;10;3
+150081;Syntegon Technology GmbH;16;3
+106284;Seppeler Rietbergwerke;26;3
+106730;RUHR OEL GMBH;6;3
+151298;Vacuumschmelze GmbH & Co.KG;16;3
+105973;Carl Werthenbach;4;1
+107405;Daimler AG;6;3
+130102;Bosch Industriekessel;5;3
+107269;EMAG Zerbst Maschinenfabrik GmbH;16;4
+101746;FMB-Blickle GmbH;3;4
+112400;Hywax GmbH;7;3
+107479;EUROPARTS;4;1
+122872;HTS-Hamburger Technik;10;1
+106553;Ruez GmbH;1;4
+127197;Protein- u. Oelwerk Neuss;14;3
+131494;BARET;17;1
+129691;Microfol Compounding GmbH;1;3
+132332;Holger Senger;1;3
+147095;International Ship Service Ltd;24;1
+121527;Louis Dreyfus Company;19;3
+121389;DMG MORI;5;4
+106507;DYNAMIC FLUID SYSTEMS;12;1
+122318;Amiblu Germany GmbH;1;3
+120574;Metecno Bausysteme GmbH;6;3
+123236;CENTURIUS Import Export GmbH;1;4
+150013;Herbert Schümann;14;1
+137675;BORNIT-Werk Aschenborn GmbH;14;3
+140543;Koenig & Bauer Digital & Webfed;5;4
+150528;Abwasserbetrieb Berg- und;13;3
+110673;WOKU-Filtermedien;3;4
+107599;FTB Filtertechnik;4;1
+129717;Pletscher + Co. AG;25;3
+109289;Mesa Parts GmbH;9;3
+136864;IPS - Industrial Piping;5;1
+131857;Werner Gießler GmbH;9;3
+139283;FRÜTEC technical supply GmbH;4;1
+127369;BASF Personal Care and Nutrition;6;3
+146916;Aerotech Peissenberg GmbH & Co. KG;5;3
+148324;Canadian Coast Guard;3;3
+115766;MECMAS INDUSTRIE S.A;17;3
+109303;Bibus SK, S.R.O.;8;1
+149313;Streitlein GmbH;3;1
+139549;CIR ATELIER;17;1
+139529;Bilfinger Engineering & Maintenance;6;3
+105781;Schütte Alfred H. GmbH & Co. KG;1;4
+106033;Gebr. Saacke GmbH & Co. KG;1;4
+116014;HYDROLA;17;3
+131443;CTDI TOULOUSE SAS;1;1
+132746;Zweckverband Laber Naab;13;3
+149793;Röhm GmbH;14;3
+151645;MAG Hungary Kft;9;4
+107823;Tries GmbH + Co. KG;9;4
+137864;BRAV-O-TECH GmbH;6;2
+132653;BMI Steildach GmbH;1;3
+108770;LERINC Werkzeugmaschinen;1;1
+117145;Bosch Rexroth AG;5;3
+151366;Apleona MT Services GmbH;13;1
+150617;F +B Maschinenservice GmbH;4;1
+148078;Universität Hohenheim;16;3
+109579;Supfina Grieshaber GmbH & Co. KG;16;4
+101087;Carl Croonen GmbH;1;1
+130398;AVL Schrick GmbH;14;3
+141157;THK RHYTHM AUTOMOTIVE GmbH;1;3
+130260;S.I.T.   Schiffs-& Industrie;7;1
+151469;Heraeus Epurio GmbH;6;1
+150914;Kamax GmbH & Co. KG;13;3
+150007;Aluminium Kety Emmi;27;3
+150608;FIVES MACHINING;17;3
+106640;WEMA Vogtland Technology GmbH;14;4
+151588;Henkel South Africa (Pty) Ltd;12;3
+105695;Volkswagenwerk AG;7;3
+141009;Hennecke GmbH;6;4
+120577;MAG IAS GmbH;9;4
+105628;SKF Lubrication Systems;14;4
+123566;A.S.M. Allseas Marine GmbH & Co KG;4;1
+101077;Robert Bosch GmbH;5;3
+149259;ATMOC;23;1
+106310;GEBR.RASCH GMBH +CO;10;3
+140768;HSP Schwalm GmbH;13;3
+121753;META SRL;15;4
+119260;Pressluft-Götz;4;1
+118427;YARA Rostock Zweigniederlassung;10;3
+151244;Continental Automotive;14;3
+101030;BMW AG;11;3
+105908;hubergroup Deutschland GmbH;1;3
+150652;Ewald Kaufmann GmbH & Co. KG;9;3
+130208;RST Recycling und;14;3
+150452;Wärtsilä Services Switzerland Ltd;21;4
+106503;Hergeng Enterprise Co. Ltd.;23;1
+118890;Hegenscheidt MFD GmbH;1;4
+130614;EDF - SA;1;3
+119889;Heraeus Deutschland;6;3
+150733;Klaus Backes GmbH;1;3
+134667;Südöl Mineralöl-Raffinerie GmbH;16;3
+106753;Finzel Hydraulik Chemnitz OHG;4;1
+148942;Eurofoam Deutschland GmbH;14;3
+108837;UTF GmbH;1;3
+105017;Samaco GmbH;1;1
+149050;Rapid Engineering Supplies Ltd;1;1
+140969;PERI GmbH;9;3
+122848;Andritz Hydro GmbH;9;4
+130047;HTT energy GmbH;10;3
+128150;Caperva Quimica S.L.;23;1
+149378;FUCHS;14;3
+106581;Reber Systematic GmbH & Co. KG;16;4
+151333;TECO Anlagenvertriebs GmbH;16;4
+106242;Siegwerk Druckfarben;6;3
+150001;Petro Gas Ausrüstungen GmbH;4;1
+101171;Mares Shipping GmbH;10;1
+149713;EGTIM Industrie;17;3
+138749;Bibus Spain S.L.;23;1
+115692;EUROTECH INTERNATIONAL SA;18;1
+137702;MENNEKES Elektrotechnik;1;3
+131042;PETROINEOS MANUFACTURING FRANCE SAS;1;3
+108151;Martin Braun;1;3
+129751;Laurin Maritime AB;3;3
+106545;Tarkett Holding GmbH;1;4
+137688;VSP Filter GmbH;4;1
+115930;BRAMMER France;17;1
+151085;EPSA MARKETPLACE;17;3
+110478;Voith Dienstleistungen und;9;1
+130055;HMF Engineering und;4;4
+118870;SFH;17;3
+148975;Hexion Stuttgart GmbH;9;3
+105983;SEW-EURODRIVE GmbH & Co. KG;14;4
+138704;FRANCAISE DE MECANIQUE;17;3
+141371;ACT-Sistemas Hidráulicos Ltda;23;1
+110507;Lutena Vakuum GmbH;10;4
+111343;H & S Anlagentechnik GmbH;7;4
+106220;KÜMA Apparatebau GmbH;9;4
+109735;Hansa-Flex AG;4;1
+150912;JEMA Tech GmbH & Co. KG;7;1
+132748;Manitowoc Crane Group France SAS;7;4
+148340;Klevenberg Shipping Center B.V.;3;3
+106162;Max Weishaupt GmbH;11;4
+119203;Herzog-Hydraulik GmbH;4;1
+106293;Benecke-Kaliko AG;10;3
+138036;EMFI S.A.S;17;3
+150829;FILTERQUIP Limited;1;1
+129914;Brauerei Beck & Co. KG;7;3
+133720;Spicer Gelenkwellenbau GmbH;14;4
+137890;Widni Oy;8;1
+151307;SONOLUB;18;3
+150618;ITA Moulding Process;17;3
+127575;MDV Papier- und Kunststoffveredelun;25;3
+150850;Ardagh Metal Packaging;19;3
+130337;Smurfit Kappa Zülpich;6;3
+129686;Wefers GmbH;1;4
+106866;INSERCO Industrie;14;3
+110829;Anton Häring KG;16;4
+133904;MSP Müller Spot Plating GmbH;19;3
+148658;HEMO GmbH;1;4
+130239;Allnex Germany GmbH;6;4
+149257;Poppies Berlidon S.A.S.U.;17;3
+138814;Optiflex GmbH;4;1
+106221;Kuwega Hydraulik Service GmbH;14;4
+129816;DOW Olefinverbund GmbH;19;3
+131556;CIR CASTRES;17;1
+109454;Eisenhardt;9;3
+148183;Bilfinger Maintenance GmbH;19;3
+107594;Daramic LLC.;10;3
+105898;BASF SE;19;3
+151152;BIBUS FRANCE SAS;17;1
+121526;ThyssenKrupp Presta AG;25;3
+118351;Sandvik Tooling Supply Schmalkalden;6;4
+122934;HAARTZ GmbH;1;3
+108203;Continental Teves AG &Co OHG;14;3
+150619;Winning BLW Management GbmH;5;3
+108495;H. Stoll AG & Co. KG;9;3
+116029;Rubix;17;1
+107919;Rheinmetall Landsysteme GmbH;7;4
+130077;KSB (Schweiz) AG;16;4
+107942;Diosna;10;4
+111464;FAIRPLAY;10;3
+119449;MABEO INDUSTRIES SAS;17;1
+124488;TD Deutsche Klimakompressor GmbH;4;3
+150696;Filter Services UK Ltd;20;1
+125352;SAACKE GmbH;10;4
+149171;IMEX Filtertechnika;8;2
+133252;Viterra Magdeburg GmbH;7;3
+130313;A. Winkel-Nayyar Trading GmbH;1;1
+149783;Rolf Weber KG;4;1
+123233;Continental Automotive GmbH;14;3
+149019;GELSENWASSER AG;4;3
+101563;Wieland-Werke AG;9;4
+134058;Rafflenbeul Anlagenbau GmbH;6;3
+116165;SUPRA FRANCE;17;3
+149103;Filter Fraune GmbH;4;1
+151489;Christian Diener GmbH;16;4
+130165;Tecfeld GmbH;4;1
+130053;Xervon Instandhaltung GmbH;6;3
+119957;AUTO CHASSIS INTERNATIONAL;17;3
+105764;Eugen Woerner GmbH & Co. KG;5;4
+104571;Pfefferl e. Kfm;1;1
+107695;Infraserv Wiesbaden Technik;1;2
+107971;AVISTA OIL Deutschland GmbH;7;3
+151613;Apleona MT Services GmbH;16;5
+148625;Lenze Operations GmbH;7;3
+128878;ERIKS Industrial Services Ltd.;28;1
+123425;Hainzl Industriesysteme GmbH;8;1
+151329;Fource B.V.;8;1
+148789;Lubetech Services (PTY) LTD;12;1
+150185;Eriks Ireland;28;1
+133505;Mamminger Konserven GmbH & Co. KG;5;3
+148086;Anton Ohlert;14;1
+151134;FACEO FM IDF;18;3
+117107;Buderus Schleiftechnik GmbH;10;2
+107821;KUNZMANN Maschinenbau GmbH;19;4
+150558;POLYTEC CAR STYLING Weierbach GmbH;6;3
+121636;Christian Tober;13;3
+149452;Rheinzink GmbH & Co. KG;1;3
+110518;REMONDIS Chemie GmbH;11;3
+151717;Momentive;6;3
+149246;Comau Roumanie Srl;17;4
+108591;ADM Spyck GmbH;6;3
+141715;CNC-Experten GmbH & Co. KG;5;3
+107485;WORLD HYDRAULICS CO., LTD;23;1
+127341;SMS group GmbH;14;4
+148938;SEFI;17;3
+108580;ULMEX Industrie System;9;1
+101673;Index-Werke GmbH & Co. KG;9;4
+136884;De Vries Scheepsbouw Makkum B.V.;2;4
+105729;Liebherr;9;4
+107489;Volkswagen AG;14;3
+133517;Exotech;12;1
+109491;DUSTCONTROL GMBH - DEUTSCHLAND;16;4
+129716;AGRAVIS Kraftfutterwerke;6;3
+121854;Maschinenbau Silberhorn GmbH;1;4
+124564;Borbet GmbH;13;3
+119581;Rubix France;17;1
+105859;Gardner Denver;9;4
+122260;KSB SE & Co. KGaA;5;3
+150120;INGENICA LLI;17;3
+150405;Hess GmbH;6;3
+108327;HNSA INGENIEROS S.A.;23;1
+118087;bst hydraulics gmbh;9;4
+140726;ARGUS Additive Plastics GmbH;6;3
+107175;RAMPF Tooling Solutions;16;4
+5204400;Filtration Group Kft;1;3
+134257;EFC Industrial Filtration b.v.;8;1
+149972;WST Präzisionstechnik GmbH;1;3
+111709;BILSTEIN & SIEKERMANN;1;3
+107591;Starrag Technology GmbH;14;4
+107117;R.JUNG GMBH;4;1
+127618;Sprint Engineering & Lubricants Ltd;1;1
+106227;Graphit Kropfmühl GmbH;11;3
+150599;HENRI PETIT-JEAN SAS;17;3
+149161;EC Machine Services (Pty) ltd;12;1
+107000;ECKERT & GRAF GMBH;1;4
+108855;Deutz AG;1;4
+129709;Tallink Grupp AS;1;1
+148661;Rhein-Fass GmbH & Co.KG;14;3
+149882;Trans-Auto AB;8;1
+149057;Sindra GmbH & Co. KG;14;3
+124538;Lanxess Organometallics GmbH;6;3
+110073;Thieme GmbH & Co. KG;16;3
+101167;MAN Truck & Bus SE;5;4
+149229;Cannon Viking Ltd Viking House;20;1
+115936;ACE;17;1
+110239;Enercon GmbH;29;4
+108877;Bibus Zagreb d.o.o.;8;1
+106013;PREGLER HANS GMBH U. CO.KG;5;4
+149699;NOMOCO Maschinenfabrik GmbH;1;4
+107508;Sika Deutschland GmbH;16;3
+149871;Eriks Transportation GmbH;8;1
+147877;Guard Endustriyel Urunler;23;1
+108272;Cavitron v. Hagen & Funke GmbH;14;4
+118987;Innofluid GmbH & Co. KG;4;1
+118772;ThyssenKrupp Presta;7;3
+122924;BIBUS Austria GmbH;8;1
+131652;COMAU FRANCE;17;4
+151516;FRIMO Innovative;10;4
+149820;FRIMO GmbH;10;4
+112091;elobau Gmbh & Co.KG;27;4
+132767;MT Gas Chem Nordsee;10;3
+124769;Rain Carbon Germany GmbH;14;3
+109981;Stadtwerke;1;3
+148548;Alfred Heyd GmbH & Co. KG;1;3
+129634;Bilfinger VAM Anlagentechnik GmbH;11;4
+106130;Filter-Mueller;3;1
+109041;SGL epo GmbH;6;3
+149218;BASF Agricultural Solutions GmbH;3;3
+109063;Comer S.r.l;15;1
+151018;MT Gas Chem Pacific;10;3
+109192;Fluid Concept GmbH;4;1
+127826;Ingenieurbüro Heino Winter;26;3
+149832;Afrifil Manufacturing (Pty) Ltd.;12;1
+123174;DEXIS TAMPLEU SPRIET;1;1
+148649;Holcim (Deutschland) GmbH;30;3
+107497;ALZMETALL GmbH & Co.;5;4
+149111;Eawag;13;3
+108241;Bosch Sanayi ve Ticaret A.S.;5;4
+105966;Solvay Chemicals GmbH;6;3
+111412;Daimler AG;10;4
+130298;Unitherm Cemcon;11;3
+130497;DERIVES RESINIQUES TERPENIQUES;17;3
+106726;HESCH INDUSTRIETECHNIK Vertriebs;5;1
+106351;Voith Turbo GmbH & Co. KG;3;4
+137569;WK Systemtechnik;11;4
+134969;Ernst Rickermann Landhandel GmbH;7;3
+122753;Hine Renovables S.L.;8;1
+130021;G + L  Anlagenbau OHG;1;4
+129554;Apollo-Gößnitz GmbH;1;4
+109565;MST Technology GmbH & Co.KG;1;3
+107885;Südöl GmbH;1;3
+148642;ELFIN Engineering GmbH;4;1
+121790;Covestro NV;10;3
+106079;Scholing GmbH;4;1
+106672;FAUDI GmbH;6;4
+5203500;Filtration Group SAS;3;3
+101168;MAN Truck & Bus SE;5;4
+149567;Pella Sietas GmbH;7;2
+118147;KmB Technologie GmbH;4;3
+147094;AUMA Drives GmbH;14;3
+107482;Wagener Technik GmbH;4;1
+127528;MWN  Niefern;9;4
+107044;ANTRIEBSTECHNIK DELTA;4;1
+130069;Intec Engineering GmbH;19;4
+150346;SPG Steiner GmbH;3;3
+117785;Satherm GmbH;4;1
+151484;ebm-papst St. Georgen GmbH & Co. KG;19;4
+129886;A+B Tank- und Anlagentechnik GmbH;1;4
+105780;CHIRON Group SE;9;4
+109463;Federal-Mogul Burscheid GmbH;14;4
+118428;August Berghaus GmbH & Co. KG;6;3
+107825;Bantleon Hermann GmbH;4;1
+139542;3defacto GmbH;1;4
+133582;Martin Zieglmeier;5;3
+148582;Liberty Blue Shipmanagement;10;3
+151435;Apleona Gebäudetechnik GmbH;6;1
+149060;Industrial Electronic - Indel;4;1
+149362;EMAG Systems GmbH;16;4
+111209;GKN Driveline Deutschland GmbH;1;3
+129825;NMS Ltd.;24;3
+147263;MAHLE Filtersysteme GmbH;3;3
+118947;DOW FRANCE SAS;17;3
+129768;Raffinerie Heide GmbH;10;4
+151707;Knauber Contracting GmbH;6;1
+117439;Kößler technologie GmbH;5;4
+106366;M.GUTMARK CO.LTD.;23;1
+110537;Fuchs Lubritech GmbH;19;3
+111322;Daimler AG;19;3
+131296;SAIPOL;17;3
+119267;Altmann GmbH &  Co. KG;4;1
+106827;ELBTRADE;1;1
+139067;Schrader Fluid Technology GmbH;6;1
+148988;IOW Trade Sp. z o.o.;8;1
+130016;Geisler GmbH;1;3
+148316;thyssenkrupp Valvetrain GmbH;7;3
+123079;Trefz GmbH;4;1
+5204200;Filtration Group s.r.o.;3;3
+130207;REMONDIS Industrie Service;4;1
+149469;Sud Marine Shipyard;3;2
+148764;sciprotec industrial plant;7;3
+150889;AXIOME Frimo Group;17;3
+107101;ROHDE U.SCHWARZ;13;3
+142273;Hölker GmbH & Co. KG;14;1
+130146;MS ENGINEERING A/S;8;2
+111075;DGS System GmbH;16;4
+129895;Bayer Business;6;3
+140498;Pister Kugelhähne GmbH;19;3
+132741;Machining Centers;15;4
+105770;Waldrich Siegen;14;4
+118345;Walter AG;16;2
+149337;PSA Automobiles SA;17;3
+149358;Königswarter & Ebell;14;3
+149756;Rubix GmbH;8;1
+112266;Reki Ltd.;3;3
+106048;Knoll Maschinenbau GmbH;9;4
+151861;Paul Bauder GmbH & Co. KG;16;3
+108335;TotalEnergies Raffinerie;19;3
+140278;Hydrosnow GmbH;3;1
+111934;Pöppelmann GmbH & Co.KG;10;3
+149039;Opel Wien GmbH;1;4
+106591;EAST WIND Schiffs- und Werftbedarf;7;1
+106258;Scherer Feinbau GmbH;14;4
+116355;NOYER SAFIA LENS;1;1
+109257;Wurzener Dauerbackwaren GmbH;1;3
+125820;Wiegel Gebäudetechnik GmbH;5;4
+130230;Malteurop Deutschland GmbH;14;3
+149958;LOSMA S.p.A.;15;4
+109681;INMA;4;1
+106008;Zeppelin Systems GmbH;6;4
+105954;Woodward L'Orange GmbH;16;3
+5229700;Filtration Group (Shanghai) Co. Ltd;3;3
+127924;Fil-Tec Rixen GmbH;4;1
+151058;LIEBHERR-COMPONENTS;9;4
+111587;FILTEGA GmbH & Co.KG;1;1
+128880;manroland sheetfed GmbH;14;4
+123240;Still GmbH;14;4
+129463;Kohinoor Energy Limited;24;1
+105605;Robert Bosch GmbH;5;3
+107506;Knoll Hydraulik GmbH + Co.KG;5;4
+118494;Harald Pach;9;3
+129917;Baufeld-Mineralölraffinerie;14;3
+138648;Schäfer Pumpen & Hydraulik GmbH;4;2
+132927;B E B Entsorgungs- GmbH;19;3
+149298;Axalta Coating Systems;6;3
+101039;EvoBus GmbH;16;3
+105652;Robert Bosch GmbH;5;3
+120746;RCO Recycling Centrum GmbH;14;3
+136329;Trinseo Netherlands B.V.;10;3
+106765;LOTZ Hydraulik + Pneumatik GmbH;1;3
+110124;Cosaco GmbH;10;3
+150789;Filterteknik Suomi OY;8;1
+131440;BAYER S.A.S;17;3
+122405;Winkelmann Powertrain;1;3
+110257;Halit Uzun Muehendislik;3;1
+110335;Zeller + Gmelin;16;3
+112416;Bayer AG;6;3
+140034;Paul Bauder GmbH & Co. KG;19;3
+107414;TDK-Technische Dienste;1;3
+105986;Evonik Industries AG;14;3
+141396;Hansa-Flex Hydraulik GmbH;4;1
+147283;MAHLE Ventiltrieb GmbH;5;3
+140444;PreussenElektra GmbH;10;3
+112532;Pittler T & S GmbH;6;4
+129955;Perstorp Chemicals GmbH;4;3
+119380;IFM Elektronic GmbH;9;3
+139739;RAMPF Polymer Solutions;9;4
+149139;K.R. Pfiffner GmbH;9;4
+134896;H&R Ölwerke Schindler GmbH;7;3
+150222;C.A.T.S VAL DE SEINE;18;3
+124659;DOW Deutschland Anlagen-;6;3
+138689;HYDRO SERVICE CONCEPT;17;1
+146875;Ystral GmbH;16;3
+151430;SOPREMA GmbH;6;3
+148441;Christian Pfeiffer;14;4
+107123;PETKUS Technologie GmbH;4;4
+111454;Elutec-OHG;4;1
+151071;Westfalen Chemie GmbH & co. KG;1;4
+132776;Linde Hydraulics GmbH & Co. KG;14;4
+148863;AVEA Entsorgungsbetriebe;4;3
+133635;JL Hydraulik &;8;1
+149346;LEROUX ET LOTZ INDUSTRY (LLI);17;3
+107640;KOHLER GMBH;4;1
+135581;Fangmann industrie;7;3
+108719;APS-Industrietechnik GmbH;4;1
+113056;NODIER EMAG INDUSTRIE SA;3;4
+149751;Aqseptence Group GmbH;9;4
+120097;Fuchs Petrolub SE;14;3
+130191;Renken & Co. GmbH;4;1
+121658;SGS Ablängtechnik GmbH;1;3
+130362;Vestas Wind Systems A/S;29;4
+109021;Moehwald GmbH;5;4
+134114;F.E.S. GmbH;1;4
+108289;Marabu GmbH & Co.KG;9;3
+110157;Europe Direct GmbH;4;1
+111350;Filtros Cartes S. A.;23;1
+137124;Austal Ships;10;4
+138835;REEDEREI NORD GmbH;4;3
+147656;Flowserve B.V.;25;3
+105964;Eickhoff Maschinenfabrik GmbH;14;4
+108252;Continental Teves AG & Co. oHG;3;3
+122700;Dexis Tampleu Spriet Caen;18;1
+147943;HPKJ moving power GmbH;4;1
+125803;PSG Procurement Services GmbH;6;4
+108007;Carl Leipold GmbH;1;4
+151684;D.W. RENZMANN;3;5
+149232;BMI Deutschland GmbH;6;3
+142217;Carpenter GmbH;1;3
+122824;ERIKS Deutschland GmbH;3;1
+107259;DMG MORI Pfronten GmbH;5;4
+140138;WP Kemper GmbH;10;2
+138230;Plansee SE;11;3
+142035;Spie Energy Solutions GmbH;13;1
+109929;Stadtentwässerung Schorndorf;3;3
+148562;Olenex Edible Oils GmbH;7;4
+127227;ThyssenKrupp;6;3
+107164;HYMA Die Hydrauliker GmbH;4;1
+122778;HIFI FILTER FRANCE;17;1
+149799;Willi Elbe;9;3
+150431;Reko-Verpackungen &;7;3
+130076;Klüver Anlagenbau & Service;7;4
+150874;DDP Specialty Products Germany;10;3
+130275;Houghton Deutschland GmbH;1;3
+130986;SEW-USOCOME S.A.S;1;3
+100117;AP Logistics B.V.;3;1
+130211;Adapti AS;26;3
+110287;Filterteknik A/S;8;1
+127214;Shell Deutschland Oil GmbH;10;3
+147242;MAHLE Motor Parcalari Sanayi;3;3
+149911;GIS AG;9;3
+141922;Clariant Plastics & Coatings;6;3
+151232;KRAIBURG Austria;26;3
+148076;Pfeifer & Langen GmbH & Co.KG;1;3
+107371;Erhard Luttkau GmbH;1;1
+107322;Daimler Truck AG;19;4
+118356;FAURE TECHNOLOGIES SA;17;1
+109895;H.P.S. Hydraulik;4;1
+137054;Global Newbuilts Ltd.;1;1
+124848;Leifeld Metal Spinning GmbH;14;4
+108227;Bosch Rexroth Kft.;8;1
+119500;Wolfgang Preinfalk GmbH;3;4
+107920;MAN Energy Solutions SE;5;4
+151253;Landeshauptstadt Kiel;7;4
+149462;Henkel Capital S.A. de CV;3;3
+109286;Albert Handtmann;9;3
+149354;Eickhoff Bergbautechnik GmbH;14;4
+108793;Wakol GmbH;19;3
+125483;Thielenhaus Technologies GmbH;4;3
+105683;ARBURG GMBH + CO KG;9;4
+148610;CIGMA SAS - ACTEMUIM;17;3
+105718;HAWE Hydraulik SE;5;4
+149863;Statkraft Markets GmbH;1;3
+111243;TEGUS Handels-,Technologie-und;4;1
+151714;Alfa Laval Middle East Ltd;31;3
+149494;Caperva Process Technology S.L.U.;1;1
+129546;H&R Chemisch-Pharmazeutische;6;3
+134891;Barry Callebaut Cocoa;10;3
+119200;MAFAC;16;4
+132141;Mubea Tellerfedern GmbH;6;4
+129406;ThyssenKrupp Marine Systems GmbH;7;4
+151695;HINE HYDRAULICS;23;1
+123432;FASE-CIR;17;1
+151457;Al Seer Marine Supplies;2;4
+105891;WAFIOS;3;4
+130251;Sinnerbrink Maschinenbau;6;4
+105666;SKF GmbH;5;3
+130305;Voestalpine Stahl Donawitz GmbH;3;3
+129947;Dyckerhoff GmbH;1;3
+5200600;Filtration Group Korea Ltd;1;3
+149568;ITS (UK) Ltd.;1;1
+118825;Otmar Heim GmbH;1;3
+148597;Tecnologie e Ambiente S.p.A.;23;3
+139354;FIO  SA;17;1
+127620;EPE UK LTD;1;1
+137938;ThyssenKrupp Industrial;14;4
+123036;EBZ Sys Tec GmbH;9;4
+110609;Gustav Grimm Edelstahlwerk;13;3
+130154;Ness Wärmetechnik GmbH;16;3
+108343;Rauh Hydraulik GmbH;4;1
+148620;LIREAL GmbH;14;3
+149689;Proseat GmbH & Co. KG;13;3
+150445;Betz Flow GmbH;5;3
+109331;KTB Import-Export;4;1
+150723;ERIKS Logistics and Service GmbH;8;1
+124053;Filtrox Carlson Ltd.;20;1
+129752;Rickmers Shipmanagement Pte. Ltd.;24;3
+140859;KOCX Trading & Repair (KT&R);3;4
+129904;Machinefabriek Bolier b.v.;1;4
+129950;Dieselmotoren & Antriebssysteme;7;1
+148657;Leadec FM BV & Co. KG;4;1
+138274;AB Components Ltd;28;1
+127173;PREIS Wassertechnik GmbH;16;3
+106133;Alfred Kärcher SE & Co. KG;16;4
+106245;Bürener Maschinenfabrik GmbH;5;4
+106587;VTE-FILTER GMBH;4;1
+150585;The Millboard Company Ltd;1;1
+148389;Stadtwerke Augsburg Wasser GmbH;5;3
+129938;ContiTech Transportband;6;3
+123885;LEW Automotive GmbH;9;3
+108104;Wacker Neuson;5;4
+148621;ESM;17;3
+151343;Rollstar;13;3
+150411;Evonik Industries AG;6;3
+111774;MAG IAS GmbH;9;4
+148713;EZU-Metallwaren;1;2
+148930;K.T.S. Technical Services GmbH;10;3
+123195;NANFOURMA;17;1
+148919;Turbo-Separator AG;9;1
+129920;Fritz Barthel;7;1
+105756;SMS group GmbH;1;4
+106644;Hanon Systems;4;3
+119301;Optiflex GmbH;4;1
+147206;Parker Hannifin Manufacturing;14;4
+129713;Richter + Frenzel GmbH & Co. KG;5;3
+147294;MAHLE Filtersysteme Austria GmbH;3;3
+135771;Christian Berner OY;10;1
+129560;WILO EMU;5;4
+107931;Bharat Forge CDP GmbH;1;3
+147555;GS-Industrietechnik GmbH;9;3
+141161;Hine do Brasil Industria e Comércio;23;1
+151616;Gericke AG;16;4
+128379;NTN Antriebstechnik GmbH;10;3
+151837;Wärtsilä Ibérica S.A.;21;4
+106144;NOLD HYDRAULIK + PNEUMATIK;4;1
+133392;ICOPAL;18;3
+140781;Heinkel Umwelttechnik;7;4
+126957;GH-Induction Deutschland GmbH;19;4
+150835;LANXESS N.V.;10;3
+151192;Leadec Austria GmbH;11;1
+142046;Emag Milano S.r.L.;17;4
+130250;Mineralölhandel;1;1
+150627;URS SPIRIG;16;3
+148686;Leader Hydraulics Ltd.;28;1
+106082;WILCKENS FARBEN GMBH;7;3
+105977;Dr. Baus GmbH;4;1
+109700;SKF GmbH;9;3
+118477;Flint Group Germany GmbH;16;3
+101067;BAUCH CNC GmbH & Co. KG;1;4
+109939;C.D.Wälzholz GmbH;6;3
+150995;Haenchen Hydraulique S.A.R.L.;1;3
+128051;Caterpillar Motoren GmbH & Co. KG;3;4
+112526;Filtros Cartes Catalunya S.L.U.;23;1
+150787;John Deere GmbH & Co. KG;13;3
+110557;IGK Isolierglasklebstoffe GmbH;6;3
+137412;Trevisan Macchine;1;4
+109196;MKR Metzger GmbH;11;4
+129934;Cogema Lda;1;3
+147837;MATEC GmbH;3;4
+107990;SF-FILTER GMBH;8;1
+124226;NORTON Hydraulics (Midlands) Limite;1;1
+125595;GEA Pharma Systems Ltd.;28;4
+134147;Experbuy;6;1
+129970;Smurfit Kappa Hoya;7;3
+150172;Hydraulique Aquitaine;17;1
+146827;Rhea MP Technologies GmbH;8;1
+149557;Lange Hydraulikelemente;9;3
+110131;Renolit SE;1;3
+109766;Stollwerck GmbH;7;3
+141676;Littau GmbH;4;1
+149306;AXEL;17;3
+147323;BP Europe SE;7;3
+118160;SPRELA GmbH;19;3
+109389;TECNOFIL srl;15;1
+5888800;Kirin Filtration (Singapore) Pte Lt;3;3
+150436;A. Albert GmbH;22;1
+140740;Busse & Kuntze Filter GmbH;3;1
+105771;WERKZEUGMASCHINENFABRIK;5;4
+130097;Koll Packband GmbH & Co. KG;4;4
+106148;Felss Systems GmbH;9;4
+128911;AL Ghurair Resources;23;3
+151474;Sappi Germany GmbH;19;3
+140363;Bibus Vietnam E & C Co. Ltd.;23;1
+149982;Promera;6;4
+128244;NKT GmbH & Co. KG;6;3
+149654;MAHLE Engine Systems UK Ltd.;1;3
+148251;Opel Automobile GmbH;1;3
+124252;POWER UTILITIES;28;1
+130087;Loch Präzisions;1;4
+108434;S.A.R. Elektronic GmbH;5;2
+147905;Hans Pfeiffer GmbH;9;3
+149492;Miavit GmbH;26;3
+106180;UNIVERSAL HYDRAULIK GMBH;14;4
+117013;AUTOMATEC;1;1
+105740;FTE automotive GmbH;5;3
+107342;GIMA;18;4
+148741;Uniper SE;4;3
+123038;Maschinenfabrik Herkules;14;4
+121373;Simpex Hydraulik GmbH;4;1
+105881;Benhil GmbH;1;4
+129945;Evonik Antwerpen N.V.;10;3
+127775;Norderwerft  Repair GmbH;10;3
+111459;Georg Boerner GmbH & Co. KG;14;3
+105648;APA - KANDT  GmbH;3;1
+129742;Mitteldeutsches Bitumenwerk;19;3
+105963;HERMA GmbH;9;3
+108873;Elsaesser Filtertechnik GmbH;3;1
+107670;Görgü Hydraulik-Maschinenbau GmbH;4;1
+146738;Franz Gottwald GmbH & Co.KG;4;1
+134970;Europa Crown Limited;20;1
+122166;Bayer AG;10;3
+125640;Tauber Rohrbau GmbH u. Co.KG;14;3
+149759;Hennecke-OMS S.p.A.;15;4
+130171;Perlwitz Armaturen GmbH;1;3
+112337;Peter Ungerer;9;3
+151094;Markt Bad Birnbach;13;3
+120092;SF Filtres S.A.;3;1
+106030;O. &  L.;6;3
+107451;Gema Switzerland GmbH;16;4
+151081;Wilhelm Lingsch GmbH;25;2
+105701;Volkswagen AG;7;3
+106213;Industrievertrieb Rossius KG;4;1
+150657;VSP Filter GmbH;4;1
+151364;PROMATEC SAS;17;3
+151057;ENA Filter GmbH;4;1
+138272;Multi Factor Europe Ltd;20;1
+110599;FRÜTEC Technical Supply GmbH;3;1
+108513;Theysohn;7;3
+151361;Essity Operations Mannheim GmbH;19;3
+137057;LANXESS Deutschland GmbH;6;3
+119740;TISCO Europe GmbH;4;1
+111707;Richard Bergner GmbH & Co. KG;5;3
+150510;Rotring-Hische GmbH;7;4
+151778;BMW Manufacturing Hungary Kft.;11;3
+119708;Piller Entgrattechnik GmbH;1;4
+132674;Deutsche Aircraft GmbH;5;4
+148609;EcoFilterSolutions GmbH;10;4
+105946;Schwäbische Werkzeugmaschinen GmbH;9;4
+127629;Leser GmbH & Co. KG;10;3
+137876;PSA AUTOMOBILES S.A.;17;3
+136745;KAW KIEHL KG;5;3
+112323;HEMO GmbH;3;4
+128050;K.T.S. Technical Services e.K.;1;1
+151649;DELTAFLUID SRL;15;1
+130167;OEG GmbH;1;1
+107511;LINDT & SPRUENGLI;14;3
+128609;ThyssenKrupp Steel Europe AG;6;3
+106519;Maschinenfabrik Niehoff;19;4
+102048;Walter H. Ackrutat;1;1
+105957;Festo SE & Co. KG;9;3
+105517;Daimler AG;19;3
+129563;ExxonMobil Production;7;3
+151072;PREOL a.s.;13;3
+136053;Rubix NV Antwerpen;8;1
+140033;Redimo GmbH;1;2
+110174;ZF Friedrichshafen AG;9;4
+148965;Nippon Oil Pump Co.;16;4
+129954;Deller GmbH;14;3
+109234;Zweckverband Gruppenklärwerk;16;3
+137123;SNC Renault Cleon;3;3
+137632;Bibus Malaysia Sdn.Bhd.;23;1
+149268;Beirow Pumps and Engineering cc;1;1
+132676;Alfa Laval Copenhagen A/S;22;4
+121120;FEUER Powertrain GmbH & Co.KG;4;3
+140405;JACOBS DOUWE;28;3
+101164;Caterpillar Motoren GmbH & Co. KG;1;4
+108397;Hermann Erkert GmbH;16;3
+149205;Lindenschmidt KG;6;3
+110161;Wacker-Chemie AG;21;3
+111443;Gemeinde Rheinmünster;1;3
+106385;GENERAL FILTER PTE LTD.;23;1
+105687;ZF Friedrichshafen AG;9;3
+130148;Aker Ingenieria S.L.;1;1
+131742;EDHD SAS HYDROMAINTENANCE;18;1
+130568;Renault S.A.S.;17;3
+139772;Bircken Apparatebau PGmbH;10;4
+148920;Breisacher GmbH;1;3
+107435;AXA ENTWICKLUNGS- U.;14;4
+149279;Ski Karlov sro;24;3
+108779;Mineraloelraffinerie;9;3
+124076;CONTROL GEAR (FILTRATION) LTD;28;1
+121131;Robert Bosch GmbH;5;3
+105897;Heidelberg Manufacturing;9;3
+150219;European Marine Spares (EMS);1;1
+106755;Süd-Fensterwerk GmbH & Co.;1;3
+149719;Mahle Polska Sp. z o.o.;24;3
+105699;Volkswagen AG;7;3
+121650;STI s.r.l.;15;1
+109797;SKF Industrie S.p.A;15;4
+108631;Leise GmbH & Co.KG;4;1
+108398;Lingemann GmbH;4;1
+148803;Compressed Air Management 2008 Ltd;1;1
+149551;KBW Blickle Hydraulik GmbH;9;4
+147284;MAHLE Industriemotoren-;5;3
+106711;V-Line Europe GmbH;1;1
+147273;Brandt Schokoladen GmbH & Co. KG;14;3
+132109;Brockmann Mineralölhandel GmbH;7;3
+148490;CCK Systems & Control;23;1
+137055;Rhea MP Services OÜ;8;1
+107647;Seven Seas Germany GmbH;7;1
+117284;Harry Roth Präzisionsdrehteile;9;3
+124557;Freund Drehtechnik GmbH;6;3
+148206;MIE SERVICES LTD;24;3
+140545;Jacobs Douwe Egberts DE GmbH;10;3
+107062;WERKZEUGMASCHINENBAU;1;3
+125777;PURPLAN GmbH;10;4
+107576;Bibus Menos Sp. z o.o.;8;1
+101198;Dr. Ing. h. c. F. Porsche AG;9;3
+148775;L. Schaible GmbH & Co.KG;13;3
+106539;FUCHS LUBRICANTS;19;3
+148570;VTA Verfahrenstechnik und;14;3
+150420;SEALOCK LIMITED;1;3
+105843;MASCHINENFABRIK;9;3
+140047;ENGIE Services AG;13;1
+151580;Baker & Baker Germany GmbH;10;4
+107391;Haimer GmbH;11;3
+112182;Getriebe- und Antriebstechnik;7;3
+109770;Stöferle GmbH;11;4
+149038;ASK Hydraulik GmbH;14;1
+106712;Stollwerck GmbH;1;3
+139361;EGGER Holzwerkstoffe;14;3
+130282;Tuchel & Sohn GmbH;1;3
+139178;HIFI FILTER SA;17;1
+151505;PTS Group GmbH;4;1
+136828;Bosch Limited;5;4
+105985;dormakaba Deutschland GmbH;14;3
+131513;ABB France;17;3
+151304;SM Coating GmbH;6;4
+108810;Bayer AG;6;3
+106353;Willibrord Lösing;4;1
+110785;Henkes GmbH;4;1
+118969;GKN Driveline Trier GmbH;4;3
+141089;OREXAD VALOUTIL GC;17;1
+108296;WK Hydraulik;4;1
+123101;Bredtmann - Girke;6;4
+109443;DOM Sicherheitstechnik;14;3
+117322;Robert Bosch Power Tools GmbH;5;3
+5889100;Clear Edge Filtration SA (Pty) Ltd;3;1
+131971;EUCO International;3;3
+109026;Eckerle;1;4
+107758;SCHWARK;26;1
+151412;FUCHS OIL CORPORATION;19;3
+119782;Evonik Industries AG;6;3
+137033;SUSA S.Sauer GmbH & Co. KG;14;3
+148624;Unipro & Consulting GmbH;4;1
+134640;GELITA AG;19;3
+106818;DAW SE;6;3
+151209;Skatec Co. Ltd;23;1
+106697;EMAG;16;4
+130074;I.B. Kracht b.v.;25;1
+129603;Max Zeller Söhne AG;25;3
+128141;Maersk Line Limited;2;3
+129995;Mannesmann;1;3
+150715;Alfred Popp & Sohn GmbH;13;3
+119774;SF Filter AG;8;1
+150752;Ardagh Metal Packaging;10;3
+107565;GSN;9;4
+150438;Filtry Przemys?owe Polska Sp. z o.o;8;1
+146828;Tecfilter Comércio de Equipamentos;23;1
+151290;Siemens s.r.o.;13;4
+105990;Schaeffler Techn. AG & Co.KG;5;3
+131487;ALDIANCE SAS;3;1
+150434;CSM Deutschland GmbH;7;3
+147983;Liebherr-Components Deggendorf GmbH;9;4
+107094;COROPLAST;1;3
+110686;Krone Filtertechnik GmbH;4;1
+139816;LEFRANC SAS;1;1
+107466;V.I.T. Systemtechnik GmbH;4;1
+140794;Al Masaood Oil Industry;23;4
+105676;Robert Bosch GmbH;5;3
+149296;Grene Wind Industry Supplies A/S;8;1
+149427;John Morfield Limited;20;1
+149547;ORA drive GmbH;14;3
+150499;Stahlwerk Annahütte;11;3
+137901;B & K GmbH;4;4
+129311;W. Mauch;9;4
+130336;Reflex GmbH & Co. KG;4;3
+105763;ZF Friedrichshafen AG;9;4
+148557;Kloska Technical Marine Sales GmbH;4;1
+121810;COOO Bibus;8;1
+149622;IMERYS MINERALS GmbH;4;3
+147713;BMTS Technology;5;3
+151381;Apleona Schweiz AG;13;1
+141631;Hoffmann GmbH;5;3
+129979;MV Pauline, CONSHIP S. A.;3;3
+105700;Volkswagen AG;7;3
+151157;Gehring Production;14;3
+129982;EST Energetics GmbH;14;4
+118785;Inoteh d.o.o.;8;1
+119828;FILTRES MONNET SAS;17;4
+108548;Hoerbiger Antriebstechnik GmbH;5;4
+110924;Alghanim International General;23;1
+105613;SMS Elotherm GmbH;1;3
+105685;DOW DEUTSCHLAND;10;3
+140494;Evonik Resource Efficiency GmbH;6;3
+132418;VNG Gasspeicher GmbH;14;3
+119513;STRABAG Property and;5;3
+109730;MBR MASCHINENBAU RUNKEL;6;4
+108206;Continental;3;3
+150661;Weber Industrieller Rohrleitungs- &;6;1
+125988;SF-Filter SP. z.o.o.;8;1
+127531;Dr. Johannes Heidenhain GmbH;5;3
+105871;Gertner Service GmbH;1;1
+102923;E.W. Neu GmbH;1;1
+148745;MT Gaschem Antarctic;7;3
+8887;Filtration Group S.R.L.;3;3
+119134;TCM GmbH & Co. KG;4;1
+151141;AAGM Aalener;16;3
+108290;Ludwig Meister GmbH & Co. KG;4;1
+106394;CHINA STEEL CORPORATION;24;3
+130056;Anlagenbau Haas GmbH;5;4
+117883;Opel Austria GmbH;1;4
+107157;Polyplan-GmbH;11;4
+149747;Bals Elektrotechnik GmbH & Co. KG;14;3
+150399;ANTROK PIPING;7;4
+134096;CEFIP-Consulting-Engineering;14;1
+138901;Emag Salach GmbH;16;4
+110747;Filtertechnik Knauf GmbH;4;1
+105778;TBT Tiefbohrtechnik GmbH & Co.;9;4
+117462;Frimo Lotte GmbH;3;4
+107374;RAUH Hydraulik GmBH;4;1
+147249;MAHLE Industrial Thermal Systems;5;3
+105661;Maximator GmbH;14;4
+110057;Musahsi Grolsheim;3;3
+150390;Rauh Hydraulik GmbH;4;3
+130038;Hegler Plastik GmbH;6;3
+150181;SAIPOL;17;3
+151360;Maschinenfabrik NIEHOFF;24;4
+129885;Annen Verfahrenstechnik GmbH;1;3
+119891;Speedfluid S.a.s.;15;1
+129534;Imatech BV;1;3
+150982;Behörde für Schule;10;3
+121099;SLE Technology GmbH;5;4
+130195;SASOL Germany GmbH;1;3
+130022;Gegenbauer Facility;13;1
+149478;Rubix B.V.;8;1
+128028;Gebr. Friedrich GmbH & Co. KG;10;1
+128089;Costa Crociere S.P.A .;2;4
+132660;F.M.I. SRL a socio unico;15;3
+130142;Mainova AG;14;4
+147241;MAHLE GmbH;5;3
+141436;Vestas Offshore Wind A/S;29;4
+150413;Troester GmbH & Co. KG;10;3
+108018;Alois Berger GmbH & Co.KG;13;3
+147630;Uniper Kraftwerke GmbH;1;3
+148645;Cleverfilter GmbH;4;1
+131579;Rubix;17;1
+106491;PRAEWEMA;6;1
+151596;Meier-Wiedmann GmbH;5;4
+147140;HSR GmbH;4;1
+147367;Fluid Solutions GmbH;10;1
+149752;Pneumatech;4;1
+137336;PMC Hydraulics (Qingdao) Co., Ltd.;8;1
+149388;Putsch GmbH & Co. KG;14;4
+117529;A.S. Création Tapeten AG;14;3
+117345;International Filter Center Co.;23;1
+150479;Daimler Truck AG;16;3
+123216;CAPPE SOUPLET NANTES;17;1
+106482;M. Rottmoser e.K.;4;1
+107139;Cargill GmbH;7;3
+107159;INNOVATHERM;6;4
+129903;ARDAGH Glass GmbH;10;3
+119428;Wendland Zerspanungs-;7;4
+147704;Consolidated Industrial Supplies Co;23;1
+108579;Hydrobar;4;1
+105969;ERIKS Deutschland GmbH;8;1
+131431;SAIPOL;17;3
+108567;Bilfinger EMS GmbH;10;4
+149482;Vopak Dupeg Terminal;7;3
+127888;FAIRPLAY Schleppdampfschiffs-;10;3
+107128;SAMAG Saalfelder;14;4
+110555;Filterteknik Sverige AB;8;1
+151060;KOEPFER Gear GmbH;9;4
+131733;COMAU S.P.A;15;4
+149683;YARA Tertre SA / TET;7;3
+151219;Continental Automotive;10;3
+132352;Sell GmbH;1;4
+107548;NANOVAL GmbH &Co.KG;10;3
+106720;Dr. Roschig;4;1
+130257;Ardagh Metal Packaging;3;3
+149549;MIAS Filter AB;8;1
+111598;Wellmann Anlagentechnik GmbH;14;1
+118551;Nölle + Nordhorn GmbH;4;1
+129601;Paul Wurth International S.A.;24;3
+107202;Webac Gesellschaft;4;3
+124728;SF-Filterdienst GmbH;8;1
+129476;Zementwerk Hatschek GmbH;1;3
+106533;Geze GmbH;1;3
+151926;Daimler Buses GmbH;11;3
+137558;Präzisions-Automatendreherei;4;1
+107099;OEL- & FILTER;4;1
+151821;Heraeus Site Operations;6;3
+140237;PTS Industrietechnik GmbH;3;1
+109691;Brammer GmbH;3;1
+130200;Nikolaus Sorg GmbH;5;3
+125288;Trianel Gasspeicher Epe;6;3
+147602;Constellium Rolled Products Singen;16;1
+105674;Moog GmbH;9;4
+149743;Carl Zeiss SMT GmbH;9;3
+107184;BP Europa SE;14;3
+124443;Lactosan GmbH & Co. KG;11;3
+120568;Bibus Ukraine LLC;8;1
+117058;TRANSFLEX;18;1
+107785;HyPneu GMBH;4;1
+137475;VTA Verfahrenstechnische;5;4
+130258;Schauenburg;4;4
+117280;Schlosserei Majerus GmbH & Co. KG;5;2
+106381;Engel Austria GmbH;5;4
+106018;Josef Kalveram GmbH + Co.KG;14;4
+105608;Robert Bosch GmbH;5;3
+107392;OBE GmbH & Co. KG;19;5
+142351;ATROTECH GmbH;3;4
+122534;Lechler GmbH;16;4
+131312;IMERYS PCC FRANCE;1;3
+90322;Service Ausland;3;5
+122227;Inter Sea Services & Trading GmbH;4;1
+106290;TROX GMBH;6;3
+122059;AUMA Riester GmbH & Co. KG;1;3
+127349;ATI Handels GmbH;4;1
+101085;Compair Drucklufttechnik;21;4
+110413;Th. Niehues GmbH;4;4
+112268;Petrochemical Industries Co (K.S.C);24;3
+105711;Lippold GmbH;4;1
+5550500;Filtration Group Reedsburg;3;3
+150153;PCI SCEMM;17;3
+117545;R.Bosch Manufactur. Solutions GmbH;5;3
+106567;UNIOR;24;4
+137698;RobMation GmbH;1;4
+107578;ALTHA INDUSTRIEPRODUKTE;5;4
+138048;FFG Werke GmbH;14;4
+106732;HEIDELBERG Cement AG;14;3
+106181;AS-CREATION;6;3
+138698;Reiner Gross GmbH;7;3
+149042;Jowa AG;4;3
+138691;OILGEAR TOWLER SAS;1;2
+119354;J&S Automotive Technology;7;3
+151466;Mercurius Handelsgesellschaft mbH;4;1
+150934;Castrol Germany GmbH;10;3
+120121;Holcim GmbH;1;3
+108011;DMT-Drehmaschinen GmbH & Co. KG;9;2
+129542;trans-Mar-supply GmbH & Co. KG;1;1
+129946;Solvay Chemicals GmbH;14;3
+119322;Hubert Zumbrägel GmbH;4;1
+142117;FIVAL ELAUS;18;1
+126842;Veltrup Prozesstechnik GmbH;4;3
+128817;Combé Anlagenbau GmbH;4;1
+138399;Andritz Frautech S.R.L;15;3
+133609;MT Gas Chem Pacific;10;3
+151176;Nobiskrug Yachts GmbH;13;3
+150677;Wacker Chemicals(Nanjing)Co.,Ltd;21;4
+123049;Nilfisk SpA;15;4
+140963;Gema Eastern Europe SRL;16;4
+151409;Rousselot Isle S/L;17;3
+151016;Bibus Portugal, Lda;23;1
+109820;EFTEC Engineering GmbH;9;4
+111389;Robert Bosch GmbH;5;3
+105842;Alfing Kessler;9;4
+127371;Gema (Shanghai) Co.,Ltd.;16;4
+150962;Elsässer Filtertechnik GmbH;4;1
+130315;Wacker Chemie AG;21;3
+149497;Bühler Alzenau GmbH;14;4
+127921;Reederei F. Laeisz GmbH;7;3
+127530;PREMETEC Automation GmbH;6;4
+127688;ThyssenKrupp Marine Systems GmbH;10;2
+129949;DFDS A/S;24;3
+108062;GEA Westfalia Separator Group GmbH;6;4
+148994;Bonback GmbH & Co. KG;6;3
+106847;GERLIEVA SPRUEHTECHNIK GMBH;16;4
+147291;MAHLE ANAND Filter Systems;3;3
+122261;YAMAZAKI MAZAK FRANCE;1;4
+130152;NORDFOLIEN GmbH;10;3
+141217;Elaskon Sachsen GmbH & Co. KG;13;3
+130157;Raesch Quarz (Germany);1;3
+117302;Manasek Hydraulik und;4;1
+119305;Dressler;9;4
+107431;Thomas Filtertechnik GmbH;4;1
+128409;Deutsche Edelstahlwerke;14;3
+111346;Zeppelin GmbH;6;4
+105760;Robert Bosch Automotive;5;3
+105664;MONTA;11;3
+105597;Bühler Technologies GmbH;4;1
+148894;Industrietechnik Tholey;9;1
+133920;ZF Wind Power Antwerpen NV;29;4
+138180;FESTO Sp. z o.o.;24;3
+137064;AGM Filtri SRL;15;1
+108621;EMCO Magdeburg GmbH;1;4
+124757;CT Elastomer-Beschichtungen GmbH;6;3
+121292;PaSyS;1;4
+110356;Dr. Herfeld GmbH & Co.KG;6;4
+141223;Taucher Knoth (Nachf.);7;3
+105801;Grob Werke GmbH & Co. KG;11;4
+125482;Achenbach Buschhütten GmbH & Co. KG;1;4
+129858;Holcim (Deutschland) AG;1;3
+118174;Accxon Filtration GmbH;4;1
+115923;STAUBLI FAVERGES SCA;17;3
+112589;Dingbro Ltd - Industrial Filtration;20;1
+148866;Nordland Papier GmbH;7;3
+105607;Robert Bosch GmbH;5;3
+140400;SEFYDRO;17;1
+120925;PRIMACON GmbH;11;4
+109608;PAUL WURTH S.A.;25;3
+107079;LANG SPANNWERKZEUGE GMBH;1;4
+130234;Straub-Verpackungen GmbH;9;3
+130219;Kabel Premium Pulp & Paper GmbH;4;4
+138181;Ruf Gebäudetechnik GmbH;4;3
+107102;Thoben Antriebs- u.;4;1
+148779;APODIS GMBH;4;1
+150871;FAMA srl;15;4
+125587;Global Logistics Support GmbH;4;1
+147961;IFA Powertrain GmbH & Co.;13;3
+112398;Ehrhard Müller KG;4;1
+142134;GEA Mechanical Equipment;6;4
+2435;Filtration Group SAS;3;3
+106316;Friedrich Pietzcker KG;1;3
+107034;PAPIER -U.KARTONFABRIK;1;3
+106388;BIBUS HYDRAULIK AG;8;1
+148838;Deinzer + Weyland GmbH;14;1
+138713;HK-CON GmbH;6;2
+105862;Oerlikon Neumag;1;3
+127803;PROMARINE GmbH;3;1
+149366;Matschuk KG;14;3
+148568;Sandvik Tooling Suppyly Renningen;9;4
+151090;BIBUS Industry doo;8;1
+108471;Flint Group Italia S.p.a.;15;3
+108286;Beck Machinenfabrik GmbH;13;4
+137538;G.B. Ambrosoli S.p.A.;15;3
+149623;Stefan Toelke;25;3
+132928;B. Braun Melsungen AG;6;4
+139773;BOSTIK SA;18;3
+140964;Pieralisi Maip;23;3
+131603;LEROUX ET LOTZ TECHNOLOGIES;1;4
+149253;Fuchs Lubricants Benelux NV;14;3
+148594;MT Gaschem Adriatic;4;3
+107111;Wilhelm Feldmann;7;4
+105978;Uhde High Pressure;6;4
+127957;Fr. Fassmer GmbH & Co. KG;10;3
+125920;Robert Bosch Elektronik GmbH;13;3
+108517;CAMEO SPA;15;3
+133592;HEFFI FILTRATION;17;3
+132484;Rubix S.p.A.;15;1
+151561;KTC Systemtechnik GmbH;10;4
+150990;AGC f glass GmbH;7;3
+107725;Hülswitt GmbH;14;4
+105573;Hellmut Springer;4;1
+132982;SuperYacht Spares B.V.;2;1
+105735;KraussMaffei Technologies GmbH;11;4
+138227;IBD Solutions GmbH;6;4
+121885;Robert Bosch  AG;5;4
+106659;HOECKER ANLAGENBAU GMBH;7;4
+127900;Schiffahrts-Gesellschaft;10;3
+140518;Sinus GmbH;4;2
+108638;SF-Systeme Buechele GmbH;9;4
+105391;Filcom GmbH;4;1
+110273;Zahnradwerk Nord GmbH;1;3
+130125;Mabeconta S.L.;23;1
+149092;IESA Limited;1;1
+5203800;Filtration Group Process Inc;3;3
+105844;Karl Klink GmbH;19;4
+106458;Ketten Wulf Betriebs GmbH;14;3
+151422;FGL Fürstenwalder Futtermittel-;19;3
+105622;Voith Turbo GmbH & Co. KG;3;4
+106739;SCHMID GMBH;11;4
+122167;Bosch;24;3
+107602;JANKOVITS Engineering Kft.;8;1
+105814;Gebr. Heller GmbH;9;4
+149581;EMAG Milano S.r.l;17;3
+5888600;Filtration Group Japan Corporation;3;3
+129519;GHT Giessbach Hydraulic Tools;4;1
+128927;Grillo-Werke AG;6;3
+150471;Trokamed GmbH;1;3
+150046;Intervalve Research and;7;3
+101034;Rolls-Royce Solutions GmbH;2;4
+105061;Knorr-Bremse;21;4
+129677;Currenta GmbH & Co. OHG;14;3
+136096;Bugsier-, Reederei- und;7;3
+108724;DOEDIJNS;7;1
+119306;BP Europa SE (LU);10;3
+106303;Bär + Co.;9;4
+151733;Sonepar France Distribution;17;4
+126025;Oscar Fäh AG;4;1
+120532;Dorninger Hytronics GmbH;5;4
+133931;HYDRO PLUS SARL;18;3
+149586;FIVES MAINTENANCE;18;3
+105672;J. Wagner GmbH;11;4
+137934;FFG-Werke GmbH;16;4
+106999;BIBUS  S.R.O.;8;1
+122616;WIKA Alexander Wiegand;1;3
+130450;Camfil S.p.A.;23;1
+115458;Hydrotec;18;1
+149666;Adolf Roth GmbH & Co. KG;4;1
+130075;Kemostal Process Technology;3;4
+105995;Bosch Thermotechnik GmbH;13;3
+118366;Covestro Deutschland AG;6;3
+120553;YARA Brunsbüttel GmbH;10;3
+128132;Fredenbecker Technik & Handels GmbH;7;3
+106919;Emag Koepfer GmbH;16;4
+139350;Wärtsilä Services Switzerland Ltd.;25;4
+122333;Nabaltec AG;19;3
+116291;CERI;18;4
+151907;Bisenius Projektmanagement GmbH;6;1
+133424;SGMH;18;1
+119613;Reich GmbH;6;3
+150135;IPCO Germany GmbH;9;3
+109704;Knorr-Bremse;21;4
+124133;Freudenberg Filtrat.Technologies UK;20;1
+110149;MHS Hydraulik Systeme GmbH;5;4
+150468;KSB Service GmbH;14;4
+149357;J.M. Voith SE & Co. KG/VTA;9;4
+132579;Yara Italia S.p.A.;15;3
+112088;Waffenschmid;27;3
+119302;Unior;9;3
+147611;Stöferle Automotive GmbH;5;4
+111546;Knorr-Bremse;21;4
+130328;Weinreich;14;4
+101346;Carl Werthenbach;4;1
+129991;ESN Deutsche Tischtennis;5;3
+129620;Wasserversorgung Ruhstorfer;11;3
+105600;ROBERT BUERKLE GmbH;1;4
+107958;Gerhard Mederer;3;3
+105645;TH. KEKEISEN GMBH & CO.;1;1
+107962;hubergroup Deutschland GmbH;1;3
+150898;SR Industriecervice GmbH;1;1
+140159;Bearing Man Group (Pty) Ltd.;12;1
+107275;NICKELHUETTE AUE GMBH;14;3
+112274;Otto Zimmermann GmbH;1;1
+139161;BIBUS Baltics SIA;8;1
+125174;Kramp Danmark A/S;8;1
+118795;WMZ Werkzeugm. Ziegenhain GmbH;1;3
+116249;Appydro;17;1
+127532;CVS engineering GmbH;1;3
+147329;CIR CENTRE LOGISTIQUE;17;1
+105799;BURKHARDT + WEBER;9;4
+148680;United Air Specialists Unc.;3;3
+118867;Pressehaus Stuttgart Druck GmbH;9;3
+132993;Allnex Resins Germany GmbH;14;3
+150718;IG Metall;25;3
+121898;Göhler GmbH & Co.KG;14;4
+151032;Mehler Texnologies GmbH;14;3
+107949;PTS Hydraulik GmbH;4;4
+151028;FLUIDEXX EAD;8;1
+140406;Perfomance Polyamides GmbH;19;3
+135887;Jackon GmbH;10;3
+5888700;Filtration Group S.R.L.;3;3
+149602;Trianel Kohlekraftwerk;25;3
+120589;Optitek GmbH;6;4
+134308;BASF Antwerpen NV;19;3
+136926;Cerdia Produktions GmbH;16;3
+125395;AFMECH GmbH;1;1
+148727;Global Services (Europe) Ltd.;28;1
+149846;Flutech Industrie;18;3
+106981;Interlit Filtration GmbH;5;4
+148905;Alfred Heyd GmbH & Co. KG;1;3
+151554;AMPERE CLEON SAS;17;3
+110839;Tecnologie Diesel S.p.A.;15;4
+132163;FOGTEC Brandschutz GmbH;6;4
+107625;Mayfran GmbH;14;4
+106120;Rubix GmbH;8;1
+133196;Outokumpu Nirosta GmbH;14;3
+119600;Kamat GmbH u.Co.KG;6;4
+108832;PMC Hydraulics A/S;8;1
+107888;Starrag GmbH;14;1
+149070;GTIE Industrie Actemium Poissy;17;3
+151510;ACLA-WERKE GmbH;6;3
+122117;Haas u. Kellhofer;4;1
+120032;BIBUS o.o.o.;8;1
+149813;SOLVAY;7;3
+106235;Erwin Halder KG;11;4
+108689;FTS;11;3
+105879;Krones AG;19;4
+106456;Licon mt GmbH & Co. KG;11;4
+127923;Fr. Lürssen Werft GmbH & Co. KG;2;4
+105834;Alfred Veith GmbH & Co. KG;13;4
+131485;JOHN MORFIELD LTD.;20;1
+151599;Metallbau;19;4
+149280;Bon Gelati GmbH & Co. KG;14;3
+126278;BENTEC GmbH;1;3
+105717;HYDRAULIK-BAUTEILE;4;1
+126424;OMEGAFLUID S.R.L.;23;1
+127910;Raffinerie Heide GmbH;10;3
+128932;Rudolf Henrichsmeyer;14;3
+130308;MITSUBISHI POLYESTER;6;4
+127165;Hüttenwerke Krupp Mannesmann;14;3
+106784;TTH-Techno Trade Hamburg GmbH;4;1
+109050;Langnese Honig GmbH & Co. KG;7;3
+147511;Standard Aggregatebau Evers;7;3
+119820;ENBW Energie;19;3
+106992;Daimler AG;16;3
+124477;Woodward L'Orange GmbH;16;3
+150429;DFE Pharma;6;3
+123066;PMC Hydraulics AB;8;1
+149444;Transnord Zahnrad- und;13;3
+105993;Arthur Klink GmbH;19;4
+106510;Aurubis AG;1;3
+151362;AVL SCHRICK Performance;14;3
+123069;Rhea MP Industry AG;8;1
+130078;KSB Österreich GmbH;11;4
+129743;Starke & Sohn GmbH;7;4
+150883;Wintershall Dea Deutschland GmbH;10;3
+151779;TREUREAL Property Management GmbH;6;1
+123815;August Storck KG;4;3
+107467;TEWE GmbH;7;4
+151088;Bibus (UK) Ltd.;28;1
+148782;Fives Landis LTD;20;3
+148717;Knauf Insulation GmbH;14;3
+149635;Reca GmbH;7;3
+149990;Uniper Energy Storage GmbH;14;3
+110765;Koch Consulting + Export e.K;4;1
+105519;KNDS Deutschland GmbH & Co. KG;5;4
+137932;Prinzbach GmbH & Co. KG;13;2
+135558;Power Oil Rostock GmbH;10;3
+148638;EMS GmbH;13;1
+106770;KS Kolbenschmidt GmbH;9;3
+133796;NTN-SNR Cévennes;17;3
+139945;EFTEC Ltd;1;1
+148752;W. Adolph;4;1
+147557;LIEBHERR-Hausgeräte;5;4
+106029;Topas Advanced Polymers GmbH;6;3
+139769;Dussmann Service Deutschland GmbH;4;1
+106212;Kajo GmbH;6;3
+151503;Filter-Müller GmbH;4;1
+106849;SAIP IMPIANTI;15;4
+111940;Räuchle GmbH & Co. KG;11;3
+105768;WEISSER J.G. SOEHNE;9;4
+149954;SERTEC;17;3
+150425;Dörken MKS-Systeme GmbH & Co. KG;3;3
+109975;Bibus Hungary KFT;8;1
+110080;MIPA SE;11;3
+119462;KAMAX Tools & Equipment;14;3
+130119;LSS Logistik;14;4
+138345;Nemak Dillingen Casting;19;3
+147693;APODIS Technologies GmbH;4;4
+134011;Buck Tankanlagen GmbH;11;4
+149005;AuenBurg GmbH;4;1
+106424;PEQUIMIL LDA.;23;1
+129856;Nyffenegger Pumpentechnik;25;3
+150158;Covameat NV;17;3
+151255;PD-Technik;7;1
+120018;Eigenbetrieb;1;3
+121870;Industrial Electronic;3;1
+141412;Wolfgang Anderer;4;1
+119112;Synthopol Chemie Dr. rer.pol.;7;3
+149765;Energiedienst Holding AG;1;3
+110321;Boie GmbH;4;1
+100061;Wärtsilä Finland Oy;21;4
+130228;SUET Saat- und;14;3
+105619;HENKEL AG + Co. KGAA;19;3
+130085;Kroll Fahrzeugbau-;14;4
+110922;Mercer Stendal GmbH;10;3
+149646;Wainbee Ltd.;8;1
+108016;BÜHLER AG;25;4
+110580;Süddeutscher Verlag;1;3
+128027;TMH Elektrotechnik GmbH;1;1
+129936;Stute Bauträger- u. Beteiligungs-;1;3
+148149;INDEX FRANCE S.a.r.l.;17;3
+105838;Schaeffler Techn. AG & Co. KG;5;3
+131754;Hennig France SAS;17;3
+105714;Kracht GmbH;14;4
+107644;Polo Filter-Technik Bremen GmbH;7;4
+151479;H. B. Fuller Deutschland;10;3
+120920;RAMPF Eco Solutions GmbH & Co. KG;19;3
+122191;Schirm GmbH;10;1
+118446;FORTEK SRL;15;1
+105721;GKS HYDRAULIK GMBH & CO.KG;9;4
+101059;A.S.M Allseas Marine GmbH & Co.KG;22;1
+141233;Bibus (Thailand) Co., Ltd;23;1
+105766;Coperion GmbH;16;4
+131767;CEFILOR;1;3
+107540;Continental Automotive GmbH;14;3
+149340;MPW GmbH;19;3
+108578;KOEPFER;9;4
+149829;Windmöller GmbH;7;3
+138988;Maersk A/S;2;4
+150042;IGP Chemie GmbH;14;3
+112433;Hartmut Hesse;7;4
+127787;Oldendorff Carriers GmbH & Co. KG;3;3
+151130;Desmet Ballestra Group s.a.;10;4
+118813;TRUMPF Laser GmbH;9;4
+123485;TIB Chemicals AG;14;3
+105942;SONA AutoComp Germany GmbH;14;4
+123540;Nordex Energy SE & Co. KG;29;4
+149805;Strabag Property and Facility;14;3
+122984;Schwenck Maritime Procurement;1;1
+105604;Bosch Rexroth AG;5;4
+106387;Eigenbrodt AB;8;1
+130879;EUROPEAN TECHNOLOGIE CONCEPT;1;3
+105865;Gleason-Pfauter;9;4
+135785;BT Brammer Distributie Centrum;8;1
+121029;K.R. Pfiffner AG, Utzenstorf;9;4
+110222;Olbrich GmbH;14;4
+109154;ThyssenKrupp Schulte GmbH;14;3
+149353;Ademco 1 GmbH;13;3
+129912;Beda-Technology Limited;1;4
+129304;PT. Tekno Fluida Indonesia;23;1
+148753;innogy Gas Storage NWE GmbH;14;1
+140499;Ismael Antunes de Sousa, Lda;1;2
+127604;Präzisionsteile Dresden;6;4
+130105;Luitpoldhütte GmbH;19;3
+149238;Weru Präzisionsdrehteile-;13;3
+150760;ERIKS Logistics and Service GmbH;8;1
+150609;ENGIE Deutschland GmbH;16;3
+148913;Ryland Research Limited;1;1
+136770;Evac Germany GmbH;10;1
+133437;VDL Delmas GmbH;10;4
+128781;Poschner & Bock;25;1
+125891;VARINELLI S.R.L.;3;3
+118950;Environmental Systems GmbH;7;3
+149394;Sicad S.p.A.;23;3
+149802;SolutekniK Systeme;23;1
+105538;Robert Bosch GmbH;5;3
+125341;SKL;1;3
+141955;Baumanns & Kröll;4;3
+105815;Hammelmann GmbH;14;4
+129386;Protein- und Oelwerk;14;3
+117550;Bunge Deutschland GmbH;19;3
+141956;HEMA Umformtechnik;1;4
+108506;JRA GmbH;4;1
+112456;LANXESS Deutschland GmbH;6;3
+115620;HES;3;1
+127294;Wolfgang Endress GmbH & Co.KG;5;3
+128100;Hyundai Heavy Industries Co. Ltd.;2;2
+130149;Niedergesäss;7;3
+148608;Lubropoint di Usuardi Maria;3;3
+148879;Mecelec Design Ltd;1;1

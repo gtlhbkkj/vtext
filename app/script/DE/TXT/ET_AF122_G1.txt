@@ -1,0 +1,93 @@
+# Data for arr_headers[]
+ET_SECTION_!_1_!_1. Abstreifer (Abstreiferleiste, Rückspüllkanal)
+ET_SECTION_!_2_!_2. Dichstungssatz
+ET_SECTION_!_3_!_3. Buchsensatz
+ET_SECTION_!_4_!_4. Motor
+ET_SECTION_!_5_!_5. Gehäuse und Deckel
+ET_SECTION_!_6_!_6. Rest: Mitnehmer, usw.
+ET_SECTION_!_7_!_7. Antriebswelle
+ET_SECTION_!_8_!_8. Komplettfiltereinsatz (mit und ohne Antrieb)
+ET_SECTION_!_9_!_9. Elemente
+ET_SECTION_!_10_!_10. dP Manometer
+ET_SECTION_!_11_!_11. Ventile
+END_OF_BLOCK_ET_SECTION
+
+EZ_!_AF122_G1_!_*_!_5050-20182933-S00
+
+
+
+####################################################################################
+##                                     AF122/G1                                   ##
+####################################################################################
+
+############   SECTION 1 /// Abstreifer (Abstreiferleiste, Rückspüllkanal)  ############
+ETS01_!_AF122_G1_!_*_!_72498139 *** VERTEILER N AF122 KS PPS GF40_!_391.00
+
+
+############   SECTION 2 /// D-SATZ  ############
+ETS02_!_AF122_G1_!_*_!_72494754 *** D-SATZ AF122/G1 FKM PTFE VP_!_37.30
+
+
+############   SECTION 3 /// B-SATZ  ############
+ETS03_!__!_AF122_G1_!_*_!_79331752 *** BUCHSE F. AF72 M. BUND/XFM-1820-17_!_n/a
+
+
+############   SECTION 4 /// MOTOR  ############
+ETS04_!_AF122_G1_!_*_!_79717919 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN     VP_!_757.00
+ETS04_!_AF122_G1_!_*_!_79334830 *** MOTORBOCK AF72/G4 ALU BEARB_!_177.00
+ETS04_!_AF122_G1_!_*_!_70534073 *** PNEUM.SCHWENKANTRIEB ED620552 DOPPELTW._!_314.00
+ETS04_!_AF122_G1_!_*_!_76935654 *** MAGNETVENTIL 5/2-WEGE 24V STANDARD FRS_!_255.00
+
+
+############   SECTION 5 /// GEH + DECKEL  ############
+ETS05_!_AF122_G1_!_*_!_72494757 *** DECKEL Z AF12243/G1 ST_!_n/a_!_Baugruppe Deckel AF 12243/G1_!_1:72494682,1:76351407,1:76351415,1:72485915
+
+ETS05_!_AF122_G1_!_*_!_72494760 *** DECKEL Z AF12247 G1 ST_!_n/a_!_Baugruppe Deckel AF 12247/G1_!_1:72494682,1:76351407,1:76351415,1:72485989
+
+
+############   SECTION 6 /// Rest: usw.   ############
+ETS06_!_AF122_G1_!_*_!_78231300 *** DOPPELNIPPEL G 1/2 GF 280_!_n/a
+
+############   SECTION 7 ///  Mitnehmer, Antriebswelle   ############
+ETS07_!_AF122_G1_!_*_!_72485915 *** ANTRIEBSWELLE AF12243/G1 1.0715_!_n/a
+ETS07_!_AF122_G1_!_*_!_72485989 *** ANTRIEBSWELLE AF12247/G1 1.0715_!_n/a
+
+############   SECTION 8 /// Komplettfiltereinsatz (mit und ohne Antrieb)   ############
+ETS08_!_AF122_G1_!_*_!_ETDUM881 *** AF12240-021-00000-3001/G1 mit AF100174-xxx_!_n/a_!_Komplettfiltereinsatz ohne Antrieb mit AF100174-xxx_!_1:ETDUM880,1:ETDUM991
+
+############   SECTION 9 /// Filterelemente   ############
+ETS09_!_AF122_G1_!_*_!_ETDUM991 *** AF120174-xxx F. AF122_!_812.00_!_Segmentelement mit Topmesh / Tragkörper Alu, Filtermedium 1.4571
+
+####################################################################################
+##                          Einzelne Teile AF122/G1                               ##
+####################################################################################
+
+# 1. RSK
+
+# 2. DICHTUNGEN
+
+# 3. B-Satz
+
+# 4. Motor
+
+# 5. Deckel
+72494682_!_DECKEL B AF122/G1 ST_!_n/a
+76351407_!_DICHTAUFSATZ AF73-113/G3 ST LIPPEND._!_28.40
+76351415_!_DICHTSCHEIBE AF736-1136 1.0037_!_11.10
+
+# 7. Antriebswelle
+72485915_!_ANTRIEBSWELLE AF12243/G1 1.0715_!_n/a
+72485989_!_ANTRIEBSWELLE AF12247/G1 1.0715_!_n/a
+
+# 8. Kompletteinsatz
+ETDUM880_!_AF12240-021-00000-3001/G1_!_n/a_!_Komplettfiltereinsatz ohne Antrieb ohne Element
+
+# 9. Elemente
+ETDUM991_!_AF120174-xxx F. AF122_!_812.00_!_Segmentelement mit Topmesh / Tragkörper Alu, Filtermedium 1.4571
+
+# ELEMENTE
+72501711_!_ETDUM991_!_AF120174-001
+72501712_!_ETDUM991_!_AF120174-002
+72486177_!_ETDUM991_!_AF120174-003
+72486176_!_ETDUM991_!_AF120174-004
+72486175_!_ETDUM991_!_AF120174-006

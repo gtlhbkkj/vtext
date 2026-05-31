@@ -5,12 +5,12 @@
 ::
 AF713_H2_!_1_!_Standardausführung
 Filterkopf: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
-Gehäuse: CK15 / C22
-Weitere Einbauten: C-Stahl, GGG
+Gehäuse: Carbonstahl Ck 15 / 1.1141
+Weitere Einbauten: EN-JS 1030, C-Stahl, Edelstahl, Aluminium
 ::
 AF713_H2_!_3_!_Ausführung mit Innenteile Edelstahl
 Filterkopf: Gusseisen mit Kugelgraphit (Sphäroguss) GGG-40 (EN_GJS-400-15 nach EN1563) 
-Gehäuse: CK15 / C22
+Gehäuse: Carbonstahl Ck 15 / 1.1141
 Weitere Einbauten: Edelstahl
 ::
 AF122_G1_!_1_!_Standardausführung

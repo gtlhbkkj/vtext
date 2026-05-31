@@ -11,7 +11,7 @@ BEGIN {
   if (bypass == 1) {
      if ("AF713_H2,AF724_G4" ~ arr[1]) {
        print "\n" mt                >> TMP_DIR "/" UUID ".result.txt"
-       print mt "mit Bypass 20 bar" >> TMP_DIR "/" UUID ".result.txt"
+       print mt "integriertes Sicherheits-By-Pass-Überdruckventil, Öffnungsdruck 20 bar" >> TMP_DIR "/" UUID ".result.txt"
      } else {
        print "\n" mt                >> TMP_DIR "/" UUID ".result.txt"
        print mt "######## IS BYPASS POSSIBLE WITH " arr[1] " FILTER ?"        >> TMP_DIR "/" UUID ".result.txt"   

@@ -1,0 +1,1554 @@
+
+
+
+
+
+
+
+
+151733;Sonepar France Distribution;OE/OES - Key Account;Samuel Macaire
+151645;MAG Hungary Kft;OE/OES - Key Account;Patrick Stäbler
+151616;Gericke AG;OE/OES - Key Account;Benjamin Hille
+151599;Metallbau;OE/OES - Key Account;Florian Winkler
+110161;Wacker-Chemie AG;Endkunden - AM;Marcus Schneeberger
+151596;Meier-Wiedmann GmbH;OE/OES - Key Account;Johannes Schmidt
+126424;OMEGAFLUID S.R.L.;Händler - AM;Rocco Cafaro
+150934;Castrol Germany GmbH;Endkunden - AM;Claudia Vonk
+129945;Evonik Antwerpen N.V.;Endkunden - AM;Claudia Vonk
+5204200;Filtration Group s.r.o.;Endkunden - AM;Nicht zugeordnet
+147877;Guard Endustriyel Urunler;Händler - AM;Rocco Cafaro
+106120;Rubix GmbH;Händler - AM;Thomas Lumpp
+151329;Fource B.V.;Händler - AM;Thomas Lumpp
+151209;Skatec Co. Ltd;Händler - AM;Rocco Cafaro
+120568;Bibus Ukraine LLC;Händler - AM;Thomas Lumpp
+128150;Caperva Quimica S.L.;Händler - AM;Rocco Cafaro
+5229700;Filtration Group (Shanghai) Co. Ltd;Endkunden - AM;Nicht zugeordnet
+151152;BIBUS FRANCE SAS;Händler - AM;Samuel Macaire
+105391;Filcom GmbH;Händler - AM;Schnell, Iris
+105969;ERIKS Deutschland GmbH;Händler - AM;Thomas Lumpp
+105700;Volkswagen AG;Endkunden - AM;Hendrik Hoppe
+107576;Bibus Menos Sp. z o.o.;Händler - AM;Thomas Lumpp
+8887;Filtration Group S.R.L.;Endkunden - AM;Nicht zugeordnet
+149827;Lubropoint S.R.L.S.;Endkunden - AM;Vezzani, Gabriele
+151474;Sappi Germany GmbH;Endkunden - AM;Florian Winkler
+137064;AGM Filtri SRL;Händler - AM;Vezzani, Gabriele
+149719;Mahle Polska Sp. z o.o.;Endkunden - AM;Inside sales International
+151561;KTC Systemtechnik GmbH;OE/OES - Key Account;Claudia Vonk
+151489;Christian Diener GmbH;OE/OES - Key Account;Benjamin Hille
+109063;Comer S.r.l;Händler - AM;Vezzani, Gabriele
+116165;SUPRA FRANCE;Endkunden - AM;Samuel Macaire
+151484;ebm-papst St. Georgen GmbH & Co. KG;OE/OES - Key Account;Florian Winkler
+106212;Kajo GmbH;Endkunden - AM;Kasubke, Rene
+133931;HYDRO PLUS SARL;Endkunden - AM;Ludovic Henry
+101077;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+132579;Yara Italia S.p.A.;Endkunden - AM;Vezzani, Gabriele
+151457;Al Seer Marine Supplies;OE/OES - Key Account;Birger Hahn
+108520;Behringer Corp.;Händler - AM;Thomas Lumpp
+133757;Entek Otomasyon Urunleri San.veTic.;Händler - AM;Rocco Cafaro
+151406;EMAG Salach GmbH;OE/OES - Key Account;Samuel Macaire
+106999;BIBUS  S.R.O.;Händler - AM;Thomas Lumpp
+109570;In.Tec Di Nicolotti Maurizio;Händler - AM;Vezzani, Gabriele
+118366;Covestro Deutschland AG;Endkunden - AM;Kasubke, Rene
+123425;Hainzl Industriesysteme GmbH;Händler - AM;Thomas Lumpp
+147323;BP Europe SE;Endkunden - AM;Hendrik Hoppe
+140406;Perfomance Polyamides GmbH;Endkunden - AM;Florian Winkler
+122753;Hine Renovables S.L.;Händler - AM;Thomas Lumpp
+117058;TRANSFLEX;Händler - AM;Ludovic Henry
+146738;Franz Gottwald GmbH & Co.KG;Händler - AM;Schnell, Iris
+107508;Sika Deutschland GmbH;Endkunden - AM;Benjamin Hille
+105685;DOW DEUTSCHLAND;Endkunden - AM;Claudia Vonk
+151392;Valeo Powertrain GmbH;OE/OES - Key Account;Johannes Schmidt
+106181;AS-CREATION;Endkunden - AM;Kasubke, Rene
+129927;B.V.A. s.r.o.;Endkunden - AM;Inside sales International
+151360;Maschinenfabrik NIEHOFF;OE/OES - Key Account;Inside sales International
+151333;TECO Anlagenvertriebs GmbH;OE/OES - Key Account;Benjamin Hille
+151304;SM Coating GmbH;OE/OES - Key Account;Kasubke, Rene
+151588;Henkel South Africa (Pty) Ltd;Endkunden - AM;Steven Louw
+151290;Siemens s.r.o.;OE/OES - Key Account;Field Service
+151253;Landeshauptstadt Kiel;OE/OES - Key Account;Hendrik Hoppe
+5888600;Filtration Group Japan Corporation;Endkunden - AM;Nicht zugeordnet
+151516;FRIMO Innovative;OE/OES - Key Account;Claudia Vonk
+151081;Wilhelm Lingsch GmbH;Kontraktoren - OE;Inside sales DACH
+108724;DOEDIJNS;Händler - AM;Hendrik Hoppe
+149549;MIAS Filter AB;Händler - AM;Thomas Lumpp
+106388;BIBUS HYDRAULIK AG;Händler - AM;Thomas Lumpp
+148994;Bonback GmbH & Co. KG;Endkunden - AM;Kasubke, Rene
+151071;Westfalen Chemie GmbH & co. KG;OE/OES - Key Account;Sales inactive
+121527;Louis Dreyfus Company;Endkunden - AM;Florian Winkler
+133252;Viterra Magdeburg GmbH;Endkunden - AM;Hendrik Hoppe
+140138;WP Kemper GmbH;Kontraktoren - OE;Claudia Vonk
+151060;KOEPFER Gear GmbH;OE/OES - Key Account;Patrick Stäbler
+151058;LIEBHERR-COMPONENTS;OE/OES - Key Account;Patrick Stäbler
+150871;FAMA srl;OE/OES - Key Account;Vezzani, Gabriele
+101030;BMW AG;Endkunden - AM;Christian Huber
+105977;Dr. Baus GmbH;Händler - AM;Schnell, Iris
+109303;Bibus SK, S.R.O.;Händler - AM;Thomas Lumpp
+151714;Alfa Laval Middle East Ltd;Endkunden - AM;Service Separation
+150706;Winning BLW GmbH;OE/OES - Key Account;Sales inactive
+139529;Bilfinger Engineering & Maintenance;Endkunden - AM;Kasubke, Rene
+147241;MAHLE GmbH;Endkunden - AM;Johannes Schmidt
+150677;Wacker Chemicals(Nanjing)Co.,Ltd;OE/OES - Key Account;Marcus Schneeberger
+105597;Bühler Technologies GmbH;Händler - AM;Schnell, Iris
+151307;SONOLUB;Endkunden - AM;Ludovic Henry
+148657;Leadec FM BV & Co. KG;Händler - AM;Schnell, Iris
+150438;Filtry Przemys?owe Polska Sp. z o.o;Händler - AM;Thomas Lumpp
+134308;BASF Antwerpen NV;Endkunden - AM;Florian Winkler
+147367;Fluid Solutions GmbH;Händler - AM;Claudia Vonk
+150651;CHIRON Group SE;OE/OES - Key Account;Patrick Stäbler
+150510;Rotring-Hische GmbH;OE/OES - Key Account;Hendrik Hoppe
+105898;BASF SE;Endkunden - AM;Florian Winkler
+138274;AB Components Ltd;Händler - AM;Paul Dunne
+105843;MASCHINENFABRIK;Endkunden - AM;Patrick Stäbler
+139283;FRÜTEC technical supply GmbH;Händler - AM;Schnell, Iris
+150468;KSB Service GmbH;OE/OES - Key Account;Marten Hess
+107971;AVISTA OIL Deutschland GmbH;Endkunden - AM;Hendrik Hoppe
+132484;Rubix S.p.A.;Händler - AM;Vezzani, Gabriele
+150452;Wärtsilä Services Switzerland Ltd;OE/OES - Key Account;Marcus Schneeberger
+107990;SF-FILTER GMBH;Händler - AM;Thomas Lumpp
+106539;FUCHS LUBRICANTS;Endkunden - AM;Florian Winkler
+150399;ANTROK PIPING;OE/OES - Key Account;Hendrik Hoppe
+119301;Optiflex GmbH;Händler - AM;Schnell, Iris
+149982;Promera;OE/OES - Key Account;Kasubke, Rene
+149802;SolutekniK Systeme;Händler - AM;Rocco Cafaro
+149958;LOSMA S.p.A.;OE/OES - Key Account;Vezzani, Gabriele
+150397;MFR Power Solution GmbH;Endkunden - AM;Florian Winkler
+110555;Filterteknik Sverige AB;Händler - AM;Thomas Lumpp
+106079;Scholing GmbH;Händler - AM;Schnell, Iris
+108513;Theysohn;Endkunden - AM;Hendrik Hoppe
+150413;Troester GmbH & Co. KG;Endkunden - AM;Claudia Vonk
+106547;Keil Anlagenbau;OE/OES - Key Account;Claudia Vonk
+115458;Hydrotec;Händler - AM;Ludovic Henry
+107167;BASF Polyurethanes GmbH;Endkunden - AM;Claudia Vonk
+106227;Graphit Kropfmühl GmbH;Endkunden - AM;Christian Huber
+149759;Hennecke-OMS S.p.A.;OE/OES - Key Account;Vezzani, Gabriele
+149751;Aqseptence Group GmbH;OE/OES - Key Account;Patrick Stäbler
+149699;NOMOCO Maschinenfabrik GmbH;OE/OES - Key Account;Sales inactive
+129742;Mitteldeutsches Bitumenwerk;Endkunden - AM;Florian Winkler
+149567;Pella Sietas GmbH;Kontraktoren - OE;Hendrik Hoppe
+151130;Desmet Ballestra Group s.a.;OE/OES - Key Account;Claudia Vonk
+149551;KBW Blickle Hydraulik GmbH;OE/OES - Key Account;Patrick Stäbler
+127349;ATI Handels GmbH;Händler - AM;Schnell, Iris
+5550500;Filtration Group Reedsburg;Endkunden - AM;Nicht zugeordnet
+148490;CCK Systems & Control;Händler - AM;Rocco Cafaro
+149340;MPW GmbH;Endkunden - AM;Florian Winkler
+107275;NICKELHUETTE AUE GMBH;Endkunden - AM;Marten Hess
+133517;Exotech;Händler - AM;Steven Louw
+148649;Holcim (Deutschland) GmbH;Endkunden - AM;SERVICE PROCESS
+149497;Bühler Alzenau GmbH;OE/OES - Key Account;Marten Hess
+130105;Luitpoldhütte GmbH;Endkunden - AM;Florian Winkler
+105676;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+149924;Paul Bauder GmbH & Co. KG;Endkunden - AM;Kasubke, Rene
+106310;GEBR.RASCH GMBH +CO;Endkunden - AM;Claudia Vonk
+105695;Volkswagenwerk AG;Endkunden - AM;Hendrik Hoppe
+111350;Filtros Cartes S. A.;Händler - AM;Rocco Cafaro
+119782;Evonik Industries AG;Endkunden - AM;Kasubke, Rene
+129970;Smurfit Kappa Hoya;Endkunden - AM;Hendrik Hoppe
+107888;Starrag GmbH;Händler - AM;Marten Hess
+149479;FRIMO Hungary Kft.;OE/OES - Key Account;Christian Huber
+149218;BASF Agricultural Solutions GmbH;Endkunden - AM;Nicht zugeordnet
+110080;MIPA SE;Endkunden - AM;Christian Huber
+118551;Nölle + Nordhorn GmbH;Händler - AM;Schnell, Iris
+149469;Sud Marine Shipyard;Kontraktoren - OE;Nicht zugeordnet
+110686;Krone Filtertechnik GmbH;Händler - AM;Schnell, Iris
+149388;Putsch GmbH & Co. KG;OE/OES - Key Account;Marten Hess
+106385;GENERAL FILTER PTE LTD.;Händler - AM;Rocco Cafaro
+129895;Bayer Business;Endkunden - AM;Kasubke, Rene
+149362;EMAG Systems GmbH;OE/OES - Key Account;Benjamin Hille
+105990;Schaeffler Techn. AG & Co.KG;Endkunden - AM;Johannes Schmidt
+105966;Solvay Chemicals GmbH;Endkunden - AM;Kasubke, Rene
+106378;Lekang Filter AS;Händler - AM;Thomas Lumpp
+110287;Filterteknik A/S;Händler - AM;Thomas Lumpp
+117145;Bosch Rexroth AG;Endkunden - AM;Johannes Schmidt
+149357;J.M. Voith SE & Co. KG/VTA;OE/OES - Key Account;Patrick Stäbler
+122924;BIBUS Austria GmbH;Händler - AM;Thomas Lumpp
+149354;Eickhoff Bergbautechnik GmbH;OE/OES - Key Account;Marten Hess
+105538;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+149246;Comau Roumanie Srl;OE/OES - Key Account;Samuel Macaire
+140545;Jacobs Douwe Egberts DE GmbH;Endkunden - AM;Claudia Vonk
+119513;STRABAG Property and;Endkunden - AM;Johannes Schmidt
+149171;IMEX Filtertechnika;Kontraktoren - OE;Thomas Lumpp
+108471;Flint Group Italia S.p.a.;Endkunden - AM;Vezzani, Gabriele
+149139;K.R. Pfiffner GmbH;OE/OES - Key Account;Patrick Stäbler
+149039;Opel Wien GmbH;OE/OES - Key Account;Sales inactive
+147283;MAHLE Ventiltrieb GmbH;Endkunden - AM;Johannes Schmidt
+148965;Nippon Oil Pump Co.;OE/OES - Key Account;Benjamin Hille
+151219;Continental Automotive;Endkunden - AM;Claudia Vonk
+148713;EZU-Metallwaren;Kontraktoren - OE;Sales inactive
+148658;HEMO GmbH;OE/OES - Key Account;Sales inactive
+150657;VSP Filter GmbH;Händler - AM;Schnell, Iris
+110124;Cosaco GmbH;Endkunden - AM;Claudia Vonk
+119267;Altmann GmbH &  Co. KG;Händler - AM;Schnell, Iris
+106529;Koemmerling;Endkunden - AM;Florian Winkler
+106726;HESCH INDUSTRIETECHNIK Vertriebs;Händler - AM;Johannes Schmidt
+133437;VDL Delmas GmbH;OE/OES - Key Account;Claudia Vonk
+151469;Heraeus Epurio GmbH;Händler - AM;Kasubke, Rene
+148568;Sandvik Tooling Suppyly Renningen;OE/OES - Key Account;Patrick Stäbler
+148562;Olenex Edible Oils GmbH;OE/OES - Key Account;Hendrik Hoppe
+148441;Christian Pfeiffer;OE/OES - Key Account;Marten Hess
+149646;Wainbee Ltd.;Händler - AM;Thomas Lumpp
+127197;Protein- u. Oelwerk Neuss;Endkunden - AM;Marten Hess
+105652;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+150412;Brammer S.A.;Händler - AM;Thomas Lumpp
+109192;Fluid Concept GmbH;Händler - AM;Schnell, Iris
+126522;GST Grinder GmbH;Endkunden - AM;Christian Huber
+151554;AMPERE CLEON SAS;Endkunden - AM;Samuel Macaire
+147983;Liebherr-Components Deggendorf GmbH;OE/OES - Key Account;Patrick Stäbler
+130053;Xervon Instandhaltung GmbH;Endkunden - AM;Kasubke, Rene
+130074;I.B. Kracht b.v.;Händler - AM;Inside sales DACH
+148389;Stadtwerke Augsburg Wasser GmbH;Endkunden - AM;Johannes Schmidt
+147837;MATEC GmbH;OE/OES - Key Account;Nicht zugeordnet
+106587;VTE-FILTER GMBH;Händler - AM;Schnell, Iris
+129563;ExxonMobil Production;Endkunden - AM;Hendrik Hoppe
+150962;Elsässer Filtertechnik GmbH;Händler - AM;Schnell, Iris
+134896;H&R Ölwerke Schindler GmbH;Endkunden - AM;Hendrik Hoppe
+147693;APODIS Technologies GmbH;OE/OES - Key Account;Schnell, Iris
+147611;Stöferle Automotive GmbH;OE/OES - Key Account;Johannes Schmidt
+109383;Bayern-Fass Rekonditionierungs GmbH;Endkunden - AM;Christian Huber
+131494;BARET;Händler - AM;Samuel Macaire
+107117;R.JUNG GMBH;Händler - AM;Schnell, Iris
+105606;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+115936;ACE;Händler - AM;Samuel Macaire
+107164;HYMA Die Hydrauliker GmbH;Händler - AM;Schnell, Iris
+130125;Mabeconta S.L.;Händler - AM;Rocco Cafaro
+124041;Rubix U.K. Limited;Händler - AM;John Manley
+140159;Bearing Man Group (Pty) Ltd.;Händler - AM;Steven Louw
+147557;LIEBHERR-Hausgeräte;OE/OES - Key Account;Johannes Schmidt
+138428;Bartec Benke GmbH;Endkunden - AM;Hendrik Hoppe
+147206;Parker Hannifin Manufacturing;OE/OES - Key Account;Marten Hess
+90322;Service Ausland;Nicht zugeordnet;Nicht zugeordnet
+142351;ATROTECH GmbH;OE/OES - Key Account;Nicht zugeordnet
+151503;Filter-Müller GmbH;Händler - AM;Schnell, Iris
+105711;Lippold GmbH;Händler - AM;Schnell, Iris
+150882;thomas zement GmbH & Co. KG;Endkunden - AM;Marten Hess
+142134;GEA Mechanical Equipment;OE/OES - Key Account;Kasubke, Rene
+109766;Stollwerck GmbH;Endkunden - AM;Hendrik Hoppe
+142046;Emag Milano S.r.L.;OE/OES - Key Account;Samuel Macaire
+117107;Buderus Schleiftechnik GmbH;Kontraktoren - OE;Claudia Vonk
+141956;HEMA Umformtechnik;OE/OES - Key Account;Sales inactive
+141436;Vestas Offshore Wind A/S;OE/OES - Key Account;Rasmus Bunten
+151779;TREUREAL Property Management GmbH;Händler - AM;Kasubke, Rene
+135558;Power Oil Rostock GmbH;Endkunden - AM;Claudia Vonk
+105973;Carl Werthenbach;Händler - AM;Schnell, Iris
+130568;Renault S.A.S.;Endkunden - AM;Samuel Macaire
+106424;PEQUIMIL LDA.;Händler - AM;Rocco Cafaro
+117545;R.Bosch Manufactur. Solutions GmbH;Endkunden - AM;Johannes Schmidt
+151580;Baker & Baker Germany GmbH;OE/OES - Key Account;Claudia Vonk
+111934;Pöppelmann GmbH & Co.KG;Endkunden - AM;Claudia Vonk
+108327;HNSA INGENIEROS S.A.;Händler - AM;Rocco Cafaro
+105627;Henkel AG & Co. KGAA;Endkunden - AM;Kasubke, Rene
+120574;Metecno Bausysteme GmbH;Endkunden - AM;Kasubke, Rene
+119820;ENBW Energie;Endkunden - AM;Florian Winkler
+141934;EVAC OY;Händler - AM;Hendrik Hoppe
+106503;Hergeng Enterprise Co. Ltd.;Händler - AM;Rocco Cafaro
+141009;Hennecke GmbH;OE/OES - Key Account;Kasubke, Rene
+108290;Ludwig Meister GmbH & Co. KG;Händler - AM;Schnell, Iris
+108506;JRA GmbH;Händler - AM;Schnell, Iris
+106242;Siegwerk Druckfarben;Endkunden - AM;Kasubke, Rene
+140963;Gema Eastern Europe SRL;OE/OES - Key Account;Benjamin Hille
+125288;Trianel Gasspeicher Epe;Endkunden - AM;Kasubke, Rene
+140859;KOCX Trading & Repair (KT&R);OE/OES - Key Account;Nicht zugeordnet
+137033;SUSA S.Sauer GmbH & Co. KG;Endkunden - AM;Marten Hess
+5203800;Filtration Group Process Inc;Endkunden - AM;Nicht zugeordnet
+117281;Franz Wild Öltechnik GmbH;Händler - AM;Schnell, Iris
+150393;RWE Power AG;Endkunden - AM;Hendrik Hoppe
+135771;Christian Berner OY;Händler - AM;Claudia Vonk
+150499;Stahlwerk Annahütte;Endkunden - AM;Christian Huber
+133424;SGMH;Händler - AM;Ludovic Henry
+140794;Al Masaood Oil Industry;OE/OES - Key Account;Rocco Cafaro
+150914;Kamax GmbH & Co. KG;Endkunden - AM;Field Service
+108766;PMC Hydraulics Oy;Händler - AM;Thomas Lumpp
+121215;Federal-Mogul Friedberg GmbH;Endkunden - AM;Christian Huber
+129386;Protein- und Oelwerk;Endkunden - AM;Marten Hess
+147284;MAHLE Industriemotoren-;Endkunden - AM;Johannes Schmidt
+140781;Heinkel Umwelttechnik;OE/OES - Key Account;Hendrik Hoppe
+130337;Smurfit Kappa Zülpich;Endkunden - AM;Kasubke, Rene
+148620;LIREAL GmbH;Endkunden - AM;Marten Hess
+140543;Koenig & Bauer Digital & Webfed;OE/OES - Key Account;Johannes Schmidt
+134667;Südöl Mineralöl-Raffinerie GmbH;Endkunden - AM;Benjamin Hille
+105664;MONTA;Endkunden - AM;Christian Huber
+141396;Hansa-Flex Hydraulik GmbH;Händler - AM;Schnell, Iris
+140518;Sinus GmbH;Kontraktoren - OE;Schnell, Iris
+119581;Rubix France;Händler - AM;Samuel Macaire
+109975;Bibus Hungary KFT;Händler - AM;Thomas Lumpp
+138345;Nemak Dillingen Casting;Endkunden - AM;Florian Winkler
+118160;SPRELA GmbH;Endkunden - AM;Florian Winkler
+105701;Volkswagen AG;Endkunden - AM;Hendrik Hoppe
+149793;Röhm GmbH;Endkunden - AM;Marten Hess
+140499;Ismael Antunes de Sousa, Lda;Kontraktoren - OE;Sales inactive
+151684;D.W. RENZMANN;Nicht zugeordnet;Nicht zugeordnet
+151479;H. B. Fuller Deutschland;Endkunden - AM;Claudia Vonk
+150752;Ardagh Metal Packaging;Endkunden - AM;Claudia Vonk
+118446;FORTEK SRL;Händler - AM;Vezzani, Gabriele
+150990;AGC f glass GmbH;Endkunden - AM;Hendrik Hoppe
+151707;Knauber Contracting GmbH;Händler - AM;Kasubke, Rene
+140033;Redimo GmbH;Kontraktoren - OE;Sales inactive
+148534;SAB;Endkunden - AM;Hendrik Hoppe
+120920;RAMPF Eco Solutions GmbH & Co. KG;Endkunden - AM;Florian Winkler
+147437;Fuchs Lubricants;Endkunden - AM;Steven Louw
+150601;KSB Service GmbH;Händler - AM;Schnell, Iris
+151649;DELTAFLUID SRL;Händler - AM;Vezzani, Gabriele
+136926;Cerdia Produktions GmbH;Endkunden - AM;Benjamin Hille
+119322;Hubert Zumbrägel GmbH;Händler - AM;Schnell, Iris
+134891;Barry Callebaut Cocoa;Endkunden - AM;Claudia Vonk
+105699;Volkswagen AG;Endkunden - AM;Hendrik Hoppe
+139739;RAMPF Polymer Solutions;OE/OES - Key Account;Patrick Stäbler
+118428;August Berghaus GmbH & Co. KG;Endkunden - AM;Kasubke, Rene
+140034;Paul Bauder GmbH & Co. KG;Endkunden - AM;Florian Winkler
+146827;Rhea MP Technologies GmbH;Händler - AM;Thomas Lumpp
+133635;JL Hydraulik &;Händler - AM;Thomas Lumpp
+133592;HEFFI FILTRATION;Endkunden - AM;Samuel Macaire
+105954;Woodward L'Orange GmbH;Endkunden - AM;Benjamin Hille
+139542;3defacto GmbH;OE/OES - Key Account;Sales inactive
+141233;Bibus (Thailand) Co., Ltd;Händler - AM;Rocco Cafaro
+149353;Ademco 1 GmbH;Endkunden - AM;Field Service
+149832;Afrifil Manufacturing (Pty) Ltd.;Händler - AM;Steven Louw
+139350;Wärtsilä Services Switzerland Ltd.;OE/OES - Key Account;Inside sales DACH
+138988;Maersk A/S;OE/OES - Key Account;Birger Hahn
+149882;Trans-Auto AB;Händler - AM;Thomas Lumpp
+141217;Elaskon Sachsen GmbH & Co. KG;Endkunden - AM;Field Service
+151094;Markt Bad Birnbach;Endkunden - AM;Field Service
+107602;JANKOVITS Engineering Kft.;Händler - AM;Thomas Lumpp
+138901;Emag Salach GmbH;OE/OES - Key Account;Benjamin Hille
+108335;TotalEnergies Raffinerie;Endkunden - AM;Florian Winkler
+141161;Hine do Brasil Industria e Comércio;Händler - AM;Rocco Cafaro
+122778;HIFI FILTER FRANCE;Händler - AM;Samuel Macaire
+125988;SF-Filter SP. z.o.o.;Händler - AM;Thomas Lumpp
+90323;Service Inland;Nicht zugeordnet;Nicht zugeordnet
+151362;AVL SCHRICK Performance;Endkunden - AM;Marten Hess
+148988;IOW Trade Sp. z o.o.;Händler - AM;Thomas Lumpp
+138713;HK-CON GmbH;Kontraktoren - OE;Kasubke, Rene
+138691;OILGEAR TOWLER SAS;Kontraktoren - OE;Sales inactive
+138648;Schäfer Pumpen & Hydraulik GmbH;Kontraktoren - OE;Schnell, Iris
+138227;IBD Solutions GmbH;OE/OES - Key Account;Kasubke, Rene
+138048;FFG Werke GmbH;OE/OES - Key Account;Marten Hess
+132767;MT Gas Chem Nordsee;Endkunden - AM;Claudia Vonk
+127214;Shell Deutschland Oil GmbH;Endkunden - AM;Claudia Vonk
+127924;Fil-Tec Rixen GmbH;Händler - AM;Schnell, Iris
+106366;M.GUTMARK CO.LTD.;Händler - AM;Rocco Cafaro
+137938;ThyssenKrupp Industrial;OE/OES - Key Account;Marten Hess
+130876;DEXIS PAYS DE  LOIRE;Händler - AM;Samuel Macaire
+137934;FFG-Werke GmbH;OE/OES - Key Account;Benjamin Hille
+137932;Prinzbach GmbH & Co. KG;Kontraktoren - OE;Field Service
+137901;B & K GmbH;OE/OES - Key Account;Schnell, Iris
+147961;IFA Powertrain GmbH & Co.;Endkunden - AM;Field Service
+138272;Multi Factor Europe Ltd;Händler - AM;John Manley
+108631;Leise GmbH & Co.KG;Händler - AM;Schnell, Iris
+151018;MT Gas Chem Pacific;Endkunden - AM;Claudia Vonk
+127294;Wolfgang Endress GmbH & Co.KG;Endkunden - AM;Johannes Schmidt
+150153;PCI SCEMM;Endkunden - AM;Samuel Macaire
+124757;CT Elastomer-Beschichtungen GmbH;Endkunden - AM;Kasubke, Rene
+131440;BAYER S.A.S;Endkunden - AM;Samuel Macaire
+105573;Hellmut Springer;Händler - AM;Schnell, Iris
+124728;SF-Filterdienst GmbH;Händler - AM;Thomas Lumpp
+147943;HPKJ moving power GmbH;Händler - AM;Schnell, Iris
+107485;WORLD HYDRAULICS CO., LTD;Händler - AM;Rocco Cafaro
+116029;Rubix;Händler - AM;Samuel Macaire
+137864;BRAV-O-TECH GmbH;Kontraktoren - OE;Kasubke, Rene
+119134;TCM GmbH & Co. KG;Händler - AM;Schnell, Iris
+137558;Präzisions-Automatendreherei;Händler - AM;Schnell, Iris
+148779;APODIS GMBH;Händler - AM;Schnell, Iris
+107785;HyPneu GMBH;Händler - AM;Schnell, Iris
+137698;RobMation GmbH;OE/OES - Key Account;Sales inactive
+110518;REMONDIS Chemie GmbH;Endkunden - AM;Christian Huber
+111454;Elutec-OHG;Händler - AM;Schnell, Iris
+128927;Grillo-Werke AG;Endkunden - AM;Kasubke, Rene
+123485;TIB Chemicals AG;Endkunden - AM;Marten Hess
+137661;FFG Werke GmbH;OE/OES - Key Account;Florian Winkler
+122700;Dexis Tampleu Spriet Caen;Händler - AM;Ludovic Henry
+151613;Apleona MT Services GmbH;Nicht zugeordnet;Benjamin Hille
+119774;SF Filter AG;Händler - AM;Thomas Lumpp
+130022;Gegenbauer Facility;Händler - AM;Field Service
+137569;WK Systemtechnik;OE/OES - Key Account;Christian Huber
+129991;ESN Deutsche Tischtennis;Endkunden - AM;Johannes Schmidt
+132927;B E B Entsorgungs- GmbH;Endkunden - AM;Florian Winkler
+109041;SGL epo GmbH;Endkunden - AM;Kasubke, Rene
+116014;HYDROLA;Endkunden - AM;Samuel Macaire
+151505;PTS Group GmbH;Händler - AM;Schnell, Iris
+137475;VTA Verfahrenstechnische;OE/OES - Key Account;Johannes Schmidt
+148661;Rhein-Fass GmbH & Co.KG;Endkunden - AM;Marten Hess
+109735;Hansa-Flex AG;Händler - AM;Schnell, Iris
+110922;Mercer Stendal GmbH;Endkunden - AM;Claudia Vonk
+137412;Trevisan Macchine;OE/OES - Key Account;Sales inactive
+148773;PCH Technischer Handel GmbH;Händler - AM;Schnell, Iris
+136637;Orion Engineered Carbons GmbH;Endkunden - AM;Kasubke, Rene
+150528;Abwasserbetrieb Berg- und;Endkunden - AM;Field Service
+140444;PreussenElektra GmbH;Endkunden - AM;Claudia Vonk
+109331;KTB Import-Export;Händler - AM;Schnell, Iris
+136745;KAW KIEHL KG;Endkunden - AM;Johannes Schmidt
+136884;De Vries Scheepsbouw Makkum B.V.;OE/OES - Key Account;Birger Hahn
+118987;Innofluid GmbH & Co. KG;Händler - AM;Schnell, Iris
+117785;Satherm GmbH;Händler - AM;Schnell, Iris
+136828;Bosch Limited;OE/OES - Key Account;Johannes Schmidt
+106144;NOLD HYDRAULIK + PNEUMATIK;Händler - AM;Schnell, Iris
+131556;CIR CASTRES;Händler - AM;Samuel Macaire
+150558;POLYTEC CAR STYLING Weierbach GmbH;Endkunden - AM;Kasubke, Rene
+134114;F.E.S. GmbH;OE/OES - Key Account;Sales inactive
+118356;FAURE TECHNOLOGIES SA;Händler - AM;Samuel Macaire
+119613;Reich GmbH;Endkunden - AM;Kasubke, Rene
+118600;BGM-Trading GmbH;Händler - AM;Schnell, Iris
+106644;Hanon Systems;Endkunden - AM;Schnell, Iris
+138036;EMFI S.A.S;Endkunden - AM;Samuel Macaire
+108296;WK Hydraulik;Händler - AM;Schnell, Iris
+134011;Buck Tankanlagen GmbH;OE/OES - Key Account;Christian Huber
+150436;A. Albert GmbH;Händler - AM;Inside sales Hamburg
+129546;H&R Chemisch-Pharmazeutische;Endkunden - AM;Kasubke, Rene
+133920;ZF Wind Power Antwerpen NV;OE/OES - Key Account;Rasmus Bunten
+133720;Spicer Gelenkwellenbau GmbH;OE/OES - Key Account;Marten Hess
+127900;Schiffahrts-Gesellschaft;Endkunden - AM;Claudia Vonk
+128609;ThyssenKrupp Steel Europe AG;Endkunden - AM;Kasubke, Rene
+147656;Flowserve B.V.;Endkunden - AM;Inside sales DACH
+132928;B. Braun Melsungen AG;OE/OES - Key Account;Kasubke, Rene
+132776;Linde Hydraulics GmbH & Co. KG;OE/OES - Key Account;Marten Hess
+132748;Manitowoc Crane Group France SAS;OE/OES - Key Account;Hendrik Hoppe
+128024;Hellmers GmbH Fahrzeugbau;OE/OES - Key Account;Claudia Vonk
+150787;John Deere GmbH & Co. KG;Endkunden - AM;Field Service
+131754;Hennig France SAS;Endkunden - AM;Samuel Macaire
+109712;Heinrichs & Co. KG;Endkunden - AM;Kasubke, Rene
+150055;Mercedes-Benz AG;Endkunden - AM;Benjamin Hille
+149232;BMI Deutschland GmbH;Endkunden - AM;Kasubke, Rene
+132741;Machining Centers;OE/OES - Key Account;Vezzani, Gabriele
+108793;Wakol GmbH;Endkunden - AM;Florian Winkler
+151326;ONERGYS GmbH;Nicht zugeordnet;Schnell, Iris
+125352;SAACKE GmbH;OE/OES - Key Account;Claudia Vonk
+149478;Rubix B.V.;Händler - AM;Thomas Lumpp
+106319;Gutmann GmbH;Endkunden - AM;Florian Winkler
+129949;DFDS A/S;Endkunden - AM;Inside sales International
+105985;dormakaba Deutschland GmbH;Endkunden - AM;Marten Hess
+118785;Inoteh d.o.o.;Händler - AM;Thomas Lumpp
+132676;Alfa Laval Copenhagen A/S;OE/OES - Key Account;Inside sales Hamburg
+149312;EIG CRUSTAG;Endkunden - AM;Patrick Stäbler
+121120;FEUER Powertrain GmbH & Co.KG;Endkunden - AM;Schnell, Iris
+132674;Deutsche Aircraft GmbH;OE/OES - Key Account;Johannes Schmidt
+110557;IGK Isolierglasklebstoffe GmbH;Endkunden - AM;Kasubke, Rene
+150172;Hydraulique Aquitaine;Händler - AM;Samuel Macaire
+132352;Sell GmbH;OE/OES - Key Account;Sales inactive
+133904;MSP Müller Spot Plating GmbH;Endkunden - AM;Florian Winkler
+109939;C.D.Wälzholz GmbH;Endkunden - AM;Kasubke, Rene
+150185;Eriks Ireland;Händler - AM;Paul Dunne
+115640;POLYFLUID;Händler - AM;Samuel Macaire
+132163;FOGTEC Brandschutz GmbH;OE/OES - Key Account;Kasubke, Rene
+149732;4D Hydraulik GmbH;Händler - AM;Schnell, Iris
+149666;Adolf Roth GmbH & Co. KG;Händler - AM;Schnell, Iris
+108397;Hermann Erkert GmbH;Endkunden - AM;Benjamin Hille
+128932;Rudolf Henrichsmeyer;Endkunden - AM;Marten Hess
+137632;Bibus Malaysia Sdn.Bhd.;Händler - AM;Rocco Cafaro
+132141;Mubea Tellerfedern GmbH;OE/OES - Key Account;Kasubke, Rene
+132105;Dr.-Ing. Robert Stopp;OE/OES - Key Account;Marten Hess
+125587;Global Logistics Support GmbH;Händler - AM;Schnell, Iris
+141906;Inovyn Deutschland GmbH;Endkunden - AM;Marten Hess
+131733;COMAU S.P.A;OE/OES - Key Account;Vezzani, Gabriele
+127921;Reederei F. Laeisz GmbH;Endkunden - AM;Hendrik Hoppe
+131652;COMAU FRANCE;OE/OES - Key Account;Samuel Macaire
+105607;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+131603;LEROUX ET LOTZ TECHNOLOGIES;OE/OES - Key Account;Sales inactive
+149205;Lindenschmidt KG;Endkunden - AM;Kasubke, Rene
+119449;MABEO INDUSTRIES SAS;Händler - AM;Samuel Macaire
+106770;KS Kolbenschmidt GmbH;Endkunden - AM;Patrick Stäbler
+131534;LED-POLYURETHANE;OE/OES - Key Account;Samuel Macaire
+126025;Oscar Fäh AG;Händler - AM;Schnell, Iris
+151695;HINE HYDRAULICS;Händler - AM;Rocco Cafaro
+130362;Vestas Wind Systems A/S;OE/OES - Key Account;Rasmus Bunten
+130328;Weinreich;OE/OES - Key Account;Marten Hess
+130312;Woma GmbH;OE/OES - Key Account;Kasubke, Rene
+130308;MITSUBISHI POLYESTER;OE/OES - Key Account;Kasubke, Rene
+137319;ERIKS BV;Händler - AM;Thomas Lumpp
+130258;Schauenburg;OE/OES - Key Account;Schnell, Iris
+151244;Continental Automotive;Endkunden - AM;Marten Hess
+123195;NANFOURMA;Händler - AM;Samuel Macaire
+130251;Sinnerbrink Maschinenbau;OE/OES - Key Account;Kasubke, Rene
+130239;Allnex Germany GmbH;OE/OES - Key Account;Kasubke, Rene
+110321;Boie GmbH;Händler - AM;Schnell, Iris
+112589;Dingbro Ltd - Industrial Filtration;Händler - AM;John Manley
+147624;YACO-tec GmbH;Händler - AM;Schnell, Iris
+151016;Bibus Portugal, Lda;Händler - AM;Rocco Cafaro
+108689;FTS;Endkunden - AM;Christian Huber
+130219;Kabel Premium Pulp & Paper GmbH;OE/OES - Key Account;Schnell, Iris
+108591;ADM Spyck GmbH;Endkunden - AM;Kasubke, Rene
+139549;CIR ATELIER;Händler - AM;Samuel Macaire
+130181;Prototyp-Werke GmbH;OE/OES - Key Account;Benjamin Hille
+148078;Universität Hohenheim;Endkunden - AM;Benjamin Hille
+130146;MS ENGINEERING A/S;Kontraktoren - OE;Thomas Lumpp
+130142;Mainova AG;OE/OES - Key Account;Marten Hess
+141847;Vattenfall Wasserkraft GmbH;Endkunden - AM;Schnell, Iris
+139161;BIBUS Baltics SIA;Händler - AM;Thomas Lumpp
+151090;BIBUS Industry doo;Händler - AM;Thomas Lumpp
+129745;Wasserverband Eifel-Rur;Endkunden - AM;Marten Hess
+130119;LSS Logistik;OE/OES - Key Account;Marten Hess
+150599;HENRI PETIT-JEAN SAS;Endkunden - AM;Samuel Macaire
+123066;PMC Hydraulics AB;Händler - AM;Thomas Lumpp
+130097;Koll Packband GmbH & Co. KG;OE/OES - Key Account;Schnell, Iris
+130087;Loch Präzisions;OE/OES - Key Account;Sales inactive
+132982;SuperYacht Spares B.V.;Händler - AM;Birger Hahn
+128878;ERIKS Industrial Services Ltd.;Händler - AM;Paul Dunne
+107479;EUROPARTS;Händler - AM;Schnell, Iris
+108579;Hydrobar;Händler - AM;Schnell, Iris
+110785;Henkes GmbH;Händler - AM;Schnell, Iris
+151057;ENA Filter GmbH;Händler - AM;Schnell, Iris
+130085;Kroll Fahrzeugbau-;OE/OES - Key Account;Marten Hess
+107466;V.I.T. Systemtechnik GmbH;Händler - AM;Schnell, Iris
+127888;FAIRPLAY Schleppdampfschiffs-;Endkunden - AM;Claudia Vonk
+119957;AUTO CHASSIS INTERNATIONAL;Endkunden - AM;Samuel Macaire
+130078;KSB Österreich GmbH;OE/OES - Key Account;Christian Huber
+130077;KSB (Schweiz) AG;OE/OES - Key Account;Benjamin Hille
+115766;MECMAS INDUSTRIE S.A;Endkunden - AM;Samuel Macaire
+130076;Klüver Anlagenbau & Service;OE/OES - Key Account;Hendrik Hoppe
+124477;Woodward L'Orange GmbH;Endkunden - AM;Benjamin Hille
+129716;AGRAVIS Kraftfutterwerke;Endkunden - AM;Kasubke, Rene
+117284;Harry Roth Präzisionsdrehteile;Endkunden - AM;Patrick Stäbler
+101029;Audi AG;Endkunden - AM;Johannes Schmidt
+133505;Mamminger Konserven GmbH & Co. KG;Endkunden - AM;Johannes Schmidt
+131487;ALDIANCE SAS;Händler - AM;Nicht zugeordnet
+130075;Kemostal Process Technology;OE/OES - Key Account;Nicht zugeordnet
+107392;OBE GmbH & Co. KG;Nicht zugeordnet;Florian Winkler
+107391;Haimer GmbH;Endkunden - AM;Christian Huber
+130069;Intec Engineering GmbH;OE/OES - Key Account;Florian Winkler
+105717;HYDRAULIK-BAUTEILE;Händler - AM;Schnell, Iris
+130056;Anlagenbau Haas GmbH;OE/OES - Key Account;Johannes Schmidt
+130055;HMF Engineering und;OE/OES - Key Account;Schnell, Iris
+105666;SKF GmbH;Endkunden - AM;Johannes Schmidt
+151486;Lürssen Yacht;Händler - AM;Birger Hahn
+112526;Filtros Cartes Catalunya S.L.U.;Händler - AM;Rocco Cafaro
+105687;ZF Friedrichshafen AG;Endkunden - AM;Patrick Stäbler
+127173;PREIS Wassertechnik GmbH;Endkunden - AM;Benjamin Hille
+130021;G + L  Anlagenbau OHG;OE/OES - Key Account;Sales inactive
+129982;EST Energetics GmbH;OE/OES - Key Account;Marten Hess
+5200600;Filtration Group Korea Ltd;Endkunden - AM;Sales inactive
+129912;Beda-Technology Limited;OE/OES - Key Account;Sales inactive
+2440;FILTRATION GROUP BV;Endkunden - AM;Nicht zugeordnet
+100117;AP Logistics B.V.;Händler - AM;Nicht zugeordnet
+5204500;Filtration Group Sp.z.o.o.;Endkunden - AM;Sales inactive
+122824;ERIKS Deutschland GmbH;Händler - AM;Nicht zugeordnet
+149337;PSA Automobiles SA;Endkunden - AM;Samuel Macaire
+111431;Hine S. A.;Händler - AM;Nicht zugeordnet
+129904;Machinefabriek Bolier b.v.;OE/OES - Key Account;Sales inactive
+137688;VSP Filter GmbH;Händler - AM;Schnell, Iris
+149820;FRIMO GmbH;OE/OES - Key Account;Claudia Vonk
+148609;EcoFilterSolutions GmbH;OE/OES - Key Account;Claudia Vonk
+148782;Fives Landis LTD;Endkunden - AM;John Manley
+129886;A+B Tank- und Anlagentechnik GmbH;OE/OES - Key Account;Sales inactive
+106730;RUHR OEL GMBH;Endkunden - AM;Kasubke, Rene
+150346;SPG Steiner GmbH;Endkunden - AM;Nicht zugeordnet
+141922;Clariant Plastics & Coatings;Endkunden - AM;Kasubke, Rene
+149057;Sindra GmbH & Co. KG;Endkunden - AM;Marten Hess
+150760;ERIKS Logistics and Service GmbH;Händler - AM;Thomas Lumpp
+139772;Bircken Apparatebau PGmbH;OE/OES - Key Account;Claudia Vonk
+129743;Starke & Sohn GmbH;OE/OES - Key Account;Hendrik Hoppe
+115930;BRAMMER France;Händler - AM;Samuel Macaire
+137124;Austal Ships;OE/OES - Key Account;Claudia Vonk
+140405;JACOBS DOUWE;Endkunden - AM;Paul Dunne
+119306;BP Europa SE (LU);Endkunden - AM;Claudia Vonk
+139067;Schrader Fluid Technology GmbH;Händler - AM;Kasubke, Rene
+149259;ATMOC;Händler - AM;Rocco Cafaro
+119891;Speedfluid S.a.s.;Händler - AM;Vezzani, Gabriele
+108206;Continental;Endkunden - AM;Nicht zugeordnet
+119889;Heraeus Deutschland;Endkunden - AM;Kasubke, Rene
+149229;Cannon Viking Ltd Viking House;Händler - AM;John Manley
+138180;FESTO Sp. z o.o.;Endkunden - AM;Inside sales International
+129739;ENGINEERING DOBERSEK;OE/OES - Key Account;Marten Hess
+148717;Knauf Insulation GmbH;Endkunden - AM;Marten Hess
+129686;Wefers GmbH;OE/OES - Key Account;Sales inactive
+149060;Industrial Electronic - Indel;Händler - AM;Schnell, Iris
+150411;Evonik Industries AG;Endkunden - AM;Kasubke, Rene
+151144;John Deere GmbH & Co. KG;Endkunden - AM;Florian Winkler
+137876;PSA AUTOMOBILES S.A.;Endkunden - AM;Samuel Macaire
+148608;Lubropoint di Usuardi Maria;Endkunden - AM;Nicht zugeordnet
+129634;Bilfinger VAM Anlagentechnik GmbH;OE/OES - Key Account;Christian Huber
+137057;LANXESS Deutschland GmbH;Endkunden - AM;Kasubke, Rene
+151466;Mercurius Handelsgesellschaft mbH;Händler - AM;Schnell, Iris
+109389;TECNOFIL srl;Händler - AM;Vezzani, Gabriele
+138704;FRANCAISE DE MECANIQUE;Endkunden - AM;Samuel Macaire
+121810;COOO Bibus;Händler - AM;Thomas Lumpp
+107139;Cargill GmbH;Endkunden - AM;Hendrik Hoppe
+150661;Weber Industrieller Rohrleitungs- &;Händler - AM;Kasubke, Rene
+110335;Zeller + Gmelin;Endkunden - AM;Benjamin Hille
+129560;WILO EMU;OE/OES - Key Account;Johannes Schmidt
+129554;Apollo-Gößnitz GmbH;OE/OES - Key Account;Sales inactive
+149462;Henkel Capital S.A. de CV;Endkunden - AM;Nicht zugeordnet
+150932;YNSECT;Endkunden - AM;Ludovic Henry
+106030;O. &  L.;Endkunden - AM;Kasubke, Rene
+127227;ThyssenKrupp;Endkunden - AM;Kasubke, Rene
+108252;Continental Teves AG & Co. oHG;Endkunden - AM;Nicht zugeordnet
+112088;Waffenschmid;Endkunden - AM;Einkauf IIPB
+122333;Nabaltec AG;Endkunden - AM;Florian Winkler
+125891;VARINELLI S.R.L.;Endkunden - AM;Nicht zugeordnet
+129620;Wasserversorgung Ruhstorfer;Endkunden - AM;Christian Huber
+130047;HTT energy GmbH;Endkunden - AM;Claudia Vonk
+150723;ERIKS Logistics and Service GmbH;Händler - AM;Thomas Lumpp
+132747;Stahl Gerlafingen AG;Endkunden - AM;Inside sales DACH
+150120;INGENICA LLI;Endkunden - AM;Samuel Macaire
+108018;Alois Berger GmbH & Co.KG;Endkunden - AM;Field Service
+109691;Brammer GmbH;Händler - AM;Nicht zugeordnet
+131431;SAIPOL;Endkunden - AM;Samuel Macaire
+129406;ThyssenKrupp Marine Systems GmbH;OE/OES - Key Account;Hendrik Hoppe
+106866;INSERCO Industrie;Endkunden - AM;Marten Hess
+5203500;Filtration Group SAS;Endkunden - AM;Nicht zugeordnet
+129311;W. Mauch;OE/OES - Key Account;Patrick Stäbler
+150007;Aluminium Kety Emmi;Endkunden - AM;Einkauf IIPB
+128891;Wafios Umformtechnik GmbH;OE/OES - Key Account;Marten Hess
+131513;ABB France;Endkunden - AM;Samuel Macaire
+148570;VTA Verfahrenstechnik und;Endkunden - AM;Marten Hess
+123069;Rhea MP Industry AG;Händler - AM;Thomas Lumpp
+123566;A.S.M. Allseas Marine GmbH & Co KG;Händler - AM;Schnell, Iris
+129768;Raffinerie Heide GmbH;OE/OES - Key Account;Claudia Vonk
+128881;Otto Fuchs KG;OE/OES - Key Account;Field Service
+128880;manroland sheetfed GmbH;OE/OES - Key Account;Marten Hess
+118174;Accxon Filtration GmbH;Händler - AM;Schnell, Iris
+128100;Hyundai Heavy Industries Co. Ltd.;Kontraktoren - OE;Birger Hahn
+140494;Evonik Resource Efficiency GmbH;Endkunden - AM;Kasubke, Rene
+148642;ELFIN Engineering GmbH;Händler - AM;Schnell, Iris
+107994;Liqui Filter GmbH;Händler - AM;Schnell, Iris
+149756;Rubix GmbH;Händler - AM;Thomas Lumpp
+128089;Costa Crociere S.P.A .;OE/OES - Key Account;Birger Hahn
+129849;Gebr. Willers GmbH & Co.KG;Endkunden - AM;Marten Hess
+108873;Elsaesser Filtertechnik GmbH;Händler - AM;Nicht zugeordnet
+106387;Eigenbrodt AB;Händler - AM;Thomas Lumpp
+149581;EMAG Milano S.r.l;Endkunden - AM;Samuel Macaire
+130298;Unitherm Cemcon;Endkunden - AM;Christian Huber
+108877;Bibus Zagreb d.o.o.;Händler - AM;Thomas Lumpp
+111940;Räuchle GmbH & Co. KG;Endkunden - AM;Christian Huber
+130398;AVL Schrick GmbH;Endkunden - AM;Marten Hess
+128051;Caterpillar Motoren GmbH & Co. KG;OE/OES - Key Account;Nicht zugeordnet
+106293;Benecke-Kaliko AG;Endkunden - AM;Claudia Vonk
+149346;LEROUX ET LOTZ INDUSTRY (LLI);Endkunden - AM;Samuel Macaire
+149298;Axalta Coating Systems;Endkunden - AM;Kasubke, Rene
+149394;Sicad S.p.A.;Endkunden - AM;Rocco Cafaro
+110537;Fuchs Lubritech GmbH;Endkunden - AM;Florian Winkler
+129677;Currenta GmbH & Co. OHG;Endkunden - AM;Marten Hess
+140740;Busse & Kuntze Filter GmbH;Händler - AM;Nicht zugeordnet
+120553;YARA Brunsbüttel GmbH;Endkunden - AM;Claudia Vonk
+130195;SASOL Germany GmbH;Endkunden - AM;Sales inactive
+146875;Ystral GmbH;Endkunden - AM;Benjamin Hille
+149268;Beirow Pumps and Engineering cc;Händler - AM;Sales inactive
+105629;FrymaKoruma AG;Endkunden - AM;Sales inactive
+129503;NSC Schifffahrtsgesellschaft;Endkunden - AM;Sales inactive
+147095;International Ship Service Ltd;Händler - AM;Inside sales International
+127923;Fr. Lürssen Werft GmbH & Co. KG;OE/OES - Key Account;Birger Hahn
+121790;Covestro NV;Endkunden - AM;Claudia Vonk
+107825;Bantleon Hermann GmbH;Händler - AM;Schnell, Iris
+149253;Fuchs Lubricants Benelux NV;Endkunden - AM;Marten Hess
+129946;Solvay Chemicals GmbH;Endkunden - AM;Marten Hess
+106130;Filter-Mueller;Händler - AM;Nicht zugeordnet
+101171;Mares Shipping GmbH;Händler - AM;Claudia Vonk
+127604;Präzisionsteile Dresden;OE/OES - Key Account;Kasubke, Rene
+127530;PREMETEC Automation GmbH;OE/OES - Key Account;Kasubke, Rene
+127528;MWN  Niefern;OE/OES - Key Account;Patrick Stäbler
+150789;Filterteknik Suomi OY;Händler - AM;Thomas Lumpp
+147291;MAHLE ANAND Filter Systems;Endkunden - AM;Nicht zugeordnet
+120032;BIBUS o.o.o.;Händler - AM;Thomas Lumpp
+109050;Langnese Honig GmbH & Co. KG;Endkunden - AM;Hendrik Hoppe
+120097;Fuchs Petrolub SE;Endkunden - AM;Marten Hess
+147098;OQ Services GmbH;Endkunden - AM;Sales inactive
+148621;ESM;Endkunden - AM;Samuel Macaire
+151085;EPSA MARKETPLACE;Endkunden - AM;Samuel Macaire
+148838;Deinzer + Weyland GmbH;Händler - AM;Marten Hess
+106712;Stollwerck GmbH;Endkunden - AM;Sales inactive
+122081;Elmetherm S.A.;Endkunden - AM;Samuel Macaire
+149495;HYD & AU Luxembourg S.A.;Endkunden - AM;Samuel Macaire
+127371;Gema (Shanghai) Co.,Ltd.;OE/OES - Key Account;Benjamin Hille
+122872;HTS-Hamburger Technik;Händler - AM;Claudia Vonk
+127688;ThyssenKrupp Marine Systems GmbH;Kontraktoren - OE;Claudia Vonk
+108832;PMC Hydraulics A/S;Händler - AM;Thomas Lumpp
+127341;SMS group GmbH;OE/OES - Key Account;Marten Hess
+126957;GH-Induction Deutschland GmbH;OE/OES - Key Account;Florian Winkler
+125889;OMSG (Deutschland) GmbH;OE/OES - Key Account;Benjamin Hille
+125820;Wiegel Gebäudetechnik GmbH;OE/OES - Key Account;Johannes Schmidt
+124053;Filtrox Carlson Ltd.;Händler - AM;John Manley
+106732;HEIDELBERG Cement AG;Endkunden - AM;Marten Hess
+151435;Apleona Gebäudetechnik GmbH;Händler - AM;Kasubke, Rene
+118947;DOW FRANCE SAS;Endkunden - AM;Samuel Macaire
+125803;PSG Procurement Services GmbH;OE/OES - Key Account;Kasubke, Rene
+137055;Rhea MP Services OÜ;Händler - AM;Thomas Lumpp
+127681;Alfa Laval Mid Europe GmbH;OE/OES - Key Account;Claudia Vonk
+108719;APS-Industrietechnik GmbH;Händler - AM;Schnell, Iris
+125595;GEA Pharma Systems Ltd.;OE/OES - Key Account;Paul Dunne
+151422;FGL Fürstenwalder Futtermittel-;Endkunden - AM;Florian Winkler
+133392;ICOPAL;Endkunden - AM;Ludovic Henry
+125482;Achenbach Buschhütten GmbH & Co. KG;OE/OES - Key Account;Sales inactive
+130315;Wacker Chemie AG;Endkunden - AM;Marcus Schneeberger
+109681;INMA;Händler - AM;Schnell, Iris
+107594;Daramic LLC.;Endkunden - AM;Claudia Vonk
+122191;Schirm GmbH;Händler - AM;Claudia Vonk
+124848;Leifeld Metal Spinning GmbH;OE/OES - Key Account;Marten Hess
+151032;Mehler Texnologies GmbH;Endkunden - AM;Marten Hess
+140237;PTS Industrietechnik GmbH;Händler - AM;Nicht zugeordnet
+149070;GTIE Industrie Actemium Poissy;Endkunden - AM;Samuel Macaire
+147630;Uniper Kraftwerke GmbH;Endkunden - AM;Sales inactive
+130208;RST Recycling und;Endkunden - AM;Marten Hess
+123540;Nordex Energy SE & Co. KG;OE/OES - Key Account;Rasmus Bunten
+120856;PlasmaAir AG;Endkunden - AM;Benjamin Hille
+111598;Wellmann Anlagentechnik GmbH;Händler - AM;Marten Hess
+150609;ENGIE Deutschland GmbH;Endkunden - AM;Benjamin Hille
+107599;FTB Filtertechnik;Händler - AM;Schnell, Iris
+124557;Freund Drehtechnik GmbH;Endkunden - AM;Kasubke, Rene
+148149;INDEX FRANCE S.a.r.l.;Endkunden - AM;Samuel Macaire
+150390;Rauh Hydraulik GmbH;Endkunden - AM;Schnell, Iris
+124076;CONTROL GEAR (FILTRATION) LTD;Händler - AM;Paul Dunne
+130038;Hegler Plastik GmbH;Endkunden - AM;Kasubke, Rene
+101322;A.-W.Heil & Sohn GmbH & Co. KG;Händler - AM;Schnell, Iris
+129995;Mannesmann;Endkunden - AM;Sales inactive
+123240;Still GmbH;OE/OES - Key Account;Marten Hess
+2435;Filtration Group SAS;Endkunden - AM;Nicht zugeordnet
+123236;CENTURIUS Import Export GmbH;OE/OES - Key Account;Sales inactive
+105963;HERMA GmbH;Endkunden - AM;Patrick Stäbler
+123101;Bredtmann - Girke;OE/OES - Key Account;Kasubke, Rene
+109234;Zweckverband Gruppenklärwerk;Endkunden - AM;Benjamin Hille
+137538;G.B. Ambrosoli S.p.A.;Endkunden - AM;Vezzani, Gabriele
+123049;Nilfisk SpA;OE/OES - Key Account;Vezzani, Gabriele
+130211;Adapti AS;Endkunden - AM;e-commerce
+129601;Paul Wurth International S.A.;Endkunden - AM;Inside sales International
+148942;Eurofoam Deutschland GmbH;Endkunden - AM;Marten Hess
+123038;Maschinenfabrik Herkules;OE/OES - Key Account;Marten Hess
+106290;TROX GMBH;Endkunden - AM;Kasubke, Rene
+139178;HIFI FILTER SA;Händler - AM;Samuel Macaire
+148975;Hexion Stuttgart GmbH;Endkunden - AM;Patrick Stäbler
+133796;NTN-SNR Cévennes;Endkunden - AM;Samuel Macaire
+125777;PURPLAN GmbH;OE/OES - Key Account;Claudia Vonk
+120092;SF Filtres S.A.;Händler - AM;Nicht zugeordnet
+141001;Oventrop GmbH & Co. KG;Endkunden - AM;Field Service
+122063;Ingenieur Büro J. Middelhoff;Endkunden - AM;Kasubke, Rene
+147242;MAHLE Motor Parcalari Sanayi;Endkunden - AM;Nicht zugeordnet
+147713;BMTS Technology;Endkunden - AM;Johannes Schmidt
+150001;Petro Gas Ausrüstungen GmbH;Händler - AM;Schnell, Iris
+149805;Strabag Property and Facility;Endkunden - AM;Marten Hess
+150222;C.A.T.S VAL DE SEINE;Endkunden - AM;Ludovic Henry
+123036;EBZ Sys Tec GmbH;OE/OES - Key Account;Patrick Stäbler
+133609;MT Gas Chem Pacific;Endkunden - AM;Claudia Vonk
+110073;Thieme GmbH & Co. KG;Endkunden - AM;Benjamin Hille
+142273;Hölker GmbH & Co. KG;Händler - AM;Marten Hess
+136365;C. Thywissen GmbH;Endkunden - AM;Marten Hess
+122848;Andritz Hydro GmbH;OE/OES - Key Account;Patrick Stäbler
+149005;AuenBurg GmbH;Händler - AM;Schnell, Iris
+108517;CAMEO SPA;Endkunden - AM;Vezzani, Gabriele
+142117;FIVAL ELAUS;Händler - AM;Ludovic Henry
+122534;Lechler GmbH;OE/OES - Key Account;Benjamin Hille
+5204400;Filtration Group Kft;Endkunden - AM;Sales inactive
+127910;Raffinerie Heide GmbH;Endkunden - AM;Claudia Vonk
+147992;Tecnoelastomeri Srl;Endkunden - AM;Vezzani, Gabriele
+122261;YAMAZAKI MAZAK FRANCE;OE/OES - Key Account;Sales inactive
+121898;Göhler GmbH & Co.KG;OE/OES - Key Account;Marten Hess
+129304;PT. Tekno Fluida Indonesia;Händler - AM;Rocco Cafaro
+126278;BENTEC GmbH;Endkunden - AM;Sales inactive
+121885;Robert Bosch  AG;OE/OES - Key Account;Johannes Schmidt
+125483;Thielenhaus Technologies GmbH;Endkunden - AM;Schnell, Iris
+124769;Rain Carbon Germany GmbH;Endkunden - AM;Marten Hess
+148919;Turbo-Separator AG;Händler - AM;Patrick Stäbler
+148645;Cleverfilter GmbH;Händler - AM;Schnell, Iris
+121854;Maschinenbau Silberhorn GmbH;OE/OES - Key Account;Sales inactive
+121753;META SRL;OE/OES - Key Account;Vezzani, Gabriele
+148251;Opel Automobile GmbH;Endkunden - AM;Sales inactive
+107184;BP Europa SE;Endkunden - AM;Marten Hess
+121389;DMG MORI;OE/OES - Key Account;Johannes Schmidt
+108810;Bayer AG;Endkunden - AM;Kasubke, Rene
+106316;Friedrich Pietzcker KG;Endkunden - AM;Sales inactive
+121292;PaSyS;OE/OES - Key Account;Sales inactive
+124659;DOW Deutschland Anlagen-;Endkunden - AM;Kasubke, Rene
+107931;Bharat Forge CDP GmbH;Endkunden - AM;Sales inactive
+115620;HES;Händler - AM;Nicht zugeordnet
+150912;JEMA Tech GmbH & Co. KG;Händler - AM;Hendrik Hoppe
+124133;Freudenberg Filtrat.Technologies UK;Händler - AM;John Manley
+148913;Ryland Research Limited;Händler - AM;Sales inactive
+106591;EAST WIND Schiffs- und Werftbedarf;Händler - AM;Hendrik Hoppe
+136815;Gelsenkraft GmbH;Endkunden - AM;Marten Hess
+140964;Pieralisi Maip;Endkunden - AM;Rocco Cafaro
+150874;DDP Specialty Products Germany;Endkunden - AM;Claudia Vonk
+121099;SLE Technology GmbH;OE/OES - Key Account;Johannes Schmidt
+148183;Bilfinger Maintenance GmbH;Endkunden - AM;Florian Winkler
+136770;Evac Germany GmbH;Händler - AM;Claudia Vonk
+121029;K.R. Pfiffner AG, Utzenstorf;OE/OES - Key Account;Patrick Stäbler
+119740;TISCO Europe GmbH;Händler - AM;Schnell, Iris
+129947;Dyckerhoff GmbH;Endkunden - AM;Sales inactive
+148938;SEFI;Endkunden - AM;Samuel Macaire
+139773;BOSTIK SA;Endkunden - AM;Ludovic Henry
+110599;FRÜTEC Technical Supply GmbH;Händler - AM;Nicht zugeordnet
+120925;PRIMACON GmbH;OE/OES - Key Account;Christian Huber
+150835;LANXESS N.V.;Endkunden - AM;Claudia Vonk
+120589;Optitek GmbH;OE/OES - Key Account;Kasubke, Rene
+120577;MAG IAS GmbH;OE/OES - Key Account;Patrick Stäbler
+105862;Oerlikon Neumag;Endkunden - AM;Sales inactive
+120532;Dorninger Hytronics GmbH;OE/OES - Key Account;Johannes Schmidt
+119828;FILTRES MONNET SAS;OE/OES - Key Account;Samuel Macaire
+148597;Tecnologie e Ambiente S.p.A.;Endkunden - AM;Rocco Cafaro
+124252;POWER UTILITIES;Händler - AM;Paul Dunne
+119708;Piller Entgrattechnik GmbH;OE/OES - Key Account;Sales inactive
+148775;L. Schaible GmbH & Co.KG;Endkunden - AM;Field Service
+151141;AAGM Aalener;Endkunden - AM;Benjamin Hille
+119600;Kamat GmbH u.Co.KG;OE/OES - Key Account;Kasubke, Rene
+148745;MT Gaschem Antarctic;Endkunden - AM;Hendrik Hoppe
+119500;Wolfgang Preinfalk GmbH;OE/OES - Key Account;Nicht zugeordnet
+128911;AL Ghurair Resources;Endkunden - AM;Rocco Cafaro
+148086;Anton Ohlert;Händler - AM;Marten Hess
+119428;Wendland Zerspanungs-;OE/OES - Key Account;Hendrik Hoppe
+106507;DYNAMIC FLUID SYSTEMS;Händler - AM;Steven Louw
+119305;Dressler;OE/OES - Key Account;Patrick Stäbler
+119200;MAFAC;OE/OES - Key Account;Benjamin Hille
+122934;HAARTZ GmbH;Endkunden - AM;Sales inactive
+118890;Hegenscheidt MFD GmbH;OE/OES - Key Account;Sales inactive
+150479;Daimler Truck AG;Endkunden - AM;Benjamin Hille
+118813;TRUMPF Laser GmbH;OE/OES - Key Account;Patrick Stäbler
+149494;Caperva Process Technology S.L.U.;Händler - AM;Sales inactive
+150181;SAIPOL;Endkunden - AM;Samuel Macaire
+109608;PAUL WURTH S.A.;Endkunden - AM;Inside sales DACH
+112385;Hilite Germany GmbH;Endkunden - AM;Johannes Schmidt
+118351;Sandvik Tooling Supply Schmalkalden;OE/OES - Key Account;Kasubke, Rene
+130275;Houghton Deutschland GmbH;Endkunden - AM;Sales inactive
+138399;Andritz Frautech S.R.L;Endkunden - AM;Vezzani, Gabriele
+150429;DFE Pharma;Endkunden - AM;Kasubke, Rene
+105986;Evonik Industries AG;Endkunden - AM;Marten Hess
+118345;Walter AG;Kontraktoren - OE;Benjamin Hille
+124346;Hugo Benzing GmbH & Co.KG;Endkunden - AM;Benjamin Hille
+139923;Versalis Deutschland GmbH;Händler - AM;Kasubke, Rene
+118087;bst hydraulics gmbh;OE/OES - Key Account;Patrick Stäbler
+118795;WMZ Werkzeugm. Ziegenhain GmbH;Endkunden - AM;Sales inactive
+129920;Fritz Barthel;Händler - AM;Hendrik Hoppe
+117883;Opel Austria GmbH;OE/OES - Key Account;Sales inactive
+117462;Frimo Lotte GmbH;OE/OES - Key Account;Nicht zugeordnet
+121131;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+131296;SAIPOL;Endkunden - AM;Samuel Macaire
+150163;Weseke Dragees GmbH;Endkunden - AM;Kasubke, Rene
+150135;IPCO Germany GmbH;Endkunden - AM;Patrick Stäbler
+115692;EUROTECH INTERNATIONAL SA;Händler - AM;Ludovic Henry
+119462;KAMAX Tools & Equipment;Endkunden - AM;Marten Hess
+124656;Schondelmaier GmbH;Endkunden - AM;Field Service
+117439;Kößler technologie GmbH;OE/OES - Key Account;Johannes Schmidt
+117280;Schlosserei Majerus GmbH & Co. KG;Kontraktoren - OE;Johannes Schmidt
+149846;Flutech Industrie;Endkunden - AM;Ludovic Henry
+149492;Miavit GmbH;Endkunden - AM;e-commerce
+112274;Otto Zimmermann GmbH;Händler - AM;Sales inactive
+107422;Gehring Naumburg GmbH & Co.KG;Endkunden - AM;Marten Hess
+111443;Gemeinde Rheinmünster;Endkunden - AM;Sales inactive
+149103;Filter Fraune GmbH;Händler - AM;Schnell, Iris
+107405;Daimler AG;Endkunden - AM;Kasubke, Rene
+148686;Leader Hydraulics Ltd.;Händler - AM;Paul Dunne
+119302;Unior;Endkunden - AM;Patrick Stäbler
+151176;Nobiskrug Yachts GmbH;Endkunden - AM;Field Service
+109286;Albert Handtmann;Endkunden - AM;Patrick Stäbler
+105740;FTE automotive GmbH;Endkunden - AM;Johannes Schmidt
+105017;Samaco GmbH;Händler - AM;Sales inactive
+150834;BCSA GEAR;Endkunden - AM;Samuel Macaire
+107044;ANTRIEBSTECHNIK DELTA;Händler - AM;Schnell, Iris
+140498;Pister Kugelhähne GmbH;Endkunden - AM;Florian Winkler
+148678;Franz Suden KG;Endkunden - AM;Kasubke, Rene
+149161;EC Machine Services (Pty) ltd;Händler - AM;Steven Louw
+148557;Kloska Technical Marine Sales GmbH;Händler - AM;Schnell, Iris
+132728;Brachthäuser;Händler - AM;Nicht zugeordnet
+118772;ThyssenKrupp Presta;Endkunden - AM;Hendrik Hoppe
+106533;Geze GmbH;Endkunden - AM;Sales inactive
+108619;Techno Commerz;Händler - AM;Sales inactive
+105945;HECKLER & KOCH GMBH;Endkunden - AM;Sales inactive
+148206;MIE SERVICES LTD;Endkunden - AM;Inside sales International
+119260;Pressluft-Götz;Händler - AM;Schnell, Iris
+148930;K.T.S. Technical Services GmbH;Endkunden - AM;Claudia Vonk
+116291;CERI;OE/OES - Key Account;Ludovic Henry
+109895;H.P.S. Hydraulik;Händler - AM;Schnell, Iris
+149038;ASK Hydraulik GmbH;Händler - AM;Marten Hess
+115923;STAUBLI FAVERGES SCA;Endkunden - AM;Samuel Macaire
+133064;IKN GmbH;Endkunden - AM;Claudia Vonk
+115757;HYD&AU FLUID;OE/OES - Key Account;Samuel Macaire
+108770;LERINC Werkzeugmaschinen;Händler - AM;Sales inactive
+148753;innogy Gas Storage NWE GmbH;Händler - AM;Marten Hess
+146916;Aerotech Peissenberg GmbH & Co. KG;Endkunden - AM;Johannes Schmidt
+149427;John Morfield Limited;Händler - AM;John Manley
+139361;EGGER Holzwerkstoffe;Endkunden - AM;Marten Hess
+118427;YARA Rostock Zweigniederlassung;Endkunden - AM;Claudia Vonk
+150585;The Millboard Company Ltd;Händler - AM;Sales inactive
+113056;NODIER EMAG INDUSTRIE SA;OE/OES - Key Account;Nicht zugeordnet
+112532;Pittler T & S GmbH;OE/OES - Key Account;Kasubke, Rene
+112433;Hartmut Hesse;OE/OES - Key Account;Hendrik Hoppe
+110924;Alghanim International General;Händler - AM;Rocco Cafaro
+106091;Siltronic AG;Endkunden - AM;Sales inactive
+129691;Microfol Compounding GmbH;Endkunden - AM;Sales inactive
+130313;A. Winkel-Nayyar Trading GmbH;Händler - AM;Sales inactive
+106720;Dr. Roschig;Händler - AM;Schnell, Iris
+112323;HEMO GmbH;OE/OES - Key Account;Nicht zugeordnet
+105908;hubergroup Deutschland GmbH;Endkunden - AM;Sales inactive
+141715;CNC-Experten GmbH & Co. KG;Endkunden - AM;Johannes Schmidt
+109981;Stadtwerke;Endkunden - AM;Sales inactive
+112091;elobau Gmbh & Co.KG;OE/OES - Key Account;Einkauf IIPB
+129082;Compound Solutions Limited;Händler - AM;Sales inactive
+130102;Bosch Industriekessel;Endkunden - AM;Johannes Schmidt
+117529;A.S. Création Tapeten AG;Endkunden - AM;Marten Hess
+149683;YARA Tertre SA / TET;Endkunden - AM;Hendrik Hoppe
+111774;MAG IAS GmbH;OE/OES - Key Account;Patrick Stäbler
+117345;International Filter Center Co.;Händler - AM;Rocco Cafaro
+147762;Richter + Frenzel GmbH & Co. KG;Endkunden - AM;Sales inactive
+106510;Aurubis AG;Endkunden - AM;Sales inactive
+109257;Wurzener Dauerbackwaren GmbH;Endkunden - AM;Sales inactive
+110765;Koch Consulting + Export e.K;Händler - AM;Schnell, Iris
+101087;Carl Croonen GmbH;Händler - AM;Sales inactive
+127803;PROMARINE GmbH;Händler - AM;Nicht zugeordnet
+141412;Wolfgang Anderer;Händler - AM;Schnell, Iris
+150627;URS SPIRIG;Endkunden - AM;Benjamin Hille
+130154;Ness Wärmetechnik GmbH;Endkunden - AM;Benjamin Hille
+111546;Knorr-Bremse;OE/OES - Key Account;Marcus Schneeberger
+135887;Jackon GmbH;Endkunden - AM;Claudia Vonk
+106753;Finzel Hydraulik Chemnitz OHG;Händler - AM;Schnell, Iris
+148594;MT Gaschem Adriatic;Endkunden - AM;Schnell, Iris
+141676;Littau GmbH;Händler - AM;Schnell, Iris
+147094;AUMA Drives GmbH;Endkunden - AM;Marten Hess
+118867;Pressehaus Stuttgart Druck GmbH;Endkunden - AM;Patrick Stäbler
+106353;Willibrord Lösing;Händler - AM;Schnell, Iris
+5203600;FILTRATION GROUP Ltd;Endkunden - AM;Nicht zugeordnet
+111346;Zeppelin GmbH;OE/OES - Key Account;Kasubke, Rene
+129519;GHT Giessbach Hydraulic Tools;Händler - AM;Schnell, Iris
+127769;Marine Shipstores D. Medri GmbH;Händler - AM;Nicht zugeordnet
+111343;H & S Anlagentechnik GmbH;OE/OES - Key Account;Hendrik Hoppe
+111075;DGS System GmbH;OE/OES - Key Account;Benjamin Hille
+110843;Turbo-HKS GmbH;OE/OES - Key Account;Nicht zugeordnet
+106491;PRAEWEMA;Händler - AM;Kasubke, Rene
+129917;Baufeld-Mineralölraffinerie;Endkunden - AM;Marten Hess
+105874;Gehring Technologies GmbH & Co KG;Endkunden - AM;Sales inactive
+130016;Geisler GmbH;Endkunden - AM;Sales inactive
+110839;Tecnologie Diesel S.p.A.;OE/OES - Key Account;Vezzani, Gabriele
+108289;Marabu GmbH & Co.KG;Endkunden - AM;Patrick Stäbler
+108227;Bosch Rexroth Kft.;Händler - AM;Thomas Lumpp
+110057;Musahsi Grolsheim;Endkunden - AM;Nicht zugeordnet
+119354;J&S Automotive Technology;Endkunden - AM;Hendrik Hoppe
+119014;GS Industrietechnik;Endkunden - AM;Sales inactive
+110829;Anton Häring KG;OE/OES - Key Account;Benjamin Hille
+123216;CAPPE SOUPLET NANTES;Händler - AM;Samuel Macaire
+110673;WOKU-Filtermedien;OE/OES - Key Account;Nicht zugeordnet
+110637;Wasserkraft Volk AG;Kontraktoren - OE;Benjamin Hille
+121650;STI s.r.l.;Händler - AM;Vezzani, Gabriele
+111412;Daimler AG;OE/OES - Key Account;Claudia Vonk
+148863;AVEA Entsorgungsbetriebe;Endkunden - AM;Schnell, Iris
+139816;LEFRANC SAS;Händler - AM;Sales inactive
+129885;Annen Verfahrenstechnik GmbH;Endkunden - AM;Sales inactive
+130614;EDF - SA;Endkunden - AM;Sales inactive
+137675;BORNIT-Werk Aschenborn GmbH;Endkunden - AM;Marten Hess
+130152;NORDFOLIEN GmbH;Endkunden - AM;Claudia Vonk
+149197;ADDCON EUROPE GmbH;Endkunden - AM;Marten Hess
+132746;Zweckverband Laber Naab;Endkunden - AM;Field Service
+151364;PROMATEC SAS;Endkunden - AM;Samuel Macaire
+110413;Th. Niehues GmbH;OE/OES - Key Account;Schnell, Iris
+110356;Dr. Herfeld GmbH & Co.KG;OE/OES - Key Account;Kasubke, Rene
+110239;Enercon GmbH;OE/OES - Key Account;Rasmus Bunten
+121994;ASB Anlagen-Service-;Händler - AM;Johannes Schmidt
+110222;Olbrich GmbH;OE/OES - Key Account;Marten Hess
+110174;ZF Friedrichshafen AG;OE/OES - Key Account;Patrick Stäbler
+110507;Lutena Vakuum GmbH;OE/OES - Key Account;Claudia Vonk
+110149;MHS Hydraulik Systeme GmbH;OE/OES - Key Account;Johannes Schmidt
+126842;Veltrup Prozesstechnik GmbH;Endkunden - AM;Schnell, Iris
+150219;European Marine Spares (EMS);Händler - AM;Sales inactive
+109820;EFTEC Engineering GmbH;OE/OES - Key Account;Patrick Stäbler
+109797;SKF Industrie S.p.A;OE/OES - Key Account;Vezzani, Gabriele
+112266;Reki Ltd.;Endkunden - AM;Nicht zugeordnet
+148879;Mecelec Design Ltd;Händler - AM;Sales inactive
+109770;Stöferle GmbH;OE/OES - Key Account;Christian Huber
+109730;MBR MASCHINENBAU RUNKEL;OE/OES - Key Account;Kasubke, Rene
+109704;Knorr-Bremse;OE/OES - Key Account;Marcus Schneeberger
+109579;Supfina Grieshaber GmbH & Co. KG;OE/OES - Key Account;Benjamin Hille
+151134;FACEO FM IDF;Endkunden - AM;Ludovic Henry
+109491;DUSTCONTROL GMBH - DEUTSCHLAND;OE/OES - Key Account;Benjamin Hille
+116249;Appydro;Händler - AM;Samuel Macaire
+109463;Federal-Mogul Burscheid GmbH;OE/OES - Key Account;Marten Hess
+127787;Oldendorff Carriers GmbH & Co. KG;Endkunden - AM;Nicht zugeordnet
+109196;MKR Metzger GmbH;OE/OES - Key Account;Christian Huber
+107482;Wagener Technik GmbH;Händler - AM;Schnell, Iris
+136402;Refood GmbH & Co. KG;Endkunden - AM;Marten Hess
+132418;VNG Gasspeicher GmbH;Endkunden - AM;Marten Hess
+127532;CVS engineering GmbH;Endkunden - AM;Sales inactive
+130450;Camfil S.p.A.;Händler - AM;Rocco Cafaro
+131767;CEFILOR;Endkunden - AM;Sales inactive
+106272;Enke-Werk;Endkunden - AM;Schnell, Iris
+131857;Werner Gießler GmbH;Endkunden - AM;Patrick Stäbler
+101346;Carl Werthenbach;Händler - AM;Schnell, Iris
+109026;Eckerle;OE/OES - Key Account;Sales inactive
+150042;IGP Chemie GmbH;Endkunden - AM;Marten Hess
+128244;NKT GmbH & Co. KG;Endkunden - AM;Kasubke, Rene
+105517;Daimler AG;Endkunden - AM;Florian Winkler
+107062;WERKZEUGMASCHINENBAU;Endkunden - AM;Sales inactive
+109021;Moehwald GmbH;OE/OES - Key Account;Johannes Schmidt
+120121;Holcim GmbH;Endkunden - AM;Sales inactive
+107034;PAPIER -U.KARTONFABRIK;Endkunden - AM;Sales inactive
+151430;SOPREMA GmbH;Endkunden - AM;Kasubke, Rene
+149557;Lange Hydraulikelemente;Endkunden - AM;Patrick Stäbler
+118147;KmB Technologie GmbH;Endkunden - AM;Schnell, Iris
+151366;Apleona MT Services GmbH;Händler - AM;Field Service
+108855;Deutz AG;OE/OES - Key Account;Sales inactive
+130879;EUROPEAN TECHNOLOGIE CONCEPT;Endkunden - AM;Sales inactive
+108638;SF-Systeme Buechele GmbH;OE/OES - Key Account;Patrick Stäbler
+150715;Alfred Popp & Sohn GmbH;Endkunden - AM;Field Service
+125341;SKL;Endkunden - AM;Sales inactive
+149452;Rheinzink GmbH & Co. KG;Endkunden - AM;Sales inactive
+108621;EMCO Magdeburg GmbH;OE/OES - Key Account;Sales inactive
+149743;Carl Zeiss SMT GmbH;Endkunden - AM;Patrick Stäbler
+132653;BMI Steildach GmbH;Endkunden - AM;Sales inactive
+142140;THAMES DIESEL INJECTION PART LTD.;Händler - AM;Inside sales Hamburg
+142217;Carpenter GmbH;Endkunden - AM;Sales inactive
+108578;KOEPFER;OE/OES - Key Account;Patrick Stäbler
+107962;hubergroup Deutschland GmbH;Endkunden - AM;Sales inactive
+112400;Hywax GmbH;Endkunden - AM;Hendrik Hoppe
+149279;Ski Karlov sro;Endkunden - AM;Inside sales International
+149813;SOLVAY;Endkunden - AM;Hendrik Hoppe
+149291;PWK IBEX GmbH;Endkunden - AM;Schnell, Iris
+150883;Wintershall Dea Deutschland GmbH;Endkunden - AM;Claudia Vonk
+5888800;Kirin Filtration (Singapore) Pte Lt;Endkunden - AM;Nicht zugeordnet
+108548;Hoerbiger Antriebstechnik GmbH;OE/OES - Key Account;Johannes Schmidt
+106082;WILCKENS FARBEN GMBH;Endkunden - AM;Hendrik Hoppe
+150617;F +B Maschinenservice GmbH;Händler - AM;Schnell, Iris
+120018;Eigenbetrieb;Endkunden - AM;Sales inactive
+138814;Optiflex GmbH;Händler - AM;Schnell, Iris
+130165;Tecfeld GmbH;Händler - AM;Schnell, Iris
+112456;LANXESS Deutschland GmbH;Endkunden - AM;Kasubke, Rene
+149296;Grene Wind Industry Supplies A/S;Händler - AM;Thomas Lumpp
+151510;ACLA-WERKE GmbH;Endkunden - AM;Kasubke, Rene
+149546;ARYZTA Bakeries Deutschland GmbH;Endkunden - AM;Marten Hess
+108567;Bilfinger EMS GmbH;OE/OES - Key Account;Claudia Vonk
+118477;Flint Group Germany GmbH;Endkunden - AM;Benjamin Hille
+108434;S.A.R. Elektronic GmbH;Kontraktoren - OE;Johannes Schmidt
+149863;Statkraft Markets GmbH;Endkunden - AM;Sales inactive
+106149;AACHENER PRINTEN-U.SCHOKOLAD.-;Endkunden - AM;Sales inactive
+149111;Eawag;Endkunden - AM;Field Service
+108286;Beck Machinenfabrik GmbH;OE/OES - Key Account;Field Service
+150889;AXIOME Frimo Group;Endkunden - AM;Samuel Macaire
+108272;Cavitron v. Hagen & Funke GmbH;OE/OES - Key Account;Marten Hess
+107640;KOHLER GMBH;Händler - AM;Schnell, Iris
+105995;Bosch Thermotechnik GmbH;Endkunden - AM;Field Service
+106284;Seppeler Rietbergwerke;Endkunden - AM;e-commerce
+151157;Gehring Production;Endkunden - AM;Marten Hess
+150405;Hess GmbH;Endkunden - AM;Kasubke, Rene
+109672;Müller Praezision GmbH;Endkunden - AM;Sales inactive
+109443;DOM Sicherheitstechnik;Endkunden - AM;Marten Hess
+108251;Carl Benzinger GmbH;OE/OES - Key Account;Patrick Stäbler
+105645;TH. KEKEISEN GMBH & CO.;Händler - AM;Sales inactive
+108241;Bosch Sanayi ve Ticaret A.S.;OE/OES - Key Account;Johannes Schmidt
+131971;EUCO International;Endkunden - AM;Nicht zugeordnet
+105871;Gertner Service GmbH;Händler - AM;Sales inactive
+151255;PD-Technik;Händler - AM;Hendrik Hoppe
+141955;Baumanns & Kröll;Endkunden - AM;Schnell, Iris
+108104;Wacker Neuson;OE/OES - Key Account;Johannes Schmidt
+137890;Widni Oy;Händler - AM;Thomas Lumpp
+108062;GEA Westfalia Separator Group GmbH;OE/OES - Key Account;Kasubke, Rene
+147511;Standard Aggregatebau Evers;Endkunden - AM;Hendrik Hoppe
+130167;OEG GmbH;Händler - AM;Sales inactive
+147602;Constellium Rolled Products Singen;Händler - AM;Benjamin Hille
+129476;Zementwerk Hatschek GmbH;Endkunden - AM;Sales inactive
+149765;Energiedienst Holding AG;Endkunden - AM;Sales inactive
+149257;Poppies Berlidon S.A.S.U.;Endkunden - AM;Samuel Macaire
+150571;Dörken Coatings GmbH& Co. KG;Endkunden - AM;Marten Hess
+108016;BÜHLER AG;OE/OES - Key Account;Inside sales DACH
+108011;DMT-Drehmaschinen GmbH & Co. KG;Kontraktoren - OE;Patrick Stäbler
+147905;Hans Pfeiffer GmbH;Endkunden - AM;Patrick Stäbler
+108007;Carl Leipold GmbH;OE/OES - Key Account;Sales inactive
+107949;PTS Hydraulik GmbH;OE/OES - Key Account;Schnell, Iris
+129903;ARDAGH Glass GmbH;Endkunden - AM;Claudia Vonk
+107920;MAN Energy Solutions SE;OE/OES - Key Account;Johannes Schmidt
+138751;Brammer;Händler - AM;Rocco Cafaro
+149019;GELSENWASSER AG;Endkunden - AM;Schnell, Iris
+117322;Robert Bosch Power Tools GmbH;Endkunden - AM;Johannes Schmidt
+107371;Erhard Luttkau GmbH;Händler - AM;Sales inactive
+149829;Windmöller GmbH;Endkunden - AM;Hendrik Hoppe
+107919;Rheinmetall Landsysteme GmbH;OE/OES - Key Account;Hendrik Hoppe
+107862;HEDELIUS MASCHINENFABRIK GMBH;OE/OES - Key Account;Hendrik Hoppe
+129816;DOW Olefinverbund GmbH;Endkunden - AM;Florian Winkler
+130497;DERIVES RESINIQUES TERPENIQUES;Endkunden - AM;Samuel Macaire
+125395;AFMECH GmbH;Händler - AM;Sales inactive
+117550;Bunge Deutschland GmbH;Endkunden - AM;Florian Winkler
+148920;Breisacher GmbH;Endkunden - AM;Sales inactive
+147714;BMTS Technology Austria;Endkunden - AM;Johannes Schmidt
+111209;GKN Driveline Deutschland GmbH;Endkunden - AM;Sales inactive
+149622;IMERYS MINERALS GmbH;Endkunden - AM;Schnell, Iris
+149238;Weru Präzisionsdrehteile-;Endkunden - AM;Field Service
+140400;SEFYDRO;Händler - AM;Samuel Macaire
+107821;KUNZMANN Maschinenbau GmbH;OE/OES - Key Account;Florian Winkler
+128132;Fredenbecker Technik & Handels GmbH;Endkunden - AM;Hendrik Hoppe
+107725;Hülswitt GmbH;OE/OES - Key Account;Marten Hess
+107695;Infraserv Wiesbaden Technik;Kontraktoren - OE;Sales inactive
+107942;Diosna;OE/OES - Key Account;Claudia Vonk
+121870;Industrial Electronic;Händler - AM;Nicht zugeordnet
+107644;Polo Filter-Technik Bremen GmbH;OE/OES - Key Account;Hendrik Hoppe
+106711;V-Line Europe GmbH;Händler - AM;Sales inactive
+122227;Inter Sea Services & Trading GmbH;Händler - AM;Schnell, Iris
+151343;Rollstar;Endkunden - AM;Field Service
+148625;Lenze Operations GmbH;Endkunden - AM;Hendrik Hoppe
+150608;FIVES MACHINING;Endkunden - AM;Samuel Macaire
+140047;ENGIE Services AG;Händler - AM;Field Service
+127369;BASF Personal Care and Nutrition;Endkunden - AM;Kasubke, Rene
+128781;Poschner & Bock;Händler - AM;Inside sales DACH
+149547;ORA drive GmbH;Endkunden - AM;Marten Hess
+107625;Mayfran GmbH;OE/OES - Key Account;Marten Hess
+106765;LOTZ Hydraulik + Pneumatik GmbH;Endkunden - AM;Sales inactive
+149378;FUCHS;Endkunden - AM;Marten Hess
+107591;Starrag Technology GmbH;OE/OES - Key Account;Marten Hess
+130149;Niedergesäss;Endkunden - AM;Hendrik Hoppe
+130230;Malteurop Deutschland GmbH;Endkunden - AM;Marten Hess
+136096;Bugsier-, Reederei- und;Endkunden - AM;Hendrik Hoppe
+107578;ALTHA INDUSTRIEPRODUKTE;OE/OES - Key Account;Johannes Schmidt
+107431;Thomas Filtertechnik GmbH;Händler - AM;Schnell, Iris
+149990;Uniper Energy Storage GmbH;Endkunden - AM;Marten Hess
+138230;Plansee SE;Endkunden - AM;Christian Huber
+105897;Heidelberg Manufacturing;Endkunden - AM;Patrick Stäbler
+129463;Kohinoor Energy Limited;Händler - AM;Inside sales International
+149713;EGTIM Industrie;Endkunden - AM;Samuel Macaire
+128229;Ditech AS;Händler - AM;Thomas Lumpp
+107565;GSN;OE/OES - Key Account;Patrick Stäbler
+106339;BREHM GMBH +CO.KG;Endkunden - AM;Patrick Stäbler
+101059;A.S.M Allseas Marine GmbH & Co.KG;Händler - AM;Inside sales Hamburg
+107506;Knoll Hydraulik GmbH + Co.KG;OE/OES - Key Account;Johannes Schmidt
+149050;Rapid Engineering Supplies Ltd;Händler - AM;Sales inactive
+130171;Perlwitz Armaturen GmbH;Endkunden - AM;Sales inactive
+107497;ALZMETALL GmbH & Co.;OE/OES - Key Account;Johannes Schmidt
+119203;Herzog-Hydraulik GmbH;Händler - AM;Schnell, Iris
+149783;Rolf Weber KG;Händler - AM;Schnell, Iris
+150434;CSM Deutschland GmbH;Endkunden - AM;Hendrik Hoppe
+107467;TEWE GmbH;OE/OES - Key Account;Hendrik Hoppe
+109091;Harting Electric GmbH & Co.KG;Endkunden - AM;Claudia Vonk
+130179;Nordenhamer Zinkhütte GmbH;Endkunden - AM;Sales inactive
+123815;August Storck KG;Endkunden - AM;Schnell, Iris
+147264;MAHLE Blechtechnologie GmbH;Endkunden - AM;Johannes Schmidt
+151232;KRAIBURG Austria;Endkunden - AM;e-commerce
+129856;Nyffenegger Pumpentechnik;Endkunden - AM;Inside sales DACH
+107451;Gema Switzerland GmbH;OE/OES - Key Account;Benjamin Hille
+149635;Reca GmbH;Endkunden - AM;Hendrik Hoppe
+148877;Wagner;Endkunden - AM;Patrick Stäbler
+130148;Aker Ingenieria S.L.;Händler - AM;Sales inactive
+123885;LEW Automotive GmbH;Endkunden - AM;Patrick Stäbler
+106458;Ketten Wulf Betriebs GmbH;Endkunden - AM;Marten Hess
+107101;ROHDE U.SCHWARZ;Endkunden - AM;Field Service
+134147;Experbuy;Händler - AM;Kasubke, Rene
+112416;Bayer AG;Endkunden - AM;Kasubke, Rene
+107647;Seven Seas Germany GmbH;Händler - AM;Hendrik Hoppe
+107435;AXA ENTWICKLUNGS- U.;OE/OES - Key Account;Marten Hess
+128028;Gebr. Friedrich GmbH & Co. KG;Händler - AM;Claudia Vonk
+107342;GIMA;OE/OES - Key Account;Ludovic Henry
+128817;Combé Anlagenbau GmbH;Händler - AM;Schnell, Iris
+122117;Haas u. Kellhofer;Händler - AM;Schnell, Iris
+139945;EFTEC Ltd;Händler - AM;Sales inactive
+107322;Daimler Truck AG;OE/OES - Key Account;Florian Winkler
+148866;Nordland Papier GmbH;Endkunden - AM;Hendrik Hoppe
+130257;Ardagh Metal Packaging;Endkunden - AM;Nicht zugeordnet
+108203;Continental Teves AG &Co OHG;Endkunden - AM;Marten Hess
+127531;Dr. Johannes Heidenhain GmbH;Endkunden - AM;Johannes Schmidt
+106755;Süd-Fensterwerk GmbH & Co.;Endkunden - AM;Sales inactive
+138835;REEDEREI NORD GmbH;Endkunden - AM;Schnell, Iris
+149444;Transnord Zahnrad- und;Endkunden - AM;Field Service
+107269;EMAG Zerbst Maschinenfabrik GmbH;OE/OES - Key Account;Benjamin Hille
+107259;DMG MORI Pfronten GmbH;OE/OES - Key Account;Johannes Schmidt
+107175;RAMPF Tooling Solutions;OE/OES - Key Account;Benjamin Hille
+147249;MAHLE Industrial Thermal Systems;Endkunden - AM;Johannes Schmidt
+149799;Willi Elbe;Endkunden - AM;Patrick Stäbler
+107159;INNOVATHERM;OE/OES - Key Account;Kasubke, Rene
+150013;Herbert Schümann;Händler - AM;Marten Hess
+150431;Reko-Verpackungen &;Endkunden - AM;Hendrik Hoppe
+148548;Alfred Heyd GmbH & Co. KG;Endkunden - AM;Sales inactive
+109658;Fertigungstechnik Nord GmbH;Endkunden - AM;Hendrik Hoppe
+107157;Polyplan-GmbH;OE/OES - Key Account;Christian Huber
+130305;Voestalpine Stahl Donawitz GmbH;Endkunden - AM;Nicht zugeordnet
+129542;trans-Mar-supply GmbH & Co. KG;Händler - AM;Sales inactive
+124488;TD Deutsche Klimakompressor GmbH;Endkunden - AM;Schnell, Iris
+149482;Vopak Dupeg Terminal;Endkunden - AM;Hendrik Hoppe
+105838;Schaeffler Techn. AG & Co. KG;Endkunden - AM;Johannes Schmidt
+150619;Winning BLW Management GbmH;Endkunden - AM;Johannes Schmidt
+107128;SAMAG Saalfelder;OE/OES - Key Account;Marten Hess
+148764;sciprotec industrial plant;Endkunden - AM;Hendrik Hoppe
+106603;Dometic Germany Krautheim GmbH;Endkunden - AM;Patrick Stäbler
+107123;PETKUS Technologie GmbH;OE/OES - Key Account;Schnell, Iris
+128050;K.T.S. Technical Services e.K.;Händler - AM;Sales inactive
+107758;SCHWARK;Händler - AM;e-commerce
+110131;Renolit SE;Endkunden - AM;Sales inactive
+122167;Bosch;Endkunden - AM;Inside sales International
+121373;Simpex Hydraulik GmbH;Händler - AM;Schnell, Iris
+102048;Walter H. Ackrutat;Händler - AM;Sales inactive
+139354;FIO  SA;Händler - AM;Samuel Macaire
+105619;HENKEL AG + Co. KGAA;Endkunden - AM;Florian Winkler
+118180;KB Servicepoint Bassum GmbH;Endkunden - AM;Sales inactive
+107111;Wilhelm Feldmann;OE/OES - Key Account;Hendrik Hoppe
+107079;LANG SPANNWERKZEUGE GMBH;OE/OES - Key Account;Sales inactive
+141371;ACT-Sistemas Hidráulicos Ltda;Händler - AM;Rocco Cafaro
+118870;SFH;Endkunden - AM;Samuel Macaire
+107000;ECKERT & GRAF GMBH;OE/OES - Key Account;Sales inactive
+108779;Mineraloelraffinerie;Endkunden - AM;Patrick Stäbler
+106981;Interlit Filtration GmbH;OE/OES - Key Account;Johannes Schmidt
+150995;Haenchen Hydraulique S.A.R.L.;Endkunden - AM;Sales inactive
+149972;WST Präzisionstechnik GmbH;Endkunden - AM;Sales inactive
+112182;Getriebe- und Antriebstechnik;Endkunden - AM;Hendrik Hoppe
+131742;EDHD SAS HYDROMAINTENANCE;Händler - AM;Ludovic Henry
+118969;GKN Driveline Trier GmbH;Endkunden - AM;Schnell, Iris
+108151;Martin Braun;Endkunden - AM;Sales inactive
+106933;Müller Hydraulik GmbH;OE/OES - Key Account;Benjamin Hille
+148894;Industrietechnik Tholey;Händler - AM;Patrick Stäbler
+130253;Sonac Lingen GmbH;Endkunden - AM;Sales inactive
+149871;Eriks Transportation GmbH;Händler - AM;Thomas Lumpp
+107202;Webac Gesellschaft;Endkunden - AM;Schnell, Iris
+107374;RAUH Hydraulik GmBH;Händler - AM;Schnell, Iris
+106919;Emag Koepfer GmbH;OE/OES - Key Account;Benjamin Hille
+149092;IESA Limited;Händler - AM;Sales inactive
+106849;SAIP IMPIANTI;OE/OES - Key Account;Vezzani, Gabriele
+131485;JOHN MORFIELD LTD.;Händler - AM;John Manley
+135581;Fangmann industrie;Endkunden - AM;Hendrik Hoppe
+149366;Matschuk KG;Endkunden - AM;Marten Hess
+130191;Renken & Co. GmbH;Händler - AM;Schnell, Iris
+118623;ZIMEX GmbH;Endkunden - AM;Patrick Stäbler
+106847;GERLIEVA SPRUEHTECHNIK GMBH;OE/OES - Key Account;Benjamin Hille
+147273;Brandt Schokoladen GmbH & Co. KG;Endkunden - AM;Marten Hess
+129717;Pletscher + Co. AG;Endkunden - AM;Inside sales DACH
+139769;Dussmann Service Deutschland GmbH;Händler - AM;Schnell, Iris
+149654;MAHLE Engine Systems UK Ltd.;Endkunden - AM;Sales inactive
+106739;SCHMID GMBH;OE/OES - Key Account;Christian Huber
+148159;Basi Schöberl GmbH & Co.KG;Endkunden - AM;Sales inactive
+149911;GIS AG;Endkunden - AM;Patrick Stäbler
+140768;HSP Schwalm GmbH;Endkunden - AM;Field Service
+147169;Quant Service GmbH;Händler - AM;Sales inactive
+123432;FASE-CIR;Händler - AM;Samuel Macaire
+106697;EMAG;OE/OES - Key Account;Benjamin Hille
+149689;Proseat GmbH & Co. KG;Endkunden - AM;Field Service
+129954;Deller GmbH;Endkunden - AM;Marten Hess
+129695;ZENTIS GmbH & Co. KG;Endkunden - AM;Sales inactive
+128379;NTN Antriebstechnik GmbH;Endkunden - AM;Claudia Vonk
+150158;Covameat NV;Endkunden - AM;Samuel Macaire
+128912;Kohn Industry Products;Endkunden - AM;Schnell, Iris
+110273;Zahnradwerk Nord GmbH;Endkunden - AM;Sales inactive
+106672;FAUDI GmbH;OE/OES - Key Account;Kasubke, Rene
+109700;SKF GmbH;Endkunden - AM;Patrick Stäbler
+130250;Mineralölhandel;Händler - AM;Sales inactive
+106631;Batimat;Endkunden - AM;Johannes Schmidt
+132660;F.M.I. SRL a socio unico;Endkunden - AM;Vezzani, Gabriele
+148638;EMS GmbH;Händler - AM;Field Service
+101039;EvoBus GmbH;Endkunden - AM;Benjamin Hille
+108388;Rohrwerk Maxhuette;Endkunden - AM;Johannes Schmidt
+149358;Königswarter & Ebell;Endkunden - AM;Marten Hess
+106659;HOECKER ANLAGENBAU GMBH;OE/OES - Key Account;Hendrik Hoppe
+111707;Richard Bergner GmbH & Co. KG;Endkunden - AM;Johannes Schmidt
+106640;WEMA Vogtland Technology GmbH;OE/OES - Key Account;Marten Hess
+150652;Ewald Kaufmann GmbH & Co. KG;Endkunden - AM;Patrick Stäbler
+106596;Forst Technologie GmbH & Co. KG;OE/OES - Key Account;Kasubke, Rene
+106581;Reber Systematic GmbH & Co. KG;OE/OES - Key Account;Benjamin Hille
+106567;UNIOR;OE/OES - Key Account;Inside sales International
+134970;Europa Crown Limited;Händler - AM;John Manley
+106553;Ruez GmbH;OE/OES - Key Account;Sales inactive
+149747;Bals Elektrotechnik GmbH & Co. KG;Endkunden - AM;Marten Hess
+127957;Fr. Fassmer GmbH & Co. KG;Endkunden - AM;Claudia Vonk
+106545;Tarkett Holding GmbH;OE/OES - Key Account;Sales inactive
+106519;Maschinenfabrik Niehoff;OE/OES - Key Account;Florian Winkler
+107094;COROPLAST;Endkunden - AM;Sales inactive
+121658;SGS Ablängtechnik GmbH;Endkunden - AM;Sales inactive
+106456;Licon mt GmbH & Co. KG;OE/OES - Key Account;Christian Huber
+106451;WALTHER;OE/OES - Key Account;Schnell, Iris
+129709;Tallink Grupp AS;Händler - AM;Sales inactive
+111243;TEGUS Handels-,Technologie-und;Händler - AM;Schnell, Iris
+150733;Klaus Backes GmbH;Endkunden - AM;Sales inactive
+130200;Nikolaus Sorg GmbH;Endkunden - AM;Johannes Schmidt
+122616;WIKA Alexander Wiegand;Endkunden - AM;Sales inactive
+106381;Engel Austria GmbH;OE/OES - Key Account;Johannes Schmidt
+148905;Alfred Heyd GmbH & Co. KG;Endkunden - AM;Sales inactive
+106379;Bosch Rexroth GmbH;OE/OES - Key Account;Johannes Schmidt
+151361;Essity Operations Mannheim GmbH;Endkunden - AM;Florian Winkler
+127826;Ingenieurbüro Heino Winter;Endkunden - AM;e-commerce
+129955;Perstorp Chemicals GmbH;Endkunden - AM;Schnell, Iris
+106351;Voith Turbo GmbH & Co. KG;OE/OES - Key Account;Nicht zugeordnet
+110157;Europe Direct GmbH;Händler - AM;Schnell, Iris
+119380;IFM Elektronic GmbH;Endkunden - AM;Patrick Stäbler
+118950;Environmental Systems GmbH;Endkunden - AM;Hendrik Hoppe
+131579;Rubix;Händler - AM;Samuel Macaire
+106311;RAMPF Production Systems;OE/OES - Key Account;Patrick Stäbler
+106303;Bär + Co.;OE/OES - Key Account;Patrick Stäbler
+122405;Winkelmann Powertrain;Endkunden - AM;Sales inactive
+134969;Ernst Rickermann Landhandel GmbH;Endkunden - AM;Hendrik Hoppe
+137702;MENNEKES Elektrotechnik;Endkunden - AM;Sales inactive
+106259;Probst & Class GmbH & Co. KG;OE/OES - Key Account;Florian Winkler
+151028;FLUIDEXX EAD;Händler - AM;Thomas Lumpp
+137054;Global Newbuilts Ltd.;Händler - AM;Sales inactive
+110478;Voith Dienstleistungen und;Händler - AM;Patrick Stäbler
+108398;Lingemann GmbH;Händler - AM;Schnell, Iris
+106258;Scherer Feinbau GmbH;OE/OES - Key Account;Marten Hess
+129938;ContiTech Transportband;Endkunden - AM;Kasubke, Rene
+130228;SUET Saat- und;Endkunden - AM;Marten Hess
+107548;NANOVAL GmbH &Co.KG;Endkunden - AM;Claudia Vonk
+105613;SMS Elotherm GmbH;Endkunden - AM;Sales inactive
+106245;Bürener Maschinenfabrik GmbH;OE/OES - Key Account;Johannes Schmidt
+147140;HSR GmbH;Händler - AM;Schnell, Iris
+151381;Apleona Schweiz AG;Händler - AM;Field Service
+106235;Erwin Halder KG;OE/OES - Key Account;Christian Huber
+106221;Kuwega Hydraulik Service GmbH;OE/OES - Key Account;Marten Hess
+106220;KÜMA Apparatebau GmbH;OE/OES - Key Account;Patrick Stäbler
+106192;MAN Energy Solutions SE;OE/OES - Key Account;Marcus Schneeberger
+151088;Bibus (UK) Ltd.;Händler - AM;Paul Dunne
+121376;Franz Funke;Endkunden - AM;Schnell, Iris
+118873;Tesium GmbH;Endkunden - AM;Kasubke, Rene
+131532;COMPAGNIE DES ILES DU PONANT;Endkunden - AM;Sales inactive
+107099;OEL- & FILTER;Händler - AM;Schnell, Iris
+106180;UNIVERSAL HYDRAULIK GMBH;OE/OES - Key Account;Marten Hess
+130986;SEW-USOCOME S.A.S;Endkunden - AM;Sales inactive
+108495;H. Stoll AG & Co. KG;Endkunden - AM;Patrick Stäbler
+106162;Max Weishaupt GmbH;OE/OES - Key Account;Christian Huber
+106148;Felss Systems GmbH;OE/OES - Key Account;Patrick Stäbler
+130336;Reflex GmbH & Co. KG;Endkunden - AM;Schnell, Iris
+106133;Alfred Kärcher SE & Co. KG;OE/OES - Key Account;Benjamin Hille
+151412;FUCHS OIL CORPORATION;Endkunden - AM;Florian Winkler
+129858;Holcim (Deutschland) AG;Endkunden - AM;Sales inactive
+107670;Görgü Hydraulik-Maschinenbau GmbH;Händler - AM;Schnell, Iris
+110205;Pressedruck Potsdam GmbH;Endkunden - AM;Schnell, Iris
+136053;Rubix NV Antwerpen;Händler - AM;Thomas Lumpp
+106048;Knoll Maschinenbau GmbH;OE/OES - Key Account;Patrick Stäbler
+127165;Hüttenwerke Krupp Mannesmann;Endkunden - AM;Marten Hess
+106033;Gebr. Saacke GmbH & Co. KG;OE/OES - Key Account;Sales inactive
+106018;Josef Kalveram GmbH + Co.KG;OE/OES - Key Account;Marten Hess
+109154;ThyssenKrupp Schulte GmbH;Endkunden - AM;Marten Hess
+129752;Rickmers Shipmanagement Pte. Ltd.;Endkunden - AM;Inside sales International
+150081;Syntegon Technology GmbH;Endkunden - AM;Benjamin Hille
+121526;ThyssenKrupp Presta AG;Endkunden - AM;Inside sales DACH
+5889100;Clear Edge Filtration SA (Pty) Ltd;Händler - AM;Nicht zugeordnet
+122059;AUMA Riester GmbH & Co. KG;Endkunden - AM;Sales inactive
+151409;Rousselot Isle S/L;Endkunden - AM;Samuel Macaire
+148316;thyssenkrupp Valvetrain GmbH;Endkunden - AM;Hendrik Hoppe
+149280;Bon Gelati GmbH & Co. KG;Endkunden - AM;Marten Hess
+107414;TDK-Technische Dienste;Endkunden - AM;Sales inactive
+106013;PREGLER HANS GMBH U. CO.KG;OE/OES - Key Account;Johannes Schmidt
+138689;HYDRO SERVICE CONCEPT;Händler - AM;Samuel Macaire
+106008;Zeppelin Systems GmbH;OE/OES - Key Account;Kasubke, Rene
+140969;PERI GmbH;Endkunden - AM;Patrick Stäbler
+138698;Reiner Gross GmbH;Endkunden - AM;Hendrik Hoppe
+105993;Arthur Klink GmbH;OE/OES - Key Account;Florian Winkler
+108580;ULMEX Industrie System;Händler - AM;Patrick Stäbler
+149586;FIVES MAINTENANCE;Endkunden - AM;Ludovic Henry
+129825;NMS Ltd.;Endkunden - AM;Inside sales International
+147262;MAHLE Filtersysteme GmbH;Endkunden - AM;Johannes Schmidt
+105983;SEW-EURODRIVE GmbH & Co. KG;OE/OES - Key Account;Marten Hess
+117302;Manasek Hydraulik und;Händler - AM;Schnell, Iris
+105978;Uhde High Pressure;OE/OES - Key Account;Kasubke, Rene
+147555;GS-Industrietechnik GmbH;Endkunden - AM;Patrick Stäbler
+106394;CHINA STEEL CORPORATION;Endkunden - AM;Inside sales International
+142035;Spie Energy Solutions GmbH;Händler - AM;Field Service
+129713;Richter + Frenzel GmbH & Co. KG;Endkunden - AM;Johannes Schmidt
+105971;Mauser-Werke Oberndorf;OE/OES - Key Account;Sales inactive
+124564;Borbet GmbH;Endkunden - AM;Field Service
+150850;Ardagh Metal Packaging;Endkunden - AM;Florian Winkler
+151298;Vacuumschmelze GmbH & Co.KG;Endkunden - AM;Benjamin Hille
+148610;CIGMA SAS - ACTEMUIM;Endkunden - AM;Samuel Macaire
+105964;Eickhoff Maschinenfabrik GmbH;OE/OES - Key Account;Marten Hess
+123174;DEXIS TAMPLEU SPRIET;Händler - AM;Sales inactive
+110580;Süddeutscher Verlag;Endkunden - AM;Sales inactive
+105946;Schwäbische Werkzeugmaschinen GmbH;OE/OES - Key Account;Patrick Stäbler
+123079;Trefz GmbH;Händler - AM;Schnell, Iris
+149954;SERTEC;Endkunden - AM;Samuel Macaire
+150471;Trokamed GmbH;Endkunden - AM;Sales inactive
+105943;Robert Bosch GmbH;OE/OES - Key Account;Johannes Schmidt
+111389;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+148741;Uniper SE;Endkunden - AM;Schnell, Iris
+105605;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+127620;EPE UK LTD;Händler - AM;Sales inactive
+148569;Technoalpin Austria Ges.m.b.H.;Endkunden - AM;Thomas Lumpp
+124538;Lanxess Organometallics GmbH;Endkunden - AM;Kasubke, Rene
+132993;Allnex Resins Germany GmbH;Endkunden - AM;Marten Hess
+128378;Gustav Schmidt GmbH & Co. KG;Händler - AM;Schnell, Iris
+105942;SONA AutoComp Germany GmbH;OE/OES - Key Account;Marten Hess
+149306;AXEL;Endkunden - AM;Samuel Macaire
+140454;Tox Pressotechnik;Endkunden - AM;Patrick Stäbler
+122166;Bayer AG;Endkunden - AM;Claudia Vonk
+102923;E.W. Neu GmbH;Händler - AM;Sales inactive
+129603;Max Zeller Söhne AG;Endkunden - AM;Inside sales DACH
+105934;AZO GMBH + CO.KG;OE/OES - Key Account;Florian Winkler
+105926;HERRENKNECHT AG;OE/OES - Key Account;Patrick Stäbler
+148803;Compressed Air Management 2008 Ltd;Händler - AM;Sales inactive
+150696;Filter Services UK Ltd;Händler - AM;John Manley
+136864;IPS - Industrial Piping;Händler - AM;Johannes Schmidt
+132109;Brockmann Mineralölhandel GmbH;Endkunden - AM;Hendrik Hoppe
+106784;TTH-Techno Trade Hamburg GmbH;Händler - AM;Schnell, Iris
+112268;Petrochemical Industries Co (K.S.C);Endkunden - AM;Inside sales International
+125174;Kramp Danmark A/S;Händler - AM;Thomas Lumpp
+105891;WAFIOS;OE/OES - Key Account;Nicht zugeordnet
+127575;MDV Papier- und Kunststoffveredelun;Endkunden - AM;Inside sales DACH
+150420;SEALOCK LIMITED;Endkunden - AM;Sales inactive
+149568;ITS (UK) Ltd.;Händler - AM;Sales inactive
+129534;Imatech BV;Endkunden - AM;Sales inactive
+149752;Pneumatech;Händler - AM;Schnell, Iris
+150898;SR Industriecervice GmbH;Händler - AM;Sales inactive
+105881;Benhil GmbH;OE/OES - Key Account;Sales inactive
+105879;Krones AG;OE/OES - Key Account;Florian Winkler
+105865;Gleason-Pfauter;OE/OES - Key Account;Patrick Stäbler
+111464;FAIRPLAY;Endkunden - AM;Claudia Vonk
+148076;Pfeifer & Langen GmbH & Co.KG;Endkunden - AM;Sales inactive
+127629;Leser GmbH & Co. KG;Endkunden - AM;Claudia Vonk
+131443;CTDI TOULOUSE SAS;Händler - AM;Sales inactive
+148096;OBD PRECISION GmbH;Endkunden - AM;Sales inactive
+105859;Gardner Denver;OE/OES - Key Account;Patrick Stäbler
+110257;Halit Uzun Muehendislik;Händler - AM;Nicht zugeordnet
+105844;Karl Klink GmbH;OE/OES - Key Account;Florian Winkler
+105842;Alfing Kessler;OE/OES - Key Account;Patrick Stäbler
+131042;PETROINEOS MANUFACTURING FRANCE SAS;Endkunden - AM;Sales inactive
+133196;Outokumpu Nirosta GmbH;Endkunden - AM;Marten Hess
+101139;ISP Salzbergen GmbH & Co. KG;Endkunden - AM;Sales inactive
+105834;Alfred Veith GmbH & Co. KG;OE/OES - Key Account;Field Service
+130282;Tuchel & Sohn GmbH;Endkunden - AM;Sales inactive
+105820;HELD TECHNOLOGIE GMBH;Kontraktoren - OE;Benjamin Hille
+130207;REMONDIS Industrie Service;Händler - AM;Schnell, Iris
+108343;Rauh Hydraulik GmbH;Händler - AM;Schnell, Iris
+129934;Cogema Lda;Endkunden - AM;Sales inactive
+110747;Filtertechnik Knauf GmbH;Händler - AM;Schnell, Iris
+150445;Betz Flow GmbH;Endkunden - AM;Johannes Schmidt
+148340;Klevenberg Shipping Center B.V.;Endkunden - AM;Nicht zugeordnet
+129751;Laurin Maritime AB;Endkunden - AM;Nicht zugeordnet
+127812;Wilhelm Rump GmbH & Co KG;Händler - AM;Hendrik Hoppe
+5888700;Filtration Group S.R.L.;Endkunden - AM;Nicht zugeordnet
+148624;Unipro & Consulting GmbH;Händler - AM;Schnell, Iris
+129894;GE Power Systems GmbH;Endkunden - AM;Patrick Stäbler
+105815;Hammelmann GmbH;OE/OES - Key Account;Marten Hess
+150046;Intervalve Research and;Endkunden - AM;Hendrik Hoppe
+104571;Pfefferl e. Kfm;Händler - AM;Sales inactive
+147329;CIR CENTRE LOGISTIQUE;Händler - AM;Samuel Macaire
+148789;Lubetech Services (PTY) LTD;Händler - AM;Steven Louw
+105608;Robert Bosch GmbH;Endkunden - AM;Johannes Schmidt
+109929;Stadtentwässerung Schorndorf;Endkunden - AM;Nicht zugeordnet
+130260;S.I.T.   Schiffs-& Industrie;Händler - AM;Hendrik Hoppe
+108845;Rugel;Endkunden - AM;Patrick Stäbler
+112398;Ehrhard Müller KG;Händler - AM;Schnell, Iris
+148752;W. Adolph;Händler - AM;Schnell, Iris
+105814;Gebr. Heller GmbH;OE/OES - Key Account;Patrick Stäbler
+111709;BILSTEIN & SIEKERMANN;Endkunden - AM;Sales inactive
+141631;Hoffmann GmbH;Endkunden - AM;Johannes Schmidt
+129557;CETIB Dexis;Endkunden - AM;Sales inactive
+105801;Grob Werke GmbH & Co. KG;OE/OES - Key Account;Christian Huber
+122179;SEFI Rungis;Händler - AM;Nicht zugeordnet
+146828;Tecfilter Comércio de Equipamentos;Händler - AM;Rocco Cafaro
+105799;BURKHARDT + WEBER;OE/OES - Key Account;Patrick Stäbler
+123233;Continental Automotive GmbH;Endkunden - AM;Marten Hess
+105794;Plasser Robel Services GmbH;Kontraktoren - OE;Johannes Schmidt
+150775;Theile-Schürrholz GmbH;Händler - AM;Schnell, Iris
+125920;Robert Bosch Elektronik GmbH;Endkunden - AM;Field Service
+105781;Schütte Alfred H. GmbH & Co. KG;OE/OES - Key Account;Sales inactive
+122318;Amiblu Germany GmbH;Endkunden - AM;Sales inactive
+105780;CHIRON Group SE;OE/OES - Key Account;Patrick Stäbler
+151192;Leadec Austria GmbH;Händler - AM;Christian Huber
+134640;GELITA AG;Endkunden - AM;Florian Winkler
+105778;TBT Tiefbohrtechnik GmbH & Co.;OE/OES - Key Account;Patrick Stäbler
+105774;SKF Lubrication Systems;OE/OES - Key Account;Hendrik Hoppe
+129950;Dieselmotoren & Antriebssysteme;Händler - AM;Hendrik Hoppe
+117013;AUTOMATEC;Händler - AM;Sales inactive
+105771;WERKZEUGMASCHINENFABRIK;OE/OES - Key Account;Johannes Schmidt
+107489;Volkswagen AG;Endkunden - AM;Marten Hess
+130024;Grillo-Werke AG;Endkunden - AM;Nicht zugeordnet
+105770;Waldrich Siegen;OE/OES - Key Account;Marten Hess
+118163;TSM Technical Services &;Händler - AM;Hendrik Hoppe
+105766;Coperion GmbH;OE/OES - Key Account;Benjamin Hille
+105764;Eugen Woerner GmbH & Co. KG;OE/OES - Key Account;Johannes Schmidt
+151337;EFC NV;Händler - AM;Thomas Lumpp
+105763;ZF Friedrichshafen AG;OE/OES - Key Account;Patrick Stäbler
+107511;LINDT & SPRUENGLI;Endkunden - AM;Marten Hess
+106482;M. Rottmoser e.K.;Händler - AM;Schnell, Iris
+129979;MV Pauline, CONSHIP S. A.;Endkunden - AM;Nicht zugeordnet
+120746;RCO Recycling Centrum GmbH;Endkunden - AM;Marten Hess
+109565;MST Technology GmbH & Co.KG;Endkunden - AM;Sales inactive
+138181;Ruf Gebäudetechnik GmbH;Endkunden - AM;Schnell, Iris
+150618;ITA Moulding Process;Endkunden - AM;Samuel Macaire
+122984;Schwenck Maritime Procurement;Händler - AM;Sales inactive
+128141;Maersk Line Limited;Endkunden - AM;Birger Hahn
+112337;Peter Ungerer;Endkunden - AM;Patrick Stäbler
+141223;Taucher Knoth (Nachf.);Endkunden - AM;Hendrik Hoppe
+134096;CEFIP-Consulting-Engineering;Händler - AM;Marten Hess
+120904;Burgmaier Hightech GmbH & Co.KG;Endkunden - AM;Patrick Stäbler
+111322;Daimler AG;Endkunden - AM;Florian Winkler
+105758;Danfoss Power Solutions;OE/OES - Key Account;Hendrik Hoppe
+149042;Jowa AG;Endkunden - AM;Schnell, Iris
+106992;Daimler AG;Endkunden - AM;Benjamin Hille
+105648;APA - KANDT  GmbH;Händler - AM;Nicht zugeordnet
+118825;Otmar Heim GmbH;Endkunden - AM;Sales inactive
+131437;RUBIX THOME;Händler - AM;Samuel Macaire
+140726;ARGUS Additive Plastics GmbH;Endkunden - AM;Kasubke, Rene
+128027;TMH Elektrotechnik GmbH;Händler - AM;Sales inactive
+127775;Norderwerft  Repair GmbH;Endkunden - AM;Claudia Vonk
+140363;Bibus Vietnam E & C Co. Ltd.;Händler - AM;Rocco Cafaro
+118494;Harald Pach;Endkunden - AM;Patrick Stäbler
+147704;Consolidated Industrial Supplies Co;Händler - AM;Rocco Cafaro
+149313;Streitlein GmbH;Händler - AM;Nicht zugeordnet
+101198;Dr. Ing. h. c. F. Porsche AG;Endkunden - AM;Patrick Stäbler
+105756;SMS group GmbH;OE/OES - Key Account;Sales inactive
+106827;ELBTRADE;Händler - AM;Sales inactive
+135785;BT Brammer Distributie Centrum;Händler - AM;Thomas Lumpp
+108837;UTF GmbH;Endkunden - AM;Sales inactive
+148727;Global Services (Europe) Ltd.;Händler - AM;Paul Dunne
+128409;Deutsche Edelstahlwerke;Endkunden - AM;Marten Hess
+105735;KraussMaffei Technologies GmbH;OE/OES - Key Account;Christian Huber
+105729;Liebherr;OE/OES - Key Account;Patrick Stäbler
+147263;MAHLE Filtersysteme GmbH;Endkunden - AM;Nicht zugeordnet
+111459;Georg Boerner GmbH & Co. KG;Endkunden - AM;Marten Hess
+105721;GKS HYDRAULIK GMBH & CO.KG;OE/OES - Key Account;Patrick Stäbler
+109454;Eisenhardt;Endkunden - AM;Patrick Stäbler
+130234;Straub-Verpackungen GmbH;Endkunden - AM;Patrick Stäbler
+105760;Robert Bosch Automotive;Endkunden - AM;Johannes Schmidt
+129936;Stute Bauträger- u. Beteiligungs-;Endkunden - AM;Sales inactive
+105718;HAWE Hydraulik SE;OE/OES - Key Account;Johannes Schmidt
+150829;FILTERQUIP Limited;Händler - AM;Sales inactive
+124226;NORTON Hydraulics (Midlands) Limite;Händler - AM;Sales inactive
+141157;THK RHYTHM AUTOMOTIVE GmbH;Endkunden - AM;Sales inactive
+130157;Raesch Quarz (Germany);Endkunden - AM;Sales inactive
+105714;Kracht GmbH;OE/OES - Key Account;Marten Hess
+105683;ARBURG GMBH + CO KG;OE/OES - Key Account;Patrick Stäbler
+148680;United Air Specialists Unc.;Endkunden - AM;Nicht zugeordnet
+148931;Tom Parker Ltd;Händler - AM;Sales inactive
+111587;FILTEGA GmbH & Co.KG;Händler - AM;Sales inactive
+140278;Hydrosnow GmbH;Händler - AM;Nicht zugeordnet
+125640;Tauber Rohrbau GmbH u. Co.KG;Endkunden - AM;Marten Hess
+109289;Mesa Parts GmbH;Endkunden - AM;Patrick Stäbler
+116154;MHT;Händler - AM;Samuel Macaire
+137336;PMC Hydraulics (Qingdao) Co., Ltd.;Händler - AM;Thomas Lumpp
+138749;Bibus Spain S.L.;Händler - AM;Rocco Cafaro
+107540;Continental Automotive GmbH;Endkunden - AM;Marten Hess
+133582;Martin Zieglmeier;Endkunden - AM;Johannes Schmidt
+105674;Moog GmbH;OE/OES - Key Account;Patrick Stäbler
+107102;Thoben Antriebs- u.;Händler - AM;Schnell, Iris
+127618;Sprint Engineering & Lubricants Ltd;Händler - AM;Sales inactive
+105672;J. Wagner GmbH;OE/OES - Key Account;Christian Huber
+106213;Industrievertrieb Rossius KG;Händler - AM;Schnell, Iris
+105661;Maximator GmbH;OE/OES - Key Account;Marten Hess
+141089;OREXAD VALOUTIL GC;Händler - AM;Samuel Macaire
+105628;SKF Lubrication Systems;OE/OES - Key Account;Marten Hess
+105622;Voith Turbo GmbH & Co. KG;OE/OES - Key Account;Nicht zugeordnet
+5203100;Filtration Group BV;Endkunden - AM;Nicht zugeordnet
+105604;Bosch Rexroth AG;OE/OES - Key Account;Johannes Schmidt
+119112;Synthopol Chemie Dr. rer.pol.;Endkunden - AM;Hendrik Hoppe
+116355;NOYER SAFIA LENS;Händler - AM;Sales inactive
+105600;ROBERT BUERKLE GmbH;OE/OES - Key Account;Sales inactive
+105522;Rolls-Royce Solutions GmbH;OE/OES - Key Account;Nicht zugeordnet
+105519;KNDS Deutschland GmbH & Co. KG;OE/OES - Key Account;Johannes Schmidt
+148582;Liberty Blue Shipmanagement;Endkunden - AM;Claudia Vonk
+148324;Canadian Coast Guard;Endkunden - AM;Nicht zugeordnet
+149329;Vibrant Curiosity Ltd.;Endkunden - AM;Nicht zugeordnet
+105061;Knorr-Bremse;OE/OES - Key Account;Marcus Schneeberger
+101746;FMB-Blickle GmbH;OE/OES - Key Account;Nicht zugeordnet
+131312;IMERYS PCC FRANCE;Endkunden - AM;Sales inactive
+101673;Index-Werke GmbH & Co. KG;OE/OES - Key Account;Patrick Stäbler
+151072;PREOL a.s.;Endkunden - AM;Field Service
+149602;Trianel Kohlekraftwerk;Endkunden - AM;Inside sales DACH
+150982;Behörde für Schule;Endkunden - AM;Claudia Vonk
+129914;Brauerei Beck & Co. KG;Endkunden - AM;Hendrik Hoppe
+121636;Christian Tober;Endkunden - AM;Field Service
+101563;Wieland-Werke AG;OE/OES - Key Account;Patrick Stäbler
+150425;Dörken MKS-Systeme GmbH & Co. KG;Endkunden - AM;Nicht zugeordnet
+148748;F.B. Egner;Händler - AM;Schnell, Iris
+105957;Festo SE & Co. KG;Endkunden - AM;Patrick Stäbler
+147595;Gabriele Vezzani;Endkunden - AM;Nicht zugeordnet
+101168;MAN Truck & Bus SE;OE/OES - Key Account;Johannes Schmidt
+107958;Gerhard Mederer;Endkunden - AM;Nicht zugeordnet
+132332;Holger Senger;Endkunden - AM;Sales inactive
+101167;MAN Truck & Bus SE;OE/OES - Key Account;Johannes Schmidt
+150718;IG Metall;Endkunden - AM;Inside sales DACH
+122260;KSB SE & Co. KGaA;Endkunden - AM;Johannes Schmidt
+124443;Lactosan GmbH & Co. KG;Endkunden - AM;Christian Huber
+101164;Caterpillar Motoren GmbH & Co. KG;OE/OES - Key Account;Sales inactive
+134058;Rafflenbeul Anlagenbau GmbH;Endkunden - AM;Kasubke, Rene
+107885;Südöl GmbH;Endkunden - AM;Sales inactive
+101085;Compair Drucklufttechnik;OE/OES - Key Account;Marcus Schneeberger
+101067;BAUCH CNC GmbH & Co. KG;OE/OES - Key Account;Sales inactive
+136329;Trinseo Netherlands B.V.;Endkunden - AM;Claudia Vonk
+149623;Stefan Toelke;Endkunden - AM;Inside sales DACH
+101034;Rolls-Royce Solutions GmbH;OE/OES - Key Account;Birger Hahn
+151717;Momentive;Endkunden - AM;Kasubke, Rene
+147294;MAHLE Filtersysteme Austria GmbH;Endkunden - AM;Nicht zugeordnet
+100061;Wärtsilä Finland Oy;OE/OES - Key Account;Marcus Schneeberger
+137123;SNC Renault Cleon;Endkunden - AM;Nicht zugeordnet
+105768;WEISSER J.G. SOEHNE;OE/OES - Key Account;Patrick Stäbler
+151778;BMW Manufacturing Hungary Kft.;Endkunden - AM;Christian Huber
+151821;Heraeus Site Operations;Endkunden - AM;Kasubke, Rene
+134257;EFC Industrial Filtration b.v.;Händler - AM;Thomas Lumpp
+110609;Gustav Grimm Edelstahlwerk;Endkunden - AM;Field Service
+151926;Daimler Buses GmbH;Endkunden - AM;Christian Huber
+117583;Hans Hoffmann GmbH;Endkunden - AM;Claudia Vonk
+106067;Präzisionswerk Schnatz;OE/OES - Key Account;Marten Hess
+151907;Bisenius Projektmanagement GmbH;Händler - AM;Kasubke, Rene
+151837;Wärtsilä Ibérica S.A.;OE/OES - Key Account;Marcus Schneeberger
+107823;Tries GmbH + Co. KG;OE/OES - Key Account;Patrick Stäbler
+151861;Paul Bauder GmbH & Co. KG;Endkunden - AM;Benjamin Hille
+150909;GHP;Endkunden - AM;Samuel Macaire
+101680;DMG MORI;OE/OES - Key Account;Johannes Schmidt
+106029;Topas Advanced Polymers GmbH;Endkunden - AM;Kasubke, Rene
+106818;DAW SE;Endkunden - AM;Kasubke, Rene

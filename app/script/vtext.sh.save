@@ -146,26 +146,16 @@ output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR
 output1=$(gawk -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p10_endnr.awk" $txtdir"p10_endnr.txt")
 
 #output1=$(gawk  -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p11_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
-# based on filter name define data file name, like ET_AF736.txt
+# based on filter name define data file name, like ET_AF736_G3.txt
 et_file_name=$(gawk -v my_string=$my_str -f $awkdir"p11_find_spares.awk" $txtdir"p11_find_et_file.txt")
 #echo ${output1} > /tmp/output1.txt
-
-# file_path - something like "/home/vtext/app/script/DE/TXT/ET_AF736_G3.txt"
 file_path=$txtdir$et_file_name
-
-#echo ${file_path} >> /home/vtext/app/script/DE/TXT/AF736_G3.txt
+#echo ${file_path} >> /home/vtext/app/script/DE/AWK/output1.txt
 #echo ${file_path} >> /home/vtext/app/script/DE/AWK/output1.txt
 
-# TEST BLOCK FOR LINK VERIFICATION
-#file_to_read=$txtdir"ET_TEST.txt"
-#file_to_write=$txtdir"ET_111.txt"
-#output1=$(gawk -v ftwrite=${file_to_write} -v TXT_DIR=${txtdir} -f $awkdir"p20_check_link.awk" $file_to_read)
-# END OF TEST BLOCK
-
 if [ -f "$file_path" ]; then
-#  echo "$file_path" >> /home/vtext/app/script/DE/AWK/111.txt
 #  output1=$(gawk -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p12_spares.awk" $txtdir"et_af_general.txt" $txtdir"et_af_single_prices.txt")
-  output1=$(gawk -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p12_spares.awk" $txtdir"shopdata.txt" $file_path)
+  output1=$(gawk -v filter_name="$myfiltername" -v my_string=$my_str -v mt="$mytstamp" -v UUID=${UUID} -v TMP_DIR=${TMP_DIR} -f $awkdir"p12_spares.awk" $file_path)
 fi
 
 

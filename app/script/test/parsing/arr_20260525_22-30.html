@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+	<title>Онлайн-табло</title>
+	<meta name="description" content="Онлайн-табло">
+	<meta name="keywords" content="Онлайн-табло">
+
+	<meta property="og:title" content="Онлайн-табло">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/online-board/arrival/">
+	<meta property="og:image" content="/assets/img/sever.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<!--<link rel="preload" fetchpriority="high" as="image" href="/upload/information_system_6/5/7/9/item_579/small_item_579.webp" />
+	<link rel="preload" fetchpriority="high" as="image" href="/upload/information_system_6/5/7/9/item_579/item_579.webp" />-->
+	<style>html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}:root{--theme--accent--default:#0041A0;--theme--accent--muted:#2668D5;--theme--accent--subtle:#B9D4FF;--theme--accent--emphasis:#002F6C;--theme--accent--disabled:#D9E7FF;--theme--accent--deep:#00235D;--theme--accent--gold:#D1BA92;--theme--fg--default:#1F1F1F;--theme--fg--muted:#616161;--theme--fg--subtle:#9E9E9E;--theme--fg--on-accent:#FFFFFF;--theme--fg--on-disabled:#E0E0E0;--theme--fg--disabled:#BDBDBD;--theme--fg--on-dark:#FFFFFF;--theme--bg--surface:#FFFFFF;--theme--bg--muted:#EDEFF1;--theme--bg--subtle:#DBDEE2;--theme--bg--canvas:#F4F5F6;--theme--button--default:#FF0000;--theme--button--disabled:#FFF2F0;--theme--button--subtle:#FFE8E4;--theme--button--muted:#FF7361;--theme--button--emphasis:#B9150D;--theme--border--default:#F5F5F5;--theme--overlay--bg:#171717;--theme--warning--default:#83652B;--theme--warning--subtle:#F9EDD8;--theme--warning--muted:#D6B986;--theme--warning--emphasis:#A28042;--theme--warning--on-warning:#171717;--theme--info--default:#003A90;--theme--info--subtle:#B9D4FF;--theme--info--muted:#5F97F4;--theme--info--emphasis:#0041A0;--theme--info--on-info:#FFFFFF;--theme--error--default:#FF0000;--theme--error--subtle:#FFF2F0;--theme--error--muted:#FFA698;--theme--error--emphasis:#FF7361;--theme--error--on-error:#FFFFFF;--theme--success--default:#11763D;--theme--success--subtle:#E8F6EE;--theme--success--muted:#5DC389;--theme--success--emphasis:#18A957;--theme--success--on-success:#FFFFFF;--theme--input--background:#FFFFFF;--theme--input--text:#424242;--theme--input--placeholder:#757575;--theme--input--border--disabled:#EEEEEE;--theme--input--border--default:#E0E0E0;--theme--input--fg--disabled:#E0E0E0;--colors--black:#171717;--colors--white:#FFFFFF;--card--text:#FFFFFF;--card--bg--default:#1F1F1F;--button--text:#FFFFFF;--button--bg--default:#DF1642;--colors--disabled:#efefef;--ff-body:"Grtsk Peta",Arial,sans-serif;--html:100%}.air-datepicker{--adp-font-family:var(--ff-body);--adp-day-name-color:var(--theme--info--emphasis);--adp-color-current-date:var(--theme--button--default);--adp-cell-background-color-selected:var(--theme--button--default);--adp-cell-background-color-selected-hover:var(--theme--button--emphasis)}*{box-sizing:border-box}:after,:before{box-sizing:border-box}html{font-size:var(--html);-webkit-tap-highlight-color:transparent;-ms-overflow-style:scrollbar}body{font-family:var(--ff-body);font-weight:400;line-height:1;font-size:1rem;background-color:var(--theme--bg--canvas);color:var(--theme--fg--default);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (max-width:1024px){body.--menu-open{overflow:hidden}body.--inclusive-bar-open{overflow:hidden}}body.--modal-open{overflow:hidden}a{text-decoration:none;color:inherit;outline:0}a:focus,a:hover{text-decoration:none}button{outline:0;cursor:pointer}figure{margin:0}img{vertical-align:middle}svg{fill:currentColor}.wrapper{padding-top:var(--offset-top,80px)}@media (max-width:767px){.wrapper{padding-top:var(--offset-top,64px)}}.wrapper>:last-child{margin-bottom:0}.container{padding:0 126px;width:100%;max-width:1422px;margin:0 auto}.container_fluid{max-width:100%}@media (max-width:1440px){.container{max-width:1234px;padding:0 32px}}@media (max-width:1024px){.container{max-width:100%;width:auto;padding:0 32px}}@media (max-width:767px){.container{padding:0 20px}}.container .container{padding:0;margin:0;width:100%;max-width:100%;min-width:initial}.tippy-box[data-theme~=black]{background-color:var(--theme--fg--default);color:var(--theme--fg--on-accent);text-align:center}.tippy-box[data-theme~=black] img{display:block;width:100%;margin:4px 0}.tippy-box[data-theme~=blue]{background-color:var(--theme--bg--surface);color:var(--theme--accent--emphasis);text-align:center}.tippy-box[data-theme~=blue][data-placement^=top]>.tippy-arrow::before{border-top-color:var(--theme--bg--surface)}.tippy-box[data-theme~=blue][data-placement^=bottom]>.tippy-arrow::before{border-bottom-color:var(--theme--bg--surface)}.tippy-box[data-theme~=blue][data-placement^=left]>.tippy-arrow::before{border-left-color:var(--theme--bg--surface)}.tippy-box[data-theme~=blue][data-placement^=right]>.tippy-arrow::before{border-right-color:var(--theme--bg--surface)}.inclusive-bar{display:none}.header{position:fixed;z-index:2000;top:0;left:0;width:100%;background-color:var(--theme--bg--surface);box-shadow:0 8px 40px rgba(48,49,51,.16)}.header__inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:48px}@media (max-width:1199px){.header__inner{gap:10px}}.header__bar{display:flex;align-items:center;justify-content:flex-end;gap:16px}.header__nav{flex:1;align-self:stretch}@media (max-width:1024px){.header__nav{display:none}}.--search-open .header__nav{pointer-events:none}.header__burger-button{justify-content:center;align-items:center;background-color:transparent;border:0;padding:0;outline:0;width:32px;height:32px;color:var(--theme--accent--emphasis);display:none}.header__burger-button svg{width:100%;height:100%}@media (max-width:1024px){.header__burger-button{display:flex}}@media (max-width:767px){.--search-open .header__burger-button{opacity:0;pointer-events:none}}.header__settings-button{justify-content:center;align-items:center;background-color:transparent;border:0;padding:0;outline:0;width:32px;height:32px;color:var(--theme--accent--emphasis);display:none}.header__settings-button svg{width:100%;height:100%}@media (max-width:1024px){body.inclusive-view .header__settings-button{display:flex}}@media (max-width:767px){.--search-open .header__settings-button{opacity:0;pointer-events:none}}.header .logo{position:relative;top:-7px;width:204px;height:46px}@media (max-width:767px){.header .logo{width:164px}.--search-open .header .logo{opacity:0;pointer-events:none}}@media (max-width:767px){.header__inner{height:64px}.header .city-select{display:none}.header .lang-select{display:none}.header__button{display:none}}.menu{display:none;position:fixed;top:0;right:0;bottom:0;z-index:3000;background-color:var(--theme--accent--emphasis);color:var(--theme--fg--on-accent);width:375px}@media (max-width:1024px){body.--menu-open .menu{display:block}}@media (max-width:767px){.menu{left:0;width:100%}}.menu .logo{position:relative;top:-7px;max-width:204px}.menu .city-select{padding:0}.menu .city-select__toggle{background-color:var(--theme--accent--deep);color:var(--theme--fg--on-accent);max-width:130px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.menu .city-select__toggle:after{border-right-color:var(--theme--fg--on-accent);border-bottom-color:var(--theme--fg--on-accent)}.menu .city-select .dropdown{left:auto;right:0}.menu .lang-select{display:flex;align-items:center;color:var(--theme--fg--on-accent);gap:12px}.menu .lang-select svg{width:24px;height:24px;flex-shrink:0}.menu .lang-select__link{display:flex;justify-content:center;align-items:center;height:24px;text-transform:uppercase;border:1px solid var(--theme--fg--on-accent);color:var(--theme--fg--on-accent);font-size:16px;line-height:1;font-weight:400;padding:0 4px}.menu .lang-select__link.active{background-color:var(--theme--fg--on-accent);color:var(--theme--accent--emphasis)}.menu .button_secondary{border-color:var(--theme--fg--on-accent);color:var(--theme--fg--on-accent)}.menu .button_secondary:active,.menu .button_secondary:focus,.menu .button_secondary:hover{border-color:var(--theme--fg--on-accent);color:var(--theme--fg--on-accent)}.menu__header{position:relative;display:flex;align-items:center;justify-content:flex-start;height:80px;padding:0 20px;flex-shrink:0}@media (max-width:767px){.menu__header{height:64px}}.menu__close{display:flex;justify-content:center;align-items:center;color:var(--theme--fg--on-accent);background-color:transparent;border:0;padding:0;width:32px;height:32px;position:absolute;z-index:1;top:0;bottom:0;margin:auto 0;right:20px}.menu__close svg{width:100%;height:100%}.menu__inner{display:flex;flex-direction:column;height:100%}.menu__body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0}.menu__bar{display:flex;flex-wrap:wrap;justify-content:space-between;padding:0 20px 20px;row-gap:20px;-moz-column-gap:12px;column-gap:12px}.menu__user{display:flex;align-items:center;background-color:transparent;color:var(--theme--fg--on-accent);gap:8px;font-size:19px;line-height:24px;font-weight:400}.menu__user svg{width:24px;height:24px}.menu__search{flex:1 1 100%}.menu__links{display:flex;flex-wrap:wrap;gap:20px;padding:0 20px 20px}.menu__links>*{flex:1 1 calc(50% - 10px)}.menu__section{position:relative;padding:20px}.menu__section:before{content:"";display:block;position:absolute;top:0;left:20px;right:20px;opacity:.2;border-top:1px solid var(--theme--fg--on-accent)}.menu .nav-list__label{color:var(--theme--fg--on-accent);width:100%;text-align:left;font-size:19px;font-weight:600;line-height:1.3;margin:0}.menu .nav-list__label:after{right:4px}.menu .nav-list__list{padding:10px 0 0}.menu .nav-list__item:not(:last-child){margin-bottom:12px}.menu .nav-list__link{font-size:17px}.menu__footer{position:relative;padding:20px}.menu__footer:before{content:"";display:block;position:absolute;top:0;left:20px;right:20px;opacity:.2;border-top:1px solid var(--theme--fg--on-accent)}.menu .button[data-js="click:inclusiveShow"] b{display:none}body.inclusive-view .menu .button[data-js="click:inclusiveShow"]{font-size:0}body.inclusive-view .menu .button[data-js="click:inclusiveShow"] b{display:block;font-weight:400;font-size:14px}.logo{display:inline-block;vertical-align:top;width:100%;max-width:204px;flex-shrink:0}.logo__img{max-width:100%;max-height:100%}.lang-select{position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none}.lang-select__toggle{display:flex;align-items:center;background-color:transparent;outline:0;border:0;padding:28px 0;color:var(--theme--fg--default);gap:4px;text-transform:uppercase;font-size:17px;line-height:1.3}.lang-select__toggle svg{width:24px;height:24px;color:var(--theme--accent--emphasis)}@media (min-width:1025px){.lang-select__toggle:hover{color:var(--theme--accent--default)}}.lang-select .dropdown__link{justify-content:center;text-align:center}.city-select{-webkit-user-select:none;-moz-user-select:none;user-select:none;position:relative;padding:23px 0}.city-select__toggle{position:relative;outline:0;border:0;font-size:14px;line-height:18px;font-weight:400;color:var(--theme--accent--emphasis);background-color:var(--theme--bg--canvas);border-radius:17px;padding:8px 28px 8px 12px;max-width:125px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.city-select__toggle:after{content:"";display:block;position:absolute;top:13px;right:12px;width:6px;height:6px;border-right:2px solid var(--theme--accent--emphasis);border-bottom:2px solid var(--theme--accent--emphasis);transform:rotate(45deg)}.--open .city-select__toggle:after{top:16px;transform:rotate(-135deg)}@media (min-width:1025px){.city-select__toggle:hover{color:var(--theme--fg--on-accent);background-color:var(--theme--accent--emphasis)}.city-select__toggle:hover:after{border-right-color:var(--theme--fg--on-accent);border-bottom-color:var(--theme--fg--on-accent)}}.search-form__open{display:flex;justify-content:center;align-items:center;outline:0;padding:0;border:0;background-color:transparent;color:var(--theme--accent--emphasis);width:24px;height:24px}@media (min-width:1025px){.search-form__open:hover{color:var(--theme--accent--default)}}.search-form__open svg{width:100%;height:100%}.search-form__inner{display:none;align-items:center;position:absolute;z-index:2;left:242px;right:155px;top:0;bottom:0;margin:auto 0;height:48px}.search-form__inner:after{content:"";display:block;position:absolute;right:48px;top:8px;bottom:8px;width:1px;background-color:var(--theme--bg--subtle)}@media (max-width:1024px){.search-form__inner{left:222px;right:45px}}@media (max-width:767px){.search-form__inner{left:0;right:0}}.search-form.--open .search-form__inner{display:flex}.search-form__input{width:100%;background-color:var(--theme--bg--surface);color:var(--theme--input--text);border:1px solid var(--theme--accent--deep);font-size:17px;line-height:20px;font-weight:400;padding:13px 85px 13px 24px;border-radius:24px;outline:0}.search-form__input:focus{border-color:var(--theme--accent--default)}.search-form__input::-moz-placeholder{color:var(--theme--input--placeholder)}.search-form__input::placeholder{color:var(--theme--input--placeholder)}.search-form__close,.search-form__submit{display:flex;justify-content:center;align-items:center;outline:0;background-color:transparent;padding:0;border:0;width:24px;height:24px;position:absolute}.search-form__close svg,.search-form__submit svg{width:100%;height:100%}.search-form__submit{right:12px;top:0;bottom:0;margin:auto 0;color:var(--theme--accent--emphasis)}@media (min-width:1025px){.search-form__submit:hover{color:var(--theme--accent--default)}}.search-form__close{right:60px;top:0;bottom:0;margin:auto 0;color:var(--theme--fg--subtle)}@media (min-width:1025px){.search-form__close:hover{color:var(--theme--accent--default)}}.navigation{display:flex;align-items:stretch;height:100%;justify-content:center}.navigation__link{display:flex;justify-content:center;align-items:center;text-align:center;font-size:17px;line-height:1.3;font-weight:400;-webkit-user-select:none;-moz-user-select:none;user-select:none;outline:0;background-color:transparent;color:var(--theme--fg--default);height:100%;padding:0 20px}@media (max-width:1440px){.navigation__link{font-size:14px}}@media (max-width:1199px){.navigation__link{padding:0 10px;font-size:13px}}.navigation__sub{position:absolute;top:100%;left:0;right:0;z-index:-1;padding:40px;background-color:var(--theme--accent--emphasis);opacity:0;visibility:hidden;pointer-events:none;display:flex;box-shadow:0 16px 40px rgba(48,49,51,.3)}@media (max-width:1199px){.navigation__sub{padding:20px}}.navigation__item:hover .navigation__link{color:var(--theme--fg--on-accent);background-color:var(--theme--accent--emphasis);transition:color 150ms ease,background-color 150ms ease}.navigation__item:hover .navigation__sub{transition:visibility 150ms ease,opacity 150ms ease;opacity:1;visibility:visible;z-index:1;pointer-events:auto}.navigation__block{position:relative;display:flex;gap:60px;flex:1}@media (max-width:1199px){.navigation__block{gap:20px}}.navigation__block+.navigation__block{padding-left:60px;margin-left:60px}@media (max-width:1199px){.navigation__block+.navigation__block{margin-left:20px;padding-left:20px}}.navigation__block+.navigation__block:before{content:"";display:block;position:absolute;top:0;left:0;bottom:0;border-left:1px solid var(--theme--accent--subtle);opacity:.1}.navigation__col{display:flex;flex-direction:column;gap:12px}.navigation__col>*{flex:1}.navigation__banner{position:relative;display:block;padding:20px 60px 20px 20px;background-color:var(--theme--accent--default);color:var(--theme--fg--on-accent);transition:background-color 150ms ease;min-height:80px;font-size:17px;line-height:1.3;font-weight:600}@media (min-width:1025px){.navigation__banner:hover{background-color:var(--theme--accent--muted)}}.navigation__banner_dark{background-color:var(--theme--accent--deep);color:var(--theme--accent--subtle)}@media (min-width:1025px){.navigation__banner_dark:hover{background-color:rgba(0,35,93,.5)}}.navigation__banner svg{position:absolute;bottom:20px;right:20px;width:40px;height:40px}.navigation .nav-list{flex-shrink:0;flex-grow:1}.navigation .nav-list__item{max-width:230px}.navigation .nav-list__item:not(:last-child){margin-bottom:12px}.navigation .nav-list__link{color:var(--theme--fg--on-accent)}.hero-slider{position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;min-height:450px;max-height:650px}@media (max-width:1199px){.hero-slider{height:450px;min-height:initial;max-height:initial}}@media (max-width:1024px){.hero-slider{height:340px;min-height:initial}}@media (max-width:1024px){.hero-slider{height:auto}.hero-slider .swiper-slide{height:auto}}.hero-slider__controls{position:absolute;z-index:2;left:32px;right:32px;bottom:110px;max-width:1170px;width:auto;margin:0 auto;display:flex;align-items:center;gap:20px;pointer-events:none}@media (max-width:1024px){.hero-slider__controls{display:none}}.hero-slider__pagination{display:flex;align-items:center;justify-content:center;color:var(--theme--fg--on-accent);font-size:19px;line-height:1.3;font-weight:400;order:3}.hero-slider__next,.hero-slider__prev{pointer-events:auto;width:40px;height:40px;border-radius:50%;outline:0;padding:0;border:1px solid var(--theme--fg--on-accent);color:var(--theme--fg--on-accent);background-color:transparent;display:flex;justify-content:center;align-items:center}.hero-slider__next svg,.hero-slider__prev svg{width:16px;height:16px}@media (min-width:1025px){.hero-slider__next,.hero-slider__prev{transition:all 150ms ease}.hero-slider__next:hover,.hero-slider__prev:hover{background-color:var(--theme--accent--emphasis);border-color:var(--theme--accent--emphasis)}}.hero-slider__prev{order:1}.hero-slider__next{order:2}.hero-slider .swiper-slide{height:auto}.hero-slider__slide{position:relative;min-height:450px;max-height:650px;height:100%;display:block}@media (max-width:1199px){.hero-slider__slide{height:450px;min-height:initial;max-height:initial}}@media (max-width:1024px){.hero-slider__slide{height:340px;min-height:initial}}@media (max-width:1024px){.hero-slider__slide{height:100%;display:flex;flex-direction:column}}.hero-slider__pic{width:100%;height:100%}.hero-slider__pic img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:top center;object-position:top center}@media (max-width:1024px){.hero-slider__pic{flex:1}}.hero-slider__content{position:absolute;top:0;left:0;right:0;bottom:0;z-index:2;padding-top:40px;display:block}@media (max-width:1024px){.hero-slider__content{position:static;padding-top:0}.hero-slider__content .container{max-width:100%;padding:0}}@media (max-width:767px){.hero-slider__content{position:static}}.hero-slider__headline{margin:0;color:var(--theme--fg--on-accent);font-size:49px;line-height:1.1;font-weight:600;padding:8px 20px;background-color:var(--theme--accent--default);width:-moz-fit-content;width:fit-content}body:not(.inclusive-view) .hero-slider__headline_gradient{background:linear-gradient(16deg,#48c0fd,#703fe9,#3956fc);border-radius:45px;margin-bottom:16px}@media (min-width:1025px){.hero-slider__headline_sm{font-size:38px}}@media (max-width:1024px){.hero-slider__headline{width:100%;font-size:21px;margin:0!important;border-radius:0!important}.hero-slider__headline br{display:none}body:not(.inclusive-view) .hero-slider__headline_gradient{background:linear-gradient(90deg,#48c0fd,#703fe9,#3956fc)}}.hero-slider__text{margin:0;color:var(--theme--fg--on-accent);background-color:var(--theme--button--default);font-size:28px;line-height:1.1;font-weight:400;width:-moz-fit-content;width:fit-content;padding:8px 20px}.hero-slider__text p{margin:0}body:not(.inclusive-view) .hero-slider__text_gradient{background:linear-gradient(214deg,#48c0fd,#703fe9,#3956fc);border-radius:45px;margin-bottom:16px}@media (min-width:1025px){.hero-slider__text_sm{font-size:24px}}.hero-slider__text>:first-child{margin-top:0}.hero-slider__text>:last-child{margin-bottom:0}@media (max-width:1024px){.hero-slider__text{font-size:17px;width:100%;margin:0!important;border-radius:0!important}body:not(.inclusive-view) .hero-slider__text_gradient{background:linear-gradient(90deg,#48c0fd,#703fe9,#3956fc)}}.hero-slider__text+.hero-slider__text{background-color:var(--theme--accent--default)}.hero-slider__button{display:inline-flex;align-items:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;user-select:none;outline:0;text-decoration:none;background-color:var(--theme--fg--on-accent);color:var(--theme--accent--default);font-size:17px;line-height:24px;font-weight:400;padding:12px 32px;border-radius:24px;letter-spacing:0;text-align:center}@media (max-width:1024px){.hero-slider__button{border-radius:0;width:100%}}.hero-slider__small{font-size:12px;line-height:1.25;position:absolute;width:190px;top:50px;left:5vw}@media (max-width:1850px){.hero-slider__small{left:2vw}}@media (max-width:1660px){.hero-slider__small{position:static;margin-top:auto;padding-bottom:115px;margin-left:200px;width:initial}}@media (min-width:1025px){.hero-slider .container.container_flex{display:flex;flex-direction:column;height:100%;align-items:flex-start;justify-content:flex-start}}@media (max-width:1024px){.hero-slider__small{font-size:8px;line-height:1.25;background-color:var(--theme--button--default);color:var(--theme--fg--on-accent);padding:0 20px 8px;margin:0}}.booking-form{position:relative;z-index:2;margin-top:-90px;min-height:188px}@media (max-width:1024px){.booking-form{margin-top:0}.booking-form .container{max-width:100%;padding:0}}@media (max-width:767px){.booking-form{min-height:358px}}@media (max-width:767px){.booking-form__inner{display:flex;flex-direction:column}}.booking-form__nav{display:flex;-webkit-user-select:none;-moz-user-select:none;user-select:none;background-color:var(--theme--bg--surface)}@media (max-width:767px){.booking-form__nav{background-color:#0041a0;color:var(--theme--fg--on-accent);order:2;width:100%;padding:16px 20px 20px;display:none}}.booking-form__button{outline:0;border-width:0 1px 0 0;border-style:solid;border-color:var(--theme--bg--subtle);font-size:14px;line-height:1.3;font-weight:400;color:var(--theme--accent--emphasis);background-color:var(--theme--bg--surface);padding:12px 16px;text-align:center}.booking-form__button_link{text-decoration:underline;margin-left:auto}@media (min-width:1025px){.booking-form__button{transition:all 150ms ease}.booking-form__button:hover{background-color:#0041a0;color:var(--theme--fg--on-accent)}.booking-form__button_link:hover{background-color:transparent;color:var(--theme--accent--emphasis);text-decoration:none}}.booking-form__button.active{background-color:#0041a0;color:var(--theme--fg--on-accent)}@media (max-width:767px){.booking-form__button:nth-child(1),.booking-form__button:nth-child(2),.booking-form__button:nth-child(3){display:none}}.booking-form__button b{font-weight:400}@media (max-width:880px){.booking-form__button b{display:none}}.booking-form__button span{display:none}@media (max-width:880px){.booking-form__button span{display:block}}.booking-form__promocode-button{margin-left:auto;margin-right:16px;color:var(--theme--accent--emphasis);background-color:transparent;outline:0;border:0;padding:0;font-size:14px;line-height:1.3;font-weight:400}@media (max-width:767px){.booking-form__promocode-button{margin-left:0;margin-right:0;color:var(--theme--fg--on-accent)}}@media (max-width:767px){.booking-form__content{order:1;width:100%}}.booking-form__tab{display:none;background-color:#0041a0;color:var(--theme--fg--on-accent)}.booking-form__tab.active{display:block}@font-face{font-family:swiper-icons;src:url("data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA") format("woff");font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}:host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}.swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper{transform:translate3d(0,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);backface-visibility:hidden}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide{transform-style:preserve-3d}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-css-mode.swiper-horizontal>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-css-mode.swiper-vertical>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-css-mode.swiper-free-mode>.swiper-wrapper{scroll-snap-type:none}.swiper-css-mode.swiper-free-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}.swiper-css-mode.swiper-centered>.swiper-wrapper::before{content:"";flex-shrink:0;order:9999}.swiper-css-mode.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#000}@keyframes swiper-preloader-spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}</style>
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?1764579817">
+<link rel="stylesheet" type="text/css" href="/templates/template2/style.css?1762325462">
+<link rel="stylesheet" type="text/css" href="/templates/template8/style.css?1751038033">
+<link rel="stylesheet" type="text/css" href="/templates/template14/style.css?1747167052">
+			
+	<link rel="stylesheet" href="/assets/css/inclusive.css?v=20260128" media="print" onload="this.media='all';this.onload=null;">
+	<script>
+		window.sever = {locale: 'ru'};
+	</script>
+
+	<!--websky search-->
+	<!--<script type="text/javascript" src="https://cdn.webskyx.com/D2/static/SearchForm.min.js"></script>
+	<link href="https://cdn.webskyx.com/D2/static/SearchForm.min.css" rel="stylesheet">-->
+
+	<!--websky booking-->
+	<!--<script type="text/javascript" src="https://cdn.webskyx.com/D2/static/Engine.min.js"></script>
+	<link href="https://cdn.webskyx.com/D2/static/Engine.min.css" rel="stylesheet">-->
+
+	<!--websky checkin-->
+	<!--<script type="text/javascript" src="https://cdn.webskyx.com/D2/static/Checkin.min.js"></script>
+	<link href="https://cdn.webskyx.com/D2/static/Checkin.min.css" rel="stylesheet">-->
+
+	<!--websky account-->
+	<!--<script type="text/javascript" src="https://cdn.webskyx.com/D2/static/Account.min.js"></script>
+	<link href="https://cdn.webskyx.com/D2/static/Account.min.css" rel="stylesheet">-->
+
+	<!--websky dict-->
+	<script src="https://cdn.webskyx.com/content/D2/i18n/dict.js"></script>
+</head>
+<body data-csrf="4ac3af7abb64e37f19de513b730fb937" data-lang="ru" class="" data-color="">
+	<div class="menu">
+	<div class="menu__inner">
+		<div class="menu__header">
+			<a class="logo" href="/">
+				<img class="logo__img js-lazy" src="/assets/img/loading/loading-1-static.webp" data-src="/assets/img/logo-alt-ru.svg" alt="">
+			</a>
+			<button class="menu__close" type="button" data-js="click:menu">
+				<svg>
+					<use xlink:href="/assets/icons/icons.svg#icon-close-alt"></use>
+				</svg>
+			</button>
+		</div>
+		<div class="menu__body">
+			
+
+<div class="menu__bar">
+  <a class="button button_transparent button_sm" href="/account/"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-user"></use></svg>Войти
+			</a>
+  <div class="city-select">
+    <button class="city-select__toggle" type="button" data-js="click:dropdown">Череповец</button>
+    <div class="dropdown" data-js="dropdown">
+      <a class="dropdown__link active" href="/sever/ajax/main/set/?iata=CEE" data-iata="CEE" data-id="16" data-js="click:changeCity">Череповец</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MOW" data-iata="MOW" data-id="14" data-js="click:changeCity">Москва</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=LED" data-iata="LED" data-id="18" data-js="click:changeCity">Санкт-Петербург</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=ARH" data-iata="ARH" data-id="21" data-js="click:changeCity">Архангельск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=VUS" data-iata="VUS" data-id="19" data-js="click:changeCity">Великий Устюг</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=SVX" data-iata="SVX" data-id="28" data-js="click:changeCity">Екатеринбург</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KZN" data-iata="KZN" data-id="17" data-js="click:changeCity">Казань</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KGD" data-iata="KGD" data-id="20" data-js="click:changeCity">Калининград</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KLF" data-iata="KLF" data-id="23" data-js="click:changeCity">Калуга</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KVK" data-iata="KVK" data-id="48" data-js="click:changeCity">Кировск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MCX" data-iata="MCX" data-id="59" data-js="click:changeCity">Махачкала</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MRV" data-iata="MRV" data-id="27" data-js="click:changeCity">Минеральные Воды</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MSQ" data-iata="MSQ" data-id="22" data-js="click:changeCity">Минск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MMK" data-iata="MMK" data-id="24" data-js="click:changeCity">Мурманск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=GOJ" data-iata="GOJ" data-id="57" data-js="click:changeCity">Нижний Новгород</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=PES" data-iata="PES" data-id="25" data-js="click:changeCity">Петрозаводск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=OVS" data-iata="OVS" data-id="60" data-js="click:changeCity">Советский</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=CSH" data-iata="CSH" data-id="61" data-js="click:changeCity">Соловецкий</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=AER" data-iata="AER" data-id="26" data-js="click:changeCity">Сочи</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=ULY" data-iata="ULY" data-id="63" data-js="click:changeCity">Ульяновск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=UCT" data-iata="UCT" data-id="47" data-js="click:changeCity">Ухта</a>
+    </div>
+  </div>
+</div>
+<div class="menu__bar">
+  <div class="lang-select">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-globe-alt"></use>
+    </svg>
+    <a class="lang-select__link" href="/en/online-board/arrival/">EN</a>
+    <a class="lang-select__link active" href="/online-board/arrival/">RU</a>
+  </div>
+  <button class="button button_sm button_white" type="button" data-js="click:inclusiveShow"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-eye"></use></svg>Для слабовидящих<b>Обычная версия</b></button>
+  <a class="menu__search button" href="/booking/#/"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-search-alt"></use></svg>Поиск билета
+			</a>
+</div>
+<div class="menu__links">
+  <a class="button button_secondary button_md" href="/bronirovanie-i-upravlenie/registracziya/">Регистрация</a>
+  <a class="button button_secondary button_md" href="/booking/#/find/">Мой заказ</a>
+  <a class="button button_secondary button_md" href="/booking/#/schedule/">Расписание</a>
+  <a class="button button_secondary button_md" href="/upload/severstal/schedule.pdf?25052026" style="flex: 1 1 100%;"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-download"></use></svg>Скачать расписание
+			</a>
+  <a class="button button_secondary button_md" href="/online-board/departure/">Онлайн-табло</a>
+</div>
+<div class="menu__section">
+  <div class="nav-list">
+    <button class="nav-list__label" type="button" data-js="click:accordion">Бронирование и управление</button>
+    <div class="nav-list__content">
+      <div class="nav-list__list">
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/registracziya/">Регистрация</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/online-board/departure/">Онлайн-табло</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/booking/#/find/">Мой заказ</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/booking/#/schedule/">Расписание</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/dopolnitelnye-uslugi/">Дополнительные услуги</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/tarify-i-usloviya/">Тарифы и условия</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/karta-poletov/">Карта полетов</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/lgotnye-tarify/">Льготные тарифы</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/obmen-i-vozvrat/">Обмен и возврат</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/speczialnye-predlozheniya/">Специальные предложения</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/oformlenie-spravok/">Оформление справок</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/kak-kupit-biletuslugu/">Как купить билет/услугу</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/bronirovanie-i-upravlenie/ispravit-dannye/">Исправить данные</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu__section">
+  <div class="nav-list">
+    <button class="nav-list__label" type="button" data-js="click:accordion">Информация</button>
+    <div class="nav-list__content">
+      <div class="nav-list__list">
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/obratnaya-svyaz/">Обратная связь</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/pravila-perevozki/">Правила перевозки</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/charternye-perevozki/">Чартерные перевозки</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/bagazh-i-ruchnaya-klad/">Багаж и ручная кладь</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/gruppovye-perevozki/">Групповые перевозки</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/pravila-oformleniya-pretenzij/">Правила оформления претензий</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/perevozka-gruzov/">Перевозка грузов</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/subsidized-transportation/">Субсидированные перевозки</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/informacziya/voprosy-i-otvety/">Вопросы и ответы</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu__section">
+  <div class="nav-list">
+    <button class="nav-list__label" type="button" data-js="click:accordion">Северсталь Авиа</button>
+    <div class="nav-list__content">
+      <div class="nav-list__list">
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/o-kompanii/">О компании</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/park-vozdushnyx-sudov/">Парк воздушных судов</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/kontakty/">Контакты</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/predstavitelstva-v-aeroportax/">Представительства в аэропортах</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/vakansii/">Вакансии</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/rekvizity/">Реквизиты</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="menu__section">
+  <div class="nav-list">
+    <button class="nav-list__label" type="button" data-js="click:accordion">Аэропорт Череповец</button>
+    <div class="nav-list__content">
+      <div class="nav-list__list">
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/">Об аэропорте</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/fee-rates/">Ставки сборов</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/parking-space/">Подъезд к терминалу и парковка</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/on-pass-business-lounge/">Бизнес зал ON PASS</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/hotel/">Гостиница</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/general-aviation/">Авиация общего назначения</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/advertising-placement/">Размещение рекламы</a>
+        </div>
+        <div class="nav-list__item">
+          <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/the-pass-office/">Бюро пропусков</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+			<div class="menu__footer">
+				<!--<div class="app-list">
+										<a class="app-list__item" href="1" target="_blank">
+						<img src="/assets/img/app-google.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="1" target="_blank">
+						<img src="/assets/img/app-apple.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="https://www.rustore.ru/catalog/app/avia.severstal.app" target="_blank">
+						<img src="/assets/img/app-rustore.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="https://severstal-avia.ru/upload/apps/app-release.apk?ver=20260519" target="_blank">
+						<img src="/assets/img/app-apk.svg" alt="" />
+					</a>
+									</div>-->
+			</div>
+		</div>
+	</div>
+</div>
+<header class="header">
+
+	
+
+<div class="inclusive-bar">
+  <div class="container">
+    <div class="inclusive-bar__header">
+      <a class="logo" href="/">
+        <img class="logo__img js-lazy" src="/assets/img/loading/loading-1-static.webp" data-src="/assets/img/logo.svg" alt="" />
+      </a>
+      <button class="inclusive-bar__close" type="button" data-js="click:inclusiveToggle">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-close-alt"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="inclusive-bar__inner">
+      <div class="inclusive-bar__list">
+        <div class="inclusive-bar__item">
+          <div class="inclusive-bar__label">Шрифт</div>
+          <div class="inclusive-bar__value">
+            <button class="inclusive-bar__option --active" type="button" data-js="click:inclusiveSetValue" data-type="font" data-value="sans-serif">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3333 2C11.6752 2 11.957 2.25736 11.9955 2.58892L12 2.66667V8V13.3333C12 13.7015 11.7015 14 11.3333 14C10.9914 14 10.7097 13.7426 10.6712 13.4111L10.6667 13.3333V8.66667H5.33333V13.3333C5.33333 13.7015 5.03486 14 4.66667 14C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.29848 4.29848 2 4.66667 2C5.00856 2 5.29034 2.25736 5.32885 2.58892L5.33333 2.66667V7.33333H10.6667V2.66667C10.6667 2.29848 10.9651 2 11.3333 2Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="font" data-value="serif">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.33366 3.33333H6.00033L6.07807 3.32885C6.40963 3.29034 6.66699 3.00856 6.66699 2.66667C6.66699 2.29848 6.36852 2 6.00033 2H4.66699H3.33366L3.25591 2.00449C2.92435 2.043 2.66699 2.32478 2.66699 2.66667C2.66699 3.03486 2.96547 3.33333 3.33366 3.33333H4.00033V8V12.6667H3.33366L3.25591 12.6712C2.92435 12.7097 2.66699 12.9914 2.66699 13.3333C2.66699 13.7015 2.96547 14 3.33366 14H4.66699H6.00033L6.07807 13.9955C6.40963 13.957 6.66699 13.6752 6.66699 13.3333C6.66699 12.9651 6.36852 12.6667 6.00033 12.6667H5.33366V8.66667H10.667V12.6667H10.0003L9.92258 12.6712C9.59102 12.7097 9.33366 12.9914 9.33366 13.3333C9.33366 13.7015 9.63213 14 10.0003 14H11.3337H12.667L12.7447 13.9955C13.0763 13.957 13.3337 13.6752 13.3337 13.3333C13.3337 12.9651 13.0352 12.6667 12.667 12.6667H12.0003V8.00114L12.0003 8L12.0003 7.99886V3.33333H12.667L12.7447 3.32885C13.0763 3.29034 13.3337 3.00856 13.3337 2.66667C13.3337 2.29848 13.0352 2 12.667 2H11.3337H10.0003L9.92258 2.00449C9.59102 2.043 9.33366 2.32478 9.33366 2.66667C9.33366 3.03486 9.63213 3.33333 10.0003 3.33333H10.667V7.33333H5.33366V3.33333Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="inclusive-bar__item">
+          <div class="inclusive-bar__label">Размер</div>
+          <div class="inclusive-bar__value">
+            <button class="inclusive-bar__option --active" type="button" data-js="click:inclusiveSetValue" data-type="zoom" data-value="normal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.58097 6.4547C7.53488 5.46015 6.71396 4.66797 5.70801 4.66797C4.67247 4.66797 3.83301 5.50743 3.83301 6.54297V8.41797V10.918L3.83581 10.9666C3.85988 11.1738 4.03599 11.3346 4.24967 11.3346C4.47979 11.3346 4.66634 11.1481 4.66634 10.918V8.83464H6.74967V10.918L6.75248 10.9666C6.77655 11.1738 6.95266 11.3346 7.16634 11.3346C7.39646 11.3346 7.58301 11.1481 7.58301 10.918V8.41797V6.54297L7.58097 6.4547ZM6.74967 6.54297V8.0013H4.66634V6.54297L4.66856 6.47448C4.70383 5.93111 5.15572 5.5013 5.70801 5.5013C6.2833 5.5013 6.74967 5.96767 6.74967 6.54297ZM10.2913 7.58464C9.25581 7.58464 8.41634 8.4241 8.41634 9.45964C8.41634 10.4952 9.25581 11.3346 10.2913 11.3346C10.6814 11.3346 11.0436 11.2155 11.3436 11.0118C11.3861 11.1967 11.5518 11.3346 11.7497 11.3346C11.9798 11.3346 12.1663 11.1481 12.1663 10.918V9.45964V8.0013L12.1635 7.95271C12.1395 7.74549 11.9634 7.58464 11.7497 7.58464C11.5518 7.58464 11.3861 7.72256 11.3436 7.90752C11.0436 7.70372 10.6814 7.58464 10.2913 7.58464ZM11.333 9.45863C11.3325 8.88379 10.8663 8.41797 10.2913 8.41797C9.71604 8.41797 9.24967 8.88434 9.24967 9.45964C9.24967 10.0349 9.71604 10.5013 10.2913 10.5013C10.8663 10.5013 11.3325 10.0355 11.333 9.46064C11.333 9.46031 11.333 9.45997 11.333 9.45964C11.333 9.4593 11.333 9.45896 11.333 9.45863Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="zoom" data-value="large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.49755 6.14408C7.44224 4.95062 6.45714 4 5.25 4C4.00736 4 3 5.00736 3 6.25V8.5V11.5L3.00336 11.5583C3.03225 11.807 3.24358 12 3.5 12C3.77614 12 4 11.7761 4 11.5V9H6.5V11.5L6.50336 11.5583C6.53225 11.807 6.74358 12 7 12C7.27614 12 7.5 11.7761 7.5 11.5V8.5V6.25L7.49755 6.14408ZM6.5 6.25V8H4V6.25L4.00266 6.16781C4.04498 5.51577 4.58726 5 5.25 5C5.94036 5 6.5 5.55964 6.5 6.25ZM10.75 7.5C9.50736 7.5 8.5 8.50736 8.5 9.75C8.5 10.9926 9.50736 12 10.75 12C11.218 12 11.6527 11.8571 12.0127 11.6125C12.0638 11.8345 12.2626 12 12.5 12C12.7761 12 13 11.7761 13 11.5V9.75V8L12.9966 7.94169C12.9678 7.69302 12.7564 7.5 12.5 7.5C12.2626 7.5 12.0638 7.66551 12.0127 7.88746C11.6527 7.64291 11.218 7.5 10.75 7.5ZM12 9.75C12 9.05964 11.4404 8.5 10.75 8.5C10.0596 8.5 9.5 9.05964 9.5 9.75C9.5 10.4404 10.0596 11 10.75 11C11.4404 11 12 10.4404 12 9.75Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="zoom" data-value="extra-large">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.32974 5.52674C7.256 3.93546 5.94252 2.66797 4.33301 2.66797C2.67615 2.66797 1.33301 4.01111 1.33301 5.66797V8.66797V12.668L1.33749 12.7457C1.376 13.0773 1.65778 13.3346 1.99967 13.3346C2.36786 13.3346 2.66634 13.0362 2.66634 12.668V9.33463H5.99967V12.668L6.00416 12.7457C6.04267 13.0773 6.32445 13.3346 6.66634 13.3346C7.03453 13.3346 7.33301 13.0362 7.33301 12.668V8.66797V5.66797L7.32974 5.52674ZM5.99967 5.66797V8.0013H2.66634V5.66797L2.66989 5.55838C2.72632 4.68899 3.44935 4.0013 4.33301 4.0013C5.25348 4.0013 5.99967 4.74749 5.99967 5.66797ZM11.6663 7.33464C10.0095 7.33464 8.66634 8.67778 8.66634 10.3346C8.66634 11.9915 10.0095 13.3346 11.6663 13.3346C12.2904 13.3346 12.8699 13.1441 13.35 12.818C13.418 13.114 13.6831 13.3346 13.9997 13.3346C14.3679 13.3346 14.6663 13.0362 14.6663 12.668V10.3346V8.0013L14.6619 7.92355C14.6233 7.592 14.3416 7.33464 13.9997 7.33464C13.6831 7.33464 13.418 7.55532 13.35 7.85125C12.8699 7.52518 12.2904 7.33464 11.6663 7.33464ZM13.333 10.3346C13.333 9.41416 12.5868 8.66797 11.6663 8.66797C10.7459 8.66797 9.99967 9.41416 9.99967 10.3346C9.99967 11.2551 10.7459 12.0013 11.6663 12.0013C12.5868 12.0013 13.333 11.2551 13.333 10.3346Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="inclusive-bar__item">
+          <div class="inclusive-bar__label">Цвет</div>
+          <div class="inclusive-bar__value">
+            <button class="inclusive-bar__option --active" type="button" data-js="click:inclusiveSetValue" data-type="color" data-value="white" style="background:#FFF;color:#000;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66667 2C10.5076 2 12 3.49238 12 5.33333C12 6.39915 11.4998 7.34813 10.7213 7.95832L10.666 8L10.7213 8.04168C11.4644 8.62414 11.954 9.51528 11.9969 10.5221L12 10.6667C12 12.4592 10.5851 13.9212 8.81126 13.9969L8.66667 14H4.66667C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.32478 4.25736 2.043 4.58892 2.00449L4.66667 2H8.66667ZM5.33333 8.66667V12.6667H8.66667C9.73179 12.6667 10.6024 11.8341 10.6633 10.7842L10.6667 10.6667C10.6667 9.60155 9.83405 8.73089 8.78418 8.67006L8.66667 8.66667H5.33333ZM8.68827 7.33368C8.6811 7.33345 8.6739 7.33333 8.66667 7.33333H5.33333V3.33333H8.66667L8.78418 3.33673C9.83405 3.39756 10.6667 4.26821 10.6667 5.33333C10.6667 6.39845 9.83405 7.26911 8.78418 7.32994L8.68827 7.33368Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="color" data-value="brown" style="background:#382819;color:#93D439;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66667 2C10.5076 2 12 3.49238 12 5.33333C12 6.39915 11.4998 7.34813 10.7213 7.95832L10.666 8L10.7213 8.04168C11.4644 8.62414 11.954 9.51528 11.9969 10.5221L12 10.6667C12 12.4592 10.5851 13.9212 8.81126 13.9969L8.66667 14H4.66667C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.32478 4.25736 2.043 4.58892 2.00449L4.66667 2H8.66667ZM5.33333 8.66667V12.6667H8.66667C9.73179 12.6667 10.6024 11.8341 10.6633 10.7842L10.6667 10.6667C10.6667 9.60155 9.83405 8.73089 8.78418 8.67006L8.66667 8.66667H5.33333ZM8.68827 7.33368C8.6811 7.33345 8.6739 7.33333 8.66667 7.33333H5.33333V3.33333H8.66667L8.78418 3.33673C9.83405 3.39756 10.6667 4.26821 10.6667 5.33333C10.6667 6.39845 9.83405 7.26911 8.78418 7.32994L8.68827 7.33368Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="color" data-value="beige" style="background:#F6F3D9;color:#4C5252;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66667 2C10.5076 2 12 3.49238 12 5.33333C12 6.39915 11.4998 7.34813 10.7213 7.95832L10.666 8L10.7213 8.04168C11.4644 8.62414 11.954 9.51528 11.9969 10.5221L12 10.6667C12 12.4592 10.5851 13.9212 8.81126 13.9969L8.66667 14H4.66667C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.32478 4.25736 2.043 4.58892 2.00449L4.66667 2H8.66667ZM5.33333 8.66667V12.6667H8.66667C9.73179 12.6667 10.6024 11.8341 10.6633 10.7842L10.6667 10.6667C10.6667 9.60155 9.83405 8.73089 8.78418 8.67006L8.66667 8.66667H5.33333ZM8.68827 7.33368C8.6811 7.33345 8.6739 7.33333 8.66667 7.33333H5.33333V3.33333H8.66667L8.78418 3.33673C9.83405 3.39756 10.6667 4.26821 10.6667 5.33333C10.6667 6.39845 9.83405 7.26911 8.78418 7.32994L8.68827 7.33368Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="color" data-value="blue" style="background:#A8D0FB;color:#3F4E5F;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66667 2C10.5076 2 12 3.49238 12 5.33333C12 6.39915 11.4998 7.34813 10.7213 7.95832L10.666 8L10.7213 8.04168C11.4644 8.62414 11.954 9.51528 11.9969 10.5221L12 10.6667C12 12.4592 10.5851 13.9212 8.81126 13.9969L8.66667 14H4.66667C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.32478 4.25736 2.043 4.58892 2.00449L4.66667 2H8.66667ZM5.33333 8.66667V12.6667H8.66667C9.73179 12.6667 10.6024 11.8341 10.6633 10.7842L10.6667 10.6667C10.6667 9.60155 9.83405 8.73089 8.78418 8.67006L8.66667 8.66667H5.33333ZM8.68827 7.33368C8.6811 7.33345 8.6739 7.33333 8.66667 7.33333H5.33333V3.33333H8.66667L8.78418 3.33673C9.83405 3.39756 10.6667 4.26821 10.6667 5.33333C10.6667 6.39845 9.83405 7.26911 8.78418 7.32994L8.68827 7.33368Z" fill="currentColor"></path>
+              </svg>
+            </button>
+            <button class="inclusive-bar__option" type="button" data-js="click:inclusiveSetValue" data-type="color" data-value="black" style="background:#000;color:#FFF;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66667 2C10.5076 2 12 3.49238 12 5.33333C12 6.39915 11.4998 7.34813 10.7213 7.95832L10.666 8L10.7213 8.04168C11.4644 8.62414 11.954 9.51528 11.9969 10.5221L12 10.6667C12 12.4592 10.5851 13.9212 8.81126 13.9969L8.66667 14H4.66667C4.32478 14 4.043 13.7426 4.00449 13.4111L4 13.3333V8V2.66667C4 2.32478 4.25736 2.043 4.58892 2.00449L4.66667 2H8.66667ZM5.33333 8.66667V12.6667H8.66667C9.73179 12.6667 10.6024 11.8341 10.6633 10.7842L10.6667 10.6667C10.6667 9.60155 9.83405 8.73089 8.78418 8.67006L8.66667 8.66667H5.33333ZM8.68827 7.33368C8.6811 7.33345 8.6739 7.33333 8.66667 7.33333H5.33333V3.33333H8.66667L8.78418 3.33673C9.83405 3.39756 10.6667 4.26821 10.6667 5.33333C10.6667 6.39845 9.83405 7.26911 8.78418 7.32994L8.68827 7.33368Z" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button class="inclusive-bar__button button" type="button" data-js="click:inclusiveShow"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-eye-2"></use></svg>Обычная версия
+							</button>
+    </div>
+  </div>
+</div>
+
+	
+
+<div class="information-bar">
+  <div class="information-bar__item" data-id="635">
+    <div class="information-bar__inner">
+      <div class="information-bar__icon">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-tag"></use>
+        </svg>
+      </div>
+      <div class="information-bar__content">
+        <div class="information-bar__headline">Ознакомьтесь с информацией о порядке обмена и возврата билетов</div>
+      </div>
+      <div class="information-bar__footer"><div><a class="button button_md" href="/bronirovanie-i-upravlenie/obmen-i-vozvrat/">Ознакомиться</a></div><button class="information-bar__close" data-js="click:closeInfoBar" data-id="635"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-close"></use></svg></button></div>
+    </div>
+  </div>
+</div>
+	<div class="container">
+		<div class="header__informers"></div>
+		<div class="header__inner">
+			<a class="logo" href="/">
+				<img class="logo__img" src="/assets/img/logo-ru.svg" alt="" width="204" height="46">
+			</a>
+			
+
+<div class="header__nav">
+  <div class="navigation">
+    <div class="navigation__item">
+      <a class="navigation__link" href="/bronirovanie-i-upravlenie/kak-kupit-biletuslugu/">Бронирование и управление</a>
+      <div class="navigation__sub">
+        <div class="navigation__block">
+          <div class="navigation__col">
+            <a class="navigation__banner" href="/bronirovanie-i-upravlenie/registracziya/">Онлайн-регистрация 											<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+            <a class="navigation__banner" href="/online-board/departure/">Онлайн-табло<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+          </div>
+          <div class="nav-list">
+            <div class="nav-list__list nav-list__columns">
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/booking/#/schedule/">Расписание</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/tarify-i-usloviya/">Тарифы и условия</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/lgotnye-tarify/">Льготные тарифы</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/speczialnye-predlozheniya/">Специальные предложения</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/kak-kupit-biletuslugu/">Как купить билет/услугу</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/dopolnitelnye-uslugi/">Дополнительные услуги</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/karta-poletov/">Карта полетов</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/obmen-i-vozvrat/">Обмен и возврат</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/oformlenie-spravok/">Оформление справок</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/bronirovanie-i-upravlenie/ispravit-dannye/">Исправить данные</a>
+              </div>
+            </div>
+          </div>
+          <div class="navigation__col">
+            <a class="navigation__banner navigation__banner_dark" href="/booking/#/find/">Мой заказ<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+            <a class="navigation__banner navigation__banner_dark" href="/upload/severstal/schedule.pdf">Скачать расписание<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-download"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation__item">
+      <a class="navigation__link" href="/informacziya/pravila-perevozki/">Информация</a>
+      <div class="navigation__sub">
+        <div class="navigation__block">
+          <div class="navigation__col">
+            <a class="navigation__banner navigation__banner_dark" href="/informacziya/pravila-perevozki/">Правила перевозки<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+          </div>
+          <div class="nav-list">
+            <div class="nav-list__list nav-list__columns">
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/charternye-perevozki/">Чартерные перевозки</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/gruppovye-perevozki/">Групповые перевозки</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/perevozka-gruzov/">Перевозка грузов</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/subsidized-transportation/">Субсидированные перевозки</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/bagazh-i-ruchnaya-klad/">Багаж и ручная кладь</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/pravila-oformleniya-pretenzij/">Правила оформления претензий</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/informacziya/obratnaya-svyaz/">Обратная связь</a>
+              </div>
+            </div>
+          </div>
+          <div class="navigation__col">
+            <a class="navigation__banner" href="/informacziya/voprosy-i-otvety/">Вопросы и ответы<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation__item">
+      <a class="navigation__link" href="/severstal-avia/o-kompanii/">О&nbsp;нас</a>
+      <div class="navigation__sub">
+        <div class="navigation__block">
+          <div class="navigation__col">
+            <a class="navigation__banner" href="/severstal-avia/o-kompanii/">Северсталь Авиа<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+          </div>
+          <div class="nav-list">
+            <div class="nav-list__list">
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/park-vozdushnyx-sudov/">Парк воздушных судов</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/kontakty/">Контакты</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/predstavitelstva-v-aeroportax/">Представительства в аэропортах</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/vakansii/">Вакансии</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/rekvizity/">Реквизиты</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation__block">
+          <div class="navigation__col">
+            <a class="navigation__banner" href="/severstal-avia/aeroport-cherepovecz/">Аэропорт Череповец<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-arrow-right"></use></svg></a>
+          </div>
+          <div class="nav-list">
+            <div class="nav-list__list">
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/fee-rates/">Ставки сборов</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/parking-space/">Подъезд к терминалу и парковка</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/hotel/">Гостиница</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/general-aviation/">Авиация общего назначения</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/advertising-placement/">Размещение рекламы</a>
+              </div>
+              <div class="nav-list__item">
+                <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/the-pass-office/">Бюро пропусков</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header__bar">
+  <div class="city-select">
+    <button class="city-select__toggle" type="button" data-js="click:dropdown">Череповец</button>
+    <div class="dropdown" data-js="dropdown">
+      <a class="dropdown__link active" href="/sever/ajax/main/set/?iata=CEE" data-iata="CEE" data-id="16" data-js="click:changeCity">Череповец</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MOW" data-iata="MOW" data-id="14" data-js="click:changeCity">Москва</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=LED" data-iata="LED" data-id="18" data-js="click:changeCity">Санкт-Петербург</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=ARH" data-iata="ARH" data-id="21" data-js="click:changeCity">Архангельск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=VUS" data-iata="VUS" data-id="19" data-js="click:changeCity">Великий Устюг</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=SVX" data-iata="SVX" data-id="28" data-js="click:changeCity">Екатеринбург</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KZN" data-iata="KZN" data-id="17" data-js="click:changeCity">Казань</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KGD" data-iata="KGD" data-id="20" data-js="click:changeCity">Калининград</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KLF" data-iata="KLF" data-id="23" data-js="click:changeCity">Калуга</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=KVK" data-iata="KVK" data-id="48" data-js="click:changeCity">Кировск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MCX" data-iata="MCX" data-id="59" data-js="click:changeCity">Махачкала</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MRV" data-iata="MRV" data-id="27" data-js="click:changeCity">Минеральные Воды</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MSQ" data-iata="MSQ" data-id="22" data-js="click:changeCity">Минск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=MMK" data-iata="MMK" data-id="24" data-js="click:changeCity">Мурманск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=GOJ" data-iata="GOJ" data-id="57" data-js="click:changeCity">Нижний Новгород</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=PES" data-iata="PES" data-id="25" data-js="click:changeCity">Петрозаводск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=OVS" data-iata="OVS" data-id="60" data-js="click:changeCity">Советский</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=CSH" data-iata="CSH" data-id="61" data-js="click:changeCity">Соловецкий</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=AER" data-iata="AER" data-id="26" data-js="click:changeCity">Сочи</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=ULY" data-iata="ULY" data-id="63" data-js="click:changeCity">Ульяновск</a>
+      <a class="dropdown__link" href="/sever/ajax/main/set/?iata=UCT" data-iata="UCT" data-id="47" data-js="click:changeCity">Ухта</a>
+    </div>
+  </div>
+  <form class="search-form" action="/search/" method="get">
+    <button class="search-form__open" type="button" data-search="open">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-search"></use>
+      </svg>
+    </button>
+    <div class="search-form__inner">
+      <input class="search-form__input" type="text" name="search" placeholder="Поиск по сайту" data-search="input" />
+      <button class="search-form__close" type="button" data-search="close">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <button class="search-form__submit" type="submit" data-search="submit">
+        <svg>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-search"></use>
+        </svg>
+      </button>
+    </div>
+  </form>
+  <div class="lang-select">
+    <button class="lang-select__toggle" type="button" data-js="click:dropdown">
+      <svg>
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-globe"></use>
+      </svg>
+      <span>RU</span>
+    </button>
+    <div class="dropdown" data-js="dropdown-content">
+      <a class="dropdown__link" href="/en/online-board/arrival/">EN</a>
+      <a class="dropdown__link active" href="/online-board/arrival/">RU</a>
+    </div>
+  </div>
+  <a class="header__button button button_sm button_secondary" href="/account/">Войти</a>
+  <button class="header__burger-button" type="button" data-js="click:menu">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-menu"></use>
+    </svg>
+  </button>
+  <button class="header__settings-button" type="button" data-js="click:inclusiveToggle">
+    <svg>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-settings"></use>
+    </svg>
+  </button>
+</div>
+
+
+		</div>
+	</div>
+</header>
+<div class="wrapper">
+	<div class="page page_alt">
+	<div class="container">
+		
+
+<div class="breadcrumbs">
+  <div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs__list" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    <div class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <a class="breadcrumbs__link" href="/" itemprop="item">Главная
+							<meta itemprop="name" content="Главная" /><meta itemprop="position" content="0" /></a>
+    </div>
+    <div class="breadcrumbs__item">
+      <span class="breadcrumbs__current">Онлайн-табло</span>
+    </div>
+  </div>
+</div>
+<div class="page-header">
+  <div class="page-header__content">
+    <h1 class="page-header__headline">Онлайн-табло</h1>
+  </div>
+</div>
+		<script>
+			window.search = [{"value":"D2-323"},{"value":"Ухта"},{"value":""},{"value":"D2-119"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-151"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-120"},{"value":"Череповец"},{"value":""},{"value":"D2-152"},{"value":"Череповец"},{"value":""},{"value":"D2-324"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-255"},{"value":"Москва"},{"value":"Домодедово"},{"value":"D2-253"},{"value":"Петрозаводск"},{"value":"Бесовец"},{"value":"D2-52"},{"value":"Архангельск"},{"value":"Талаги"},{"value":"D2-254"},{"value":"Москва"},{"value":"Домодедово"},{"value":"D2-53"},{"value":"Мурманск"},{"value":"Основной"},{"value":"D2-141"},{"value":"Калининград"},{"value":"Храброво"},{"value":"D2-121"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-153"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-122"},{"value":"Череповец"},{"value":""},{"value":"D2-142"},{"value":"Череповец"},{"value":""},{"value":"D2-154"},{"value":"Череповец"},{"value":""},{"value":"D2-119"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-151"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-323"},{"value":"Ухта"},{"value":""},{"value":"D2-120"},{"value":"Череповец"},{"value":""},{"value":"D2-152"},{"value":"Череповец"},{"value":""},{"value":"D2-52"},{"value":"Архангельск"},{"value":"Талаги"},{"value":"D2-332"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-55"},{"value":"Мурманск"},{"value":"Основной"},{"value":"D2-253"},{"value":"Петрозаводск"},{"value":"Бесовец"},{"value":"D2-333"},{"value":"Ухта"},{"value":""},{"value":"D2-54"},{"value":"Череповец"},{"value":""},{"value":"D2-254"},{"value":"Москва"},{"value":"Домодедово"},{"value":"D2-324"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-121"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-153"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-122"},{"value":"Череповец"},{"value":""},{"value":"D2-154"},{"value":"Череповец"},{"value":""},{"value":"D2-119"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-151"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-323"},{"value":"Ухта"},{"value":""},{"value":"D2-120"},{"value":"Череповец"},{"value":""},{"value":"D2-152"},{"value":"Череповец"},{"value":""},{"value":"D2-51"},{"value":"Мурманск"},{"value":"Основной"},{"value":"D2-332"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-253"},{"value":"Петрозаводск"},{"value":"Бесовец"},{"value":"D2-141"},{"value":"Калининград"},{"value":"Храброво"},{"value":"D2-52"},{"value":"Архангельск"},{"value":"Талаги"},{"value":"D2-333"},{"value":"Ухта"},{"value":""},{"value":"D2-254"},{"value":"Москва"},{"value":"Домодедово"},{"value":"D2-53"},{"value":"Мурманск"},{"value":"Основной"},{"value":"D2-324"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-142"},{"value":"Череповец"},{"value":""},{"value":"D2-258"},{"value":"Череповец"},{"value":""},{"value":"D2-121"},{"value":"Санкт-Петербург"},{"value":"Пулково"},{"value":"D2-153"},{"value":"Москва"},{"value":"Шереметьево"},{"value":"D2-122"},{"value":"Череповец"},{"value":""},{"value":"D2-154"},{"value":"Череповец"},{"value":""}];
+		</script>
+		
+
+<div class="online-board-nav">
+  <div class="online-board-nav__list">
+    <a class="online-board-nav__link" href="/online-board/departure/">Вылет</a>
+    <span class="online-board-nav__link active">Прилет</span>
+  </div>
+</div>
+<div class="online-board-bar">
+  <div class="online-board-date">
+    <button data-js="click:tab" data-target="#today" data-type="today" class="online-board-date__item">Сегодня<span>25 мая, пн</span></button>
+    <button data-js="click:tab" data-target="#tomorrow" data-type="tomorrow" class="online-board-date__item">Завтра<span>26 мая, вт</span></button>
+    <button data-js="click:tab" data-target="#aftertommorrow" data-type="aftertommorrow" class="online-board-date__item">Послезавтра<span>27 мая, ср</span></button>
+  </div>
+  <div class="online-board-search">
+    <div class="online-board-search__field">
+      <input class="online-board-search__input" type="text" placeholder="Город, номер рейса" data-board="search" data-empty="Нет результата" data-empty-message="По вашему запросу ничего не найдено" />
+      <span class="online-board-search__label">Город, номер рейса</span>
+    </div>
+    <div class="online-board-search__text">
+					Время вылета/прилета указано местное
+					<span>
+						Последнее обновление <b>23:29</b><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none"><path fill="#262626" d="M17.648 6.85a7.958 7.958 0 0 0-5.65-2.35c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08a5.99 5.99 0 0 1-5.65 4c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78l-3.22 3.22h7v-7l-2.35 2.35Z"></path></svg></span></div>
+    <div class="online-board-search__sort">
+      <button class="online-board-search__sort-toggle" type="button" data-js="click:dropdown">
+						Время вылета по возрастанию
+					</button>
+      <div class="dropdown" data-js="dropdown">
+        <button class="dropdown__link active" type="button" data-js="click:boardSort" data-value="0">Время вылета по возрастанию</button>
+        <button class="dropdown__link" type="button" data-js="click:boardSort" data-value="1">Время вылета по убыванию</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tabs online-board-tabs">
+  <div class="tabs__item" id="today">
+    <div class="online-board">
+      <table class="online-board__table">
+        <thead>
+          <tr>
+            <th>Рейс</th>
+            <th>Прилет</th>
+            <th class="online-board__title-time">По плану</th>
+            <th class="online-board__title-time">Фактическое</th>
+            <th class="online-board__title-status">Статус рейса</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-number="D2-323" data-search="D2-323,Ухта," data-time="09:00">
+            <td class="online-board__id">D2-323</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Ухта</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>09:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">08:57</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>09:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">08:57</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-119" data-search="D2-119,Санкт-Петербург,Пулково" data-time="08:15">
+            <td class="online-board__id">D2-119</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:15</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">08:09</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:15</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">08:09</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-151" data-search="D2-151,Москва,Шереметьево" data-time="08:40">
+            <td class="online-board__id">D2-151</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:40</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">08:34</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:40</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">08:34</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-120" data-search="D2-120,Череповец," data-time="10:00">
+            <td class="online-board__id">D2-120</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">09:57</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">09:57</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-152" data-search="D2-152,Череповец," data-time="10:20">
+            <td class="online-board__id">D2-152</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">10:18</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">10:18</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-324" data-search="D2-324,Санкт-Петербург,Пулково" data-time="11:50">
+            <td class="online-board__id">D2-324</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>11:50</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">11:47</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>11:50</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">11:47</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-255" data-search="D2-255,Москва,Домодедово" data-time="11:55">
+            <td class="online-board__id">D2-255</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Домодедово</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>11:55</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">11:52</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>11:55</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">11:52</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-253" data-search="D2-253,Петрозаводск,Бесовец" data-time="14:10">
+            <td class="online-board__id">D2-253</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Петрозаводск<b>Бесовец</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:10</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">14:04</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:10</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">14:04</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-52" data-search="D2-52,Архангельск,Талаги" data-time="14:20">
+            <td class="online-board__id">D2-52</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Архангельск<b>Талаги</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">14:14</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">14:14</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-254" data-search="D2-254,Москва,Домодедово" data-time="16:25">
+            <td class="online-board__id">D2-254</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Домодедово</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>16:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">16:16</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>16:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">16:16</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-53" data-search="D2-53,Мурманск,Основной" data-time="12:20">
+            <td class="online-board__id">D2-53</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Мурманск<b>Основной</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>16:15</div>
+                  <div class="color-red" style="font-size: small">25 мая</div>
+                  <span class="color-red">12:20</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">16:13</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>16:15</div>
+              <div class="color-red" style="font-size: small">25 мая</div>
+              <span class="color-red">12:20</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">16:13</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-141" data-search="D2-141,Калининград,Храброво" data-time="12:20">
+            <td class="online-board__id">D2-141</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Калининград<b>Храброво</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>19:00</div>
+                  <div class="color-red" style="font-size: small">25 мая</div>
+                  <span class="color-red">12:20</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">18:58</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>19:00</div>
+              <div class="color-red" style="font-size: small">25 мая</div>
+              <span class="color-red">12:20</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">18:58</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-121" data-search="D2-121,Санкт-Петербург,Пулково" data-time="20:25">
+            <td class="online-board__id">D2-121</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">20:23</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">20:23</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-153" data-search="D2-153,Москва,Шереметьево" data-time="20:55">
+            <td class="online-board__id">D2-153</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:55</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">20:47</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:55</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">20:47</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-142" data-search="D2-142,Череповец," data-time="23:20">
+            <td class="online-board__id">D2-142</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>23:50</div>
+                  <div class="color-red" style="font-size: small">25 мая</div>
+                  <span class="color-red">23:20</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>23:50</div>
+              <div class="color-red" style="font-size: small">25 мая</div>
+              <span class="color-red">23:20</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="">Вылетел</span>
+            </td>
+          </tr>
+          <tr data-number="D2-122" data-search="D2-122,Череповец," data-time="22:20">
+            <td class="online-board__id">D2-122</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">22:15</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">22:15</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+          <tr data-number="D2-154" data-search="D2-154,Череповец," data-time="22:45">
+            <td class="online-board__id">D2-154</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:45</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black">22:56</div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:45</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black">22:56</div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-blue">Выполнен</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="online-board__footer">+1/-1 – переход суток в зависимости от города вылета или прилета</div>
+    </div>
+  </div>
+  <div class="tabs__item" id="tomorrow">
+    <div class="online-board">
+      <table class="online-board__table">
+        <thead>
+          <tr>
+            <th>Рейс</th>
+            <th>Прилет</th>
+            <th class="online-board__title-time">По плану</th>
+            <th class="online-board__title-time">Фактическое</th>
+            <th class="online-board__title-status">Статус рейса</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-number="D2-119" data-search="D2-119,Санкт-Петербург,Пулково" data-time="08:15">
+            <td class="online-board__id">D2-119</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:15</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:15</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-151" data-search="D2-151,Москва,Шереметьево" data-time="08:40">
+            <td class="online-board__id">D2-151</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:40</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:40</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-323" data-search="D2-323,Ухта," data-time="10:00">
+            <td class="online-board__id">D2-323</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Ухта</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-120" data-search="D2-120,Череповец," data-time="10:00">
+            <td class="online-board__id">D2-120</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-152" data-search="D2-152,Череповец," data-time="10:20">
+            <td class="online-board__id">D2-152</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-52" data-search="D2-52,Архангельск,Талаги" data-time="11:00">
+            <td class="online-board__id">D2-52</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Архангельск<b>Талаги</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>11:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>11:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-332" data-search="D2-332,Москва,Шереметьево" data-time="12:50">
+            <td class="online-board__id">D2-332</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>12:50</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>12:50</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-55" data-search="D2-55,Мурманск,Основной" data-time="13:05">
+            <td class="online-board__id">D2-55</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Мурманск<b>Основной</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>13:05</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>13:05</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-253" data-search="D2-253,Петрозаводск,Бесовец" data-time="14:10">
+            <td class="online-board__id">D2-253</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Петрозаводск<b>Бесовец</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:10</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:10</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-333" data-search="D2-333,Ухта," data-time="15:40">
+            <td class="online-board__id">D2-333</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Ухта</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>15:40</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>15:40</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-54" data-search="D2-54,Череповец," data-time="15:45">
+            <td class="online-board__id">D2-54</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>15:45</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>15:45</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-254" data-search="D2-254,Москва,Домодедово" data-time="16:25">
+            <td class="online-board__id">D2-254</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Домодедово</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>16:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>16:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-324" data-search="D2-324,Санкт-Петербург,Пулково" data-time="18:30">
+            <td class="online-board__id">D2-324</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>18:30</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>18:30</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-121" data-search="D2-121,Санкт-Петербург,Пулково" data-time="20:25">
+            <td class="online-board__id">D2-121</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-153" data-search="D2-153,Москва,Шереметьево" data-time="20:55">
+            <td class="online-board__id">D2-153</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:55</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:55</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-122" data-search="D2-122,Череповец," data-time="22:20">
+            <td class="online-board__id">D2-122</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-154" data-search="D2-154,Череповец," data-time="22:45">
+            <td class="online-board__id">D2-154</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:45</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:45</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="online-board__footer">+1/-1 – переход суток в зависимости от города вылета или прилета</div>
+    </div>
+  </div>
+  <div class="tabs__item" id="aftertommorrow">
+    <div class="online-board">
+      <table class="online-board__table">
+        <thead>
+          <tr>
+            <th>Рейс</th>
+            <th>Прилет</th>
+            <th class="online-board__title-time">По плану</th>
+            <th class="online-board__title-time">Фактическое</th>
+            <th class="online-board__title-status">Статус рейса</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-number="D2-119" data-search="D2-119,Санкт-Петербург,Пулково" data-time="08:15">
+            <td class="online-board__id">D2-119</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:15</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:15</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-151" data-search="D2-151,Москва,Шереметьево" data-time="08:40">
+            <td class="online-board__id">D2-151</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>08:40</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>08:40</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-323" data-search="D2-323,Ухта," data-time="10:00">
+            <td class="online-board__id">D2-323</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Ухта</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-120" data-search="D2-120,Череповец," data-time="10:00">
+            <td class="online-board__id">D2-120</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:00</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:00</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-152" data-search="D2-152,Череповец," data-time="10:20">
+            <td class="online-board__id">D2-152</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>10:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>10:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-51" data-search="D2-51,Мурманск,Основной" data-time="11:15">
+            <td class="online-board__id">D2-51</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Мурманск<b>Основной</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>12:35</div>
+                  <div class="color-red" style="font-size: small">27 мая</div>
+                  <span class="color-red">11:15</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>12:35</div>
+              <div class="color-red" style="font-size: small">27 мая</div>
+              <span class="color-red">11:15</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-332" data-search="D2-332,Москва,Шереметьево" data-time="12:50">
+            <td class="online-board__id">D2-332</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>12:50</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>12:50</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-253" data-search="D2-253,Петрозаводск,Бесовец" data-time="14:10">
+            <td class="online-board__id">D2-253</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Петрозаводск<b>Бесовец</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:10</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:10</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-141" data-search="D2-141,Калининград,Храброво" data-time="19:20">
+            <td class="online-board__id">D2-141</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Калининград<b>Храброво</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:20</div>
+                  <div class="color-red" style="font-size: small">27 мая</div>
+                  <span class="color-red">19:20</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:20</div>
+              <div class="color-red" style="font-size: small">27 мая</div>
+              <span class="color-red">19:20</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-52" data-search="D2-52,Архангельск,Талаги" data-time="13:10">
+            <td class="online-board__id">D2-52</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Архангельск<b>Талаги</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>14:30</div>
+                  <div class="color-red" style="font-size: small">27 мая</div>
+                  <span class="color-red">13:10</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>14:30</div>
+              <div class="color-red" style="font-size: small">27 мая</div>
+              <span class="color-red">13:10</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-333" data-search="D2-333,Ухта," data-time="15:40">
+            <td class="online-board__id">D2-333</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Ухта</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>15:40</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>15:40</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-254" data-search="D2-254,Москва,Домодедово" data-time="16:25">
+            <td class="online-board__id">D2-254</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Домодедово</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>16:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>16:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-53" data-search="D2-53,Мурманск,Основной" data-time="15:05">
+            <td class="online-board__id">D2-53</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Мурманск<b>Основной</b></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>16:25</div>
+                  <div class="color-red" style="font-size: small">27 мая</div>
+                  <span class="color-red">15:05</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>16:25</div>
+              <div class="color-red" style="font-size: small">27 мая</div>
+              <span class="color-red">15:05</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-142" data-search="D2-142,Череповец," data-time="23:20">
+            <td class="online-board__id">D2-142</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>19:00</div>
+                  <div class="color-red" style="font-size: small">27 мая</div>
+                  <span class="color-red">23:20</span>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>19:00</div>
+              <div class="color-red" style="font-size: small">27 мая</div>
+              <span class="color-red">23:20</span>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-324" data-search="D2-324,Санкт-Петербург,Пулково" data-time="18:30">
+            <td class="online-board__id">D2-324</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>18:30</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>18:30</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-258" data-search="D2-258,Череповец," data-time="18:10">
+            <td class="online-board__id">D2-258</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>18:10</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>18:10</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-121" data-search="D2-121,Санкт-Петербург,Пулково" data-time="20:25">
+            <td class="online-board__id">D2-121</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Санкт-Петербург<b>Пулково</b><span>Терминал 1</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:25</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:25</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-153" data-search="D2-153,Москва,Шереметьево" data-time="20:55">
+            <td class="online-board__id">D2-153</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Москва<b>Шереметьево</b><span>Терминал B</span></div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>20:55</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>20:55</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-122" data-search="D2-122,Череповец," data-time="22:20">
+            <td class="online-board__id">D2-122</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:20</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:20</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+          <tr data-number="D2-154" data-search="D2-154,Череповец," data-time="22:45">
+            <td class="online-board__id">D2-154</td>
+            <td class="online-board__body">
+              <div class="online-board__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                  <path fill="currentColor" d="M21.504 21h-19v-2h19v2Zm-6.58-11 5.31-1.42c.8-.22 1.63.26 1.84 1.06.21.8-.26 1.62-1.07 1.85l-16.57 4.43-.77-1.33-1.82-3.16 1.45-.39 1.97 1.54 4.97-1.33-4.14-7.17 1.93-.51 6.9 6.43Z"></path>
+                </svg>
+              </div>
+              <div class="online-board__name">Череповец</div>
+              <div class="online-board__time">
+                <div class="online-board__time-plan">
+                  <div>22:45</div>
+                </div>
+                <div class="online-board__time-fact">
+                  <div class="color-black"></div>
+                </div>
+              </div>
+            </td>
+            <td class="online-board__time-plan">
+              <div>22:45</div>
+            </td>
+            <td class="online-board__time-fact">
+              <div class="color-black"></div>
+            </td>
+            <td class="online-board__status">
+              <span class="color-grey">Запланирован</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="online-board__footer">+1/-1 – переход суток в зависимости от города вылета или прилета</div>
+    </div>
+  </div>
+</div>
+	</div>
+</div>			<div class="cbar">
+			<div class="container">
+				<div class="cbar__inner">
+					<div class="cbar__info">ООО «Авиапредприятие «Северсталь» использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом. Продолжая использовать наш сайт и нажимая на кнопку «Согласен», вы даете согласие на обработку файлов. <a href="/politika-cookie/">Узнать больше</a></div>
+<div class="cbar__controls"><a class="button button_secondary button_md" href="/politika-cookie/">Настроить</a> <button class="button button_md" type="button" data-js="click:cookieAccept">Согласен</button></div>				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+	<div class="container">
+		<div class="footer__top">
+			<div class="footer__about">
+				<a class="logo" href="/">
+					<img class="logo__img js-lazy" src="/assets/img/loading/loading-1-static.webp" data-src="/assets/img/logo-alt-ru.svg" alt="" width="204" height="46">
+				</a>
+				<div class="social-list">
+					<a class="social-list__link" href="https://max.ru/id3523011965_biz" target="_blank">
+						<svg>
+							<use xlink:href="/assets/icons/icons.svg?ver=1.1#social-max"></use>
+						</svg>
+					</a>
+					<a class="social-list__link" href="https://t.me/severstalavia" target="_blank">
+						<svg>
+							<use xlink:href="/assets/icons/icons.svg?ver=1.1#social-tg"></use>
+						</svg>
+					</a>
+					<a class="social-list__link" href="https://vk.com/severstalavia" target="_blank">
+						<svg>
+							<use xlink:href="/assets/icons/icons.svg?ver=1.1#social-vk"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="footer__bar">
+
+				
+
+<div class="footer-apps">
+  <div class="footer-apps__title">Мобильное приложение <span><a href="/severstal-avia/mobile-application/">Как установить или обновить <br />мобильное приложение</a></span></div>
+  <div class="footer-apps__main">
+    <div class="footer-apps__list">
+      <div class="footer-apps__label">Android</div>
+      <div class="app-list">
+        <a href="https://www.rustore.ru/catalog/app/avia.severstal.app" class="app-list__item" target="_blank" data-tippy-content="Скачайте из RuStore">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-rustore"></use>
+          </svg>
+        </a>
+        <a href="https://severstal-avia.ru/upload/apps/app-release.apk?ver=20260519" class="app-list__item" target="_blank" data-tippy-content="Скачать APK для Android">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-android"></use>
+          </svg>
+        </a>
+        <button class="app-list__item" type="button" data-js="click:modalOpen" data-target="#modal-qr" data-tippy-content="Показать qr-коды для скачивания">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-qr"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="footer-apps__list">
+      <div class="footer-apps__label">iOS</div>
+      <div class="footer-apps__value">Добавьте ярлык <a href="/severstal-avia/web-link/">web-сайта</a></div>
+    </div>
+  </div>
+  <div class="modal" id="modal-qr">
+    <div class="modal__content" data-modal="content">
+      <div class="modal__header">
+        <div class="modal__headline">Скачайте мобильное приложение</div>
+        <button class="modal__close" type="button" data-js="click:modalClose">
+          <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/icons.svg#icon-close-alt"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="document">
+          <div class="grid grid_col_2">
+            <div class="tile-item">
+              <div class="tile-item__icon">
+                <img class="js-lazy" src="/assets/img/loading/loading-square-100-static.webp" data-src="/assets/img/rustore.svg" alt="" style="width:100%;" />
+              </div>
+              <div class="tile-item__title">RuStore</div>
+              <div class="tile-item__text">
+                <p>
+                  <img class="img-qr js-lazy" src="/assets/img/loading/loading-square-100-static.webp" data-src="/assets/img/qr-rustore.svg" alt="" />
+                </p>
+              </div>
+            </div>
+            <div class="tile-item">
+              <div class="tile-item__icon">
+                <img class="js-lazy" src="/assets/img/loading/loading-square-100-static.webp" data-src="/assets/img/android.svg" alt="" style="width:100%;" />
+              </div>
+              <div class="tile-item__title">Android APK</div>
+              <div class="tile-item__text">
+                <p>
+                  <img class="img-qr js-lazy" src="/assets/img/loading/loading-square-100-static.webp" data-src="/assets/img/qr-apk.svg" alt="" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+				<!--<div class="app-list">
+										<a class="app-list__item" href="1" target="_blank">
+						<img src="/assets/img/app-google.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="1" target="_blank">
+						<img src="/assets/img/app-apple.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="https://www.rustore.ru/catalog/app/avia.severstal.app" target="_blank">
+						<img src="/assets/img/app-rustore.svg" alt="" />
+					</a>
+															<a class="app-list__item" href="https://severstal-avia.ru/upload/apps/app-release.apk?ver=20260519" target="_blank">
+						<img src="/assets/img/app-apk.svg" alt="" />
+					</a>
+									</div>-->
+			</div>
+		</div>
+		<div class="footer__inner">
+			
+
+<div class="nav-list">
+  <button class="nav-list__label" type="button" data-js="click:accordion">Бронирование и управление</button>
+  <div class="nav-list__content">
+    <div class="nav-list__list">
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/registracziya/">Регистрация</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/online-board/departure/">Онлайн-табло</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/booking/#/find/">Мой заказ</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/booking/#/schedule/">Расписание</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/dopolnitelnye-uslugi/">Дополнительные услуги</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/tarify-i-usloviya/">Тарифы и условия</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/karta-poletov/">Карта полетов</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/lgotnye-tarify/">Льготные тарифы</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/obmen-i-vozvrat/">Обмен и возврат</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/speczialnye-predlozheniya/">Специальные предложения</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/oformlenie-spravok/">Оформление справок</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/kak-kupit-biletuslugu/">Как купить билет/услугу</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/bronirovanie-i-upravlenie/ispravit-dannye/">Исправить данные</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nav-list">
+  <button class="nav-list__label" type="button" data-js="click:accordion">Информация</button>
+  <div class="nav-list__content">
+    <div class="nav-list__list">
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/obratnaya-svyaz/">Обратная связь</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/pravila-perevozki/">Правила перевозки</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/charternye-perevozki/">Чартерные перевозки</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/bagazh-i-ruchnaya-klad/">Багаж и ручная кладь</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/gruppovye-perevozki/">Групповые перевозки</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/pravila-oformleniya-pretenzij/">Правила оформления претензий</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/perevozka-gruzov/">Перевозка грузов</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/subsidized-transportation/">Субсидированные перевозки</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/informacziya/voprosy-i-otvety/">Вопросы и ответы</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nav-list">
+  <button class="nav-list__label" type="button" data-js="click:accordion">Северсталь Авиа</button>
+  <div class="nav-list__content">
+    <div class="nav-list__list">
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/o-kompanii/">О компании</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/park-vozdushnyx-sudov/">Парк воздушных судов</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/kontakty/">Контакты</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/predstavitelstva-v-aeroportax/">Представительства в аэропортах</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/vakansii/">Вакансии</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/rekvizity/">Реквизиты</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="nav-list">
+  <button class="nav-list__label" type="button" data-js="click:accordion">Аэропорт Череповец</button>
+  <div class="nav-list__content">
+    <div class="nav-list__list">
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/">Об аэропорте</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/fee-rates/">Ставки сборов</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/parking-space/">Подъезд к терминалу и парковка</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/on-pass-business-lounge/">Бизнес зал ON PASS</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/hotel/">Гостиница</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/general-aviation/">Авиация общего назначения</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/advertising-placement/">Размещение рекламы</a>
+      </div>
+      <div class="nav-list__item">
+        <a class="nav-list__link" href="/severstal-avia/aeroport-cherepovecz/the-pass-office/">Бюро пропусков</a>
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+		<div class="footer__bot">
+			<div><button class="button button_white button_md" type="button" data-js="click:inclusiveShow"> <svg><use xlink:href="/assets/icons/icons.svg#icon-eye"></use></svg>Версия для слабовидящих<b>Обычная версия</b> </button></div>			<div class="footer__copyright">© 2026 Авиапредприятие «Северсталь»</div>
+			<div class="footer__nav-bot">
+				
+
+<a href="/politika-cookie/">Политика cookie</a>
+<a href="/soglasie-pdn/">Согласие на обработку персональных данных</a>
+<a href="/personal-data-processing-security-policy/">Политика в области обеспечения безопасности обработки ПД</a>
+<a href="/upload/severstal/anti-corruption_v1.pdf">Политика противодействия коррупции</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<div itemscope="" itemtype="https://schema.org/Organization" style="display:none">
+	<meta itemprop="name" content="Северсталь Авиа" />
+	<meta itemprop="telephone" content="+7 (931) 521-77-01" />
+	<meta itemprop="email" content="avia@severstal-avia.com" />
+	<div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+		<meta itemprop="streetAddress" content="Аэропорт" />
+		<meta itemprop="postalCode" content="162693" />
+		<meta itemprop="addressLocality" content="Вологодская область, Череповецкий район, деревня Ботово" />
+	</div>
+
+</div>
+	<script src="/modules/skynetcore/front/js/common.js?1730152346"></script>
+<script src="/assets/js/main.js?1764579817"></script>
+
+			<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+				m[i].l=1*new Date();
+				for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+				k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+			ym(98070418, "init", {
+				clickmap:true,
+				trackLinks:true,
+				accurateTrackBounce:true
+			});
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/98070418" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+	</body>
+</html>

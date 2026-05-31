@@ -1,0 +1,31 @@
+1: Sales inactive
+2: Birger Hahn
+3: Nicht zugeordnet
+4: Schnell, Iris
+5: Johannes Schmidt
+6: Kasubke, Rene
+7: Hendrik Hoppe
+8: Thomas Lumpp
+9: Patrick Stäbler
+10: Claudia Vonk
+11: Christian Huber
+12: Steven Louw
+13: Field Service
+14: Marten Hess
+15: Vezzani, Gabriele
+16: Benjamin Hille
+17: Samuel Macaire
+18: Ludovic Henry
+19: Florian Winkler
+20: John Manley
+21: Marcus Schneeberger
+22: Inside sales Hamburg
+23: Rocco Cafaro
+24: Inside sales International
+25: Inside sales DACH
+26: e-commerce
+27: Einkauf IIPB
+28: Paul Dunne
+29: Rasmus Bunten
+30: SERVICE PROCESS
+31: Service Separation

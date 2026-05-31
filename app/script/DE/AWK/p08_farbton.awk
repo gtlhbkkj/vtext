@@ -46,7 +46,7 @@ END {
 
   if (ft != "" || (ft == "" && material != 2)) {
      print "\n" mt                                                     >> TMP_DIR "/" UUID ".result.txt"
-     print mt "Außenanstrich" ke300x_text ": Rostschutzfarbe RAL " farbton  >> TMP_DIR "/" UUID ".result.txt"
+     print mt "Außenanstrich" ke300x_text ": Rostschutzfarbe RAL " farbton " [Alkydharz-Grundierung]"  >> TMP_DIR "/" UUID ".result.txt"
   }
 
   RS = "\n"

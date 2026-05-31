@@ -1,0 +1,134 @@
+# Data for arr_headers[]
+ET_SECTION_!_1_!_1. Abstreifer (Abstreiferleiste, Rückspüllkanal)
+ET_SECTION_!_2_!_2. Dichstungssatz
+ET_SECTION_!_3_!_3. Buchsensatz
+ET_SECTION_!_4_!_4. Motor
+ET_SECTION_!_5_!_5. Gehäuse und Deckel
+ET_SECTION_!_6_!_6. Rest: Mitnehmer, usw.
+ET_SECTION_!_7_!_7. Antriebswelle
+ET_SECTION_!_8_!_8. Komplettfiltereinsatz (mit und ohne Antrieb)
+ET_SECTION_!_9_!_9. Elemente
+ET_SECTION_!_10_!_10. dP Manometer
+ET_SECTION_!_11_!_11. Ventile
+END_OF_BLOCK_ET_SECTION
+
+EZ_!_AF172_G2_!_*_!_5050-20032605-S00
+
+
+####################################################################################
+##                                     AF172/G2                                   ##
+####################################################################################
+
+############   SECTION 1 /// Abstreifer (Abstreiferleiste, Rückspüllkanal)  ############
+ETS01_!_AF172_G2_!_*_!_70320084 *** VERTEILER Z AF132-172 KS PPS GF40_!_232.00
+ETS01_!_AF172_G2_!_*_!_76383004 *** RSA Z FKM 24V 10BAR STANDARD_!_1561.00_!_Baugruppe Rückspülladapter
+ETS01_!_AF172_G2_!_*_!_70371789 *** RUECKSPUELKANAL Z AF112-172 VP_!_388.00
+
+
+############   SECTION 2 /// D-SATZ  ############
+ETS02_!_AF172_G2_!_*_!_70376736 *** D-SATZ AF172/G KOMPL FKM VP_!_112.00_!_Standard FKM_!_1:70349580,1:70356777,1:76351498,1:70316151
+ETS02_!_AF172_G2_!_*_!_70349580 *** D-SATZ ELEMENT AF132-172/G FKM VP_!_103.00_!_Standard FKM_!_2:78322885,2:79332230,2:77565476
+ETS02_!_AF172_G2_!_*_!_70356777 *** D-SATZ GEHAEUSE AF112-172/G FKM VP_!_43.50_!_Standard FKM_!_2:76229067,2:76233043,2:70563699,2:76233039,1:77756513,2:70012492
+ETS02_!_AF172_G2_!_*_!_70349595 *** D-SATZ WELLE AF132-172/G FKM VP_!_122.00_!_Standard FKM_!_1:76351498,1:70316151
+
+
+############   SECTION 3 /// B-SATZ  ############
+ETS03_!_AF172_G2_!_*_!_70320691 *** BUCHSENSATZ AF132-172/G VP_!_140.00_!_Standard_!_2:76190763,1:76398739
+
+############   SECTION 4 /// MOTOR  ############
+ETS04_!_AF172_G2_!_*_!_79717919 *** GETR.MOT.MB-SP.50HZ 0.18KW 14/MIN     VP_!_757.00
+ETS04_!_AF172_G2_!_*_!_79797242 *** MOTORBOCK AF VARIO MOTOVARIO_!_51.90
+
+############   SECTION 5 /// GEH + DECKEL  ############
+ETS05_!_AF172_G2_!_*_!_70329045 *** DECKEL Z AF1324.-1724.-.31/G2_!_n/a_!_Baugruppe Deckel_!_1:76367361,1:70328909
+
+
+############   SECTION 6 /// Rest: usw.   ############
+ETS06_!_AF172_G2_!_*_!_70310121 *** MAGNETSPULE 24V RSA_!_375.00_!_Magnetspulen Rückspüladapter
+ETS06_!_AF172_G2_!_*_!_70315625 *** MAGNETVENTIL FKM RSA_!_131.00_!_Ventil im Rückspüladapter
+ETS06_!_AF172_G2_!_*_!_70313863 *** RSA REP-SATZ VENTILSITZ FKM_!_173.00_!_VENTILSITZ FKM im Rückspüladapter
+ETS06_!_AF172_G2_!_*_!_70311822 *** RSA REP-SATZ RUECKSCHLAGVENTIL FKM_!_116.00_!_Reparatursatz Rückschlagventil
+
+
+############   SECTION 7 ///  Mitnehmer, Antriebswelle   ############
+ETS07_!_AF172_G2_!_*_!_70328909 *** ANTRIEBSWELLE AF132-172/G2 1.4408 BEARB_!_412.00
+
+############   SECTION 8 /// Komplettfiltereinsatz (mit und ohne Antrieb)   ############
+ETS08_!_AF172_G2_!_*_!_ETDUM881 *** AF17240-031-03000-3001/G2 mit AF100174-xxx_!_3812.00_!_Komplettfiltereinsatz auf dem Deckel montiert (Innenteile C-Stahl) mit Filterelement AF100174-xxx_!_1:ETDUM880,1:ETDUM991
+
+
+############   SECTION 9 /// Filterelemente   ############
+
+ETS09_!_AF172_G2_!_*_!_ETDUM991 *** AF100174-xxx f.AF172_!_957.00_!_Segmentelement mit Topmesh: Tragkörper Alu, Filtermedium 1.4571, Halteringe C-Stahl
+
+####################################################################################
+##                          Einzelne Teile AF172/G2                               ##
+####################################################################################
+
+# 1. RSK
+70320084_!_VERTEILER Z AF132-172 KS PPS GF40_!_232.00
+76383004_!_RSA Z FKM 24V 10BAR STANDARD_!_1561.00_!_Baugruppe Rückspülladapter
+
+# 2. DICHTUNGEN
+70376736_!_D-SATZ AF172/G KOMPL FKM VP_!_112.00_!_Standard FKM_!_1:70349580,1:70356777,1:76351498,1:70316151
+
+70349580_!_D-SATZ ELEMENT AF132-172/G FKM VP_!_103.00_!_Standard FKM_!_2:78322885,2:79332230,2:77565476
+78322885_!_FUEHRUNGSRING 61,5 PTFE AF72-132_!_n/a
+79332230_!_ANL-SCHEIBE  70X 62X1.5   PTFE FDA_!_n/a
+77565476_!_O-RING 062,00X2,00 FKM 80SHA ISO3601B N_!_n/a
+
+70356777_!_D-SATZ GEHAEUSE AF112-172/G FKM VP_!_43.50_!_Standard FKM_!_2:76229067,2:76233043,2:70563699,2:76233039,1:77756513,2:70012492
+76229067_!_O-RING 097,00X4,00 FKM 75SHA ISO3601B N_!_n/a
+76233043_!_DIRG A 14,0X 20,0X2,0 C4400 G1/4_!_n/a
+70563699_!_DIRG A 10,0X 13,5X1,5 DIN7715 C4400 G1/8_!_n/a
+76233039_!_DIRG A 21,0X 26,0X2,0 DIN7603 C4400 G1/2_!_n/a
+77756513_!_O-RING 052,07X2,62 FKM 75SHA ISO3601B N_!_n/a
+70012492_!_DIRG A 10,0X 16,0X1,0 DIN7603 CU_!_n/a
+
+70349595_!_D-SATZ WELLE AF132-172/G FKM VP_!_122.00_!_Standard FKM_!_1:76351498,1:70316151
+76351498_!_O-RING 029,82X2,62 FKM 75SHA ISO3601B N_!_n/a
+
+70316151_!_D-SATZ RSA FKM_!_n/a_!_Standard FKM_!_1:76190771,1:76310957,1:76310924,1:77565351,1:76382667,1:76382675
+76190771_!_LIPPENDICHTUNG D=35 TVM_!_n/a
+76310957_!_STUETZRING  35.0 x 44.4 PTFE_!_n/a
+76310924_!_O-RING 034,29X5,33 FKM_!_n/a
+77565351_!_O-RING 044,04X3,53 FKM_!_n/a
+76382667_!_O-RING 053,57X3,53 FKM_!_n/a
+76382675_!_O-RING 038,70X2,65 FKM_!_n/a
+
+
+# 3. B-Satz
+70320691_!_BUCHSENSATZ AF132-172/G VP_!_140.00_!_Standard_!_2:76190763,1:76398739
+76190763_!_BUCHSE 35x19-30_!_n/a
+76398739_!_ANL-SCHEIBE  50X 39X2     PTFE AF132/133_!_n/a
+
+# 4. Motor
+
+# 5. Deckel
+76367361_!_DECKEL AF132-172/G2 GGG BEARB_!_n/a
+70329045_!_DECKEL Z AF1324.-1724.-.31/G2_!_Baugruppe Deckel_!_1:76367361,1:70328909
+
+# 6. Rest
+70345829_!_AF   1724.-.21-...../G2 KSP GERUEST_!_n/a_Standard_!_1:70320084,3:70345607,1:70345586,
+70345607_!_DISTANZBOLZEN AF172 C-STAHL_!_29.80
+70345586_!_ZENTRIERFLANSCH AF172 C-STAHL_!_132.00
+70371789_!_RUECKSPUELKANAL Z AF112-172 VP_!_388.00
+
+# 7. Antriebswelle
+70328909_!_ANTRIEBSWELLE AF132-172/G2 1.4408 BEARB_!_412.00
+
+# 8. Kompletteinsatz
+ETDUM880_!_AF17240-031-03000-3001/G2 ohne Element_!_n/a_!_Komplettfiltereinsatz auf dem Deckel montiert ohne Filterelement (Innenteile C-Stahl)_!_1:76383004,1:70329045,1:70328909,1:70345829,1:70376736,1:70320691
+
+# 9. Elemente
+ETDUM991_!_AF100174-xxx f.AF172_!_957.00_!_Segmentelement mit Topmesh: Tragkörper Alu, Filtermedium 1.4571, Halteringe C-Stahl
+
+
+# ELEMENTE
+70358490_!_ETDUM991_!_AF100174-001
+70358492_!_ETDUM991_!_AF100174-002
+70358493_!_ETDUM991_!_AF100174-003
+70328638_!_ETDUM991_!_AF100174-004
+70358494_!_ETDUM991_!_AF100174-006
+70358495_!_ETDUM991_!_AF100174-008
+70358496_!_ETDUM991_!_AF100174-010

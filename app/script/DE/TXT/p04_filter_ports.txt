@@ -94,7 +94,7 @@ Differenzdruckmessung: 2 x Gewinde G 1/8
 Manometeranschlüsse: 2 x Gewinde G 1/2
 Besonderheit: Zulaufanschluss G 1 1/4 verschlossen, Zulauf über Ablass G 1 1/2" DN40
 ::
-AF133_G3_!_,13,_!_0,1,2_!_1_!_Standard GGG
+AF133_G3_!_,13,_!_0,1,2_!_1,3_!_Standard GGG
 Zu- / Ablaufanschluss: G2 Einschraublöcher DIN 3852
 Ablassanschluss: G2 Einschraubloch DIN 3852
 Fremddruckanschluss: G1 Einschraubloch DIN 3852 mit integriertem Magnet-Membranventil 24 V DC

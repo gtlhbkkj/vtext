@@ -5,8 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Filter Auslegung</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+
+
+
+    <style type="text/css">
+    .textbox {
+        overflow: hidden;
+        height: 30px;
+        border: 1px dashed #A0A0A0;
+    }
+    .opened {
+        overflow: auto;
+        height: auto;
+    }
+    .opened+div {
+        display: none;
+    }
+    </style>
+
+
+
+
 </head>
 <body>
+
   <center>
       <pre><h3>Bitte Filterbezeichnung angeben:</h3> </pre>
     <form method="get" action="/">
@@ -16,8 +39,8 @@
     <pre>
     BEISPIELE:
     AF7474-821-50200/S1 A13 KII AF6016-010
-    AF7470-821-00000-3001/S1 A13 KII AF6016-010
-    AF7470-821-00000-3001-4416/S1 A13 KII AF6016-010
+    AF7470-021-00000-3001/S1 A13 KII AF6016-010
+    AF7470-021-00000-3001-4416/S1 A13 KII AF6016-010
     AF17360-1321-43220-4529/G3 AF100176-003
     FRB123; FRB1231; usw. bis FRB123110F07B200
     [AF Baureihen: Max. 3x Leerzeichen in der Bezeichnung]

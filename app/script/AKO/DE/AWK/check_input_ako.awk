@@ -1,4 +1,5 @@
 BEGIN {
+  print "<pre>" >> errlog_txt
   print "-----------------------------------------------------------------------------" >> errlog_txt
   print "<B>" mt "CHECK LOG FOR FILTER : [" filter_name  "]</B>"                                      >> errlog_txt
   print "-----------------------------------------------------------------------------" >> errlog_txt
@@ -456,13 +457,15 @@ if (error_code == 1)
   print_html("p01","p02","p03",p01,p02,p03,tp01,tp02,tp03)
 
   print "------------------------- END OF ERROR LOG ----------------------------------" >> errlog_txt
+  print "</pre>" >> errlog_txt
+
 }
 
 
 function print_html(kp01,kp02,kp03,p01,p02,p03,tp01,tp02,tp03) {
 # допустим посетитель ввел только "FRR1031"
 # print "<!DOCTYPE html><html><head></head><body>************************"      >> result_txt
-print "<code><h3>You have selected the following configuration: </h3>"  >> result_txt
+print "<pre><h3>You have selected the following configuration: </h3>"  >> result_txt
 print "Input string : <B>" filter_name "</B><BR>" >> result_txt
 
   for (i=0; i<length(arr_hidden); i++) {
@@ -471,10 +474,13 @@ print "Input string : <B>" filter_name "</B><BR>" >> result_txt
            print "<B>" ar[2] "</B> - " ar[3] "<BR>" >> result_txt
   }
 
-# строим HTML форму с радио кнопками
 print "<h3>Please select the rest: </h3>"  >> result_txt
 
+
+
 print "<form action=\"/process-form\" method=\"post\">"  >> result_txt
+
+# строим HTML форму с радио кнопками
 
   for (i=0; i<length(arr_hidden); i++) {
     split(arr_hidden[i],ar,"!")
@@ -517,7 +523,7 @@ print_lastgr_radio(tr01,tr04,tr05)
 
 
 print "<BR><input type=\"submit\" value=\"SEND\">" >> result_txt
-print "</form> </code>"                                 >> result_txt
+print "</form> </pre>"                                 >> result_txt
 # print "</body></html>"                          >> result_txt
 return ""
 
@@ -689,8 +695,13 @@ function print_lastgr_radio(tr01,tr04,tr05) {
 # print_found(str_log[1], tferr[1], "p01 = [" p01 "] /// Einsatz = [" einsatztype "]",tp01)
 function print_found(str1, str2, str3, str4) {
   print "<B>"str1 "</B>"                           >> errlog_txt
-  print "SUCCESS !!     : " str2 " /// passed"     >> errlog_txt
+#  print "SUCCESS !!     : " str2 " /// passed"     >> errlog_txt
+  print "<font color=\"blue\">" "<B>SUCCESS !!</B>     : " str2 " /// passed" "</font>"    >> errlog_txt
+
   print "Searched values: " str3                   >> errlog_txt
   print "Values found   : " str4                   >> errlog_txt
   print "...................................................." >> errlog_txt
 }
+
+
+
